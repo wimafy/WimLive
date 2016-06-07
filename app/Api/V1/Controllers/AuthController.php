@@ -66,12 +66,8 @@ class AuthController extends Controller
             $newRequest = new Request ($request->all());
             //Pull out the picture file and it's original name
             $image = $request->file('ProfilePic');
-<<<<<<< HEAD
             $imageName = "/profile_pics/" . implode(" ",$request->only('username')) . ".png";
-=======
-            $imageName = "/public/profile_pics/" . implode(" ",$request->only('username')) . ".png";
->>>>>>> b161e704a72adce5dc34c57d4e3e4c778df38c23
-            
+            $imageName = "/public/profile_pics/" . implode(" ",$request->only('username')) . ".png";            
             //Replace the temp file in the newRequest with the original picture file name
             $newRequest->merge(array('ProfilePic' => $imageName));
 			$profileRequest->merge(array('ProfilePic' => $imageName));
