@@ -10,7 +10,11 @@
 			<div class="homepagesettingsbuttondiv" ng-controller="ProfileController">
 				<p class="homepagebuttonlable" ng-repeat="p in profile"> {{p.FirstName }} {{ p.LastName }}</p>
 				<p ng-repeat="p in profile">
+<<<<<<< HEAD
+				<img class="homepagesettingsbutton" src={{p.ProfilePic}}>
+=======
 				<img class="homepagesettingsbutton" src="{{asset(profile_pics/xxkenta.png)}}">
+>>>>>>> b161e704a72adce5dc34c57d4e3e4c778df38c23
 				</p>
 				<i class="material-icons homepagesettingsdownarrow" style="font-size: 65px; color: white;">&#xE313;</i>
 			</div>
