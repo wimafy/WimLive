@@ -33,4 +33,17 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = \Hash::make($value);
     }
+	
+	public function profiles()
+	{
+		return $this->hasOne('App\Profile');
+	}
+	public function relationships()
+	{
+		return $this->belongsToMany('App\Relationship');
+	}
+	public function wims()
+	{
+		return $this->belongsToMany('App\Wim');
+	}
 }

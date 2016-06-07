@@ -13,7 +13,7 @@ return [
     |
     */
     'signup_fields' => [
-        'name', 'email', 'password'
+        'username', 'password', 'email', 'FirstName', 'LastName', 'birthday', 'gender', 'city', 'state', 'interests', 'bio', 'ProfilePic'		
     ],
 
     /*
@@ -26,9 +26,18 @@ return [
     |
     */
     'signup_fields_rules' => [
-    	'name' => 'required',
-    	'email' => 'required|email|unique:users',
-    	'password' => 'required|min:6'
+		'username' => 'required|unique:users',
+		'password' => 'required|min:8',
+		'email' => 'required|email|unique:users',
+		'FirstName' => 'required',
+		'LastName' => 'required',
+		'birthday' => 'required',
+		'gender' => 'required',
+		'city' => 'required',
+		'state' => 'required',
+		'interests',
+		'bio' => "max:500",
+		'ProfilePic'
     ],
 
     /*
@@ -65,4 +74,42 @@ return [
     */
     'recovery_email_subject' => env('API_RECOVERY_EMAIL_SUBJECT', true),
 
+/*
+    |--------------------------------------------------------------------------
+    | Profile Fields
+    |--------------------------------------------------------------------------
+    |
+    | Here, you can specify what fields you want to store for your user. The 
+    | AuthController@signup method will automatically search for current 
+    | request data fields using names that are contained in this array.
+    |
+    */
+    'profile_fields' => [
+        'username', 'FirstName', 'LastName', 'PhoneNumber', 'city', 'state', 'birthday', 'gender', 'interests', 'bio', 'ProfilePic'		
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Profile Fields Rules
+    |--------------------------------------------------------------------------
+    |
+    | Here you can put the rules you want to use for the validator instance
+    | in the signup method.
+    |
+    */
+    'profile_fields_rules' => [
+		'username' => 'required|unique:users',
+		'FirstName' => 'required',
+		'LastName' => 'required',
+		'PhoneNumber',
+		'city' => 'required',
+		'state' => 'required',
+		'birthday' => 'required',
+		'gender' => 'required',
+		'interests',
+		'bio' => 'max:500',
+		'ProfilePic'
+    ],
+	
 ];
+
