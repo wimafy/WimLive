@@ -24,7 +24,6 @@
 
     </div>
 
-
     <div class="headerdiv">
         <a href="#homepage">
             <div class="headerbackarrow">
@@ -43,15 +42,10 @@
                     <i id="profiletopactioncircleicon" class="material-icons">&#xE0C9;</i>
                 </div>
                 <img class="profiletopprofilepiccircle" src={{p.ProfilePic}}>
-            <div class="profiletopdiv">
-                <div class="profiletopleftactioncircle">
-                    <i id="profiletopactioncircleicon" class="material-icons">&#xE0C9;</i>
-                </div>
-                <img class="profiletopprofilepiccircle" src="profile_pics/{{profileInfo.profilePic}}">
                 <div class="profiletoprightactioncircle">
                     <i id="profiletopactioncircleicon" class="material-icons">&#xE7FE;</i>
                 </div>
-                <h1 class="profiletopname" ng-repeat="p in profile">{{p.FirstName}}</h1>
+                <h1 class="profiletopname">{{p.FirstName}}</h1>
             </div>
             <div class="profileoptionchooser">
                 <div class="profileoptiondiv" onclick="pastwims()">

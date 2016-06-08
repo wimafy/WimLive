@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en" ng-app="wim">
     <head>
         <meta charset="utf-8">
@@ -9,8 +8,7 @@
 
         <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/wimmain.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	  
 		<script type="text/javascript" src="js/angular.min%20(1).js"></script>
 		<script src="bower_components/angular/angular.min.js"></script>
