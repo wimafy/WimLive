@@ -66,8 +66,8 @@ class AuthController extends Controller
             $newRequest = new Request ($request->all());
             //Pull out the picture file and it's original name
             $image = $request->file('ProfilePic');
+			//Rename the image 
             $imageName = "/profile_pics/" . implode(" ",$request->only('username')) . ".png";
-            $imageName = "/public/profile_pics/" . implode(" ",$request->only('username')) . ".png";
             //Replace the temp file in the newRequest with the original picture file name
             $newRequest->merge(array('ProfilePic' => $imageName));
 			$profileRequest->merge(array('ProfilePic' => $imageName));
@@ -77,7 +77,7 @@ class AuthController extends Controller
         //If no picture is uploaded, set a default picture
         if( $request->only('ProfilePic') == array('ProfilePic' => NULL) ) {
             //Assign default picture name
-            $imageName = "/public/profile_pics/default.png";
+            $imageName = "/profile_pics/default.png";
             
             //Insert default picture name into request array
             $newRequest->merge(array('ProfilePic' => $imageName));
@@ -103,11 +103,13 @@ class AuthController extends Controller
         //Unguard allows access to the Users model which is used to create a new user and then locked back down
         User::unguard();
 		Profile::unguard();
+		
         $user = User::create($userData);
 		$profile = Profile::create($profileData);
+		
         User::reguard();
 		Profile::reguard();
-		Log::info($profile);
+
         //If the user has not been assigned an id, return an error
         if(!$user->id) {
             return $this->response->error('could_not_create_user', 500);
