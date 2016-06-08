@@ -81,6 +81,7 @@ class AuthController extends Controller
             
             //Insert default picture name into request array
             $newRequest->merge(array('ProfilePic' => $imageName));
+			$profileRequest->merge(array'ProfilePic' => $imageName));
         }
         //Retrieves fields that we want from the config/boilerplate.php file
         $signupFields = Config::get('boilerplate.signup_fields');
