@@ -55,19 +55,19 @@ class AuthController extends Controller
     }
 
     //This method is used to receive POSTs from the signup form
-   public function signup(Request $request)
+	public function signup(Request $request)
     {
-        
         $newRequest = $request;
 		$profileRequest = $request;
         //If the user supplies a profile picture
         if( $request->only('ProfilePic') != array('ProfilePic' => NULL) ) {
             //Make a copy of the incoming request to pull out the picture file info
             $newRequest = new Request ($request->all());
+			$profileRequest = new Request ($request->all());
             //Pull out the picture file and it's original name
             $image = $request->file('ProfilePic');
-			//Rename the image 
             $imageName = "/profile_pics/" . implode(" ",$request->only('username')) . ".png";
+            
             //Replace the temp file in the newRequest with the original picture file name
             $newRequest->merge(array('ProfilePic' => $imageName));
 			$profileRequest->merge(array('ProfilePic' => $imageName));
@@ -80,9 +80,11 @@ class AuthController extends Controller
             $imageName = "/profile_pics/default.png";
             
             //Insert default picture name into request array
+			$profileRequest->merge(array('ProfilePic' => $imageName));
             $newRequest->merge(array('ProfilePic' => $imageName));
-			$profileRequest->merge(array'ProfilePic' => $imageName));
         }
+		Log::info($newRequest);
+		Log::info($profileRequest);
         //Retrieves fields that we want from the config/boilerplate.php file
         $signupFields = Config::get('boilerplate.signup_fields');
 		$profileFields = Config::get('boilerplate.profile_fields');
@@ -104,10 +106,8 @@ class AuthController extends Controller
         //Unguard allows access to the Users model which is used to create a new user and then locked back down
         User::unguard();
 		Profile::unguard();
-		
         $user = User::create($userData);
 		$profile = Profile::create($profileData);
-		
         User::reguard();
 		Profile::reguard();
 
