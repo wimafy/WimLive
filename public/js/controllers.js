@@ -25,6 +25,8 @@ wimControllers.controller('LoginController', ['userService', '$location', '$scop
 wimControllers.controller('SignupController', [ 'userService', '$scope', '$http', '$location', function (userService, $scope, $http, $location) {
 
 	$scope.signup = function(file) {
+		$scope.birthday = $scope.birth_year + '-' + $scope.birth_month + '-' + $scope.birth_day;
+		
 		userService.signup(
 			$scope.username, $scope.password, $scope.email, $scope.FirstName, $scope.LastName, $scope.birthday, $scope.gender, $scope.city, $scope.state, $scope.interests, $scope.bio, file,
 			function(response){
