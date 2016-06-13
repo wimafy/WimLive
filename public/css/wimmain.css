@@ -89,8 +89,8 @@ a {
 }
 
 .signindiv {
-    width: 60%;
-    height: calc(100% - 100px);
+    width: 90%;
+    height: 215px;
     background-color: #EEEEEE;
     margin: auto;
     border-radius: 12px;
@@ -151,9 +151,14 @@ h2 small {
 .footer a  { color:#53B2C8; }
 
 /* form starting stylings ------------------------------- */
-.group            { 
-  position:relative; 
-  margin-bottom:45px; 
+.group            {
+  position:relative;
+  /* margin-bottom: 25px; */
+  width: 90%;
+  margin: auto;
+  margin-bottom: 15px;
+  /* margin-top: 21px; */
+  padding-top: 25px;
 }
 input               {
   font-size: 45px;
@@ -288,7 +293,7 @@ input:focus ~ .highlight {
     height: 45px;
     background-color: #2196F3;
     /* margin-left: 50px; */
-    margin-top: 20px;
+    margin-top: 10px;
     border-radius: 3px;
     text-align: center;
     font-size: 20px;
@@ -297,7 +302,7 @@ input:focus ~ .highlight {
     font-family: Arial;
     box-shadow: 0px 4px 10px 1px rgba(0,0,0,0.2);
     border: none;
-    margin-left: calc(100% - 110px);
+    margin-left: calc(100% - 125px);
 }
 
 
