@@ -10,10 +10,10 @@
         <p><input type="text" class="form-control" placeholder="Email Address..." ng-model="email" required /></p>
 		<p><input type="text" class="form-control" placeholder="First Name..." ng-model="FirstName" required /></p>
 		<p><input type="text" class="form-control" placeholder="Last Name..." ng-model="LastName" required /></p>
-		<!-- <p><input type="text" class="form-control" placeholder="Birthday..." ng-model="birthday" required /></p> -->
+		<p>Birthday:</p>
 		<p>
     <select id="birth_month" name="birth_month" ng-model="birth_month">
-    	<option value="-">Month</option>
+    	<option value="" disabled selected>Month</option>
     	<option value="1">January</option>
     	<option value="2">Febuary</option>
     	<option value="3">March</option>
@@ -28,7 +28,7 @@
     	<option value="12">December</option>
     </select>
     <select id="birth_day" name="birth_day" ng-model="birth_day">
-    	<option value="-">Day</option>
+    	<option value="" disabled selected>Day</option>
     	<option value="01">1</option>
     	<option value="02">2</option>
     	<option value="03">3</option>
@@ -62,7 +62,7 @@
     	<option value="31">31</option>
     </select>
     <select id="birth_year" name="birth_year" ng-model="birth_year">
-    	<option value="-">Year</option>
+    	<option value="" disabled selected>Year</option>
 		<option value="2016">2016</option>
 		<option value="2015">2015</option>
 		<option value="2014">2014</option>
