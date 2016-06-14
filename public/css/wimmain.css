@@ -193,7 +193,7 @@ input:focus         { outline:none; }
 
 /* LABEL ======================================= */
 label                {
-  color:#999; 
+  color:#999;
   font-size:40px;
   font-size:15px;
   font-family: Arial;
@@ -203,9 +203,9 @@ label                {
   left:60px;
   top:10px;
   left:10px;
-  top:0px;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
+  top: 30px;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
 }
 
@@ -219,7 +219,7 @@ input:focus ~ label, input:valid ~ label        {
 }
 
 /* BOTTOM BARS ================================= */
-.bar    { position:relative; display:block; width: calc(100% - 100px); margin-left: 50px;}
+.bar    {position:relative;display:block;width: calc(100% - 100px);/* margin-left: 50px; */}
 .bar    { position:relative; display:block; width: calc(100%);}
 .bar:before, .bar:after     {
   content:'';
