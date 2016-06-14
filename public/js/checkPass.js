@@ -10,7 +10,12 @@ function checkPass()
 	var badColor = "#aaaaaa";
 	//Compare the values in the password field 
 	//and the confirmation field
-	if(pass1.value == pass2.value){
+	if(pass1.value.length < 8){
+		pass1.style.backgroundColor = badColor;
+		message.style.color = badColor;
+		message.innerHTML = "Password is too short. Requires more than 8 characters.";
+	}
+	else if(pass1.value == pass2.value){
 		//The passwords match. 
 		//Set the color to the good color and inform
 		//the user that they have entered the correct password 
