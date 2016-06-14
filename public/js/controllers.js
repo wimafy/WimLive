@@ -23,24 +23,65 @@ wimControllers.controller('LoginController', ['userService', '$location', '$scop
 }]);
 
 wimControllers.controller('SignupController', [ 'userService', '$scope', '$http', '$location', function (userService, $scope, $http, $location) {
-
+	function validateEmail(email) {
+		var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(email);
+	}
+	
 	$scope.signup = function(file) {
 		$scope.birthday = $scope.birth_year + '-' + $scope.birth_month + '-' + $scope.birth_day;
 		
-		userService.signup(
-			$scope.username, $scope.password, $scope.email, $scope.FirstName, $scope.LastName, $scope.birthday, $scope.gender, $scope.city, $scope.state, $scope.interests, $scope.bio, file,
-			function(response){
-				alert('Great! You are signed up! Welcome to WIM(afy), ' + $scope.FirstName + '!');
-				$location.path('/');
-			},
-			function(response){
-			alert('Something went wrong with the signup process. Try again later.');
-			}
-		);
+		if ($scope.username == ""){ //todo, let user know if username is taken
+			alert("Please enter your username.");
+		}
+		else if ($scope.password == "" || $scope.password_confirmation == ""){
+			alert("One of your passwords was not entered.");
+		}
+		else if ($scope.password_confirmation != $scope.password)
+		{
+			alert("Your passwords do not match.");
+		}
+		else if ($scope.password.length < 8){
+			alert("Your password is too short.");
+		}
+		else if (!(validateEmail($scope.email))){
+			alert("Please enter a valid email.");
+		}
+		else if ($scope.FirstName == ""){
+			alert("Please enter your first name.");
+		}
+		else if ($scope.LastName == ""){
+			alert("Please enter your last name.");
+		}
+		else if ($scope.birth_year == null || $scope.birth_month == null || $scope.birth_day == null){
+			alert("Please enter your birthday.");
+		}
+		else if ($scope.gender == ""){
+			alert("Please enter your gender.");
+		}
+		else if ($scope.city == ""){
+			alert("Please enter your city.");
+		}
+		else if ($scope.state == ""){
+			alert("Please enter your state.");
+		}
+		else{
+			userService.signup(
+				$scope.username, $scope.password, $scope.email, $scope.FirstName, $scope.LastName, $scope.birthday, $scope.gender, $scope.city, $scope.state, $scope.interests, $scope.bio, file,
+				function(response){
+					alert('Great! You are signed up! Welcome to WIM(afy), ' + $scope.FirstName + '!');
+					$location.path('/');
+				},
+				function(response){
+					alert('Something went wrong with the signup process. Try again later.');
+				}
+			);
+		}
 	}
 	
 	$scope.username = '';
 	$scope.password = '';
+	$scope.password_confirmation = '';
 	$scope.email = '';
 	$scope.FirstName = '';
 	$scope.LastName = '';

@@ -10,7 +10,6 @@
 		<link href="css/wimmain.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	  
-		<script type="text/javascript" src="js/angular.min%20(1).js"></script>
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
         <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
@@ -22,6 +21,8 @@
 		<script src = "js/app.js"></script>
 		<script src = "js/services.js"></script>
 		<script src = "js/controllers.js"></script>
+		<script src = "js/checkPass.js"></script>
+		<script src = "js/signupValidation.js"></script>
 
         <style>
             
@@ -35,8 +36,7 @@
     <body style="background-color: #ef5350;">		
 		<div ng-view></div>
   
-
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     </body>
 </html>
