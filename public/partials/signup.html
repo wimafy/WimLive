@@ -7,18 +7,19 @@
 
         <p><input type="text" class="form-control" placeholder="Username..." ng-model="username"></p>
 		
-		<p><input type="password" class="form-control" placeholder="Password..." id="password" ng-model="password"></p>
+		<p><input type="password" class="form-control" placeholder="Password..." id="password" ng-model="password" onkeyup="checkLength(); return false;"></p>
+		<span id="lengthMessage" class="signupMessage"></span>
 		<p><input type="password" class="form-control" placeholder="Confirm password..." id="password_confirmation" ng-model="password_confirmation" onkeyup="checkPass(); return false;"></p>
 		<span id="passwordMessage" class="signupMessage"></span>
 		
         <p><input type="text" class="form-control" placeholder="Email Address..." id="email" ng-model="email" onkeyup="signupValidation(); return false;" ></p>
 		<span id="emailMessage" class="signupMessage"></span>
 		
-		<p><input type="text" class="form-control" placeholder="First Name..." ng-model="FirstName"></p>
+		<p><input type="text" class="form-control" placeholder="First Name..." ng-model="FirstName" ></p>
 		<p><input type="text" class="form-control" placeholder="Last Name..." ng-model="LastName" ></p>
 		<p>Birthday:</p>
 		<p>
-    <select id="birth_month" name="birth_month" ng-model="birth_month">
+    <select id="birth_month" name="birth_month" ng-model="birth_month" >
     	<option value="" disabled selected>Month</option>
     	<option value="1">January</option>
     	<option value="2">Febuary</option>
@@ -33,7 +34,7 @@
     	<option value="11">November</option>
     	<option value="12">December</option>
     </select>
-    <select id="birth_day" name="birth_day" ng-model="birth_day">
+    <select id="birth_day" name="birth_day" ng-model="birth_day" >
     	<option value="" disabled selected>Day</option>
     	<option value="01">1</option>
     	<option value="02">2</option>
@@ -67,7 +68,7 @@
     	<option value="30">30</option>
     	<option value="31">31</option>
     </select>
-    <select id="birth_year" name="birth_year" ng-model="birth_year">
+    <select id="birth_year" name="birth_year" ng-model="birth_year" >
     	<option value="" disabled selected>Year</option>
 		<option value="2016">2016</option>
 		<option value="2015">2015</option>
@@ -189,7 +190,7 @@
 		<!--
 		<p><input type="text" class="form-control" placeholder="Gender..." ng-model="gender" required /></p>
 		-->
-		<p><input type="text" class="form-control" placeholder="City..." ng-model="city" ></p>
+		<p><input type="text" class="form-control" placeholder="City..." ng-model="city"></p>
 		
 		<!-- todo: support for other countries -->
 		<p>
@@ -266,7 +267,7 @@
 		
         <p><button type="button" class="btn btn-success form-control" ng-click="signup(ProfilePic)">Signup</button></p>
         <hr>
-
+		
         <p style="text-align: center; margin-bottom: 25px;"><a href="#login" style="color: white;">Already signed up? <b>Log in!</b></a></p>
 		
     </div>
