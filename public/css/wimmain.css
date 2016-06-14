@@ -78,14 +78,16 @@ a {
 .signinlogo {
     margin: auto;
     display: block;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     height: 10%;
     border-radius: 12px 0px 12px 0px;
     width: 225px;
     height: 115px;
     border-radius: 12px 0px 12px 0px;
     max-width: 90%;
-    margin-bottom: 10%;
+    /* margin-bottom: 10%; */
+    margin-top: calc((100vh - 410px)/2);
+    margin-bottom: calc((100vh - 410px)/2);
 }
 
 .signindiv {
@@ -94,7 +96,7 @@ a {
     background-color: #EEEEEE;
     margin: auto;
     border-radius: 12px;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     box-shadow: 8px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
@@ -209,9 +211,9 @@ label                {
 
 /* active state */
 input:focus ~ label, input:valid ~ label        {
-  top:-45px;
-  font-size: 35px;
-  top:-25px;
+  top: 2px;
+  font-size: 15px;
+  top: 2px;
   font-size: 15px;
   color:#2196F3;
 }
