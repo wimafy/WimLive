@@ -470,7 +470,7 @@ input:focus ~ .highlight {
 
 
 .circle-container {
-    position: relative;
+    margin: auto;
 }
 .circle-container a {
     display: block;
