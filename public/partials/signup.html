@@ -260,7 +260,7 @@
 						ngf-model-invalid="errorFile"
 						ngf-allow-dir="false" accept="image/jpeg,image/jpg,image/png" 
 						ngf-pattern="'image/jpeg,image/jpg,image/png'" 
-						ngf-resize="{width: 100, height: 100, quality: 1.0, centerCrop: true, type: 'image/png', restoreExif: false}">
+						ngf-resize="{quality: 1.0, type: 'image/png', restoreExif: false}">
 				<img ng-show="upload.file.$valid"> <button ng-click="ProfilePic = null" ng-show="ProfilePic">Remove</button>
 
         <hr>
