@@ -23,6 +23,7 @@
 		<script src = "js/controllers.js"></script>
 		<script src = "js/checkPass.js"></script>
 		<script src = "js/signupValidation.js"></script>
+		<script src = "js/dropdown.js"></script>
 
         <style>
             

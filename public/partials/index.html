@@ -4,16 +4,19 @@
 		<img src="web_images/Drawing%20(5).png" style="positon: absolute; width: 200px;">
 	</div>
 		
-	<a href="#signin">
-		<div class="homepagesettingsbuttondiv" ng-controller="ProfileController">
-			<p class="homepagebuttonlable" ng-repeat="p in profile"> {{p.FirstName }} {{ p.LastName }}</p>
-			<p ng-repeat="p in profile">
-				<img class="homepagesettingsbutton" src={{p.ProfilePic}}>
-			</p>
-			<i class="material-icons homepagesettingsdownarrow" style="font-size: 65px; color: white;">&#xE313;</i>
+	<div class="homepagesettingsbuttondiv" ng-controller="ProfileController">
+		<p class="homepagebuttonlable" ng-repeat="p in profile"> {{p.FirstName }} {{ p.LastName }}</p>
+		<p ng-repeat="p in profile">
+			<img class="homepagesettingsbutton" src={{p.ProfilePic}}>
+		</p>
+		<div class="dropdown">
+			<button onclick="dropdown()" class="material-icons homepagesettingsdownarrow" style="font-size: 65px; color: white;">&#xE313;</button>
+			<div id="homepageSettingsDropdown" class="dropdown-content">
+				<button class="link" ng-click="logout()">Logout</button>
+			</div>
 		</div>
-	</a>
-
+	</div>
+	
 	<div class='circle-container'>
 
 		<a href='#newWim' class='deg0'>
