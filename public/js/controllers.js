@@ -202,6 +202,7 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
 		$location.path('/login');
 	}
 	
+	//view friend list
 	$scope.refresh = function(){
 		relationshipService.viewFriends(function(response){
 			$scope.friends = response;

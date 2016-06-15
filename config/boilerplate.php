@@ -85,7 +85,7 @@ return [
     |
     */
     'profile_fields' => [
-        'username', 'FirstName', 'LastName', 'PhoneNumber', 'city', 'state', 'birthday', 'gender', 'interests', 'bio', 'ProfilePic'		
+        'username', 'email', 'FirstName', 'LastName', 'PhoneNumber', 'city', 'state', 'birthday', 'gender', 'interests', 'bio', 'ProfilePic'		
     ],
 
     /*
@@ -99,6 +99,7 @@ return [
     */
     'profile_fields_rules' => [
 		'username' => 'required|unique:users',
+		'email' => 'required|email|unique:users',
 		'FirstName' => 'required',
 		'LastName' => 'required',
 		'PhoneNumber',

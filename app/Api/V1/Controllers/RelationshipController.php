@@ -123,14 +123,14 @@ class RelationshipController extends Controller
 		$currentUser = JWTAuth::parseToken()->authenticate();
 		
 		$friendsList1 = DB::table('users')
-			->select('users.id', 'users.FirstName', 'users.LastName', 'users.username')
+			->select('users.id', 'users.FirstName', 'users.LastName', 'users.username', 'users.ProfilePic')
 			->join('relationships', 'relationships.user_one_id','=','users.id')
 			->where('relationships.status','=',1)
 			->where('relationships.user_two_id', '=', $currentUser->id)
 			->get();
 		
 		$friendsList2 =	DB::table('users')
-			->select('users.id', 'users.FirstName', 'users.LastName', 'users.username')
+			->select('users.id', 'users.FirstName', 'users.LastName', 'users.username', 'users.ProfilePic')
 			->join('relationships', 'relationships.user_two_id', '=', 'users.id')
 			->where('relationships.status', '=', 1)
 			->where('relationships.user_one_id', '=', $currentUser->id)
