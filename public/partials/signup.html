@@ -7,7 +7,7 @@
 
         <p><input type="text" class="form-control" placeholder="Username..." ng-model="username"></p>
 		
-		<p><input type="password" class="form-control" placeholder="Password..." id="password" ng-model="password" onkeyup="checkLength(); return false;"></p>
+		<p><input type="password" class="form-control" placeholder="Password..." id="password" ng-model="password" onkeyup="checkLength(); checkPass(); return false;"></p>
 		<span id="lengthMessage" class="signupMessage"></span>
 		<p><input type="password" class="form-control" placeholder="Confirm password..." id="password_confirmation" ng-model="password_confirmation" onkeyup="checkPass(); return false;"></p>
 		<span id="passwordMessage" class="signupMessage"></span>
