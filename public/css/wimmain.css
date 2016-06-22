@@ -1177,9 +1177,8 @@ input:focus ~ .highlight {
     padding: 10px;
     background-color: #ef5350;
     position: absolute;
-    right: 20px;
-    top: 30px;
-    
+    right: 0;
+    /* top: 30px; */
 }
 
 .homepagesettingsbutton {
