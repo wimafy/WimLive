@@ -478,12 +478,12 @@ input:focus ~ .highlight {
     position: absolute;
     top: 50%;
     left: calc(50% - 50px);
-    width: 86px;
-    height: 100px;
+    width: 100px;
+    height: 80px;
     margin: 0px;
     text-decoration: none;
 }
-.circle-container  { display: block; width: 50%; }
+.circle-container  {/* display: block; *//* width: 100px; */}
 .deg0 { transform: rotate(0deg) translate(12em) rotate(180deg); } /* 12em = half the width of the wrapper */
 .deg45 { transform: rotate(-90deg) translate(12em) rotate(90deg); }
 .deg135 { transform: rotate(-180deg) translate(12em) rotate(180deg); }
@@ -491,9 +491,9 @@ input:focus ~ .highlight {
 
 .homepagebuttondiv {
     width: 100px;
-    height: 100px;
+    height: 80px;
     background-color: none;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 
 #homepagetopbutton {
@@ -511,12 +511,14 @@ input:focus ~ .highlight {
 }
 
 .homepagebuttonlable {
-    margin: 5px -55px;
-    width: 189px;
+    margin: 5px 0px;
+    width: 100;
     font-family: Arial;
     color: white;
     text-align: center;
     font-size: 15px;
+    /* left: calc(50% - 50px); */
+    /* position: absolute; */
 }
 
 
@@ -1242,9 +1244,11 @@ button.link {
 }
 
 #homepagebuttonpics {
-    z-index:600;
+    z-index: -13;
     color: white;
     font-size: 80px;
+    width: 100px;
+    text-align: center;
 }
 
 
