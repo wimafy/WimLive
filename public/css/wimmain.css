@@ -1230,15 +1230,15 @@ button.link {
 }
 
 .homepagenotifications {
-    height: 50px;
-    width: 50px;
+    height: 25px;
+    width: 25px;
     border-radius: 50%;
     background-color: white;
-    margin: -175px 49px;
+    margin: -105px 60px;
     position: relative;
     text-align: center;
-    line-height: 50px;
-    font-size: 25px;
+    line-height: 25px;
+    font-size: 16px;
     color: #ef5350;
     font-family: Arial Black;
 }
