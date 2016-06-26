@@ -1,3 +1,16 @@
+<div class="headerdiv">
+    <a href="#/">
+        <div class="headerbackarrow">
+            <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+        </div>
+    </a>
+	
+    <h1 class="headerpagetitle" ng-repeat="p in profile">{{p.FirstName}}'s Profile</h1>
+
+</div>
+
+<div style="width: 100%; height: calc(100% - 40px); top: 40px; background-color: white;">
+
 <hr>
 <!--This first button is a hyperlink to the Create New Wim page-->
 <div class="pull-left"><a href="/#/newWim"><button type="button" class="btn btn-success">+ Add Wim</button></a></div>
@@ -16,4 +29,6 @@
             </li>
         </ul>
     </div>
+</div>
+
 </div>
