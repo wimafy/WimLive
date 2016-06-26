@@ -422,6 +422,7 @@ input:focus ~ .highlight {
 .dropdown {
     position: relative;
     display: inline-block;
+    float: right;
 }
 
 .dropdown-content {
