@@ -469,31 +469,12 @@ input:focus ~ .highlight {
 }
 
 
-.circle-container {
-	margin: auto;
-	
-}
-.circle-container a {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: calc(50% - 50px);
-    width: 100px;
-    height: 80px;
-    margin: 0px;
-    text-decoration: none;
-}
-.circle-container  {/* display: block; *//* width: 100px; */}
-.deg0 { transform: rotate(0deg) translate(12em) rotate(180deg); } /* 12em = half the width of the wrapper */
-.deg45 { transform: rotate(-90deg) translate(12em) rotate(90deg); }
-.deg135 { transform: rotate(-180deg) translate(12em) rotate(180deg); }
-.deg245 { transform: rotate(-270deg) translate(12em) rotate(270deg); }
 
 .homepagebuttondiv {
     width: 100px;
     height: 80px;
-    background-color: none;
-    /* border-radius: 50%; */
+    background-color: gray;
+    margin: auto;
 }
 
 #homepagetopbutton {
