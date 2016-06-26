@@ -503,6 +503,7 @@ input:focus ~ .highlight {
     /* left: calc(50% - 50px); */
     /* position: absolute; */
     text-align: center;
+    text-decoration: none;
 }
 
 
@@ -1223,6 +1224,7 @@ button.link {
     font-size: 16px;
     color: #ef5350;
     font-family: Arial Black;
+    text-decoration: none;
 }
 
 #homepagebuttonpics {
