@@ -472,7 +472,7 @@ input:focus ~ .highlight {
 
 .homepagebuttondiv {
     width: 100px;
-    height: 80px;
+    height: 70px;
     background-color: none;
     margin: auto;
 }
@@ -1216,7 +1216,7 @@ button.link {
     width: 25px;
     border-radius: 50%;
     background-color: white;
-    margin: -105px 60px;
+    margin: -85px 102px;
     position: relative;
     text-align: center;
     line-height: 25px;
@@ -1228,7 +1228,7 @@ button.link {
 #homepagebuttonpics {
     z-index: -13;
     color: white;
-    font-size: 80px;
+    font-size: 70px;
     width: 100px;
     text-align: center;
 }

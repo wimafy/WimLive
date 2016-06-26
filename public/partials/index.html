@@ -1,16 +1,29 @@
 <body style="background-color: #ef5350; min-width: 300px; min-height: 500px;">
-<div style="background-color: #ef5350; min-width: 300px; min-height: 500px;">
+
     <div class="homepagewimlogo" style="height: 50px; width: 100px; padding: 5px; position: absolute; left: 0; top: 0;" > 
         <img src="web_images/Drawing%20(5).png" style="background-color: green; height: 50px; width: 100px;">
     </div>
-    <div style="height: 50px; margin: 5px; right: 0; top: 0px; position: absolute;">
-        <button onclick="dropdown()" class="material-icons" style="font-size: 40px;
-    color: white; background-color: #ef5350; border: none; float: right; height: 50px; text-indent: -5px; line-height: 50px; width: 45px;">&#xE313;</button>      
-        <p style="height: 50px; line-height: 50px; float: right; padding: 0px 5px 0px 5px; color: white; font-size: 12px;">Braxton Young</p>
-        <img style="float: right; height: 30px; width: 30px; border-radius: 50%; background-color: white; margin-top: 10px;">
+    
+    <div style="height: 50px; margin: 5px; right: 0; top: 0px; position: absolute;" ng-controller="ProfileController">        
+        <div class="dropdown">
+			<button onclick="dropdown()" class="material-icons homepagesettingsdownarrow" style="font-size: 40px; color: white; background-color: #ef5350; border: none; float: right; height: 50px; text-indent: -5px; line-height: 50px; width: 45px;">&#xE313;</button>
+			<div id="homepageSettingsDropdown" class="dropdown-content">
+				<button class="link" ng-click="logout()">Logout</button>
+			</div>
+		</div>
         
         
-    </div>    
+        <p style="height: 50px; line-height: 50px; float: right; padding: 0px 5px 0px 5px; color: white; font-size: 12px;" ng-repeat="p in profile"> {{p.FirstName }} {{ p.LastName }}</p>
+        <p ng-repeat="p in profile">
+			<img style="float: right; height: 30px; width: 30px; border-radius: 50%; background-color: white; margin-top: 10px;" src={{p.ProfilePic}}>
+		</p>
+        
+        
+        
+    </div>     
+    
+    
+    
     <div style="width: 100vw;height: 300px;background-color: none;position: absolute;top: calc(50% - 150px);">
         <div style="width: 100vw; height: 100px; background-color: none; float: left;"> 
             
@@ -52,5 +65,3 @@
         </div>
 
     </div> 
-    
-</div>
