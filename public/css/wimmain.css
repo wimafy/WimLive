@@ -473,7 +473,7 @@ input:focus ~ .highlight {
 .homepagebuttondiv {
     width: 100px;
     height: 80px;
-    background-color: gray;
+    background-color: none;
     margin: auto;
 }
 
@@ -485,14 +485,14 @@ input:focus ~ .highlight {
 
 
 #homepagetopbuttonlable {
-    margin: -200px -80px;
+    /* margin: -200px -80px; */
     -ms-transform: rotate(180deg); /* IE 9 */
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-    transform: rotate(180deg);
+    /* -webkit-transform: rotate(180deg); */ /* Chrome, Safari, Opera */
+    /* transform: rotate(180deg); */
 }
 
 .homepagebuttonlable {
-    margin: 5px 0px;
+    margin: auto;
     width: 100;
     font-family: Arial;
     color: white;
@@ -500,6 +500,7 @@ input:focus ~ .highlight {
     font-size: 15px;
     /* left: calc(50% - 50px); */
     /* position: absolute; */
+    text-align: center;
 }
 
 
