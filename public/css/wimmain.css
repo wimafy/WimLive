@@ -14,7 +14,7 @@ a {
 
 .headerdiv {
     width: 100%;
-    height: 40px;
+    height: 50px;
     background-color: #ef5350;
     position: absolute;
     z-index: 2;
@@ -40,19 +40,19 @@ a {
 #headerbackarrowicon {
     font-size: 40px;
     color: white;
-    line-height: 42px;
+    line-height: 50px;
     text-indent: 0;
 }
 
 .headerpagetitle {
     float: left;
-    line-height: 60px;
+    line-height: 50px;
     max-width: 500px;
     margin-top: 0px;
     color: white;
     font-family: Arial;
     font-size: 18px;
-    margin-left: 5px;
+    margin-left: 0px;
 }
 
 .headerplusicon {
@@ -521,6 +521,12 @@ input:focus ~ .highlight {
 }
 
 
+.currentwimaddwimbutton {
+    background-color: #5cb85c;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
 
 .currentwimswimtypeimg {
     width: 120px;
