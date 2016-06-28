@@ -1,20 +1,27 @@
-<hr>
-<div class="pull-right"><button type="button" class="btn btn-info" ng-click="logout()">Logout!</button></div>
-<div class="clearfix"></div>
-<hr>
-<div class="row">
-	<div class="col-md-12">
-		<p> Notifications! </p>
-	</div>
-</div>	
-<hr>
+    
+<div class="headerdiv">
+    <a href="#/">
+        <div class="headerbackarrow">
+            <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+        </div>
+    </a>
+	
+    <h1 class="headerpagetitle">Notifications</h1>
 
-<div class="row">
-	<div class="col-md-12">
-		<p> Friend Requests </p>
-		<p>You currently have <b>{{ requests.length }}</b> friend requests.</p>
-		<ul>
-			<li ng-repeat="request in requests">
-				<b>{{ request.username }}</b> <button type="button" class="btn btn-info" ng-click="acceptRequest(request.id)">Accept</button> <button type="button" class="btn btn-info" ng-click="denyRequest(request.id)">Deny</button>
-			</li>
-		</ul>
+</div>
+
+<div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: white; position: absolute;">
+
+
+    <div class="row">
+    <div class="col-md-12">
+        <p> Friend Requests </p>
+        <p>You currently have <b>{{ requests.length }}</b> friend requests.</p>
+        <ul>
+            <li ng-repeat="request in requests">
+                <b>{{ request.username }}</b> <button type="button" class="btn btn-info" ng-click="acceptRequest(request.id)">Accept</button> <button type="button" class="btn btn-info" ng-click="denyRequest(request.id)">Deny</button>
+            </li>
+        </ul>
+
+    
+</div>
