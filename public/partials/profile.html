@@ -8,11 +8,11 @@
     <h1 class="headerpagetitle" ng-repeat="p in profile">{{p.FirstName}}'s Profile</h1>
 
 </div>
-<div class="notheaderdiv">
+<div class="notheaderdiv" ng-repeat="p in profile">
         
         <div class="profiletopdivbackgroundblur" style="background-image: url({{p.ProfilePic}});"></div>
         <div class="profiletopdivbackgroundpic"></div>
-        <div class="profiletopdiv" ng-repeat="p in profile">
+        <div class="profiletopdiv">
 			<div class="profiletopleftactioncircle">
                 <i id="profiletopactioncircleicon" class="material-icons">&#xE0C9;</i>
             </div>
