@@ -928,6 +928,21 @@ input:focus ~ .highlight {
 .profiletopdiv {
     width: 100%;
     height: 250px;
+    background-image: url(/profile_pics/default.png);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center center;
+    /* -webkit-filter: blur(10px); */
+    z-index: 9;
+}
+
+.profiletopdivbackgroundpic {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .profiletopdivbackgroundblur {
@@ -936,11 +951,10 @@ input:focus ~ .highlight {
     position: absolute;
     top: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, .2);
-    background-image: url(user_profile_pics/3.jpg);
-    background-repeat: no-repeat;
-    background-size: initial;
-    /* -webkit-filter: blur(10px); */
+    background-color: rgba(0, 0, 0, 0.3);
+    /* background-image: url(/profile_pics/default.png); */
+    /* background-repeat: no-repeat; */
+    /* background-size: initial; */
 }
 
 .profiletopleftactioncircle {
@@ -1079,7 +1093,7 @@ input:focus ~ .highlight {
 }
 
 .profileinfoindividualdiv {
-    height: 103px;
+    height: 43px;
     /* width: 100%; */
     /* margin-top: 10px; */
 }
