@@ -10,6 +10,7 @@
 </div>
 
 <div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: white; position: absolute;">
+    <div style="width: 95%;">
         <p><input class="form-control" ng-model="currentWimTitle" placeholder="WIM Title..." type="text"  style="margin-top: 15px"></p>
         <p><input class="form-control" ng-model="currentWimLocation" placeholder="Destination..." type="text"></p>
         <p><input class="form-control" ng-model="currentWimAddress" placeholder="Address..." type="text"></p>
@@ -28,9 +29,10 @@
         		</select>
         		</p>
         
-    <div>
-        <!--Upon clicking the Save Wim button, this create function is fired to send the info to the API through the CurrentWimsController-->
-        <button type="button" class="btn btn-primary" ng-click="create()">Save Wim</button>
+        <div>
+            <!--Upon clicking the Save Wim button, this create function is fired to send the info to the API through the CurrentWimsController-->
+            <button type="button" class="btn btn-primary" ng-click="create()">Save Wim</button>
+        </div>
     </div>
     
 </div>
