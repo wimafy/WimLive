@@ -1251,15 +1251,30 @@ button.link {
 }
 
 .homepagenotifications {
-    height: 25px;
-    width: 25px;
+    height: 17px;
+    width: 17px;
     border-radius: 50%;
     background-color: white;
-    margin: -86px 62px;
-    position: relative;
+    margin: 25px 19px;
+    position: absolute;
     text-align: center;
-    line-height: 25px;
-    font-size: 16px;
+    line-height: 16px;
+    font-size: 11px;
+    color: #ef5350;
+    font-family: Arial Black;
+    text-decoration: none;
+}
+
+.homepagenotificationsbackgroundcircle {
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    background-color: #ef5350;
+    margin: 25px 19px;
+    position: absolute;
+    text-align: center;
+    line-height: 16px;
+    font-size: 11px;
     color: #ef5350;
     font-family: Arial Black;
     text-decoration: none;
