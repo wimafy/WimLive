@@ -1255,7 +1255,7 @@ button.link {
     width: 17px;
     border-radius: 50%;
     background-color: white;
-    margin: 25px 19px;
+    margin: 28px 19px;
     position: absolute;
     text-align: center;
     line-height: 16px;
@@ -1266,11 +1266,11 @@ button.link {
 }
 
 .homepagenotificationsbackgroundcircle {
-    height: 19px;
-    width: 19px;
+    height: 21px;
+    width: 21px;
     border-radius: 50%;
     background-color: #ef5350;
-    margin: 25px 19px;
+    margin: 26px 17px;
     position: absolute;
     text-align: center;
     line-height: 16px;
