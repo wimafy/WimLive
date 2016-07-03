@@ -1,8 +1,10 @@
 body {
     margin: 0;
-    width: 100%;
+    width: 100vw;
     max-width: 1100px;
     background-color: #eeeeee;
+    height: 100vh;
+    overflow: hidden;
 }
 
 a {
