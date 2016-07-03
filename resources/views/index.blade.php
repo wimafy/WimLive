@@ -35,7 +35,7 @@
         </style>
     </head>
 
-    <body>		
+    <body style="background-color: lightgray;">		
 		<div ng-view></div>
   
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
