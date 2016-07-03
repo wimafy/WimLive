@@ -253,7 +253,7 @@
 		<p><input type="text" class="form-control" placeholder="Interests..." ng-model="interests" ></p>
         <p><textarea type="text" class="form-control" placeholder="Biography... 200 characters max" ng-model="bio" maxlength="200" style="height: 70px; width: 100%;"></textarea></p>
 		
-		<body ng-app "fileUpload" ng-controller="fileUpload">
+		<div ng-app="fileUpload" ng-controller="fileUpload">
 			<form name="upload">
 				<br>Photo:
 				<input type="file" ngf-select ng-model="ProfilePic" name="file" 
@@ -270,7 +270,7 @@
         <hr>
 		
         <p style="text-align: center; margin-bottom: 25px;"><a href="#login" style="color: white;">Already signed up? <b>Log in!</b></a></p>
-		
+        </form>
     </div>
 </div>
 </div>
