@@ -1445,12 +1445,3 @@ button.link {
     left: 60px;
     font-size: 125px;
 }
-
-/* Search page */
-
-.friendsearchbar {
-    width: 100%;
-    height: 300px;
-    padding: 10px;
-    color: green;
-}
