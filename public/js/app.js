@@ -31,6 +31,10 @@ wim.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'partials/newWim.html',
         controller: 'WimController'
 	}).
+	when('/friendSearch', {
+		templateUrl: 'partials/friendSearch.html',
+		controller: 'UserListController'
+	}).
     when('/', {
         templateUrl: 'partials/index.html',
         controller: 'MainController'
