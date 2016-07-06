@@ -1445,3 +1445,12 @@ button.link {
     left: 60px;
     font-size: 125px;
 }
+
+/* search page */
+
+.searchforfriendsinput {
+    height: 200px;
+    width: 100%;
+    color: red;
+    background-color: green;
+}
