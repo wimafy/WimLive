@@ -21,7 +21,7 @@
 				<!--This ng-repeat is basically a for loop that loops through the users array and filters for matches that are similar to what was inputed above-->
 				<li ng-repeat="relationship in relationships | filter:searchFor">
 					<!--I pass the user id to the addFriend function which will pass the userId onto the API to create a new friend-->
-					<b>{{ relationship.FirstName }} {{relationship.LastName}}</i><button type="button" class="btn btn-info" ng-click="sendFriendRequest(relationship.id)"> + Add Friend </button>
+					<b>{{ relationship.FirstName }} {{relationship.LastName}}</i><button type="button" class="btn btn-info" ng-click="sendFriendRequest(relationship.id)" style="background-color: red;"> + Add Friend </button>
 				</li>
 			</ul>
 		</div>
