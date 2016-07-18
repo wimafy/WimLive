@@ -936,7 +936,7 @@ input:focus ~ .highlight {
     background-size: 110%;
     background-position: center center;
     /* -webkit-filter: blur(10px); */
-    z-index: 9;
+    z-index: 16;
 }
 
 .profiletopdivbackgroundpic {
@@ -1005,7 +1005,7 @@ input:focus ~ .highlight {
     background-color: lightgray;
     float: left;
     margin-left: calc(50% - 50px);
-    margin-top: calc(27% - 50px);
+    margin-top: calc(10% - 0px);
     position: relative;
     z-index: 1;
     box-shadow: 6px 8px 16px 0px rgba(0,0,0,0.2);
@@ -1016,7 +1016,7 @@ input:focus ~ .highlight {
     width: 100%;
     text-align: center;
     font-family: Arial;
-    margin-top: 5px;
+    margin-top: 10px;
     color: white;
     position: relative;
     z-index: 1;
@@ -1104,7 +1104,7 @@ input:focus ~ .highlight {
 }
 
 .profileinfoleftdiv {
-    background-color: white;
+    background-color: lightgray;
     float: left;
     width: 100%;
     margin-top: 0;
@@ -1136,7 +1136,7 @@ input:focus ~ .highlight {
     float: left;
     width: calc(100% - 181px);
     font-size: 12px;
-    margin-top: 7px;
+    margin-top: 8px;
     margin-bottom: 0px;
     font-family: roboto Black;
     line-height: 12px;
@@ -1145,13 +1145,13 @@ input:focus ~ .highlight {
 .profileinfoleftinfoinformation {
     float: left;
     font-size: 16px;
-    margin-top: -11px;
+    margin-top: -27px;
     width: calc(100% - 30px);
     font-family: roboto;
-    margin-left: 51px;
+    margin-left: 59px;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 17px;
+    line-height: 16px;
 }
 
 
@@ -1181,7 +1181,7 @@ input:focus ~ .highlight {
     height: 50px;
     float: left;
     background-color: white;
-    margin-bottom: 1px;
+    margin-bottom: 1;
 }
 
 .profileinterestsimg {
