@@ -25,7 +25,7 @@
     
         <div class="profileoptionchooser">
             <div class="profileoptiondiv" onclick="showPastwimsTab()">
-                <i class="material-icons profileoptionpic">&#xE88F;</i>
+                <i class="material-icons profileoptionpic">&#xE88E;</i>
                 <p class="profileoptionchoosertext">Interests</p>
             </div>
                     
@@ -126,17 +126,7 @@
                         <p class="profileinfoleftinfoinformation">{{p.bio}}</p>
                     </div>
                 </div>
-
-                <div class="profileinforightdiv" ng-repeat="p in profile">
-                    <div class="profileinterestsheader">{{p.FirstName}}'s Interests</div>
-                    <div class="profileinterestsdiv" ng-repeat="interest in interests | filter:{ title: searchFor} | orderBy: 'date'">
-                        <div class="profileinterestsimg">
-                            <i id="profileinterestsimgicon" class="material-icons">{{interest.image}}</i>
-                        </div>
-                        <p class="profileintereststext">{{interest.text}}</p>
-                    </div>
-
-                </div>
+                
             </div>
         </div>
     </div>
