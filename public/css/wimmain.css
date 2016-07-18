@@ -372,7 +372,7 @@ input:focus ~ .highlight {
 }
 
 .eachfriend {
-    width: calc(25% - 4px);
+    width: 25%;
     height: 100px;
     float: left;
     border-style: solid;
@@ -382,25 +382,24 @@ input:focus ~ .highlight {
 }
 
 .myfriendspic {
-    width: 100px;
-    height: 100px;
-    border-radius: 75px;
-    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
     background-color: lightgray;
     display: block;
-    margin-top: 50px;
-    
+    margin-top: 10px;
+    margin-left: calc(50% - 25px);
 }
 
 .myfriendsname {
         text-align: center;
-    font-family: Arial;
-    margin-top: px;
-    color: #3f3f3f;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 25px;
-    margin-top: 15px;
+        font-family: Arial;
+        margin-top: px;
+        color: #3f3f3f;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+        margin-top: 2px;
 }
 
 .myfriendscheckmark {
