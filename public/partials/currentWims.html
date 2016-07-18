@@ -17,7 +17,13 @@
 <div class="row" style="margin: 0px;">
     <div class="col-md-12">
     	<!--I am pulling info from the 'wims' array that is created in the CurrentWimsController in controller.js-->
+        <!--
         <p>You currently have <b>{{ wims.length }}</b> wims on your schedule.</p>
+        -->
+        <div class="currentwimsindividualdiv">
+        
+        </div>
+        
         <ul>
             <li ng-repeat="wim in wims">
                 <b>{{ wim.title }}</b> at <i>{{ wim.location }}</i>

@@ -515,11 +515,11 @@ input:focus ~ .highlight {
 /*Current WIMS*/
 
 .currentwimsindividualdiv {
-    width: calc(100% - 20px);
-    height: 150px;
-    background-color: white;
-    margin: 8px;
-    border-radius: 10px;
+    width: 100vw;
+    height: 75px;
+    background-color: orange;
+    margin-bottom: 1px;
+    float: left;
     
 }
 
