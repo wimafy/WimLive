@@ -995,6 +995,8 @@ input:focus ~ .highlight {
     font-size: 25px;
     text-align: center;
     color: white;
+    float: right;
+    
 }
 
 .profiletopprofilepiccircle {
