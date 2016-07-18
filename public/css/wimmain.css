@@ -1005,6 +1005,7 @@ input:focus ~ .highlight {
     border-radius: 50%;
     background-color: lightgray;
     float: left;
+    margin: auto;
     margin-top: 60px;
     position: relative;
     z-index: 1;
