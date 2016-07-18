@@ -1105,7 +1105,7 @@ input:focus ~ .highlight {
     background-color: white;
     float: left;
     width: 100%;
-    margin-top: 0.5px;
+    margin-top: 0;
     /* border-radius: 0px 10px 10px 0px; */
     overflow: auto;
     position: relative;
