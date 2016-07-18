@@ -1092,23 +1092,24 @@ input:focus ~ .highlight {
 .profileinfoleftdiv {
     background-color: white;
     float: left;
-    width: calc(50% - 4px);
+    width: 100%;
     margin-top: 4px;
-    border-radius: 0px 10px 10px 0px;
+    /* border-radius: 0px 10px 10px 0px; */
     overflow: auto;
     position: relative;
 }
 
 .profileinfoindividualdiv {
-    height: 43px;
-    /* width: 100%; */
+    height: 41px;
+    max-width: 100%;
     /* margin-top: 10px; */
+    float: left;
 }
 
 .profileinfoleftinfoimage {
     /* width: 60px; */
     height: 20px;
-    margin: 0px 5px;
+    margin: 6px 15px;
     float: left;
 }
 
@@ -1120,23 +1121,23 @@ input:focus ~ .highlight {
 .profileinfoleftinfotitle {
     float: left;
     width: calc(100% - 181px);
-    font-size: 20px;
-    margin-top: -2px;
+    font-size: 12px;
+    margin-top: 7px;
     margin-bottom: 0px;
-    font-family: Arial;
-    line-height: 32px;
+    font-family: roboto Black;
+    line-height: 12px;
 }
 
 .profileinfoleftinfoinformation {
     float: left;
-    font-size: 9px;
-    margin-top: -2px;
+    font-size: 16px;
+    margin-top: -13px;
     width: calc(100% - 30px);
-    font-family: Arial;
-    margin-left: 30px;
+    font-family: roboto;
+    margin-left: 51px;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 10px;
+    line-height: 17px;
 }
 
 
