@@ -1036,6 +1036,13 @@ input:focus ~ .highlight {
     float: left;
 }
 
+.profileoptionchoosertext {
+    width: 100%;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 15px;
+}
+
 .profileoptionpic {
     width: 100%;
     height: 30px;
