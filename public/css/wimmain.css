@@ -373,7 +373,7 @@ input:focus ~ .highlight {
 
 .eachfriend {
     width: calc(25% - 4px);
-    height: 220px;
+    height: 100px;
     float: left;
     border-style: solid;
     border-width: 2px;
@@ -1005,7 +1005,7 @@ input:focus ~ .highlight {
     border-radius: 50%;
     background-color: lightgray;
     float: left;
-    margin: auto;
+    margin-left: calc(50% - 50px);
     margin-top: 60px;
     position: relative;
     z-index: 1;
