@@ -1029,6 +1029,7 @@ input:focus ~ .highlight {
     margin-top: 1px;
     position: relative;
     z-index: 2;
+    margin-bottom: 1;
 }
 
 .profileoptiondiv {
@@ -1082,12 +1083,12 @@ input:focus ~ .highlight {
 }
 
 .profilebottomfriendsdiv {
-    width: calc(100% - 4px);
-    height: calc(100% - 4px);
+    width: calc(100% - 0px);
+    height: calc(100% - 0px);
     background-color: green;
     position: absolute;
-    bottom: 0px;
-    margin: 2px;
+    /* bottom: 0px; */
+    /* margin-top: 1px; */
     overflow-y: auto;
 }
 
