@@ -213,51 +213,52 @@
                 
             </div>
             <div id="info" class="profilebottominfodiv" style="z-index: 5;" ng-repeat="p in profile">
-                <div class="profileinfoleftdiv">
-                    
-                    <div class="profileinterestsdiv">
-                        <i id="profileinterestsimgicon" class="material-icons">&#xE0CD;</i>
-                        <p class="profileinfoleftinfotitle">Phone</p>
-                        <p class="profileinfoleftinfoinformation">{{p.PhoneNumber}}</p>
-                        
-                    </div>
-                    
-                    <div class="profileinterestsdiv">
-                        <i id="profileinterestsimgicon" class="material-icons">&#xE0E1;</i>
-                        <p class="profileinfoleftinfotitle">Email</p>
-                        <p class="profileinfoleftinfoinformation">{{p.email}}</p>
-                        
-                    </div>
-                    
-                    <div class="profileinterestsdiv">
-                        <i id="profileinterestsimgicon" class="material-icons">&#xE7F1;</i>
-                        <p class="profileinfoleftinfotitle">Location</p>
-                        <p class="profileinfoleftinfoinformation">{{p.city}}, {{p.state}}</p>
-                        
-                    </div>
-                    
-                    <div class="profileinterestsdiv">
-                        <i id="profileinterestsimgicon" class="material-icons">&#xE7E9;</i>
-                        <p class="profileinfoleftinfotitle">Birthday</p>
-                        <p class="profileinfoleftinfoinformation">{{p.birthday}}</p>
-                        
-                    </div>
-                    
-                    <div class="profileinterestsdiv">
-                        <i id="profileinterestsimgicon" class="material-icons">&#xE63D;</i>
-                        <p class="profileinfoleftinfotitle">Gender</p>
-                        <p class="profileinfoleftinfoinformation">{{p.gender}}</p>
-                        
-                    </div>
-                    
-                    <div class="profileinterestsdiv">
-                        <i id="profileinterestsimgicon" class="material-icons">&#xE24D;</i>
-                        <p class="profileinfoleftinfotitle">Bio</p>
-                        <p class="profileinfoleftinfoinformation">{{p.bio}}</p>
-                        
+                <div style="height: calc(100vh - 35vh - 79px); width: 100%; overflow: hidden; overflow-y: scroll;">
+                    <div class="profileinfoleftdiv">
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE0CD;</i>
+                            <p class="profileinfoleftinfotitle">Phone</p>
+                            <p class="profileinfoleftinfoinformation">{{p.PhoneNumber}}</p>
+
+                        </div>
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE0E1;</i>
+                            <p class="profileinfoleftinfotitle">Email</p>
+                            <p class="profileinfoleftinfoinformation">{{p.email}}</p>
+
+                        </div>
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE7F1;</i>
+                            <p class="profileinfoleftinfotitle">Location</p>
+                            <p class="profileinfoleftinfoinformation">{{p.city}}, {{p.state}}</p>
+
+                        </div>
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE7E9;</i>
+                            <p class="profileinfoleftinfotitle">Birthday</p>
+                            <p class="profileinfoleftinfoinformation">{{p.birthday}}</p>
+
+                        </div>
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE63D;</i>
+                            <p class="profileinfoleftinfotitle">Gender</p>
+                            <p class="profileinfoleftinfoinformation">{{p.gender}}</p>
+
+                        </div>
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE24D;</i>
+                            <p class="profileinfoleftinfotitle">Bio</p>
+                            <p class="profileinfoleftinfoinformation">{{p.bio}}</p>
+
+                        </div>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
