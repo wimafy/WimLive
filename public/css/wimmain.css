@@ -544,7 +544,9 @@ input:focus ~ .highlight {
     margin: 10px;
     border-radius: 50%;
     float: left;
-    background-color: white;
+    background-color: dimgray;
+    text-align: center;
+    color: white;
 }
 
 .currentwimswimnameanddestinationholder {
