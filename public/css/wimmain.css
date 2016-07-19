@@ -603,7 +603,7 @@ input:focus ~ .highlight {
     line-height: 27px;
     text-align: center;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     font-family: Roboto Black;
 }
 
