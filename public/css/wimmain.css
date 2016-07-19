@@ -633,294 +633,32 @@ input:focus ~ .highlight {
 
 /*WIM info*/
 
-.wiminfoheaderdatetimediv {
-    width: 200px;
-    height: 150px;
-    float: right;
-    margin: 0px;
-    margin-right: 30px;
-}
-
-.wiminfoheaderwtimetillwim {
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-family: Arial Black;
-    font-size: 40px;
-}
-
-.wiminfoheaderdateofwim {
-    width: 100%;
-    text-align: center;
-    color: white;
-    font-family: Arial;
-    font-size: 20px;
-    opacity: .8;
-    margin-top: -20px;
-}
-
-
-.wiminfopicturediv {
-    width: 100%;
-    height: 500px;
-    background-color: lightgray;
-    overflow: hidden;
-    border-radius: 8px 8px 0px 0px;
-}
-
-.wiminfopicture {
-    margin: auto;
-    width: 100%;
-    height: 100%;
-}
-
-.wiminfowimicon {
-    float: right;
-    width: 200px;
-    height: 200px;
-    margin: -50px 75px;
+.individualwimtopdiv {
+    width: 100vw;
+    height: 40%;
     position: absolute;
-    right: 0px;
-    z-index: 1;
-    border-radius: 50%;
+    top: 50px;
+    float: left;
 }
 
-.wiminforesponsebuttonlable {
+.individualwimbottomdiv {
+    width: 100vw;
+    position: absolute;
+    top: 50px;
+    float: left;
+}
+
+.individualwimdestinationdiv {
+    width: 100vw;
+    height: 50px;
+    background-color: red;
+}
+
+.individualwimdestinationicon {
+    width: 50xp;
     color: black;
-    width: 200px;
     text-align: center;
-    font-family: Arial;
-    font-size: 35px;
-    margin-top: 10px;
-}
-
-.wiminfowimiconpic {
-    width: 125px;
-    height: 125px;
-    background-color: #16A243;
-    margin: auto;
-    display: block;
-    margin-top: 8px;
-    border-radius: 50%;
-    box-shadow: 0px 15px 34px 6px rgba(0,0,0,0.2);
-}
-
-#wiminfowimiconpicicon {
-    line-height: 125px;
-    width: 125px;
-    text-align: center;
-    font-size: 80px;
-    color: white;
-    
-}
-
-.wiminfodirections {
-    width: 100%;
-    height: 170px;
-
-}
-
-.wiminfodirectionsicon {
     float: left;
-    height: 70px;
-    width: 65px;
-    margin: 50px;
-    margin-right: 25px;
-}
-
-#wiminfodirectionsiconactualicon {
-    width: 65px;
-    line-height: 70px;
-    font-size: 70px;
-    color: #3f3f3f;
-    
-}
-
-#wiminfopeopleactualicon {
-    width: 65px;
-    line-height: 70px;
-    font-size: 55px;
-    color: #3f3f3f;
-    
-}
-
-#wiminfodetailsactualicon {
-    width: 65px;
-    line-height: 40px;
-    font-size: 55px;
-    color: #3f3f3f;
-    
-}
-
-
-
-.wiminfodestination {
-    float: left;
-    width: calc(100% - 200px);
-    height: 80px;
-    margin-top: 40;
-    margin-bottom: 0px;
-    line-height: 80px;
-    font-size: 80px;
-    font-family: Arial;
-    color: #3f3f3f;
-    
-    
-}
-
-.wiminfodestinationstreetname {
-    float: left;
-    width: calc(100% - 200px);
-    height: 40px;
-    margin-top: 0pc;
-    line-height: 35px;
-    font-size: 35px;
-    font-family: Arial;
-    color: #3f3f3f;
-    opacity: .7;
-}
-
-.wiminfobottomline {
-    width: 90%;
-    height: 2px;
-    margin: auto;
-    background-color: #3f3f3f;
-    opacity: .4;
-    margin-bottom: -10px;
-    margin-top: 0px
-}
-
-
-
-.wiminfoattendees {
-    width: 100%;
-    height: 100px;
-    
-
-}
-
-.wiminfoattendeesicon {
-    float: left;
-    height: 70px;
-    width: 65px;
-    margin: 20px 25px 50px 50px;
-}
-
-.wiminfoattendeeslable {
-    float: left;
-    width: calc(100% - 200px);
-    height: 50px;
-    margin-top: 30;
-    margin-bottom: -10px;
-    line-height: 50px;
-    font-size: 60px;
-    font-family: Arial;
-    color: #3f3f3f;    
-}
-
-.wiminfoattendeesholderdiv {
-    height: 268px;
-    width: 100%;
-    margin: auto;
-    margin-top: -60px;
-    margin-bottom: -60px;
-}
-
-.wiminfoattendeessideline {
-    width: 2px;
-    height: 150px;
-    background-color: #3f3f3f;
-    margin-left: 5%;
-    float: left;
-    opacity: .4;
-    margin-bottom: -80px;
-}
-
-.wiminfoattendeessliderdiv {
-    width: 90%;
-    height: 150px;
-    margin-left: 5%;
-    overflow-x: hidden;
-    overflow-x: auto;
-    float: left;
-    margin-top: -63px;
-    margin-bottom: 
-}
-
-.wiminfoindividualattendee {
-    width: 150px;
-    height: 120px;
-    margin-top: 15px;
-    float: left;
-}
-
-.wiminfoindividualattendeepic {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: auto;
-    display: block;
-    background-color: #43A047;
-    
-}
-
-.wiminfoindividualattendeename {
-    width: 100%;
-    text-align: center;
-    font-family: Arial;
-    margin-top: 5px;
-    
-}
-
-.wiminfoindividualattendeestatus {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin: -65px 90px;
-    background-color: #43A047;
-    position: relative;
-    line-height: 30px;
-    text-align: center;
-    color: white;
-    font-family: Arial;
-    font-size: 20px;
-}
-
-.wiminfodetails {
-    float: left;
-    height: 50px;
-    width: 50px;
-    margin: 34px 25px 50px 65px;
-}
-
-.wiminfodetailsactualtextdiv {
-    width: 80%;
-    float: left;
-    height: 400px;
-    overflow-y: auto;
-    margin-top: -20px;
-}
-
-.wiminfodetailsactualtext {
-    width: 100%;
-    float: left;
-    font-family: Arial;
-    font-size: 14px;
-}
-
-.wiminfomeatcontent {
-    width: calc(100% - 60px);
-    margin: 30px;
-    border-radius: 8px;
-    box-shadow: 0px 12px 16px 0px rgba(0,0,0,0.2);
-}
-
-#wiminfoheadericon {
-    line-height: 160px;
-    font-size: 50px;
-    color: white;
-    margin-left: 10px;
-    
 }
 
 /*profile page */
