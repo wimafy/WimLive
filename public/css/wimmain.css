@@ -559,14 +559,14 @@ input:focus ~ .highlight {
 .currentwimswimname {
     max-width: 100%;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 16px;
     float: left;
     text-overflow: ellipsis;
     /* margin-top: -5PX; */
     font-family: Roboto Black;
     opacity: .8;
     margin: 0;
-    line-height: 50px;
+    line-height: 60px;
     white-space: nowrap;
 }
 
@@ -579,7 +579,7 @@ input:focus ~ .highlight {
     margin-top: 30PX;
     font-family: Roboto;
     display: block;
-    margin-top: -12px;
+    margin-top: -21px;
     opacity: .6;
 }
 
@@ -617,11 +617,17 @@ input:focus ~ .highlight {
 }
 
 .currentwimcountdowntime {
-    
+    line-height: 50px;
+    text-align: center;
+    font-family: Roboto Black;
 }
 
 .currentwimcountdowndate {
-    
+    line-height: 50px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    margin-top: -39px;
 }
 
 /*WIM info*/
