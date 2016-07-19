@@ -17,7 +17,7 @@ $api->version('v1', function ($api) {
 	//Routes for Wims
 	$api->group(['middleware' => 'api.auth'], function ($api) {
 		$api->get('wims', 'App\Api\V1\Controllers\WimController@index');
-		//$api->get('wims/{id}', 'App\Api\V1\Controllers\WimController@show');
+		$api->get('wims/{id}', 'App\Api\V1\Controllers\WimController@show');
 		$api->post('wims', 'App\Api\V1\Controllers\WimController@store');
 		//$api->put('wims/{id}', 'App\Api\V1\Controllers\WimController@update');
 		//$api->delete('wims/{id}', 'App\Api\V1\Controllers\WimController@destroy');

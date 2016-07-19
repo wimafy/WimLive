@@ -9,6 +9,7 @@
         <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/wimmain.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="bower_components/chosen/chosen.css" rel="stylesheet">
 	  
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
@@ -36,9 +37,17 @@
     </head>
 
     <body style="background-color: lightgray;">		
-		<div ng-view></div>
   
+		<div ng-view></div>
+		
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/chosen/chosen.jquery.js" type="text/javascript"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$(".chosen-select").chosen();
+			});
+		</script>
     </body>
 </html>

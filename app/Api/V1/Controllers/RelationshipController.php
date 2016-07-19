@@ -43,23 +43,42 @@ class RelationshipController extends Controller
 		$currentUser = JWTAuth::parseToken()->authenticate();
 		
 		//check if relationship status exists already. if true, tell user the status. else create new relationship
-			//TODO
+		$dbCheck = DB::table('relationships')
+			->select('status')
+			->where('user_one_id', '=', $currentUser->id)
+			->where('user_two_id', '=', $request->get('friend_id'))
+			->orWhere('user_two_id', '=', $currentUser->id)
+			->where('user_one_id', '=', $request->get('friend_id'))
+			->get();
 			
-		//create a new relationship model
-		$relationship = new Relationship;
-			
-		//set the current user to action user and check which user has lower userID value.
-		$relationship->action_user_id = $currentUser->id;;
-		$relationship->user_one_id = $currentUser->id;;
-		$relationship->user_two_id = $request->get('friend_id');
-		$relationship->status = 0;
-			
-		//attempt to save the relationship in the relationships table
-		if($relationship->save())
-			return $this->response->created();
-		else
-			return $this->response->error('could_not_send_request', 500);
 		
+			
+		if (count($dbCheck)) {	
+			if($dbCheck->status == 0)
+				return $this->response->error('request_is_pending', 500);
+			else if ($dbCheck->status == 1)
+				return $this->response->error('you_are_already_friends', 500);
+			else if ($dbCheck->status == 2)
+				return $this->response->error('friend_request_was_denied', 500);
+	
+		}
+		
+		else {
+			//create a new relationship model
+			$relationship = new Relationship;
+				
+			//set the current user to action user and check which user has lower userID value.
+			$relationship->action_user_id = $currentUser->id;;
+			$relationship->user_one_id = $currentUser->id;;
+			$relationship->user_two_id = $request->get('friend_id');
+			$relationship->status = 0;
+				
+			//attempt to save the relationship in the relationships table
+			if($relationship->save())
+				return $this->response->created();
+			else
+				return $this->response->error('could_not_send_request', 500);
+		}
 	}
 	
 	//Queries the relationships table and returns an array of all the friend requests for the current user.
@@ -91,7 +110,7 @@ class RelationshipController extends Controller
 		$friendRequest->action_user_id = $currentUser->id;;
 		Log::info($friendRequest);
 		if($friendRequest->save())
-			return $this->response->noContent();
+			return $this->response->created();
 		else
 			return $this->response->error('could_not_accept_request', 500);
 	}

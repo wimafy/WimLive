@@ -83,7 +83,7 @@ class WimController extends Controller
 	}
 	
 	//Haven't implemented this stuff yet
-	/*public function show($id)
+	public function show($id)
 	{
 	    $currentUser = JWTAuth::parseToken()->authenticate();
 	    $wim = $currentUser->wims()->find($id);
@@ -91,6 +91,7 @@ class WimController extends Controller
 	        throw new NotFoundHttpException; 
 	    return $wim;
 	}
+	/*
 	public function update(Request $request, $id)
 	{
 	    $currentUser = JWTAuth::parseToken()->authenticate();
@@ -113,5 +114,6 @@ class WimController extends Controller
 	        return $this->response->noContent();
 	    else
 	        return $this->response->error('could_not_delete_wim', 500);
-	}*/
+	}
+	*/
 }

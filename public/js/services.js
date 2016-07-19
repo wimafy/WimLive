@@ -83,7 +83,7 @@ wimServices.factory('profileService', ['Restangular', 'userService', function(Re
 			
 			onSuccess(response);
 			
-		}, function(){
+		}, function(response){
 			
 			onError(response);
 		});
@@ -119,7 +119,7 @@ wimServices.factory('relationshipService', ['Restangular', 'userService', functi
 	function viewRequests(onSuccess, onError){
 		Restangular.all('api/relationship/viewRequests').getList().then(function(response){
 			onSuccess(response);
-		}, function(){
+		}, function(response){
 			onError(response);
 		});
 	}
@@ -175,14 +175,13 @@ wimServices.factory('wimService', ['Restangular', 'userService', function(Restan
         });
     }
 
-    //Haven't implemented this yet
-    /*function getById(wimId, onSuccess, onError){
+    function getById(wimId, onSuccess, onError){
         Restangular.one('api/wims', wimId).get().then(function(response){
             onSuccess(response);
         }, function(response){
             onError(response);
         });
-    }*/
+    }
 
     //POST a new wim to the API
     function create(data, onSuccess, onError){
