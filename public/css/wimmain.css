@@ -870,6 +870,7 @@ input:focus ~ .highlight {
 
 .wiminfoindividualattendeename {
     width: 100%;
+<<<<<<< HEAD
     text-align: center;
     font-family: Arial;
     margin-top: 5px;
@@ -885,6 +886,23 @@ input:focus ~ .highlight {
     position: relative;
     line-height: 30px;
     text-align: center;
+=======
+    text-align: center;
+    font-family: Arial;
+    margin-top: 5px;
+    
+}
+
+.wiminfoindividualattendeestatus {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: -65px 90px;
+    background-color: #43A047;
+    position: relative;
+    line-height: 30px;
+    text-align: center;
+>>>>>>> parent of c042d6e... individual wim new page
     color: white;
     font-family: Arial;
     font-size: 20px;
