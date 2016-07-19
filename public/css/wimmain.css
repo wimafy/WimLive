@@ -616,24 +616,12 @@ input:focus ~ .highlight {
     
 }
 
-.currentwimscountdown {
-    width: inherit;
-    font-size: 40px;
-    margin-top: 45PX;
-    font-family: Arial;
-    opacity: .8;
-    text-align: center;
-    
+.currentwimcountdowntime {
     
 }
 
-.currentwimsactualtime {
-    width: inherit;
-    font-size: 20px;
-    margin-top: -40px;
-    font-family: Arial;
-    opacity: .6;
-    text-align: center;
+.currentwimcountdowndate {
+    
 }
 
 /*WIM info*/
