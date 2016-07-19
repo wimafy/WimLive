@@ -557,7 +557,7 @@ input:focus ~ .highlight {
 }
 
 .currentwimswimname {
-    max-width: 40%;
+    max-width: 100%;
     overflow: hidden;
     font-size: 20px;
     float: left;
@@ -571,7 +571,7 @@ input:focus ~ .highlight {
 }
 
 .currentwimswimdestination {
-    width: 40%;
+    width: 100%;
     font-size: 12px;
     float: left;
     overflow: hidden;
@@ -589,7 +589,7 @@ input:focus ~ .highlight {
     width: 60;
     margin: 5px;
     background-color: none;
-    margin-top: -45px;
+    margin-top: 5px;
 }
 
 
