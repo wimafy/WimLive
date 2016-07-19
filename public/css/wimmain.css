@@ -557,7 +557,7 @@ input:focus ~ .highlight {
 }
 
 .currentwimswimname {
-    width: 50%;
+    max-width: 40%;
     overflow: hidden;
     font-size: 20px;
     float: left;
@@ -567,10 +567,11 @@ input:focus ~ .highlight {
     opacity: .8;
     margin: 0;
     line-height: 50px;
+    white-space: nowrap;
 }
 
 .currentwimswimdestination {
-    width: 50%;
+    width: 40%;
     font-size: 12px;
     float: left;
     overflow: hidden;
@@ -584,10 +585,11 @@ input:focus ~ .highlight {
 
 .currentwimparticipantsdiv {
     float: left;
-    height: 60px;
-    width: 60px;
-    padding: 10px;
+    height: 60;
+    width: 60;
+    margin: 5px;
     background-color: red;
+    margin-top: -45px;
 }
 
 
