@@ -517,10 +517,9 @@ input:focus ~ .highlight {
 .currentwimsindividualdiv {
     width: 100vw;
     height: 70px;
-    background-color: orange;
+    background-color: white;
     margin-bottom: 1px;
     float: left;
-    
 }
 
 
@@ -544,8 +543,8 @@ input:focus ~ .highlight {
     height: 50px;
     margin: 10px;
     border-radius: 50%;
-    float: left;  
-    background-color: #529dcc;
+    float: left;
+    background-color: white;
 }
 
 .currentwimswimnameanddestinationholder {
@@ -558,50 +557,52 @@ input:focus ~ .highlight {
 }
 
 .currentwimswimname {
-    width: inherit;
+    width: 50%;
     overflow: hidden;
-    font-size: 50px;
+    font-size: 20px;
     float: left;
     text-overflow: ellipsis;
-    margin-top: 30PX;
-    font-family: Arial;
-    opacity: .8
-    
+    /* margin-top: -5PX; */
+    font-family: Roboto Black;
+    opacity: .8;
+    margin: 0;
+    line-height: 50px;
 }
 
 .currentwimswimdestination {
-    width: inherit;
-    font-size: 30px;
+    width: 50%;
+    font-size: 12px;
     float: left;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 30PX;
-    font-family: Arial;
+    font-family: Roboto;
     display: block;
-    margin-top: -50;
-    opacity: .6
+    margin-top: -12px;
+    opacity: .6;
 }
 
 .currentwimparticipantsdiv {
     float: left;
-    height: 130px;
-    width: 150px;
+    height: 60px;
+    width: 60px;
     padding: 10px;
+    background-color: red;
 }
 
 
 .currentwimparticipantsimg {
     float: left;
-    width: 63px;
-    height: 63px;
+    width: 28px;
+    height: 28px;
     margin: 1px;
     border-radius: 50%;
     background-color: #529dcc;
-    line-height: 63px;
+    line-height: 30px;
     text-align: center;
     color: white;
-    font-size: 30px;
-    font-family: Arial;
+    font-size: 20px;
+    font-family: Roboto Black;
     
 }
 
