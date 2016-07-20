@@ -1,19 +1,12 @@
-.indexlogotopright {
-    height: 100px;
-    width: 150px;
-    position: absolute;
-    
-    
-}
-
-
-
-
 body {
     margin: 0;
-    width: 100%;
-    max-width: 1100px;
+    width: 100vw;
+    max-height: 500px;
     background-color: #eeeeee;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
 }
 
 a {
@@ -25,11 +18,12 @@ a {
 
 .headerdiv {
     width: 100%;
-    height: 150px;
+    height: 50px;
     background-color: #ef5350;
-    position: relative;
+    position: absolute;
     z-index: 2;
-    box-shadow: 0px 24px 30px 0px rgba(0,0,0,0.2);
+    box-shadow: 6px 4px 30px 5px rgba(0,0,0,0.2);
+    top: 0px;
 }
 
 .homepagewimlogo {
@@ -43,26 +37,26 @@ a {
 .headerbackarrow {
     height: 60px;
     width: 50;
-    margin: 45px;
+    margin: 0px -10px 0px 0px;
     float: left;
 }
 
 #headerbackarrowicon {
-    font-size: 100px;
+    font-size: 40px;
     color: white;
-    line-height: 60px;
-    text-indent: -15px;
+    line-height: 50px;
+    text-indent: 0;
 }
 
 .headerpagetitle {
     float: left;
-    line-height: 155px;
+    line-height: 50px;
     max-width: 500px;
     margin-top: 0px;
     color: white;
     font-family: Arial;
-    font-size: 50px;
-    margin-bottom: -25px;
+    font-size: 18px;
+    margin-left: 0px;
 }
 
 .headerplusicon {
@@ -77,11 +71,12 @@ a {
 
 .notheaderdiv{
     width: 100%;
-    height: calc(100vh - 150px);
+    height: calc(100vh - 40px);
     overflow-y: scroll;
     background-color: lightgray;
     overflow: hidden;
-    
+    top: 40px;
+    position: absolute;
 }
 
 
@@ -93,11 +88,11 @@ a {
     height: 10%;
     border-radius: 12px 0px 12px 0px;
     width: 225px;
-    height: 115px;
+    height: calc(((100vh - 410px)/2) + 115px);
     border-radius: 12px 0px 12px 0px;
     max-width: 90%;
     /* margin-bottom: 10%; */
-    margin-top: calc((100vh - 410px)/2);
+    padding-top: calc((100vh - 410px)/2);
     margin-bottom: calc((100vh - 410px)/2);
 }
 
@@ -433,6 +428,7 @@ input:focus ~ .highlight {
 .dropdown {
     position: relative;
     display: inline-block;
+    float: right;
 }
 
 .dropdown-content {
@@ -480,31 +476,12 @@ input:focus ~ .highlight {
 }
 
 
-.circle-container {
-	margin: auto;
-	
-}
-.circle-container a {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: calc(50% - 50px);
-    width: 100px;
-    height: 80px;
-    margin: 0px;
-    text-decoration: none;
-}
-.circle-container  {/* display: block; *//* width: 100px; */}
-.deg0 { transform: rotate(0deg) translate(12em) rotate(180deg); } /* 12em = half the width of the wrapper */
-.deg45 { transform: rotate(-90deg) translate(12em) rotate(90deg); }
-.deg135 { transform: rotate(-180deg) translate(12em) rotate(180deg); }
-.deg245 { transform: rotate(-270deg) translate(12em) rotate(270deg); }
 
 .homepagebuttondiv {
     width: 100px;
-    height: 80px;
+    height: 60px;
     background-color: none;
-    /* border-radius: 50%; */
+    margin: auto;
 }
 
 #homepagetopbutton {
@@ -515,14 +492,14 @@ input:focus ~ .highlight {
 
 
 #homepagetopbuttonlable {
-    margin: -200px -80px;
+    /* margin: -200px -80px; */
     -ms-transform: rotate(180deg); /* IE 9 */
-    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
-    transform: rotate(180deg);
+    /* -webkit-transform: rotate(180deg); */ /* Chrome, Safari, Opera */
+    /* transform: rotate(180deg); */
 }
 
 .homepagebuttonlable {
-    margin: 5px 0px;
+    margin: auto;
     width: 100;
     font-family: Arial;
     color: white;
@@ -530,6 +507,8 @@ input:focus ~ .highlight {
     font-size: 15px;
     /* left: calc(50% - 50px); */
     /* position: absolute; */
+    text-align: center;
+    text-decoration: none;
 }
 
 
@@ -537,23 +516,35 @@ input:focus ~ .highlight {
 /*Current WIMS*/
 
 .currentwimsindividualdiv {
-    width: calc(100% - 20px);
-    height: 150px;
+    width: 100vw;
+    height: 70px;
     background-color: white;
-    margin: 8px;
-    border-radius: 10px;
-    
+    margin-bottom: 1;
 }
 
 
+.currentwimaddwimbutton {
+    background-color: #5cb85c;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10%;
+    bottom: 7%;
+    border: none;
+    color: white;
+    font-size: 60px;
+    line-height: 60px;
+    box-shadow: 4px 4px 10px 2px rgba(0,0,0,0.2);
+}
 
 .currentwimswimtypeimg {
-    width: 120px;
-    height: 120px;
-    margin: 15px;
+    width: 50;
+    height: 50;
+    margin: 0;
     border-radius: 50%;
-    float: left;  
-    background-color: #529dcc;
+    float: left;
+    text-align: center;
 }
 
 .currentwimswimnameanddestinationholder {
@@ -566,51 +557,49 @@ input:focus ~ .highlight {
 }
 
 .currentwimswimname {
-    width: inherit;
     overflow: hidden;
-    font-size: 50px;
+    font-size: 20px;
     float: left;
     text-overflow: ellipsis;
-    margin-top: 30PX;
-    font-family: Arial;
-    opacity: .8
-    
+    font-family: Roboto Black;
+    opacity: .8;
+    line-height: 55px;
+    white-space: nowrap;
 }
 
 .currentwimswimdestination {
-    width: inherit;
-    font-size: 30px;
+    /* width: inherit; */
+    font-size: 12px;
     float: left;
     overflow: hidden;
     text-overflow: ellipsis;
     margin-top: 30PX;
     font-family: Arial;
     display: block;
-    margin-top: -50;
-    opacity: .6
+    margin-top: -27px;
+    opacity: .6;
+    white-space: nowrap;
 }
 
 .currentwimparticipantsdiv {
     float: left;
-    height: 130px;
-    width: 150px;
-    padding: 10px;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
 }
 
 
 .currentwimparticipantsimg {
     float: left;
-    width: 63px;
-    height: 63px;
-    margin: 1px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     background-color: #529dcc;
-    line-height: 63px;
+    line-height: 25px;
     text-align: center;
     color: white;
-    font-size: 30px;
+    font-size: 15px;
     font-family: Arial;
-    
 }
 
 
@@ -766,6 +755,7 @@ input:focus ~ .highlight {
 
 
 .wiminfodestination {
+<<<<<<< HEAD
     float: left;
     width: calc(100% - 200px);
     height: 80px;
@@ -791,6 +781,33 @@ input:focus ~ .highlight {
     opacity: .7;
 }
 
+=======
+    float: left;
+    width: calc(100% - 200px);
+    height: 80px;
+    margin-top: 40;
+    margin-bottom: 0px;
+    line-height: 80px;
+    font-size: 80px;
+    font-family: Arial;
+    color: #3f3f3f;
+    
+    
+}
+
+.wiminfodestinationstreetname {
+    float: left;
+    width: calc(100% - 200px);
+    height: 40px;
+    margin-top: 0pc;
+    line-height: 35px;
+    font-size: 35px;
+    font-family: Arial;
+    color: #3f3f3f;
+    opacity: .7;
+}
+
+>>>>>>> parent of c042d6e... individual wim new page
 .wiminfobottomline {
     width: 90%;
     height: 2px;
@@ -877,6 +894,8 @@ input:focus ~ .highlight {
 
 .wiminfoindividualattendeename {
     width: 100%;
+<<<<<<< HEAD
+<<<<<<< HEAD
     text-align: center;
     font-family: Arial;
     margin-top: 5px;
@@ -892,6 +911,28 @@ input:focus ~ .highlight {
     position: relative;
     line-height: 30px;
     text-align: center;
+=======
+=======
+>>>>>>> parent of c042d6e... individual wim new page
+    text-align: center;
+    font-family: Arial;
+    margin-top: 5px;
+    
+}
+
+.wiminfoindividualattendeestatus {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: -65px 90px;
+    background-color: #43A047;
+    position: relative;
+    line-height: 30px;
+    text-align: center;
+<<<<<<< HEAD
+>>>>>>> parent of c042d6e... individual wim new page
+=======
+>>>>>>> parent of c042d6e... individual wim new page
     color: white;
     font-family: Arial;
     font-size: 20px;
@@ -906,6 +947,7 @@ input:focus ~ .highlight {
 
 .wiminfodetailsactualtextdiv {
     width: 80%;
+<<<<<<< HEAD
     float: left;
     height: 400px;
     overflow-y: auto;
@@ -915,6 +957,17 @@ input:focus ~ .highlight {
 .wiminfodetailsactualtext {
     width: 100%;
     float: left;
+=======
+    float: left;
+    height: 400px;
+    overflow-y: auto;
+    margin-top: -20px;
+}
+
+.wiminfodetailsactualtext {
+    width: 100%;
+    float: left;
+>>>>>>> parent of c042d6e... individual wim new page
     font-family: Arial;
     font-size: 14px;
 }
@@ -938,63 +991,79 @@ input:focus ~ .highlight {
 
 .profiletopdiv {
     width: 100%;
-    height: 575px;
-    
+    height: 250px;
+    /* background-image: url(/profile_pics/default.png); */
+    background-repeat: no-repeat;
+    background-size: 110%;
+    background-position: center center;
+    /* -webkit-filter: blur(10px); */
+    z-index: 9;
+}
+
+.profiletopdivbackgroundpic {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, .5);
+    /* background-image: url(/profile_pics/default.png); */ */
 }
 
 .profiletopdivbackgroundblur {
     width: 100%;
-    height: 575px;
+    height: 250px;
     position: absolute;
-    top: 150px;
+    top: 0;
     z-index: 1;
-    background-color: rgba(0, 0, 0, .2);
-    background-image: url(user_profile_pics/64.jpg);
+    background-color: rgba(0, 0, 0, 0.1);
+    background-image: url(/profile_pics/default.png);
     background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-filter: blur(10px);
+    background-size: 106%;
+    background-position: center center;
+    -webkit-filter: blur(6px);
 }
 
 .profiletopleftactioncircle {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: #529dcc;
     float: left;
-    margin-left: calc((100% - 500px)/3);
-    margin-right: calc((100% - 500px)/6);
-    margin-top: 250px;
+    margin-left: calc((100% - 180px)/3);
+    margin-right: calc((100% - 250px)/6);
+    margin-top: 90px;
     position: relative;
     z-index: 1;
 }
 
 .profiletoprightactioncircle {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     float: left;
-    margin-left: calc((100% - 500px)/6);
-    margin-top: 250px;
+    margin-left: calc((100% - 250px)/6);
+    margin-top: 90px;
     position: relative;
     z-index: 1;
     background-color: #529dcc;
 }
 
 #profiletopactioncircleicon {
-    width: 100px;
-    line-height: 100px;
-    font-size: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 25px;
     text-align: center;
     color: white;
 }
 
 .profiletopprofilepiccircle {
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-color: lightgray;
     float: left;
-    margin-top: 150px;
+    margin-top: 60px;
     position: relative;
     z-index: 1;
 }
@@ -1004,16 +1073,16 @@ input:focus ~ .highlight {
     width: 100%;
     text-align: center;
     font-family: Arial;
-    margin-top: 15px;
+    margin-top: 5px;
     color: white;
     position: relative;
     z-index: 1;
-    font-size: 50px;
+    font-size: 20px;
 }
 
 .profileoptionchooser {
     width: 100%;
-    height: 100px;
+    height: 50px;
     background-color: white;
     margin-top: -3px;
     position: relative;
@@ -1021,23 +1090,22 @@ input:focus ~ .highlight {
 }
 
 .profileoptiondiv {
-    height: 100px;
+    height: 50px;
     width: calc(33.33% - 4px);
     background-color: white;
     float: left;
 }
 
 .profileoptionpic {
-    width: 60px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 10px;
     display: block;
- 
 }
 
 .profileoptiondividerline {
-    height: 80px;
+    height: 30px;
     width: 2px;
     float: left;
     background-color: lightgray;
@@ -1046,16 +1114,17 @@ input:focus ~ .highlight {
 
 .profilebottomdiv {
     width: calc(100%);
-    height: calc(100% - 822px);
+    height: calc(100% - 0px);
     position: absolute;
     margin: 0px;
+    overflow: scroll;
 }
 
 
 .profilebottompastwimsdiv {
     width: 100%;
     height: 100%;
-    background-color: lightgray;
+    background-color: red;
     position: absolute;
     bottom: 0px;
     overflow: auto;
@@ -1064,7 +1133,7 @@ input:focus ~ .highlight {
 .profilebottomfriendsdiv {
     width: calc(100% - 4px);
     height: calc(100% - 4px);
-    background-color: white;
+    background-color: green;
     position: absolute;
     bottom: 0px;
     margin: 2px;
@@ -1074,8 +1143,8 @@ input:focus ~ .highlight {
 .profilebottominfodiv {
     width: 100%;
     height: 100%;
-    background-color: lightgray;
-    position: absolute;
+    background-color: lightgrey;
+    /* position: relative; */
     bottom: 0px;
     overflow: auto;
 }
@@ -1086,49 +1155,54 @@ input:focus ~ .highlight {
     width: calc(50% - 4px);
     margin-top: 4px;
     border-radius: 0px 10px 10px 0px;
-   
+    overflow: auto;
+    position: relative;
 }
 
 .profileinfoindividualdiv {
-    height: 100px;
-    width: 100%;
-    margin-top: 50px;
+    height: 43px;
+    /* width: 100%; */
+    /* margin-top: 10px; */
 }
 
 .profileinfoleftinfoimage {
-    width: 60px;
-    height: 60px;
-    margin: 0px 50px;
+    /* width: 60px; */
+    height: 20px;
+    margin: 0px 5px;
     float: left;
 }
 
 #profileinfoleftinfoimageicon {
-    font-size: 65px;
+    font-size: 20px;
     color: #3f3f3f;
 }
 
 .profileinfoleftinfotitle {
     float: left;
-    width: calc(100% - 160px);
-    font-size: 35px;
-    margin-top: 0px;
+    width: calc(100% - 181px);
+    font-size: 20px;
+    margin-top: -2px;
     margin-bottom: 0px;
     font-family: Arial;
+    line-height: 32px;
 }
 
 .profileinfoleftinfoinformation {
     float: left;
-    font-size: 25px;
-    margin-top: 0px;
-    width: calc(100% - 180px);
-    
+    font-size: 9px;
+    margin-top: -2px;
+    width: calc(100% - 30px);
     font-family: Arial;
+    margin-left: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 10px;
 }
 
 
 
 .profileinforightdiv {
-    float: left;
+    float: right;
     width: 50%;
     background-color: lightgray;
 }
@@ -1137,14 +1211,14 @@ input:focus ~ .highlight {
     width: calc(100% - 4px);
     height: 50px;
     float: left;
-    margin: 4px 10px 10px 10px;
-    background-color: #3f3f3f;
+    margin: 4px 10px 10px 0px;
     border-radius: 10px 0px 0px 10px;
-    color: white;
+    color: #3f3f3f;
     line-height: 50px;
-    font-size: 35px;
-    text-indent: 25px;
+    font-size: 15px;
+    text-indent: 7px;
     font-family: Arial;
+    background-color: white;
 }
 
 .profileinterestsdiv {
@@ -1241,25 +1315,42 @@ button.link {
 }
 
 .homepagenotifications {
-    height: 25px;
-    width: 25px;
+    height: 17px;
+    width: 17px;
     border-radius: 50%;
     background-color: white;
-    margin: -105px 60px;
-    position: relative;
+    margin: 28px 14px;
+    position: absolute;
     text-align: center;
-    line-height: 25px;
-    font-size: 16px;
+    line-height: 16px;
+    font-size: 11px;
     color: #ef5350;
     font-family: Arial Black;
+    text-decoration: none;
+}
+
+.homepagenotificationsbackgroundcircle {
+    height: 21px;
+    width: 21px;
+    border-radius: 50%;
+    background-color: #ef5350;
+    margin: 26px 12px;
+    position: absolute;
+    text-align: center;
+    line-height: 16px;
+    font-size: 11px;
+    color: #ef5350;
+    font-family: Arial Black;
+    text-decoration: none;
 }
 
 #homepagebuttonpics {
     z-index: -13;
     color: white;
-    font-size: 80px;
+    font-size: 60px;
     width: 100px;
     text-align: center;
+    line-height: 64px;
 }
 
 
@@ -1414,4 +1505,13 @@ button.link {
     bottom: 180px;
     left: 60px;
     font-size: 125px;
+}
+
+/* search page */
+
+.searchforfriendsinput {
+    height: 200px;
+    width: 100%;
+    color: red;
+    background-color: green;
 }
