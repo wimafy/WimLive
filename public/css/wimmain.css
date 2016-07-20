@@ -767,16 +767,29 @@ input:focus ~ .highlight {
     height: 200px;
     background-color: white;
     float: left;
+    border: darkgray;
+    border-style: solid none solid;
+    border-width: 1px;
+    box-shadow: 0px 3px 13px 1px rgba(0,0,0,0.2);
+    margin-bottom: 20;
 }
 
 .individualwimdetailsdatetime {
     width: 100vw;
     height: 50px;
-    background-color: aquamarine;
+    background-color: white;
     float: left;
-    border: darkgray;
+    border: lightgray;
     border-style: none none solid;
     border-width: 1px;
+}
+
+.individualwimdetailsdatetimeicon {
+    
+}
+
+.individualwimdetailsdatetimetext {
+    
 }
 
 /*profile page */
