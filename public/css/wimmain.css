@@ -769,6 +769,16 @@ input:focus ~ .highlight {
     float: left;
 }
 
+.individualwimdetailsdatetime {
+    width: 100vw;
+    height: 50px;
+    background-color: aquamarine;
+    float: left;
+    border: darkgray;
+    border-style: none none solid;
+    border-width: 1px;
+}
+
 /*profile page */
 
 .profiletopdiv {
