@@ -789,7 +789,8 @@ input:focus ~ .highlight {
 }
 
 .individualwimdetailsdatetimetext {
-    
+    font-family: Roboto Black;
+    font-size: 11px;
 }
 
 /*profile page */
