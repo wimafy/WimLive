@@ -691,6 +691,7 @@ input:focus ~ .highlight {
     margin-top: -10px;
     overflow: hidden;
     overflow-x: auto;
+    white-space: nowrap;
 }
 
 .individualwimpersonsdiv {
@@ -698,7 +699,8 @@ input:focus ~ .highlight {
     height: 60px;
     float: left;
     background-color: green;
-    white-space: nowrap
+    position: relative;
+    display: inline-block;
 }
 
 /*profile page */
