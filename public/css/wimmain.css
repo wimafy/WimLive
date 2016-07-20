@@ -639,6 +639,7 @@ input:focus ~ .highlight {
     position: absolute;
     top: 50px;
     float: left;
+    background-color: lightblue;
 }
 
 .individualwimbottomdiv {
@@ -651,14 +652,28 @@ input:focus ~ .highlight {
 .individualwimdestinationdiv {
     width: 100vw;
     height: 50px;
-    background-color: red;
+    background-color: white;
 }
 
 .individualwimdestinationicon {
-    width: 50xp;
+    width: 50ppx;
     color: black;
     text-align: center;
     float: left;
+}
+
+.individualwimdestination {
+    width: calc(100vw - 50px);
+    line-height: 30px;
+    font-family: Roboto Black;
+    font-size: 20px;
+}
+
+.individualwimdestinationstreetname {
+    width: calc(100vw - 50px);
+    line-height: 20px;
+    font-family: Roboto;
+    font-size: 12px;
 }
 
 /*profile page */
