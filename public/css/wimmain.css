@@ -762,6 +762,11 @@ input:focus ~ .highlight {
     text-align: center;
 }
 
+.individualwimheadericon {
+    color: white;
+    
+}
+
 .individualwimdetailsdiv {
     width: 100vw;
     height: 200px;
@@ -785,8 +790,10 @@ input:focus ~ .highlight {
 }
 
 #individualwimdetailsdatetimeicon {
-    font-size: 1px;
-    line-height: 1px;
+    font-size: 30px;
+    line-height: 50px;
+    float: left;
+    margin-left: calc(50% - 70px);
 }
 
 .individualwimdetailsdatetimetext {
