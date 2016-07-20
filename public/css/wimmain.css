@@ -721,6 +721,11 @@ input:focus ~ .highlight {
     margin-top: -3px;
 }
 
+.individualwimpersonresponse {
+    
+}
+
+
 .individualwiminvitedlabeldiv {
     
 }
@@ -733,12 +738,15 @@ input:focus ~ .highlight {
 }
 
 .individualwimpersonsresponse {
-    height: 15px;
-    width: 15px;
+    height: 17px;
+    width: 17px;
     border-radius: 50%;
     background-color: green;
     color: white;
-    margin: 1px;
+    margin: 28px -27px;
+    position: absolute;
+    /* line-height: 7; */
+    text-align: center;
 }
 /*profile page */
 
