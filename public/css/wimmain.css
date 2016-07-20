@@ -684,23 +684,35 @@ input:focus ~ .highlight {
 
 .individualwimattendees {
     width: 95vw;
-    margin-left: 2.5vw;
-    height: 60px;
     background-color: red;
     float: left;
     margin-top: -10px;
+    display: block;
     overflow: hidden;
-    overflow-x: auto;
     white-space: nowrap;
+    overflow-x: auto;
+    margin-left: 2.5vw;
 }
 
 .individualwimpersonsdiv {
     width: 60px;
     height: 60px;
-    float: left;
+    /* float: left; */
     background-color: green;
+    /* position: relative; */
+    /* display: inline-block; */
     position: relative;
     display: inline-block;
+    margin: 0px -2px -5px;
+}
+
+.individualwimpersonsimg {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    float: left;
+    background-color: blue;
+    border-radius: 50%;
 }
 
 /*profile page */
