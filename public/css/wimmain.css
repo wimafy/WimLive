@@ -764,7 +764,7 @@ input:focus ~ .highlight {
 
 .individualwimdetailsdiv {
     width: 100vw;
-    min-height: 200px;
+    height: 200px;
     background-color: white;
     float: left;
 }
