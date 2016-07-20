@@ -632,10 +632,16 @@ input:focus ~ .highlight {
 }
 
 /*WIM info*/
+.individualwimheadercountdowntimer {
+    line-height: 50px;
+    font-family: Roboto Black;
+    float: right;
+    margin-right: 5px;
+}
 
 .individualwimtopdiv {
     width: 100vw;
-    height: 40%;
+    height: 35%;
     float: left;
     background-color: lightblue;
 }
