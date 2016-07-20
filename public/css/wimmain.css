@@ -784,13 +784,15 @@ input:focus ~ .highlight {
     border-width: 1px;
 }
 
-.individualwimdetailsdatetimeicon {
-    
+#individualwimdetailsdatetimeicon {
+    font-size: 1px;
+    line-height: 1px;
 }
 
 .individualwimdetailsdatetimetext {
     font-family: Roboto Black;
     font-size: 11px;
+    line-height: 1px;
 }
 
 /*profile page */
