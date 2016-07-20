@@ -676,7 +676,7 @@ input:focus ~ .highlight {
 
 .individualwimattendeesdiv {
     width: 100vw;
-    height: 80px;
+    height: 95px;
     background-color: white;
     float: left;
 }
@@ -694,7 +694,7 @@ input:focus ~ .highlight {
 
 .individualwimpersonsdiv {
     width: 60px;
-    height: 70px;
+    height: 101px;
     /* float: left; */
     /* position: relative; */
     /* display: inline-block; */
@@ -714,7 +714,7 @@ input:focus ~ .highlight {
 
 .individualwimpersonsname {
     width: 60px;
-    font-family: Roboto;
+    font-family: Roboto Black;
     font-size: 11px;
     text-align: center;
     float: left;
@@ -722,7 +722,12 @@ input:focus ~ .highlight {
 }
 
 .individualwimpersonresponse {
-    
+    float: left;
+    width: inherit;
+    text-align: center;
+    font-size: 12;
+    font-family: Roboto;
+    margin-top: -10px;
 }
 
 
@@ -731,7 +736,7 @@ input:focus ~ .highlight {
 }
 
 .individualwiminvitedlabelwords {
-    line-height: 30px;
+    line-height: 40px;
     margin: 0;
     font-size: 14px;
     font-family: Roboto Black;
@@ -741,9 +746,9 @@ input:focus ~ .highlight {
     height: 17px;
     width: 17px;
     border-radius: 50%;
-    background-color: green;
+    background-color: gray;
     color: white;
-    margin: 28px -27px;
+    margin: 32px -24px;
     position: absolute;
     /* line-height: 7; */
     text-align: center;
