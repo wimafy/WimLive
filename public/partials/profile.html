@@ -6,6 +6,13 @@
     </a>
 	
     <h1 class="headerpagetitle" ng-repeat="p in profile">{{p.FirstName}}'s Profile</h1>
+    
+    <i id="profiletopactioncircleicon" class="material-icons" style="margin-right: 10px;">&#xE7FE;</i>
+    
+    <i id="profiletopactioncircleicon" class="material-icons">&#xE0C9;</i>
+      
+    
+    
 
 </div>
 <div class="notheaderdiv" ng-repeat="p in profile">
@@ -13,33 +20,95 @@
         <div class="profiletopdivbackgroundblur" style="background-image: url({{p.ProfilePic}});"></div>
         <div class="profiletopdivbackgroundpic"></div>
         <div class="profiletopdiv">
-			<div class="profiletopleftactioncircle">
-                <i id="profiletopactioncircleicon" class="material-icons">&#xE0C9;</i>
-            </div>
+			
             <img class="profiletopprofilepiccircle" src={{p.ProfilePic}}>
-            <div class="profiletoprightactioncircle">
-                <i id="profiletopactioncircleicon" class="material-icons">&#xE7FE;</i>
-            </div>
+            
             <h1 class="profiletopname">{{p.FirstName}} {{p.LastName}}</h1>
         </div>
     
         <div class="profileoptionchooser">
             <div class="profileoptiondiv" onclick="showPastwimsTab()">
-                <img class="profileoptionpic" src="web_images/W.png">
+                <i class="material-icons profileoptionpic">&#xE88E;</i>
+                <p class="profileoptionchoosertext">Interests</p>
             </div>
-                    <div class="profileoptiondividerline"></div>
+                    
             <div class="profileoptiondiv" onclick="showFriendsTab()">
-                <img class="profileoptionpic" src="web_images/friends.png">
+                <i class="material-icons profileoptionpic">&#xE7FB;</i>
+                <p class="profileoptionchoosertext">Friends</p>
             </div>
-                    <div class="profileoptiondividerline"></div>
+                    
             <div class="profileoptiondiv" onclick="showUserinfoTab()">
-                <img class="profileoptionpic" src="web_images/info-icon.png">
+                <i class="material-icons profileoptionpic">&#xE87C;</i>
+                <p class="profileoptionchoosertext">Contact Info</p>
             </div>
 
         </div>
 
         <div class="profilebottomdiv">
             <div id="pastwims" class="profilebottompastwimsdiv" style="opacity: 0;">
+                <div style="height: calc(100vh - 35vh - 79px); width: 100%; overflow: hidden; overflow-y: scroll;">
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xE8D1;</i>
+                        <p class="profileintereststext">Shopping</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xE195;</i>
+                        <p class="profileintereststext">Traveling</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xE3B7;</i>
+                        <p class="profileintereststext">Painting</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xE407;</i>
+                        <p class="profileintereststext">Nature</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xE405;</i>
+                        <p class="profileintereststext">Music</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xE412;</i>
+                        <p class="profileintereststext">Photography</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xE52F;</i>
+                        <p class="profileintereststext">Cycling</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xE566;</i>
+                        <p class="profileintereststext">Running</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xE541;</i>
+                        <p class="profileintereststext">Coffee</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xE556;</i>
+                        <p class="profileintereststext">Cooking</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xEB43;</i>
+                        <p class="profileintereststext">Gains</p>
+                        
+                    </div>
+                    <div class="profileinterestsdiv">
+                        <i id="profileinterestsimgicon" class="material-icons">&#xEB48;</i>
+                        <p class="profileintereststext">Swimming</p>
+                        
+                    </div>
+                </div>
+                <!-- #commenting out past wims
                 <div class="currentwimsindividualdiv" ng-repeat="pastWim in pastWims | filter:{ title: searchFor} | orderBy: 'date'">
                         <a href="#wimInfo">
                         <div class="currentwimswimtypeimg">
@@ -61,78 +130,134 @@
                         </div>
 						</a>
                 </div>
-
-
+                -->
 
 
             </div>
             <div id="friends" class="profilebottomfriendsdiv" ng-controller="FriendController" style="z-index: 2; opacity: 0;">
-                <div onclick="testbutton('03')" id="03" class="eachfriend">
-					<ul>
-						<li ng-repeat="friend in friends">
-							<img src={{friend.ProfilePic}} class="myfriendspic">
-							<p class="myfriendsname">{{friend.FirstName}} {{friend.LastName}}</p>
-						</li>
-					</ul>
+                <div style="height: calc(100vh - 35vh - 79px); width: 100%; overflow: hidden; overflow-y: scroll;">
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
+                    <div onclick="testbutton('03')" id="03" class="eachfriend">
+                        <img src="profile_pics/inari_boy.png" class="myfriendspic">
+                        <p class="myfriendsname">Kenta Ito</p>
+                    </div>
                 </div>
-
-
+                    <ul>
+                        <li ng-repeat="friend in friends">
+                            <div onclick="testbutton('03')" id="03" class="eachfriend">
+                                <img src={{friend.ProfilePic}} class="myfriendspic">
+                                <p class="myfriendsname">{{friend.FirstName}} {{friend.LastName}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                
+                
             </div>
             <div id="info" class="profilebottominfodiv" style="z-index: 5;" ng-repeat="p in profile">
-                <div class="profileinfoleftdiv">
-                    <div class="profileinfoindividualdiv">
-                        <div class="profileinfoleftinfoimage">
-                            <i id="profileinfoleftinfoimageicon" class="material-icons">&#xE32C;</i>
-                        </div>
-                        <p class="profileinfoleftinfotitle">Phone</p>
-                        <p class="profileinfoleftinfoinformation">{{p.PhoneNumber}}</p>
-                    </div>
-                    <div class="profileinfoindividualdiv">
-                        <div class="profileinfoleftinfoimage">
-                            <i id="profileinfoleftinfoimageicon" class="material-icons">&#xE0E1;</i>
-                        </div>
-                        <p class="profileinfoleftinfotitle">Email</p>
-                        <p class="profileinfoleftinfoinformation">{{p.email}}</p>
-                    </div>
-                    <div class="profileinfoindividualdiv">
-                        <div class="profileinfoleftinfoimage">
-                            <i id="profileinfoleftinfoimageicon" class="material-icons">&#xE7F1;</i>
-                        </div>
-                        <p class="profileinfoleftinfotitle">Location</p>
-                        <p class="profileinfoleftinfoinformation">{{p.city}}, {{p.state}}</p>
-                    </div>
-                    <div class="profileinfoindividualdiv">
-                        <div class="profileinfoleftinfoimage">
-                            <i id="profileinfoleftinfoimageicon" class="material-icons">&#xE7E9;</i>
-                        </div>
-                        <p class="profileinfoleftinfotitle">Birthday</p>
-                        <p class="profileinfoleftinfoinformation">{{p.birthday}}</p>
-                    </div>
-                    <div class="profileinfoindividualdiv">
-                        <div class="profileinfoleftinfoimage">
-                            <i id="profileinfoleftinfoimageicon" class="material-icons">&#xE63D;</i>
-                        </div>
-                        <p class="profileinfoleftinfotitle">Gender</p>
-                        <p class="profileinfoleftinfoinformation">{{p.gender}}</p>
-                    </div>
-                    <div class="profileinfoindividualdiv">
-                        <div class="profileinfoleftinfoimage">
-                            <i id="profileinfoleftinfoimageicon" class="material-icons">&#xE24D;</i>
-                        </div>
-                        <p class="profileinfoleftinfotitle">Bio</p>
-                        <p class="profileinfoleftinfoinformation">{{p.bio}}</p>
-                    </div>
-                </div>
+                <div style="height: calc(100vh - 35vh - 79px); width: 100%; overflow: hidden; overflow-y: scroll;">
+                    <div class="profileinfoleftdiv">
 
-                <div class="profileinforightdiv" ng-repeat="p in profile">
-                    <div class="profileinterestsheader">{{p.FirstName}}'s Interests</div>
-                    <div class="profileinterestsdiv" ng-repeat="interest in interests | filter:{ title: searchFor} | orderBy: 'date'">
-                        <div class="profileinterestsimg">
-                            <i id="profileinterestsimgicon" class="material-icons">{{interest.image}}</i>
-                        </div>
-                        <p class="profileintereststext">{{interest.text}}</p>
-                    </div>
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE0CD;</i>
+                            <p class="profileinfoleftinfotitle">Phone</p>
+                            <p class="profileinfoleftinfoinformation">{{p.PhoneNumber}}</p>
 
+                        </div>
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE0E1;</i>
+                            <p class="profileinfoleftinfotitle">Email</p>
+                            <p class="profileinfoleftinfoinformation">{{p.email}}</p>
+
+                        </div>
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE7F1;</i>
+                            <p class="profileinfoleftinfotitle">Location</p>
+                            <p class="profileinfoleftinfoinformation">{{p.city}}, {{p.state}}</p>
+
+                        </div>
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE7E9;</i>
+                            <p class="profileinfoleftinfotitle">Birthday</p>
+                            <p class="profileinfoleftinfoinformation">{{p.birthday}}</p>
+
+                        </div>
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE63D;</i>
+                            <p class="profileinfoleftinfotitle">Gender</p>
+                            <p class="profileinfoleftinfoinformation">{{p.gender}}</p>
+
+                        </div>
+
+                        <div class="profileinterestsdiv">
+                            <i id="profileinterestsimgicon" class="material-icons">&#xE24D;</i>
+                            <p class="profileinfoleftinfotitle">Bio</p>
+                            <p class="profileinfoleftinfoinformation">{{p.bio}}</p>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

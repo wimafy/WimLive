@@ -759,6 +759,7 @@ input:focus ~ .highlight {
 
 
 .wiminfodestination {
+<<<<<<< HEAD
     float: left;
     width: calc(100% - 200px);
     height: 80px;
@@ -784,6 +785,33 @@ input:focus ~ .highlight {
     opacity: .7;
 }
 
+=======
+    float: left;
+    width: calc(100% - 200px);
+    height: 80px;
+    margin-top: 40;
+    margin-bottom: 0px;
+    line-height: 80px;
+    font-size: 80px;
+    font-family: Arial;
+    color: #3f3f3f;
+    
+    
+}
+
+.wiminfodestinationstreetname {
+    float: left;
+    width: calc(100% - 200px);
+    height: 40px;
+    margin-top: 0pc;
+    line-height: 35px;
+    font-size: 35px;
+    font-family: Arial;
+    color: #3f3f3f;
+    opacity: .7;
+}
+
+>>>>>>> parent of c042d6e... individual wim new page
 .wiminfobottomline {
     width: 90%;
     height: 2px;
@@ -871,6 +899,7 @@ input:focus ~ .highlight {
 .wiminfoindividualattendeename {
     width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
     text-align: center;
     font-family: Arial;
     margin-top: 5px;
@@ -887,6 +916,8 @@ input:focus ~ .highlight {
     line-height: 30px;
     text-align: center;
 =======
+=======
+>>>>>>> parent of c042d6e... individual wim new page
     text-align: center;
     font-family: Arial;
     margin-top: 5px;
@@ -902,6 +933,9 @@ input:focus ~ .highlight {
     position: relative;
     line-height: 30px;
     text-align: center;
+<<<<<<< HEAD
+>>>>>>> parent of c042d6e... individual wim new page
+=======
 >>>>>>> parent of c042d6e... individual wim new page
     color: white;
     font-family: Arial;
@@ -917,6 +951,7 @@ input:focus ~ .highlight {
 
 .wiminfodetailsactualtextdiv {
     width: 80%;
+<<<<<<< HEAD
     float: left;
     height: 400px;
     overflow-y: auto;
@@ -926,6 +961,17 @@ input:focus ~ .highlight {
 .wiminfodetailsactualtext {
     width: 100%;
     float: left;
+=======
+    float: left;
+    height: 400px;
+    overflow-y: auto;
+    margin-top: -20px;
+}
+
+.wiminfodetailsactualtext {
+    width: 100%;
+    float: left;
+>>>>>>> parent of c042d6e... individual wim new page
     font-family: Arial;
     font-size: 14px;
 }
