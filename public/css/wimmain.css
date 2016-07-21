@@ -697,14 +697,13 @@ input:focus ~ .highlight {
 }
 
 .individualwimattendees {
-    width: 95vw;
+    width: 100vw;
     float: left;
     margin-top: 5px;
     display: block;
     overflow: hidden;
     white-space: nowrap;
     overflow-x: auto;
-    margin-left: 2.5vw;
 }
 
 .individualwimpersonsdiv {
