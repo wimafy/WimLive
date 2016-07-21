@@ -678,7 +678,7 @@ input:focus ~ .highlight {
 }
 
 .individualwimdestinationstreetname {
-    width: calc(100vw - 50px);
+    /* width: calc(100vw - 50px); */
     line-height: 20px;
     font-family: Roboto;
     font-size: 12px;
@@ -823,8 +823,10 @@ input:focus ~ .highlight {
 }
 
 .individualwimdestinationstreetnamediv {
-    width: calc(100vw - 50px);
+    width: calc(100vw - 65px);
     float: left;
+    margin-left: 45px;
+    margin-top: 3px;
 }
 
 /*profile page */
