@@ -1,3 +1,32 @@
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+
+<script>
+var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:15,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<!-- end of google maps iframe stuff -->
+
 <div class="headerdiv">
     <a href="#/">
         <div class="headerbackarrow">
@@ -14,7 +43,9 @@
 
 <div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: #EEEEEE; position: absolute; overflow: hidden; overflow-y: auto;">
 
-<iframe class="individualwimtopdiv" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" frameborder="0" style="border:0"></iframe>
+<div id="googleMap" class="individualwimtopdiv">
+    
+</div>
     
 <div class="individualwimbottomdiv">
     <div class="individualwimdestinationdiv">

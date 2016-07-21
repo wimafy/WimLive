@@ -686,8 +686,8 @@ input:focus ~ .highlight {
 }
 
 .individualwimattendeesdiv {
-    width: 100vw;
-    height: 95px;
+    width: 105vw;
+    height: 101px;
     background-color: white;
     float: left;
     border: darkgray;
@@ -708,7 +708,7 @@ input:focus ~ .highlight {
 }
 
 .individualwimpersonsdiv {
-    width: 60px;
+    width: 70px;
     height: 101px;
     /* float: left; */
     /* position: relative; */
@@ -719,16 +719,16 @@ input:focus ~ .highlight {
 }
 
 .individualwimpersonsimg {
-    width: 35px;
-    height: 35px;
-    margin: 7.5px 12.5px;
+    width: 50px;
+    height: 50px;
+    margin: 5px 10px;
     float: left;
     background-color: gray;
     border-radius: 50%;
 }
 
 .individualwimpersonsname {
-    width: 60px;
+    width: 70px;
     font-family: Roboto Black;
     font-size: 12px;
     text-align: center;
@@ -742,7 +742,7 @@ input:focus ~ .highlight {
     text-align: center;
     font-size: 11px;
     font-family: Roboto;
-    margin-top: -10px;
+    margin-top: -12px;
 }
 
 
@@ -758,15 +758,17 @@ input:focus ~ .highlight {
 }
 
 .individualwimpersonsresponse {
-    height: 17px;
-    width: 17px;
+    height: 19px;
+    width: 19px;
     border-radius: 50%;
     background-color: gray;
     color: white;
-    margin: 32px -24px;
+    margin: 37px -27px;
     position: absolute;
     /* line-height: 7; */
     text-align: center;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .individualwimheadericon {
