@@ -680,8 +680,8 @@ input:focus ~ .highlight {
 .individualwimdestinationstreetname {
     /* width: calc(100vw - 50px); */
     line-height: 20px;
-    font-family: Roboto;
-    font-size: 12px;
+    font-family: Roboto black;
+    font-size: 9px;
     margin-top: -24px;
 }
 
