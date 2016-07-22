@@ -1392,3 +1392,12 @@ button.link {
     color: red;
     background-color: green;
 }
+
+/* bigmap */
+
+.bigmapgetdirectionsicon {
+    font-size: 30px;
+    line-height: 50px;
+    float: left;
+    margin-left: calc(50% - 70px);
+}
