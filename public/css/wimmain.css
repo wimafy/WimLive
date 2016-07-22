@@ -787,6 +787,17 @@ input:focus ~ .highlight {
     margin-bottom: 20;
 }
 
+.individualwimdatetimediv {
+    width: 100vw;
+    height: 50px; */
+    background-color: white;
+    margin-bottom: 0px;
+    border: lightgray;
+    border-style: none none solid;
+    border-width: 1px;
+    float: left;
+}
+
 .individualwimdetailsdatetime {
     width: 100vw;
     height: 50px;
