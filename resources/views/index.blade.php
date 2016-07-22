@@ -69,7 +69,7 @@
     </body>
     
     <div class="se-pre-con">
-        <img src="images/loader-64x/Preloader_2.gif">
+        
     </div>
     
 </html>
