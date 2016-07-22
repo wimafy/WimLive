@@ -27,6 +27,23 @@
 		<script src = "js/dropdown.js"></script>
 		<script src = "js/profileActions.js"></script>
 
+        
+        /*loading screen icon */
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+
+        <script>
+        //paste this code under the head tag or in a separate js file.
+            // Wait for window load
+            $(window).load(function() {
+                // Animate loader off screen
+                $(".se-pre-con").fadeOut("slow");;
+            });
+        </script>
+        
+        /* end loading screen */
+        
         <style>
             
             li {
@@ -50,4 +67,7 @@
 			});
 		</script>
     </body>
+    
+    <div class="se-pre-con"></div>
+    
 </html>
