@@ -821,8 +821,10 @@ input:focus ~ .highlight {
 
 .individualwimdetailsdatetimetext {
     font-family: Roboto Black;
-    font-size: 11px;
-    line-height: 1px;
+    font-size: 12px;
+    line-height: 50px;
+    float: left;
+    text-indent: 5px;
 }
 
 .individualwimdetailsdivbottomdetails {
