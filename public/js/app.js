@@ -39,6 +39,10 @@ wim.config(['$routeProvider', function($routeProvider) {
 		templateUrl: 'partials/selectedWim.html',
 		controller: 'WimController'
 	}).
+	when('/testMap', {
+		templateUrl: 'partials/testMap.html',
+		controller: 'MainController'
+	}).
 	
     when('/', {
         templateUrl: 'partials/index.html',
