@@ -26,7 +26,7 @@ a {
 	height: calc(100vh - 50px);
 	z-index: 9999;
 	background: url(/web_images/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
-    background-color: lightgray;
+    background-color: white;
 }
 
 
