@@ -642,9 +642,8 @@ input:focus ~ .highlight {
 
 .individualwimtopdiv {
     width: 100vw;
-    height: 35%;
     float: left;
-    background-color: lightblue;
+    background-color: lightgray;
 }
 
 .individualwimbottomdiv {
