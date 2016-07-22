@@ -68,8 +68,6 @@
 		</script>
     </body>
     
-    <div class="se-pre-con">
-        
-    </div>
+    <div class="se-pre-con"></div>
     
 </html>
