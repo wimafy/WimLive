@@ -20,7 +20,7 @@
 		<p><input type="text" class="form-control" placeholder="Last Name..." ng-model="LastName" ></p>
 		<p>Birthday:</p>
 		<p>
-    <select id="birth_month" name="birth_month" ng-model="birth_month" >
+    <select id="birth_month" name="birth_month" ng-model="birth_month" style="height: 30px; width: 40%; 0border-radius: 4px; color: #555; background-color: #fff; background-image: none; border: 1px solid #ccc;" >
     	<option value="" disabled selected>Month</option>
     	<option value="1">January</option>
     	<option value="2">Febuary</option>
@@ -35,7 +35,7 @@
     	<option value="11">November</option>
     	<option value="12">December</option>
     </select>
-    <select id="birth_day" name="birth_day" ng-model="birth_day" >
+    <select id="birth_day" name="birth_day" ng-model="birth_day" style="height: 30px; width: 20%; border-radius: 4px; color: #555; background-color: #fff; background-image: none; border: 1px solid #ccc;">
     	<option value="" disabled selected>Day</option>
     	<option value="01">1</option>
     	<option value="02">2</option>
@@ -69,7 +69,7 @@
     	<option value="30">30</option>
     	<option value="31">31</option>
     </select>
-    <select id="birth_year" name="birth_year" ng-model="birth_year" >
+    <select id="birth_year" name="birth_year" ng-model="birth_year" style="height: 30px; width: width: calc(40% - 8px);; 0border-radius: 4px; color: #555; background-color: #fff; background-image: none; border: 1px solid #ccc;">
     	<option value="" disabled selected>Year</option>
 		<option value="2016">2016</option>
 		<option value="2015">2015</option>
@@ -188,11 +188,11 @@
         </div>
 		<hr>
 		
-		<p><input type="text" class="form-control" placeholder="City..." ng-model="city"></p>
+		<p><input type="text" class="form-control" placeholder="City..." ng-model="city" style="width: 60%; float: left;"></p>
 		
 		<!-- todo: support for other countries -->
 		<p>
-		<select id="state" name="state" ng-model="state"> 
+		<select id="state" name="state" ng-model="state" style="width: calc(40% - 4px); margin-left: 4px; height: 34px; border-radius: 4px; color: #555; background-color: #fff; background-image: none; border: 1px solid #ccc;"> 
 			<option value="" disabled selected>State</option>
 			<option value="AL">Alabama</option>
 			<option value="AK">Alaska</option>
