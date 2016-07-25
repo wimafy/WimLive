@@ -148,6 +148,8 @@ a {
 }
 
 
+
+
 * { box-sizing:border-box; }
 
 /* basic stylings ------------------------------------------ */
@@ -328,6 +330,7 @@ input:focus ~ .highlight {
 }
 
 
+/*sign up */
 
 .linktoanewaccount {
     text-align: center;
@@ -352,6 +355,15 @@ input:focus ~ .highlight {
     line-height: 35px;
     text-indent: 10px;
 }
+
+.signupinterestbuttons {
+    width: 33.3%;
+    background-color: lightgray;
+    float: left;
+    height: 75px;
+}
+
+
 
 /*friends page*/
 .backarrow {
