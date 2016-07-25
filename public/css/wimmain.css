@@ -162,10 +162,11 @@ body                 { background:url(http://scotch.io/wp-content/uploads/2014/0
   background:#FFF;
   padding:10px 50px 50px;
 }
-h2       { 
-  text-align:center; 
-  margin-bottom:50px; 
+h2       {
+  text-align:center;
+  margin-bottom:50px;
   color: white;
+  font-family: Roboto;
 }
 h2 small { 
   font-weight:normal; 
@@ -361,6 +362,8 @@ input:focus ~ .highlight {
     background-color: lightgray;
     float: left;
     height: 75px;
+    text-align: center;
+    font-family: Roboto;
 }
 
 
