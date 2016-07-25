@@ -56,8 +56,7 @@
     <div class="se-pre-con"></div>
 
     <body style="background-color: lightgray;">		
-        
-        <div style="width: 150px; height: 150px; background-color: red; z-index: 999"></div>
+
   
 		<div ng-view></div>
 		
