@@ -105,6 +105,9 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 		$location.path('/login');
 	}
 	
+	if(!userService.checkIfLoggedIn())
+		$location.path('/login');
+	
 	$scope.refresh = function(){
 		profileService.index(function(response){
 			$scope.profile = response;
@@ -113,10 +116,7 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 		});
 	
 	}
-	
-	if(!userService.checkIfLoggedIn())
-		$location.path('/login');
-	
+
 	$scope.profile = [];
 	$scope.refresh();
 }]);

@@ -4,7 +4,7 @@ var wimServices = angular.module('wimServices', [
 	'ngFileUpload'
 ]);
 
-wimServices.factory('userService', ['$http', 'Upload', 'localStorageService', function($http, Upload, localStorageService) {
+wimServices.factory('userService', ['$http', 'Upload', 'localStorageService', 'Restangular', function($http, Upload, localStorageService, Restangular) {
 
 	function checkIfLoggedIn(){
 		if(localStorageService.get('token'))
@@ -35,12 +35,12 @@ wimServices.factory('userService', ['$http', 'Upload', 'localStorageService', fu
 			localStorageService.set('token', response.data.token);
 			onSuccess(response);
 		}, function(response) {
-			onError(response);
+			onError();
 		});
 	}
 
 	function login(email, password, onSuccess, onError){
-
+		
         $http.post('/api/auth/login', 
         {
             email: email,
@@ -48,6 +48,7 @@ wimServices.factory('userService', ['$http', 'Upload', 'localStorageService', fu
         }).
         then(function(response) {
             localStorageService.set('token', response.data.token);
+			Restangular.setDefaultHeaders({ 'Authorization' : 'Bearer ' + getCurrentToken() });
             onSuccess(response);
 
         }, function(response) {
@@ -76,20 +77,20 @@ wimServices.factory('userService', ['$http', 'Upload', 'localStorageService', fu
 
 }]);
 
-wimServices.factory('profileService', ['Restangular', 'userService', function(Restangular, userService){
+wimServices.factory('profileService', ['Restangular', 'userService', 'localStorageService', function(Restangular, userService, localStorageService){
+	
+	Restangular.setDefaultHeaders({ 'Authorization' : 'Bearer ' + userService.getCurrentToken() });
 	
 	function index(onSuccess, onError){
 		Restangular.one('api/profile').get().then(function(response){
 			
 			onSuccess(response);
 			
-		}, function(response){
+		}, function(){
 			
 			onError(response);
 		});
 	}
-	
-	Restangular.setDefaultHeaders({ 'Authorization' : 'Bearer ' + userService.getCurrentToken() });
 	
 	return{
 		index: index
@@ -119,7 +120,7 @@ wimServices.factory('relationshipService', ['Restangular', 'userService', functi
 	function viewRequests(onSuccess, onError){
 		Restangular.all('api/relationship/viewRequests').getList().then(function(response){
 			onSuccess(response);
-		}, function(response){
+		}, function(){
 			onError(response);
 		});
 	}
