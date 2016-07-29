@@ -1440,6 +1440,19 @@ button.link {
     border-color: lightgray;
 }
 
+.searchforfriendseachpersonname {
+    float: left;
+    width: calc(100vw - 140px);
+    text-indent: 15px;
+    overflow: hidden;
+    display: inline;
+    text-overflow: ellipsis;
+}
+
+.searchforfriendseachpersonaddbutton {
+    float: right;
+}
+
 /* bigmap */
 
 .bigmapgetdirectionsicon {
