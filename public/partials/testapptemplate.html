@@ -1,76 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
+    
+    <link href="testapptemplate.css" rel="stylesheet">
+    
 
-    body {
-        margin: 0px;
-    }
-    
-    .fullpage1 {
-        width: 100vw;
-        height: 100vh;
-        background-color: green;
-        margin: 0px;
-        position: absolute;
-         -ms-transform: translate(100vw, 0px); /* IE 9 */
-        -webkit-transform: translate(100vw, 0px); /* Safari */
-        transform: translate(100vw, 0px);
-        z-index: 4;
-    }
-    
-    .fullpage2 {
-        width: 100vw;
-        height: 100vh;
-        background-color: blue;
-        margin: 0px;
-        position: absolute;
-        -ms-transform: translate(100vw, 0px); /* IE 9 */
-        -webkit-transform: translate(100vw, 0px); /* Safari */
-        transform: translate(100vw, 0px);
-        z-index: 2;
-    }
-    
-    .fullpage3 {
-        width: 100vw;
-        height: 100vh;
-        background-color: orange;
-        margin: 0px;
-        position: absolute;
-        z-index: 0;
-    }
-    
-</style>
+    <script>
 
-<script>
-    
-function myFunction() {
-    //alert("anything");
-    document.getElementById("fullpage1").style.transform = "translate(100vw, 0px)";
-}
-    
-function getblue() {
-    //alert("anything");
-    document.getElementById("fullpage2").style.transform = "translate(0vw, 0px)";
-}
-    
-function backblue() {
-    //alert("anything");
-    document.getElementById("fullpage2").style.transform = "translate(100vw, 0px)";
-}
-    
-function getgreen() {
-    //alert("anything");
-    document.getElementById("fullpage1").style.transform = "translate(0vw, 0px)";
-}
-    
-function backgreen() {
-    //alert("anything");
-    document.getElementById("fullpage1").style.transform = "translate(100vw, 0px)";
-}
-    
-</script>
-    
+        function myFunction() {
+            //alert("anything");
+            document.getElementById("fullpage1").style.transform = "translate(100vw, 0px)";
+            
+        }
+
+        function getblue() {
+            //alert("anything");
+            document.getElementById("fullpage2").style.transform = "translate(0vw, 0px)";
+        }
+
+        function backblue() {
+            //alert("anything");
+            document.getElementById("fullpage2").style.transform = "translate(100vw, 0px)";
+        }
+
+        function getgreen() {
+            //alert("anything");
+            document.getElementById("fullpage1").style.transform = "translate(0vw, 0px)";
+        }
+
+        function backgreen() {
+            //alert("anything");
+            document.getElementById("fullpage1").style.transform = "translate(100vw, 0px)";
+        }
+
+        
+        
+        
+        
+        function headertab1() {
+            document.getElementById("homepageselecttabselectedbar").style.transform = "translate(0vw, 0px)";
+            
+        }
+        
+        function headertab2() {
+            document.getElementById("homepageselecttabselectedbar").style.transform = "translate(33.33vw, 0px)";
+            
+        }
+        
+        function headertab3() {
+            document.getElementById("homepageselecttabselectedbar").style.transform = "translate(66.66vw, 0px)";
+            
+        }
+        
+    </script>
+        
 </head>
 
 <body>
@@ -84,7 +67,17 @@ function backgreen() {
 
     <div id="fullpage2" class="fullpage2"><button onclick="backblue()">back</button></div>
     
-    <div id="fullpage3" class="fullpage3">
+    <div id="fullpage3" class="homepage">
+            
+        <div class="homepageheader"></div>
+        <div class="homepageselecttabdiv">
+            <button class="homepageselecttabbutton" onclick="headertab1()">Current WIMs</button>    
+            <button class="homepageselecttabbutton" onclick="headertab2()">Friends</button> 
+            <button class="homepageselecttabbutton" onclick="headertab3()">Profile</button> 
+            <div id="homepageselecttabselectedbar" class="homepageselecttabselectedbar"></div>
+        </div>
+        
+        
         <button onclick="getblue()">Blue</button>
         <button onclick="getgreen()">green</button>
     </div>
