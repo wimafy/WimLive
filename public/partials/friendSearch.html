@@ -17,31 +17,14 @@
 		<div class="col-md-12">
 			<!--I am pulling in the 'users' array that is created in the FriendController in controller.js-->
 			<p>There are currently <b>{{ relationships.length }}</b> users that you could be friends with!</p>
-			<ul>
+			
 				<!--This ng-repeat is basically a for loop that loops through the users array and filters for matches that are similar to what was inputed above-->
-				<li ng-repeat="relationship in relationships | filter:searchFor">
+				<div ng-repeat="relationship in relationships | filter:searchFor" class="searchforfriendseachperson">
 					<!--I pass the user id to the addFriend function which will pass the userId onto the API to create a new friend-->
 					<b>{{ relationship.FirstName }} {{relationship.LastName}}</i><button type="button" class="btn btn-info" ng-click="sendFriendRequest(relationship.id)"> + Add New Friend  </button>
-				</li>
-			</ul>
+				</div>
+			
 		</div>
-	</div>
-    <div id="myCarousel" class="carousel slide">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <!-- Carousel items -->
-      <div class="carousel-inner">
-        <div class="active item">…</div>
-        <div class="item">…</div>
-        <div class="item">…</div>
-      </div>
-      <!-- Carousel nav -->
-      <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div>
-    
+	</div>    
     
 </div>
