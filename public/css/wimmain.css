@@ -60,8 +60,8 @@ a {
 
 #headerbackarrowicon {
     font-size: 40px;
-    color: white;
-    line-height: 50px;
+    color: black;
+    line-height: 47px;
     text-indent: 0;
 }
 
@@ -1436,8 +1436,8 @@ button.link {
     border-bottom-style: solid;
     border-width: 1px;
     margin-left: -15px;
-    padding-top: 7px;
     border-color: lightgray;
+    /* background-color: orange; */
 }
 
 .searchforfriendseachpersonpic {
@@ -1445,6 +1445,7 @@ button.link {
     height: 30px;
     border-radius: 50%;
     float: left;
+    margin: 10;
 }
 
 .searchforfriendseachpersonname {
@@ -1458,6 +1459,10 @@ button.link {
 
 .searchforfriendseachpersonaddbutton {
     float: right;
+    padding: 0;
+    margin: 0px 10px 0px;
+    background-color: orange;
+    border-color: white;
 }
 
 /* bigmap */
