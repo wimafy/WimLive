@@ -36,10 +36,9 @@ a {
     width: 100%;
     height: 50px;
     background-color: #ef5350;
-    
     position: absolute;
     z-index: 9999;
-    box-shadow: 0px 7px 16px 4px rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 6px 2px rgba(0,0,0,0.3);
     top: 0px;
 }
 
@@ -1426,7 +1425,7 @@ button.link {
     height: 50px;
     width: 100%;
     color: red;
-    background-color: wheat;
+    border-radius: 0;
 }
 
 .searchforfriendseachperson {
@@ -1437,7 +1436,7 @@ button.link {
     border-width: 1px;
     margin-left: -15px;
     border-color: lightgray;
-    /* background-color: orange; */
+    background-color: F5F5F5;
 }
 
 .searchforfriendseachpersonpic {
@@ -1446,27 +1445,33 @@ button.link {
     border-radius: 50%;
     float: left;
     margin: 10;
+    background-color: lightgray;
 }
 
 .searchforfriendseachpersonname {
     float: left;
     width: calc(100vw - 140px);
-    text-indent: 15px;
+    text-indent: 0px;
     overflow: hidden;
     display: inline;
     text-overflow: ellipsis;
+    line-height: 50px;
+    font-family: Roboto;
+    font-size: 12px;
 }
 
 .searchforfriendseachpersonaddbutton {
     float: right;
     padding: 0;
     margin: 0px 10px 0px;
-    background-color: orange;
-    border-color: white;
+    background-color: F5F5F5;
+    border-color: F5F5F5;
 }
 
 #searchforfriendseachpersonaddbuttonicon {
-    
+    color: 4CAF50;
+    font-size: 30px;
+    line-height: 47px;
 }
 /* bigmap */
 
