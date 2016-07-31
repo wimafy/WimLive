@@ -1473,6 +1473,16 @@ button.link {
     font-size: 30px;
     line-height: 47px;
 }
+
+.searchforfriendseachresultsdiv {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    overflow-y: auto;
+        
+}
+
+
 /* bigmap */
 
 .bigmapgetdirectionsicon {
