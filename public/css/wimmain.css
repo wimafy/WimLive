@@ -1423,9 +1423,11 @@ button.link {
 
 .searchforfriendsinput {
     height: 50px;
-    width: 100%;
+    width: calc(100vw - 40px);
     color: red;
     border-radius: 0;
+    float: left;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
 }
 
 .searchforfriendseachperson {
@@ -1475,7 +1477,12 @@ button.link {
 }
 
 #searchforfriendseachinputsherlocicon {
-    
+    font-size: 30px;
+    line-height: 50px;
+    width: 40px;
+    text-align: center;
+    color: #616161;
+    float: left;
 }
 
 .searchforfriendseachresultsdiv {
