@@ -124,7 +124,7 @@
         </div>
     <!-- end of shell-->
         
-		<div onload="loadedpage()" ng-view></div>
+		<div ng-view></div>
 		
     </div>    
         
