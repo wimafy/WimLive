@@ -56,7 +56,7 @@
     <div class="se-pre-con"></div>
 
     <body style="background-color: lightgray;">		
-
+    <div class="indexbladewholediv">
     <!-- shell-->
         <div id="fullpage1currentwims" class="fullpage1currentwims">
             <div class="headerdiv">
@@ -126,6 +126,8 @@
         
 		<div ng-view></div>
 		
+    </div>    
+        
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/chosen/chosen.jquery.js" type="text/javascript"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
