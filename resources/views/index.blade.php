@@ -55,8 +55,7 @@
         </style>
         
         
-        <script >
-            
+        <script>
             
             function testifpageisloaded() {
                 var everythingLoaded = setInterval(function() {
@@ -64,7 +63,6 @@
                     clearInterval(everythingLoaded);
                     init(); // this is the function that gets called when everything is loaded
                     testifpageisloaded();
-                    
 
                   }
                 }, 10);
@@ -76,7 +74,6 @@
                 alert("weve done it");
             }
 
-            window.onload = testifpageisloaded();
         </script>
         
         
