@@ -36,7 +36,7 @@ a {
 .fullpageindexpage {
     width: 100vw;
     height: 100vh;
-    background-color: lightblue;
+    background-color: lightgray;
     margin: 0px;
     position: absolute;
     -ms-transform: translate(0vw, 0px); /* IE 9 */
@@ -60,50 +60,50 @@ a {
 
 .fullpage2myprofile{
      width: 100vw;
-    height: 100vh;
-    background-color: red;
-    margin: 0px;
-    position: absolute;
+     height: 100vh;
+     /* background-color: red; */
+     margin: 0px;
+     position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
-    -webkit-transform: translate(100vw, 0px); /* Safari */
-    transform: translate(100vw, 0px);
-    z-index: 10;
+     -webkit-transform: translate(100vw, 0px); /* Safari */
+     transform: translate(100vw, 0px);
+     z-index: 10;
 }
 
 .fullpage3newwim{
      width: 100vw;
-    height: 100vh;
-    background-color: yellow;
-    margin: 0px;
-    position: absolute;
+     height: 100vh;
+     /* background-color: yellow; */
+     margin: 0px;
+     position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
-    -webkit-transform: translate(100vw, 0px); /* Safari */
-    transform: translate(100vw, 0px);
-    z-index: 10;
+     -webkit-transform: translate(100vw, 0px); /* Safari */
+     transform: translate(100vw, 0px);
+     z-index: 10;
 }
 
 .fullpage4search{
      width: 100vw;
-    height: 100vh;
-    background-color: orange;
-    margin: 0px;
-    position: absolute;
+     height: 100vh;
+     /* background-color: orange; */
+     margin: 0px;
+     position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
-    -webkit-transform: translate(100vw, 0px); /* Safari */
-    transform: translate(100vw, 0px);
-    z-index: 10;
+     -webkit-transform: translate(100vw, 0px); /* Safari */
+     transform: translate(100vw, 0px);
+     z-index: 10;
 }
 
 .fullpage5notifications {
      width: 100vw;
-    height: 100vh;
-    background-color: pink;
-    margin: 0px;
-    position: absolute;
+     height: 100vh;
+     /* background-color: pink; */
+     margin: 0px;
+     position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
-    -webkit-transform: translate(100vw, 0px); /* Safari */
-    transform: translate(100vw, 0px);
-    z-index: 10;
+     -webkit-transform: translate(100vw, 0px); /* Safari */
+     transform: translate(100vw, 0px);
+     z-index: 10;
 }
 
 /*transitions*/
