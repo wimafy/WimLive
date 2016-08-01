@@ -141,10 +141,6 @@
 		</script>
     </body>
     
-    
-    
-</html>
-
 <script>
     
     function fullpage1currentwims() {
@@ -208,3 +204,6 @@
     }     
 
 </script>
+    
+</html>
+
