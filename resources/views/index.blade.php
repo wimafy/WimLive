@@ -58,6 +58,7 @@
         <script>
             function checkifpageisloaded() {
             var everythingLoaded = setInterval(function() {
+              console.log("HOLD UP");
               if (/loaded|complete/.test(document.readyState)) {
                 clearInterval(everythingLoaded);
                 init(); // this is the function that gets called when everything is loaded
