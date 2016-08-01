@@ -64,14 +64,14 @@
                 checkifpageisloaded();
 
               }
-            }, 10000);
+            }, 10);
             }
 
 
 
 
             function init() {
-                alert("weve done it");
+                console.log("weve done it");
             }
 
             checkifpageisloaded();
