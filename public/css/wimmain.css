@@ -94,14 +94,37 @@ a {
     z-index: 10;
 }
 
-/*transitions*/
-
-.pagetransitionIn {
-    transform: translate(0vw, 0px)
+.fullpage5notifications {
+     width: 100vw;
+    height: 100vh;
+    background-color: pink;
+    margin: 0px;
+    position: absolute;
+     -ms-transform: translate(100vw, 0px); /* IE 9 */
+    -webkit-transform: translate(100vw, 0px); /* Safari */
+    transform: translate(100vw, 0px);
+    z-index: 10;
 }
 
-.pagetransitionOut {
-    transform: translate(100vw, 0px)
+/*transitions*/
+
+
+.pagetransitionIN {
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  transform: translate(0vw, 0px)!important;
+}
+
+.pagetransitionOUT {
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  transform: translate(100vw, 0px)!important;
 }
 
 
