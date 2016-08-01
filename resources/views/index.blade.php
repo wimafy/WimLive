@@ -63,10 +63,10 @@
                 init(); // this is the function that gets called when everything is loaded
                 checkifpageisloaded();
 
-              } else {
-                  alert("notloaded");
+              }else{
+                alert("this is kindof a big deal");
               }
-            }, 10);
+            }, 100);
             }
 
 
