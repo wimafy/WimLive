@@ -124,7 +124,7 @@
         </div>
     <!-- end of shell-->
         
-		<div ng-view></div>
+		<div onload="loadedpage()" ng-view></div>
 		
     </div>    
         
@@ -136,6 +136,11 @@
 			$(document).ready(function(){
 				$(".chosen-select").chosen();
 			});
+            
+            function loadedpage() {
+                alert("The page is loaded");
+            }
+            
 		</script>
         <script>
     
