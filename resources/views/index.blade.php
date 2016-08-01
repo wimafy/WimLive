@@ -18,7 +18,6 @@
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
         <script src="bower_components/restangular/dist/restangular.min.js"></script>
-        <script   src="https://code.jquery.com/jquery-3.1.0.slim.min.js"   integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="   crossorigin="anonymous"></script>
 		
 		<script src = "js/app.js"></script>
 		<script src = "js/services.js"></script>
@@ -42,6 +41,12 @@
                 // Animate loader off screen
                 $(".se-pre-con").fadeOut("slow");;
             });
+            
+            
+            /*loading function maybe*/
+            $("#ngviewdiv").load(function () {
+                 alert("anything is cool");
+             });
         </script>
         
         <!-- end loading screen -->
@@ -55,29 +60,7 @@
         </style>
         
         
-        <script>
-            // get all images and iframes
-            var $elems = $('#ngviewdiv').find('img, iframe');
-
-            // count them
-            var elemsCount = $elems.length;
-
-            // the loaded elements flag
-            var loadedCount = 0;
-
-            // attach the load event to elements
-            $elems.on('load', function () {
-                // increase the loaded count 
-                loadedCount++;
-
-                // if loaded count flag is equal to elements count
-                if (loadedCount == elemsCount) {
-                    // do what you want
-                    alert('elements loaded successfully');
-                }
-            });
         
-        </script>
     </head>
     
     <div class="se-pre-con"></div>
@@ -167,7 +150,7 @@
             function loadedpage() {
                 alert("The page is loaded");
             }
-            
+               
 		</script>
         <script>
     
