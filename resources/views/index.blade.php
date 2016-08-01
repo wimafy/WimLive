@@ -42,13 +42,6 @@
                 $(".se-pre-con").fadeOut("slow");;
             });
         </script>
-         <script>
- 
-          $( document ).ready(function() {
-            $( "p" ).text( "The DOM is now loaded and can be manipulated." );
-          });
-
-          </script>
         
         <!-- end loading screen -->
         
