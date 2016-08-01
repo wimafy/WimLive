@@ -56,7 +56,77 @@
     <div class="se-pre-con"></div>
 
     <body style="background-color: lightgray;">		
+        
+        <button onclick="fullpage1currentwims()">currentwims</button>
+        <button onclick="fullpage2myprofile()">my profile</button>
+        <button onclick="fullpage3newwim()">new wim</button>
+        <button onclick="fullpage4search()">search</button>
+        <button onclick="fullpage5notifications()">notifications</button>
 
+        <div id="fullpage1currentwims" class="fullpage1currentwims">
+            <div class="headerdiv">
+                <a onclick="backfullpage1currentwims()" href="#/">
+                    <div class="headerbackarrow">
+                        <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                    </div>
+                </a>
+
+                <h1 class="headerpagetitle">Current WIMs</h1>
+
+            </div>
+        </div>
+
+
+        <div id="fullpage2myprofile" class="fullpage2myprofile">
+            <div class="headerdiv">
+                <a onclick="backfullpage2myprofile()" href="#/">
+                    <div class="headerbackarrow">
+                        <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                    </div>
+                </a>
+
+                <h1 class="headerpagetitle" ng-repeat="p in profile">{{p.FirstName}}'s Profile</h1>
+                <i id="profiletopactioncircleicon" class="material-icons" style="margin-right: 10px;">&#xE7FE;</i>
+                <i id="profiletopactioncircleicon" class="material-icons">&#xE0C9;</i>
+            </div>
+        </div>
+
+
+        <div id="fullpage3newwim" class="fullpage3newwim">
+            <div class="headerdiv">
+                <a onclick="backfullpage3newwim()" href="#/">
+                    <div class="headerbackarrow">
+                        <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                    </div>
+                </a>
+                <h1 class="headerpagetitle">New WIM</h1>
+            </div>
+        </div>
+
+
+        <div id="fullpage4search" class="fullpage4search">
+            <div class="headerdiv">
+                <a onclick="backfullpage4search()" href="#/">
+                    <div class="headerbackarrow">
+                        <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                    </div>
+                </a>
+                <h1 class="headerpagetitle">Search any Users</h1>
+            </div>
+        </div>
+
+
+        <div id="fullpage5notifications" class="fullpage5notifications">
+            <div class="headerdiv">
+                <a onclick="backfullpage5notifications()" href="#/">
+                    <div class="headerbackarrow">
+                        <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                    </div>
+                </a>
+
+                <h1 class="headerpagetitle">Notifications</h1>
+            </div>
+        </div>
   
 		<div ng-view></div>
 		
@@ -74,3 +144,67 @@
     
     
 </html>
+
+<script>
+    
+    function fullpage1currentwims() {
+        //alert("anything");
+        document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
+        document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
+    }
+
+    function backfullpage1currentwims() {
+        //alert("anything");
+       document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
+       document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
+    }
+
+    function fullpage2myprofile() {
+        //alert("anything");
+        document.getElementById("fullpage2myprofile").classList.add('pagetransitionIN');
+        document.getElementById("fullpage2myprofile").classList.remove('pagetransitionOUT');
+    }
+
+    function backfullpage2myprofile() {
+        //alert("anything");
+        document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
+        document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
+    }
+
+    function fullpage3newwim() {
+        //alert("anything");
+        document.getElementById("fullpage3newwim").classList.add('pagetransitionIN');
+        document.getElementById("fullpage3newwim").classList.remove('pagetransitionOUt');
+    }
+
+    function backfullpage3newwim() {
+        //alert("anything");
+        document.getElementById("fullpage3newwim").classList.add('pagetransitionOUT');
+        document.getElementById("fullpage3newwim").classList.remove('pagetransitionIN');
+    }
+
+     function fullpage4search() {
+        //alert("anything");
+        document.getElementById("fullpage4search").classList.add('pagetransitionIN');
+         document.getElementById("fullpage4search").classList.remove('pagetransitionOUT');
+    }
+
+    function backfullpage4search() {
+        //alert("anything");
+        document.getElementById("fullpage4search").classList.add('pagetransitionOUT');
+        document.getElementById("fullpage4search").classList.remove('pagetransitionIN');
+    }
+
+    function fullpage5notifications() {
+        //alert("anything");
+        document.getElementById("fullpage5notifications").classList.add('pagetransitionIN');
+         document.getElementById("fullpage5notifications").classList.remove('pagetransitionOUT');
+    }
+
+    function backfullpage5notifications() {
+        //alert("anything");
+        document.getElementById("fullpage5notifications").classList.add('pagetransitionOUT');
+        document.getElementById("fullpage5notifications").classList.remove('pagetransitionIN');
+    }     
+
+</script>
