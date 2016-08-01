@@ -139,71 +139,71 @@
 				$(".chosen-select").chosen();
 			});
 		</script>
+        <script>
+    
+            function fullpage1currentwims() {
+                //alert("anything");
+                document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
+                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
+            }
+
+            function backfullpage1currentwims() {
+                //alert("anything");
+               document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
+               document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
+            }
+
+            function fullpage2myprofile() {
+                //alert("anything");
+                document.getElementById("fullpage2myprofile").classList.add('pagetransitionIN');
+                document.getElementById("fullpage2myprofile").classList.remove('pagetransitionOUT');
+            }
+
+            function backfullpage2myprofile() {
+                //alert("anything");
+                document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
+                document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
+            }
+
+            function fullpage3newwim() {
+                //alert("anything");
+                document.getElementById("fullpage3newwim").classList.add('pagetransitionIN');
+                document.getElementById("fullpage3newwim").classList.remove('pagetransitionOUt');
+            }
+
+            function backfullpage3newwim() {
+                //alert("anything");
+                document.getElementById("fullpage3newwim").classList.add('pagetransitionOUT');
+                document.getElementById("fullpage3newwim").classList.remove('pagetransitionIN');
+            }
+
+             function fullpage4search() {
+                //alert("anything");
+                document.getElementById("fullpage4search").classList.add('pagetransitionIN');
+                 document.getElementById("fullpage4search").classList.remove('pagetransitionOUT');
+            }
+
+            function backfullpage4search() {
+                //alert("anything");
+                document.getElementById("fullpage4search").classList.add('pagetransitionOUT');
+                document.getElementById("fullpage4search").classList.remove('pagetransitionIN');
+            }
+
+            function fullpage5notifications() {
+                //alert("anything");
+                document.getElementById("fullpage5notifications").classList.add('pagetransitionIN');
+                 document.getElementById("fullpage5notifications").classList.remove('pagetransitionOUT');
+            }
+
+            function backfullpage5notifications() {
+                //alert("anything");
+                document.getElementById("fullpage5notifications").classList.add('pagetransitionOUT');
+                document.getElementById("fullpage5notifications").classList.remove('pagetransitionIN');
+            }     
+
+        </script>
+        
     </body>
-    
-<script>
-    
-    function fullpage1currentwims() {
-        //alert("anything");
-        document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
-        document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
-    }
-
-    function backfullpage1currentwims() {
-        //alert("anything");
-       document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
-       document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
-    }
-
-    function fullpage2myprofile() {
-        //alert("anything");
-        document.getElementById("fullpage2myprofile").classList.add('pagetransitionIN');
-        document.getElementById("fullpage2myprofile").classList.remove('pagetransitionOUT');
-    }
-
-    function backfullpage2myprofile() {
-        //alert("anything");
-        document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
-        document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
-    }
-
-    function fullpage3newwim() {
-        //alert("anything");
-        document.getElementById("fullpage3newwim").classList.add('pagetransitionIN');
-        document.getElementById("fullpage3newwim").classList.remove('pagetransitionOUt');
-    }
-
-    function backfullpage3newwim() {
-        //alert("anything");
-        document.getElementById("fullpage3newwim").classList.add('pagetransitionOUT');
-        document.getElementById("fullpage3newwim").classList.remove('pagetransitionIN');
-    }
-
-     function fullpage4search() {
-        //alert("anything");
-        document.getElementById("fullpage4search").classList.add('pagetransitionIN');
-         document.getElementById("fullpage4search").classList.remove('pagetransitionOUT');
-    }
-
-    function backfullpage4search() {
-        //alert("anything");
-        document.getElementById("fullpage4search").classList.add('pagetransitionOUT');
-        document.getElementById("fullpage4search").classList.remove('pagetransitionIN');
-    }
-
-    function fullpage5notifications() {
-        //alert("anything");
-        document.getElementById("fullpage5notifications").classList.add('pagetransitionIN');
-         document.getElementById("fullpage5notifications").classList.remove('pagetransitionOUT');
-    }
-
-    function backfullpage5notifications() {
-        //alert("anything");
-        document.getElementById("fullpage5notifications").classList.add('pagetransitionOUT');
-        document.getElementById("fullpage5notifications").classList.remove('pagetransitionIN');
-    }     
-
-</script>
     
 </html>
 
