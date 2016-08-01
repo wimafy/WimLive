@@ -55,7 +55,8 @@
         </style>
         
         
-        <script>
+        <script >
+            
             
             function testifpageisloaded() {
                 var everythingLoaded = setInterval(function() {
@@ -75,6 +76,7 @@
                 alert("weve done it");
             }
 
+            window.onload = testifpageisloaded();
         </script>
         
         
@@ -84,7 +86,7 @@
     
     <div class="se-pre-con"></div>
 
-    <body onload="testifpageisloaded()" style="background-color: lightgray;">		
+    <body style="background-color: lightgray;">		
     <div class="indexbladewholediv">
     <!-- shell-->
         <div id="fullpage1currentwims" class="fullpage1currentwims">
