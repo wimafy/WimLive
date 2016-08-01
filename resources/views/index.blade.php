@@ -61,6 +61,7 @@
               if (/loaded|complete/.test(document.readyState)) {
                 clearInterval(everythingLoaded);
                 init(); // this is the function that gets called when everything is loaded
+                var everythingLoaded = "nothing";
                 checkifpageisloaded();
 
               } else {
