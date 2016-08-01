@@ -68,7 +68,7 @@
 
 
             function init() {
-                alert("weve done it");
+                //alert("weve done it");
             }
 
         </script>
