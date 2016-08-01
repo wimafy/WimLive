@@ -63,8 +63,10 @@
                 init(); // this is the function that gets called when everything is loaded
                 checkifpageisloaded();
 
+              }else{
+                init2();
               }
-            }, 1000);
+            }, 500);
             }
 
 
@@ -72,6 +74,10 @@
 
             function init() {
                 console.log("weve done it");
+            }
+            
+            function init2() {
+                console.log("kindof a big deal");
             }
 
             checkifpageisloaded();
