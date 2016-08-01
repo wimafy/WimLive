@@ -57,7 +57,7 @@
 
     <body style="background-color: lightgray;">		
 
-
+    <!-- shell-->
         <div id="fullpage1currentwims" class="fullpage1currentwims">
             <div class="headerdiv">
                 <a onclick="backfullpage1currentwims()" href="#/">
@@ -122,7 +122,8 @@
                 <h1 class="headerpagetitle">Notifications</h1>
             </div>
         </div>
-  
+    <!-- end of shell-->
+        
 		<div ng-view></div>
 		
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>

@@ -12,7 +12,7 @@
 			</div>
 		</div>
         
-        <a href='#notify' style="text-decoration: none;">
+        <a onclick="fullpage5notifications()" href='#notify' style="text-decoration: none;">
             <p style="height: 50px; line-height: 50px; float: right; padding: 0px 5px 0px 5px; color: white; font-size: 12px;" ng-repeat="p in profile"> {{p.FirstName }} {{ p.LastName }}</p>
             <div style="float: right;" ng-repeat="p in profile">
                 <img style="float: right; height: 22px; width: 22px; border-radius: 50%; background-color: white; margin-top: 14px;" src={{p.ProfilePic}}>
@@ -30,7 +30,7 @@
     <div style="width: 100vw;height: 300px;background-color: none;position: absolute;top: calc(50% - 150px);">
         <div style="width: 100vw; height: 100px; background-color: none; float: left;"> 
             
-             <a href='#currentWims' class='homepagebuttondiv' style="text-decoration: none;">
+             <a onclick="fullpage1currentwims()" href='#currentWims' class='homepagebuttondiv' style="text-decoration: none;">
                 <div class="homepagebuttondiv">
                     <i class="material-icons" id="homepagebuttonpics" >&#xE80E;</i>
                 </div>
@@ -39,7 +39,7 @@
 
         </div>
         <div style="width: 50vw; height: 100px; background-color: none; float: left;">
-             <a href='#profile' class='homepagebuttondiv' style="text-decoration: none;">
+             <a onclick="fullpage2myprofile()" href='#profile' class='homepagebuttondiv' style="text-decoration: none;">
                 <div class="homepagebuttondiv">
                     <i class="material-icons" id="homepagebuttonpics" >&#xE7FD;</i>
                 </div>
@@ -48,7 +48,7 @@
             </a>
         </div>
         <div style="width: 50vw; height: 100px; background-color: none; float: left;">
-              <a href='#newWim' class='homepagebuttondiv' style="text-decoration: none;">
+              <a onclick="fullpage3newwim()" href='#newWim' class='homepagebuttondiv' style="text-decoration: none;">
                 <div class="homepagebuttondiv">
                     <i class="material-icons" id="homepagebuttonpics" >&#xE148;</i>
                 </div>
@@ -58,7 +58,7 @@
            
         </div>
         <div style="width: 100vw; height: 100px; background-color: none; float: left;">            
-              <a href='#friendSearch' class='homepagebuttondiv' style="text-decoration: none;">
+              <a onclick="fullpage4search()" href='#friendSearch' class='homepagebuttondiv' style="text-decoration: none;">
                 <div class="homepagebuttondiv">
                     <i class="material-icons" id="homepagebuttonpics" >&#xE8B6;</i>
                 </div>
