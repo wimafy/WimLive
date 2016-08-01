@@ -33,7 +33,11 @@ a {
 /* whole app css */
 
 .indexbladewholediv {
-    
+    width: 100vw;
+    background-color: lightgray;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
 }
 
 .fullpageindexpage {
