@@ -41,12 +41,6 @@
                 // Animate loader off screen
                 $(".se-pre-con").fadeOut("slow");;
             });
-            
-            
-            /*loading function maybe*/
-            $("#ngviewdiv").load(function () {
-                 alert("anything is cool");
-             });
         </script>
         
         <!-- end loading screen -->
