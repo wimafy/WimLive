@@ -53,7 +53,7 @@ a {
      position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
      -webkit-transform: translate(100vw, 0px); /* Safari */
-     transform: translate(100vw, 0px);
+     transform: translate(125vw, 0px);
      z-index: 10;
 }
 
@@ -65,7 +65,7 @@ a {
      position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
      -webkit-transform: translate(100vw, 0px); /* Safari */
-     transform: translate(100vw, 0px);
+     transform: translate(125vw, 0px);
      z-index: 10;
 }
 
@@ -77,7 +77,7 @@ a {
      position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
      -webkit-transform: translate(100vw, 0px); /* Safari */
-     transform: translate(100vw, 0px);
+     transform: translate(125vw, 0px);
      z-index: 10;
 }
 
@@ -89,7 +89,7 @@ a {
      position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
      -webkit-transform: translate(100vw, 0px); /* Safari */
-     transform: translate(100vw, 0px);
+     transform: translate(125vw, 0px);
      z-index: 10;
 }
 
@@ -101,7 +101,7 @@ a {
      position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
      -webkit-transform: translate(100vw, 0px); /* Safari */
-     transform: translate(100vw, 0px);
+     transform: translate(125vw, 0px);
      z-index: 10;
 }
 
