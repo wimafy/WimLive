@@ -56,6 +56,7 @@
         
              
         <script>
+            function checkifpageisloaded() {
             var everythingLoaded = setInterval(function() {
               if (/loaded|complete/.test(document.readyState)) {
                 clearInterval(everythingLoaded);
@@ -63,6 +64,7 @@
 
               }
             }, 10);
+            }
 
 
 
