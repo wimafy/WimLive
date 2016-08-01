@@ -55,7 +55,7 @@
         </style>
         
         
-        <script>
+        <script onload="testifpageisloaded()">
             
             function testifpageisloaded() {
                 var everythingLoaded = setInterval(function() {
