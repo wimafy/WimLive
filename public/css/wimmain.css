@@ -30,6 +30,83 @@ a {
 }
 
 
+/* whole app css */
+
+
+.fullpageindexpage {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    margin: 0px;
+    position: absolute;
+    -ms-transform: translate(0vw, 0px); /* IE 9 */
+    -webkit-transform: translate(0vw, 0px); /* Safari */
+    transform: translate(0vw, 0px);
+    top: 0px;
+    z-index: 1;
+}
+
+.fullpage1currentwims{
+     width: 100vw;
+    height: 100vh;
+    background-color: green;
+    margin: 0px;
+    position: absolute;
+     -ms-transform: translate(100vw, 0px); /* IE 9 */
+    -webkit-transform: translate(100vw, 0px); /* Safari */
+    transform: translate(100vw, 0px);
+    z-index: 10;
+}
+
+.fullpage2myprofile{
+     width: 100vw;
+    height: 100vh;
+    background-color: red;
+    margin: 0px;
+    position: absolute;
+     -ms-transform: translate(100vw, 0px); /* IE 9 */
+    -webkit-transform: translate(100vw, 0px); /* Safari */
+    transform: translate(100vw, 0px);
+    z-index: 10;
+}
+
+.fullpage3newwim{
+     width: 100vw;
+    height: 100vh;
+    background-color: yellow;
+    margin: 0px;
+    position: absolute;
+     -ms-transform: translate(100vw, 0px); /* IE 9 */
+    -webkit-transform: translate(100vw, 0px); /* Safari */
+    transform: translate(100vw, 0px);
+    z-index: 10;
+}
+
+.fullpage4search{
+     width: 100vw;
+    height: 100vh;
+    background-color: orange;
+    margin: 0px;
+    position: absolute;
+     -ms-transform: translate(100vw, 0px); /* IE 9 */
+    -webkit-transform: translate(100vw, 0px); /* Safari */
+    transform: translate(100vw, 0px);
+    z-index: 10;
+}
+
+/*transitions*/
+
+.pagetransitionIn {
+    transform: translate(0vw, 0px)
+}
+
+.pagetransitionOut {
+    transform: translate(100vw, 0px)
+}
+
+
+
+
 /*standard page code */
 
 .headerdiv {
@@ -1424,12 +1501,10 @@ button.link {
 .searchforfriendsinput {
     height: 50px;
     width: calc(100vw - 40px);
-    color: black;
+    color: red;
     border-radius: 0;
     float: left;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-    font-family: Roboto;
-    font-size: 22px;
 }
 
 .searchforfriendseachperson {
@@ -1485,7 +1560,6 @@ button.link {
     text-align: center;
     color: #616161;
     float: left;
-    background-color: white;
 }
 
 .searchforfriendseachresultsdiv {
@@ -1493,8 +1567,7 @@ button.link {
     height: calc(100vh - 100px);
     overflow: hidden;
     overflow-y: auto;
-    top: 50px;
-    position: absolute;
+        
 }
 
 
