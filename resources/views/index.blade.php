@@ -56,12 +56,7 @@
     <div class="se-pre-con"></div>
 
     <body style="background-color: lightgray;">		
-        
-        <button onclick="fullpage1currentwims()">currentwims</button>
-        <button onclick="fullpage2myprofile()">my profile</button>
-        <button onclick="fullpage3newwim()">new wim</button>
-        <button onclick="fullpage4search()">search</button>
-        <button onclick="fullpage5notifications()">notifications</button>
+
 
         <div id="fullpage1currentwims" class="fullpage1currentwims">
             <div class="headerdiv">
