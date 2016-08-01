@@ -42,20 +42,8 @@
                 $(".se-pre-con").fadeOut("slow");;
             });
             
-        </script>
-        
-        <!-- end loading screen -->
-        
-        <style>
             
-            li {
-                padding-bottom: 8px;
-            }
-
-        </style>
-        
-        
-        <script>
+            
             
             function testifpageisloaded() {
                 var everythingLoaded = setInterval(function() {
@@ -73,6 +61,22 @@
             function init() {
                 alert("weve done it");
             }
+        </script>
+        
+        <!-- end loading screen -->
+        
+        <style>
+            
+            li {
+                padding-bottom: 8px;
+            }
+
+        </style>
+        
+        
+        <script>
+            
+            
 
         </script>
         
