@@ -59,8 +59,8 @@ a {
 
 #headerbackarrowicon {
     font-size: 40px;
-    color: black;
-    line-height: 47px;
+    color: white;
+    line-height: 50px;
     text-indent: 0;
 }
 
@@ -1424,10 +1424,12 @@ button.link {
 .searchforfriendsinput {
     height: 50px;
     width: calc(100vw - 40px);
-    color: red;
+    color: black;
     border-radius: 0;
     float: left;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    font-family: Roboto;
+    font-size: 22px;
 }
 
 .searchforfriendseachperson {
@@ -1483,6 +1485,7 @@ button.link {
     text-align: center;
     color: #616161;
     float: left;
+    background-color: white;
 }
 
 .searchforfriendseachresultsdiv {
@@ -1490,7 +1493,8 @@ button.link {
     height: calc(100vh - 100px);
     overflow: hidden;
     overflow-y: auto;
-        
+    top: 50px;
+    position: absolute;
 }
 
 

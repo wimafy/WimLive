@@ -2,84 +2,93 @@
 <html>
 <head>
     
-    <link href="testapptemplate.css" rel="stylesheet">
+    <link href="../css/wimmain.css" rel="stylesheet">
     
 
     <script>
 
-        function myFunction() {
+
+        function fullpage1currentwims() {
             //alert("anything");
-            document.getElementById("fullpage1").style.transform = "translate(100vw, 0px)";
-            
+            document.getElementById("fullpage1currentwims").style.transform = "translate(0vw, 0px)";
         }
 
-        function getblue() {
+        function backfullpage1currentwims() {
             //alert("anything");
-            document.getElementById("fullpage2").style.transform = "translate(0vw, 0px)";
+            document.getElementById("fullpage1currentwims").style.transform = "translate(100vw, 0px)";
         }
 
-        function backblue() {
+        function fullpage2myprofile() {
             //alert("anything");
-            document.getElementById("fullpage2").style.transform = "translate(100vw, 0px)";
+            document.getElementById("fullpage2myprofile").style.transform = "translate(0vw, 0px)";
         }
 
-        function getgreen() {
+        function backfullpage2myprofile() {
             //alert("anything");
-            document.getElementById("fullpage1").style.transform = "translate(0vw, 0px)";
+            document.getElementById("fullpage2myprofile").style.transform = "translate(100vw, 0px)";
+        }
+        
+        function fullpage3newwim() {
+            //alert("anything");
+            document.getElementById("fullpage3newwim").style.transform = "translate(0vw, 0px)";
         }
 
-        function backgreen() {
+        function backfullpage3newwim() {
             //alert("anything");
-            document.getElementById("fullpage1").style.transform = "translate(100vw, 0px)";
+            document.getElementById("fullpage3newwim").style.transform = "translate(100vw, 0px)";
         }
+        
+         function fullpage4search() {
+            //alert("anything");
+            document.getElementById("fullpage4search").style.transform = "translate(0vw, 0px)";
+        }
+
+        function backfullpage4search() {
+            //alert("anything");
+            document.getElementById("fullpage4search").style.transform = "translate(100vw, 0px)";
+        }
+        
+        
 
         
         
-        
-        
-        function headertab1() {
-            document.getElementById("homepageselecttabselectedbar").style.transform = "translate(0vw, 0px)";
-            
-        }
-        
-        function headertab2() {
-            document.getElementById("homepageselecttabselectedbar").style.transform = "translate(33.33vw, 0px)";
-            
-        }
-        
-        function headertab3() {
-            document.getElementById("homepageselecttabselectedbar").style.transform = "translate(66.66vw, 0px)";
-            
-        }
+
         
     </script>
         
 </head>
 
 <body>
-
-    
     
 
 <div style="width: 100vw; height: 100vh; overflow: hidden; position: absolute; top: 0;  background-color: lightgray;">
     
-    <div id="fullpage1" class="fullpage1"><button onclick="myFunction()">back</button></div>
+    <div id="fullpage1currentwims" class="fullpage1currentwims">
+        <button onclick="backfullpage1currentwims()">back</button>
+    </div>
 
-    <div id="fullpage2" class="fullpage2"><button onclick="backblue()">back</button></div>
+    <div id="fullpage2myprofile" class="fullpage2myprofile">
+        <button onclick="backfullpage2myprofile()">back</button>
+    </div>
     
-    <div id="fullpage3" class="homepage">
-            
-        <div class="homepageheader"></div>
-        <div class="homepageselecttabdiv">
-            <button class="homepageselecttabbutton" onclick="headertab1()">Current WIMs</button>    
-            <button class="homepageselecttabbutton" onclick="headertab2()">Friends</button> 
-            <button class="homepageselecttabbutton" onclick="headertab3()">Profile</button> 
-            <div id="homepageselecttabselectedbar" class="homepageselecttabselectedbar"></div>
-        </div>
+    <div id="fullpage3newwim" class="fullpage3newwim">
+        <button onclick="backfullpage3newwim()">back</button>
+    </div>
+    
+    <div id="fullpage4search" class="fullpage4search">
+        <button onclick="backfullpage4search()">back</button>
+    </div>
+    
+    
+    
+    
+    <div class="fullpageindexpage">
         
+        <button onclick="fullpage1currentwims()">currentwims</button>
+        <button onclick="fullpage2myprofile()">my profile</button>
+        <button onclick="fullpage3newwim()">new wim</button>
+        <button onclick="fullpage4search()">search</button>
         
-        <button onclick="getblue()">Blue</button>
-        <button onclick="getgreen()">green</button>
     </div>
 
 </div>
