@@ -70,14 +70,15 @@
             }
 
 
-            function init2() {
-                console.log("weve done it");
-            }
+
 
             function init() {
                 console.log("weve done it");
             }
 
+            function init2() {
+                console.log("kindof a big deal");
+            }
             checkifpageisloaded();
         </script>
         
