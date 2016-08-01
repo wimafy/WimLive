@@ -85,7 +85,7 @@
                     </div>
                 </a>
 
-                <h1 class="headerpagetitle">{{p.FirstName}}'s Profile</h1>
+                <h1 class="headerpagetitle"> Profile</h1>
                 <i id="profiletopactioncircleicon" class="material-icons" style="margin-right: 10px;">&#xE7FE;</i>
                 <i id="profiletopactioncircleicon" class="material-icons">&#xE0C9;</i>
             </div>
