@@ -48,14 +48,13 @@ a {
 
 .fullpage1currentwims{
      width: 100vw;
-    height: 100vh;
-    background-color: green;
-    margin: 0px;
-    position: absolute;
+     height: 100vh;
+     margin: 0px;
+     position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
-    -webkit-transform: translate(100vw, 0px); /* Safari */
-    transform: translate(100vw, 0px);
-    z-index: 10;
+     -webkit-transform: translate(100vw, 0px); /* Safari */
+     transform: translate(100vw, 0px);
+     z-index: 10;
 }
 
 .fullpage2myprofile{
@@ -124,7 +123,7 @@ a {
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
-  transform: translate(100vw, 0px)!important;
+  transform: translate(125vw, 0px)!important;
 }
 
 
@@ -138,7 +137,7 @@ a {
     background-color: #ef5350;
     position: absolute;
     z-index: 9999;
-    box-shadow: 0px 1px 6px 2px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.2);
     top: 0px;
 }
 
