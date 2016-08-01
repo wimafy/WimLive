@@ -29,8 +29,9 @@
 
         
         <!--loading screen icon -->
-        
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+        <!-- old jquery (it works though)
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
         <script>
@@ -41,6 +42,13 @@
                 $(".se-pre-con").fadeOut("slow");;
             });
         </script>
+         <script>
+ 
+          $( document ).ready(function() {
+            $( "p" ).text( "The DOM is now loaded and can be manipulated." );
+          });
+
+          </script>
         
         <!-- end loading screen -->
         
@@ -124,7 +132,7 @@
         </div>
     <!-- end of shell-->
         
-		<div ng-view></div>
+		<div id="ngviewdiv" ng-view></div>
 		
     </div>    
         
