@@ -61,12 +61,13 @@
               if (/loaded|complete/.test(document.readyState)) {
                 clearInterval(everythingLoaded);
                 init(); // this is the function that gets called when everything is loaded
+                
                 checkifpageisloaded();
 
               }else{
                 init2();
               }
-            }, 500);
+            }, 10);
             }
 
 
