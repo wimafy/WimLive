@@ -62,12 +62,9 @@
                 clearInterval(everythingLoaded);
                 init(); // this is the function that gets called when everything is loaded
                 
-                
-
-              }else{
-                init2();
-                
-              }
+                  }else{
+                      init2();    
+                 }
             }, 10);
             }
 
@@ -209,36 +206,42 @@
 
             function fullpage3newwim() {
                 //alert("anything");
+                checkifpageisloaded();
                 document.getElementById("fullpage3newwim").classList.add('pagetransitionIN');
                 document.getElementById("fullpage3newwim").classList.remove('pagetransitionOUt');
             }
 
             function backfullpage3newwim() {
                 //alert("anything");
+                checkifpageisloaded();
                 document.getElementById("fullpage3newwim").classList.add('pagetransitionOUT');
                 document.getElementById("fullpage3newwim").classList.remove('pagetransitionIN');
             }
 
              function fullpage4search() {
                 //alert("anything");
+                checkifpageisloaded();
                 document.getElementById("fullpage4search").classList.add('pagetransitionIN');
                  document.getElementById("fullpage4search").classList.remove('pagetransitionOUT');
             }
 
             function backfullpage4search() {
                 //alert("anything");
+                checkifpageisloaded();
                 document.getElementById("fullpage4search").classList.add('pagetransitionOUT');
                 document.getElementById("fullpage4search").classList.remove('pagetransitionIN');
             }
 
             function fullpage5notifications() {
                 //alert("anything");
+                checkifpageisloaded();
                 document.getElementById("fullpage5notifications").classList.add('pagetransitionIN');
                  document.getElementById("fullpage5notifications").classList.remove('pagetransitionOUT');
             }
 
             function backfullpage5notifications() {
                 //alert("anything");
+                checkifpageisloaded();
                 document.getElementById("fullpage5notifications").classList.add('pagetransitionOUT');
                 document.getElementById("fullpage5notifications").classList.remove('pagetransitionIN');
             }     
