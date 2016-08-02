@@ -181,24 +181,28 @@
     
             function fullpage1currentwims() {
                 //alert("anything");
+                checkifpageisloaded();
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
             }
 
             function backfullpage1currentwims() {
                 //alert("anything");
-               document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
+                checkifpageisloaded();
+                document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
             }
 
             function fullpage2myprofile() {
                 //alert("anything");
+                checkifpageisloaded();
                 document.getElementById("fullpage2myprofile").classList.add('pagetransitionIN');
                 document.getElementById("fullpage2myprofile").classList.remove('pagetransitionOUT');
             }
 
             function backfullpage2myprofile() {
                 //alert("anything");
+                checkifpageisloaded();
                 document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
                 document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
             }
