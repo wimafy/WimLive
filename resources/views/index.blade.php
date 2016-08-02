@@ -62,11 +62,11 @@
                 clearInterval(everythingLoaded);
                 init(); // this is the function that gets called when everything is loaded
                 
-                checkifpageisloaded();
+                
 
               }else{
                 init2();
-                checkifpageisloaded();
+                
               }
             }, 10);
             }
