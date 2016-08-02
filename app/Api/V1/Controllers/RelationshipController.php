@@ -31,7 +31,8 @@ class RelationshipController extends Controller
 								username,
 								email,
 								FirstName,
-								LastName
+								LastName,
+								ProfilePic
 							 FROM
 								users');
 		return $users;

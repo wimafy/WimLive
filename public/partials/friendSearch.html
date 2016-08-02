@@ -26,7 +26,7 @@
 				<!--This ng-repeat is basically a for loop that loops through the users array and filters for matches that are similar to what was inputed above-->
 				<div ng-repeat="relationship in relationships | filter:searchFor" class="searchforfriendseachperson">
 					<!--I pass the user id to the addFriend function which will pass the userId onto the API to create a new friend-->
-                    <img class="searchforfriendseachpersonpic">
+                    <img class="searchforfriendseachpersonpic" src={{relationship.ProfilePic}}>
 					<b class="searchforfriendseachpersonname">{{ relationship.FirstName }} {{relationship.LastName}}</b>
                     <button type="button" class="searchforfriendseachpersonaddbutton btn btn-info" ng-click="sendFriendRequest(relationship.id)">
                         <i id="searchforfriendseachpersonaddbuttonicon" class="material-icons">&#xE148;</i>  
