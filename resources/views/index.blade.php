@@ -66,6 +66,7 @@
 
               }else{
                 init2();
+                checkifpageisloaded();
               }
             }, 10);
             }
