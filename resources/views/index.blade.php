@@ -165,12 +165,11 @@
 
             function backfullpage1currentwims() {
                 //alert("anything");
+               
+                window.location.assign("#/");
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
-                
-               alert("one");    
-               window.location.assign("#/");
-                alert("two");
+               
                 
                checkifpageisloaded();
                 
