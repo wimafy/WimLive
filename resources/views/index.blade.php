@@ -160,13 +160,17 @@
                 
                 console.log('before');
                  
-                setTimeout(function(){ console.log("Hello"); }, 100);
+                setTimeout(function(){ 
                 
-                console.log('after');
+                    console.log('after');
                 
-                window.location.assign("#currentWims");
+                    window.location.assign("#currentWims");
+
+                    checkifpageisloaded();
                 
-                checkifpageisloaded();
+                }, 3000);
+                
+                
             }
 
             function backfullpage1currentwims() {
