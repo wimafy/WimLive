@@ -159,7 +159,9 @@
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
                 
                 console.log('before');
-                wait(2000);  //7 seconds in milliseconds
+                 
+                setTimeout(function(){ console.log("Hello"); }, 100);
+                
                 console.log('after');
                 
                 window.location.assign("#currentWims");
