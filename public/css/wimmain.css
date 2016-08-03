@@ -62,6 +62,7 @@ a {
      -webkit-transform: translate(100vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
      z-index: 10;
+    background-color: gray;
 }
 
 .fullpage2myprofile{
@@ -74,6 +75,7 @@ a {
      -webkit-transform: translate(100vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
      z-index: 10;
+     background-color: gray;
 }
 
 .fullpage3newwim{
@@ -86,6 +88,7 @@ a {
      -webkit-transform: translate(100vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
      z-index: 10;
+     background-color: gray;
 }
 
 .fullpage4search{
@@ -98,6 +101,7 @@ a {
      -webkit-transform: translate(100vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
      z-index: 10;
+     background-color: gray;
 }
 
 .fullpage5notifications {
@@ -110,6 +114,7 @@ a {
      -webkit-transform: translate(100vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
      z-index: 10;
+     background-color: gray;
 }
 
 /*transitions*/

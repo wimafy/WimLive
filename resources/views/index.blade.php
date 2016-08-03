@@ -168,9 +168,13 @@
 
             function backfullpage1currentwims() {
                 //alert("anything");
-                checkifpageisloaded();
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
+                
+               window.location.assign("#/");
+                
+               checkifpageisloaded();
+                
             }
 
             function fullpage2myprofile() {
