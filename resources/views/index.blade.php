@@ -158,6 +158,10 @@
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
                 
+                console.log('before');
+                wait(2000);  //7 seconds in milliseconds
+                console.log('after');
+                
                 window.location.assign("#currentWims");
                 
                 checkifpageisloaded();
