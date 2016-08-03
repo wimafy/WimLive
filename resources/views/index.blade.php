@@ -63,16 +63,6 @@
             }
 
 
-
-
-            function init() {
-                console.log("weve done it");
-            }
-            
-            function init2() {
-                console.log("kindof a big deal");
-            }
-
             checkifpageisloaded();
         </script>
         
@@ -162,19 +152,18 @@
 			$(document).ready(function(){
 				$(".chosen-select").chosen();
 			});
-            
-            function loadedpage() {
-                alert("The page is loaded");
-            }
                
 		</script>
         <script>
     
             function fullpage1currentwims() {
                 //alert("anything");
-                checkifpageisloaded();
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
+                
+                window.location.assign("#currentWims");
+                
+                checkifpageisloaded();
             }
 
             function backfullpage1currentwims() {
