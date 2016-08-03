@@ -76,7 +76,7 @@
     <!-- shell-->
         <div id="fullpage1currentwims" class="fullpage1currentwims">
             <div class="headerdiv">
-                <a onclick="backfullpage1currentwims()" href="#/">
+                <a onclick="backfullpage1currentwims()">
                     <div class="headerbackarrow">
                         <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
                     </div>
