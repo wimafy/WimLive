@@ -58,7 +58,7 @@
         <script>
             function checkifpageisloaded() {
                 $(document).ready(function(){
-                    alert("document is ready");
+                    console.log("document is ready");
                 });
             }
 
