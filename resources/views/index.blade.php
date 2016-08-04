@@ -167,8 +167,11 @@
                     window.location.assign("#currentWims");
 
                     checkifpageisloaded();
+                    
+                    document.getElementById("fullpage1currentwims").classList.add('pagezindexOUT');
+                    document.getElementById("fullpage1currentwims").classList.remove('pagezindexIN');
                 
-                }, 3000);
+                }, 100);
                 
                 
             }
@@ -182,6 +185,11 @@
                
                 
                checkifpageisloaded();
+                
+               
+               document.getElementById("fullpage1currentwims").classList.add('pagezindexOUT');
+               document.getElementById("fullpage1currentwims").classList.remove('pagezindexIN');
+                
                 
             }
 

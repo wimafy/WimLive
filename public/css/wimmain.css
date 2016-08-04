@@ -138,6 +138,23 @@ a {
   transform: translate(125vw, 0px)!important;
 }
 
+.pagezindexIN {
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  z-index: 0 !important;
+}
+
+.pagezindexOUT {
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  z-index: 10 !important;    
+}
 
 
 
