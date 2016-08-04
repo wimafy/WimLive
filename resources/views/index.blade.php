@@ -83,7 +83,7 @@
 
             </div>
             
-            <div id="fullpagebottomcover1currentwims" class="fullpagebottomcover">
+            <div class="fullpagebottomcover">
             
             </div>
             
@@ -173,8 +173,8 @@
 
                     checkifpageisloaded();
                     
-                    document.getElementById("fullpagebottomcover1currentwims").classList.add('pagezindexIN');
-                    document.getElementById("fullpagebottomcover1currentwims").classList.remove('pagezindexOUT');
+                    document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
+                    document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
                     
                     console.log("step one");
                 
@@ -194,8 +194,8 @@
                checkifpageisloaded();
                 
                
-               document.getElementById("fullpagebottomcover1currentwims").classList.add('pagezindexOUT');
-               document.getElementById("fullpagebottomcover1currentwims").classList.remove('pagezindexIN');
+               document.getElementById("fullpage1currentwims").classList.add('pagezindexOUT');
+               document.getElementById("fullpage1currentwims").classList.remove('pagezindexIN');
                 
                 
             }
