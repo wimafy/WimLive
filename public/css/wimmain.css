@@ -144,6 +144,7 @@ a {
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
+  opacity: 0;
   z-index: 0 !important;
 }
 
@@ -153,7 +154,9 @@ a {
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
-  z-index: 10 !important;    
+  opacity: 10;
+  z-index: 10 !important;
+  
 }
 
 
