@@ -168,8 +168,10 @@
 
                     checkifpageisloaded();
                     
-                    document.getElementById("fullpage1currentwims").classList.add('pagezindexOUT');
-                    document.getElementById("fullpage1currentwims").classList.remove('pagezindexIN');
+                    document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
+                    document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
+                    
+                    console.log("step one");
                 
                 }, 100);
                 
