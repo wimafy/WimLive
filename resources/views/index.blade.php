@@ -82,11 +82,6 @@
                 <h1 class="headerpagetitle">Current WIMs</h1>
 
             </div>
-            
-            <div class="fullpagebottomcover">
-            
-            </div>
-            
         </div>
 
 
