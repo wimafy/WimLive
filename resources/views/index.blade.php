@@ -157,14 +157,14 @@
                 //alert("anything");
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
                 
-                alert("very first");
+                // alert("very first");
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
                 
-                alert('before');
+                // alert('before');
                  
                 setTimeout(function(){ 
                 
-                    alert('after');
+                   // alert('after');
                 
                     window.location.assign("#currentWims");
 
@@ -172,10 +172,10 @@
                     
                     document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
                    
-                    alert("alert2");
+                //    alert("alert2");
                     document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
                     
-                    alert("last");
+                  //  alert("last");
                 
                 }, 100);
                 
