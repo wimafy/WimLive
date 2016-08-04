@@ -156,22 +156,26 @@
             function fullpage1currentwims() {
                 //alert("anything");
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
+                
+                alert("very first");
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
                 
-                console.log('before');
+                alert('before');
                  
                 setTimeout(function(){ 
                 
-                    console.log('after');
+                    alert('after');
                 
                     window.location.assign("#currentWims");
 
                     checkifpageisloaded();
                     
                     document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
+                   
+                    alert("alert2");
                     document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
                     
-                    console.log("step one");
+                    alert("last");
                 
                 }, 100);
                 
