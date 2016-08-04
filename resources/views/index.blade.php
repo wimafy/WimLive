@@ -82,6 +82,11 @@
                 <h1 class="headerpagetitle">Current WIMs</h1>
 
             </div>
+            
+            <div id="fullpagebottomcover1currentwims" class="fullpagebottomcover">
+            
+            </div>
+            
         </div>
 
 
@@ -168,8 +173,8 @@
 
                     checkifpageisloaded();
                     
-                    document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
-                    document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
+                    document.getElementById("fullpagebottomcover1currentwims").classList.add('pagezindexIN');
+                    document.getElementById("fullpagebottomcover1currentwims").classList.remove('pagezindexOUT');
                     
                     console.log("step one");
                 
@@ -189,8 +194,8 @@
                checkifpageisloaded();
                 
                
-               document.getElementById("fullpage1currentwims").classList.add('pagezindexOUT');
-               document.getElementById("fullpage1currentwims").classList.remove('pagezindexIN');
+               document.getElementById("fullpagebottomcover1currentwims").classList.add('pagezindexOUT');
+               document.getElementById("fullpagebottomcover1currentwims").classList.remove('pagezindexIN');
                 
                 
             }

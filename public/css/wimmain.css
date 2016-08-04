@@ -53,6 +53,13 @@ a {
     z-index: 1;
 }
 
+.fullpagebottomcover {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    top: 50px;
+    background-color: blue;
+}
+
 .fullpage1currentwims{
      width: 100vw;
      height: 100vh;
