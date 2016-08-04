@@ -59,6 +59,11 @@
             function checkifpageisloaded() {
                 $(document).ready(function(){
                     console.log("document is ready");
+                    document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
+                   
+                //    alert("alert2");
+                    document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
+                    
                 });
             }
 
@@ -170,10 +175,7 @@
 
                     checkifpageisloaded();
                     
-                    document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
-                   
-                //    alert("alert2");
-                    document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
+                    
                     
                   //  alert("last");
                 
