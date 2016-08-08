@@ -56,22 +56,21 @@
         
              
         <script>
-        
-            function checkifpageisloaded(x) {
+            /*
+            function checkifpageisloaded() {
                 $(document).ready(function(){
-                    //alert(x);
-                    console.log(x);
                     console.log("document is ready");
-                    document.getElementById(x).classList.add('pagezindexIN');
+                    document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
                    
                 //    alert("alert2");
-                    document.getElementById(x).classList.remove('pagezindexOUT');
+                    document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
                     
                 });
             }
 
 
             checkifpageisloaded();
+            */
         </script>
         
         
@@ -176,7 +175,14 @@
                 
                     window.location.assign("#currentWims");
 
-                    checkifpageisloaded(fullpage1currentwims);
+                   $(document).ready(function(){
+                        console.log("document is ready");
+                        document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
+
+                    //    alert("alert2");
+                        document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
+
+                    });
                     
                     
                     
@@ -197,7 +203,7 @@
                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
                
                 
-               checkifpageisloaded("fullpage1currentwims");
+               checkifpageisloaded();
                 
                
                document.getElementById("fullpage1currentwims").classList.add('pagezindexOUT');
