@@ -200,10 +200,9 @@
                
                 //window.location.assign("#/");
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
+                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
                 
                 document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
-                
-               document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
                
                 
                //checkifpageisloaded();
