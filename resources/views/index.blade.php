@@ -61,10 +61,10 @@
                 $(document).ready(function(){
                     alert(x);
                     console.log("document is ready");
-                    document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
+                    document.getElementById(x).classList.add('pagezindexIN');
                    
                 //    alert("alert2");
-                    document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
+                    document.getElementById(x).classList.remove('pagezindexOUT');
                     
                 });
             }
@@ -175,7 +175,7 @@
                 
                     window.location.assign("#currentWims");
 
-                    checkifpageisloaded("blooba");
+                    checkifpageisloaded("fullpage1currentwims");
                     
                     
                     
