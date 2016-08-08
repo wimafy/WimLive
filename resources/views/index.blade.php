@@ -183,9 +183,11 @@
                 
                 
             }
+            
+            // i need to make it so the ng-init div moves off to the right and then have a holder index page that fades out thill the actual index page loads (or have a loading screen)
 
             function backfullpage1currentwims() {
-                //alert("anything");
+                alert("anything");
                
                 window.location.assign("#/");
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
