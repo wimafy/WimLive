@@ -56,8 +56,10 @@
         
              
         <script>
-            function checkifpageisloaded() {
+        
+            function checkifpageisloaded(x) {
                 $(document).ready(function(){
+                    alert(x);
                     console.log("document is ready");
                     document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
                    
@@ -173,7 +175,7 @@
                 
                     window.location.assign("#currentWims");
 
-                    checkifpageisloaded();
+                    checkifpageisloaded("blooba");
                     
                     
                     
