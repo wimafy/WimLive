@@ -198,12 +198,15 @@
             function backfullpage1currentwims() {
                 //alert("anything");
                
-                window.location.assign("#/");
+                //window.location.assign("#/");
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
+                
+                document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+                
                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
                
                 
-               checkifpageisloaded();
+               //checkifpageisloaded();
                 
                
                document.getElementById("fullpage1currentwims").classList.add('pagezindexOUT');
@@ -211,6 +214,11 @@
                 
                 
             }
+            
+            
+            
+            
+            
 
             function fullpage2myprofile() {
                 //alert("anything");
