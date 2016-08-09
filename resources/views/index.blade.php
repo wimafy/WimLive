@@ -168,20 +168,27 @@
                 //alert("anything");
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
                 
-                // alert("very first");
+                document.getElementById("loadinggif").classList.add('pagetransitionIN');
+                
+                 alert("very first");
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
                 
-                // alert('before');
+                document.getElementById("loadinggif").classList.remove('pagetransitionOUT');
+                
+                
+                 alert('before');
                  
                 setTimeout(function(){ 
                 
-                   // alert('after');
+                   alert('after');
                 
                     window.location.assign("#currentWims");
 
+                    alert('after 2');
+                    
                    $(document).ready(function(){
                         console.log("document is ready");
-                        
+                    alert('after 3');
 
                     });
                     

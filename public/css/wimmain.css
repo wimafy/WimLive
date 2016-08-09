@@ -109,8 +109,8 @@ a {
      /* background-color: pink; */
      margin: 0px;
      position: absolute;
-     -ms-transform: translate(100vw, 0px); /* IE 9 */
-     -webkit-transform: translate(100vw, 0px); /* Safari */
+     -ms-transform: translate(125vw, 0px); /* IE 9 */
+     -webkit-transform: translate(125vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
      z-index: 10;
      background-color: lightgray;
@@ -128,6 +128,9 @@ a {
 	background: url(/web_images/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
 	background-color: white;
     z-index: -10;
+    -ms-transform: translate(125vw, 0px); /* IE 9 */
+    -webkit-transform: translate(125vw, 0px); /* Safari */
+    transform: translate(125vw, 0px);
 }
 
 .loadinggifIN {
