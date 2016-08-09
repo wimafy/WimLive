@@ -147,7 +147,7 @@
         <script>
     
             function fullpage1currentwims() {
-                //alert("anything");
+                console.log("anything");
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
                  document.getElementById("loadinggiflevel1").classList.remove('pagetransitionOUT');
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
@@ -161,10 +161,10 @@
                 
                     window.location.assign("#currentWims");
 
-                    alert('after 2');
+                    //alert('after 2');
                     
                    $(document).ready(function(){
-                        alert("document is ready");
+                        //alert("document is ready");
                        
                         //alert('after 3');
                        
