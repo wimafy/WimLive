@@ -134,11 +134,11 @@ a {
 }
 
 .loadinggifOUT {
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -ms-transition: .1s;
-  -o-transition: .1s;
-  transition: .1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
   opacity: 0;
   z-index: -10 !important;
 }
@@ -205,8 +205,8 @@ a {
     background-color: #ef5350;
     position: absolute;
     z-index: 9999;
+    box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.2);
     top: 0px;
-    box-shadow: 0px 3px 13px 1px rgba(0,0,0,0.3);
 }
 
 .homepagewimlogo {
