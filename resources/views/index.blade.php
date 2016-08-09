@@ -190,7 +190,7 @@
                 //alert("anything");
                
                alert("D");
-                document.getElementById("loadinggif").classList.remove('loadinggifOUT');
+                document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUT');
                 
                 
                alert("D");
@@ -212,7 +212,7 @@
               
                alert("D");
                 
-              document.getElementById("loadinggif").classList.remove('pagetransitionIN');
+              document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
                 
                 
                 
