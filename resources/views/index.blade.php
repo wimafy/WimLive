@@ -54,31 +54,13 @@
 
         </style>
         
-             
-        <script>
-            /*
-            function checkifpageisloaded() {
-                $(document).ready(function(){
-                    console.log("document is ready");
-                    document.getElementById("fullpage1currentwims").classList.add('pagezindexIN');
-                   
-                //    alert("alert2");
-                    document.getElementById("fullpage1currentwims").classList.remove('pagezindexOUT');
-                    
-                });
-            }
-
-
-            checkifpageisloaded();
-            */
-        </script>
         
         
     </head>
     
     <div class="se-pre-con"></div>
 
-    <body style="background-color: lightgray;">		
+    <body style="background-color: #EEEEEE;">		
     <div class="indexbladewholediv">
     <!-- shell-->
         
@@ -144,7 +126,7 @@
             </div>
         </div>
         
-        <div id="loadinggif" class="loadinggif"></div>
+        <div id="loadinggiflevel1" class="loadinggiflevel1"></div>
              
     <!-- end of shell-->
         
@@ -189,7 +171,7 @@
                        
                     //alert('after 3');
                        
-                    document.getElementById("loadinggif").classList.add('loadinggifOUT');
+                    document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
 
                     });
                     

@@ -43,14 +43,14 @@ a {
 .fullpageindexpage {
     width: 100vw;
     height: 100vh;
-    background-color: lightgray;
+    background-color: blue;
     margin: 0px;
     position: absolute;
     -ms-transform: translate(0vw, 0px); /* IE 9 */
     -webkit-transform: translate(0vw, 0px); /* Safari */
     transform: translate(0vw, 0px);
     top: 0px;
-    z-index: 1;
+    z-index: 0;
 }
 
 .fullpage1currentwims{
@@ -62,19 +62,20 @@ a {
      -webkit-transform: translate(100vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
      z-index: 100;
+    background-color: red;
 }
 
 .fullpage2myprofile{
      width: 100vw;
-     height: 100vh;
+     height: 50px;
      /* background-color: red; */
      margin: 0px;
      position: absolute;
      -ms-transform: translate(100vw, 0px); /* IE 9 */
      -webkit-transform: translate(100vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
-     z-index: 10;
-     background-color: lightgray;
+     z-index: 100;
+    background-color: red;
 }
 
 .fullpage3newwim{
@@ -86,8 +87,8 @@ a {
      -ms-transform: translate(100vw, 0px); /* IE 9 */
      -webkit-transform: translate(100vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
-     z-index: 10;
-     background-color: lightgray;
+     z-index: 100;
+     background-color: red;
 }
 
 .fullpage4search{
@@ -99,8 +100,8 @@ a {
      -ms-transform: translate(100vw, 0px); /* IE 9 */
      -webkit-transform: translate(100vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
-     z-index: 10;
-     background-color: lightgray;
+     z-index: 100;
+     background-color: red;
 }
 
 .fullpage5notifications {
@@ -112,13 +113,13 @@ a {
      -ms-transform: translate(125vw, 0px); /* IE 9 */
      -webkit-transform: translate(125vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
-     z-index: 10;
-     background-color: lightgray;
+     z-index: 100;
+     background-color: red;
 }
 
 /*transitions*/
 
-.loadinggif {
+.loadinggiflevel1 {
     position: fixed;
 	left: 0px;
 	top: 0px;
@@ -126,21 +127,21 @@ a {
 	height: calc(100vh - 0px);
 	background: url(/web_images/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
 	background-color: white;
-    z-index: 9;
+    z-index: 75;
     -ms-transform: translate(125vw, 0px); /* IE 9 */
     -webkit-transform: translate(125vw, 0px); /* Safari */
     transform: translate(125vw, 0px);
     opacity: 1;
 }
 
-.loadinggifOUT {
+.loadinggiflevel1OUT {
   -webkit-transition: 10s;
   -moz-transition: 10s;
   -ms-transition: 10s;
   -o-transition: 10s;
   transition: 10s;
   opacity: 0;
-  z-index: -1 !important;
+  z-index: 25 !important;
 }
 
 
