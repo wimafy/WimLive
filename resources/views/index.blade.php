@@ -170,26 +170,26 @@
                 
                 document.getElementById("loadinggif").classList.add('pagetransitionIN');
                 
-                 alert("very first");
+                 //alert("very first");
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
                 
                 document.getElementById("loadinggif").classList.remove('pagetransitionOUT');
                 
                 
-                 alert('before');
+                 //alert('before');
                  
                 setTimeout(function(){ 
                 
-                   alert('after');
+                   //alert('after');
                 
                     window.location.assign("#currentWims");
 
-                    alert('after 2');
+                    //alert('after 2');
                     
                    $(document).ready(function(){
                         console.log("document is ready");
                        
-                    alert('after 3');
+                    //alert('after 3');
                        
                     document.getElementById("loadinggif").classList.add('loadinggifOUT');
 
@@ -216,6 +216,10 @@
                 document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
                 
                 document.getElementById("loadinggif").classList.add('loadinggifIN');
+                
+                document.getElementById("loadinggif").classList.remove('loadinggifOUT');
+                
+                document.getElementById("loadinggif").classList.add('pagetransitionIN');
                 
                 
                 
