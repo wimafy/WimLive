@@ -147,37 +147,34 @@
         <script>
     
             function fullpage1currentwims() {
-                //alert("anything");
+                console.log("anything");
+                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
+                 document.getElementById("loadinggiflevel1").classList.remove('pagetransitionOUT');
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
                 document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
                 
-                 //alert("very first");
-                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
-                 document.getElementById("loadinggiflevel1").classList.remove('pagetransitionOUT');
-                
-                
-                 //alert('before');
+                 console.log("very first");
                  
                 setTimeout(function(){ 
                 
-                   //alert('after');
+                   console.log('after');
                 
                     window.location.assign("#currentWims");
 
-                    //alert('after 2');
+                    console.log('after 2');
                     
                    $(document).ready(function(){
                         console.log("document is ready");
                        
-                    //alert('after 3');
+                        console.log('after 3');
                        
-                    document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
+                        document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
 
                     });
                     
                     
                     
-                  //  alert("last");
+                    console.log("last");
                 
                 }, 100);
                 

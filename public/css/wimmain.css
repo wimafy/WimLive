@@ -134,13 +134,13 @@ a {
     opacity: 1;
 }
 
-.loadinggiflevel1OUT {
+.loadinggifOUTlevel1 {
   -webkit-transition: 10s;
   -moz-transition: 10s;
   -ms-transition: 10s;
   -o-transition: 10s;
   transition: 10s;
-  opacity: 0;
+  opacity: 0 !important;
   z-index: 25 !important;
 }
 
