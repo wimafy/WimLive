@@ -147,26 +147,26 @@
         <script>
     
             function fullpage1currentwims() {
-                console.log("anything");
+                alert("anything");
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
                  document.getElementById("loadinggiflevel1").classList.remove('pagetransitionOUT');
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
                 document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
                 
-                 console.log("very first");
+                 alert("very first");
                  
                 setTimeout(function(){ 
                 
-                   console.log('after');
+                   alert('after');
                 
                     window.location.assign("#currentWims");
 
-                    console.log('after 2');
+                    alert('after 2');
                     
                    $(document).ready(function(){
-                        console.log("document is ready");
+                        alert("document is ready");
                        
-                        console.log('after 3');
+                        alert('after 3');
                        
                         document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
 
@@ -174,7 +174,7 @@
                     
                     
                     
-                    console.log("last");
+                    alert("last");
                 
                 }, 100);
                 
@@ -239,7 +239,7 @@
                     //alert('after 2');
                     
                    $(document).ready(function(){
-                        console.log("document is ready");
+                        alert("document is ready");
                         document.getElementById("loadinggif").classList.add('loadinggifOUT');
 
                     });
