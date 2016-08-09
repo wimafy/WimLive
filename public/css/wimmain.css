@@ -130,14 +130,15 @@ a {
     -ms-transform: translate(125vw, 0px); /* IE 9 */
     -webkit-transform: translate(125vw, 0px); /* Safari */
     transform: translate(125vw, 0px);
+    opacity: 1;
 }
 
 .loadinggifOUT {
   -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -moz-transition: 10s;
+  -ms-transition: 10s;
+  -o-transition: 10s;
+  transition: 10s;
   opacity: 0;
   z-index: -1 !important;
 }
