@@ -131,6 +131,16 @@ a {
     z-index: -10;
 }
 
+.loadinggifIN {
+    z-index: 0 !important;
+}
+
+.loadinggifOUT {
+    z-index: -10 !important;
+}
+
+
+
 
 .pagetransitionIN {
   -webkit-transition: .1s;
@@ -150,6 +160,7 @@ a {
   transform: translate(125vw, 0px)!important;
 }
 
+/*
 .pagezindexIN {
   -webkit-transition: .1s;
   -moz-transition: .1s;
@@ -170,6 +181,7 @@ a {
   z-index: 10 !important;
   
 }
+*/
 
 .ngviewtransitionout {
   -webkit-transition: .1s;
