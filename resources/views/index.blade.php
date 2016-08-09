@@ -143,7 +143,7 @@
             </div>
         </div>
         
-        <div id="loadinggif" class="loadinggif"></div>
+        <div class="loadinggif"></div>
              
     <!-- end of shell-->
         
@@ -202,30 +202,17 @@
                 //alert("anything");
                
                 //window.location.assign("#/");
-               
-                document.getElementById("loadinggif").classList.add('loadinggifIN');
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
                 
                 document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
                
                 
-                
-               setTimeout(function(){ 
-                
-                   // alert('after');
-                
-                    window.location.assign("#/");
-
-                   $(document).ready(function(){
-                        console.log("document is ready");
-                        
-                    });
-                
-                }, 100);
+               //checkifpageisloaded();
                 
                
-               
+               document.getElementById("fullpage1currentwims").classList.add('pagezindexOUT');
+               document.getElementById("fullpage1currentwims").classList.remove('pagezindexIN');
                 
                 
             }
