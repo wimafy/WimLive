@@ -124,10 +124,9 @@ a {
 	top: 0px;
 	width: 100vw;
 	height: calc(100vh - 0px);
-	z-index: 966;
 	background: url(/web_images/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
 	background-color: white;
-    z-index: 1;
+    z-index: 9;
     -ms-transform: translate(125vw, 0px); /* IE 9 */
     -webkit-transform: translate(125vw, 0px); /* Safari */
     transform: translate(125vw, 0px);
@@ -140,7 +139,7 @@ a {
   -o-transition: 1s;
   transition: 1s;
   opacity: 0;
-  z-index: -10 !important;
+  z-index: -1 !important;
 }
 
 
