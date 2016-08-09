@@ -81,6 +81,7 @@
     <body style="background-color: lightgray;">		
     <div class="indexbladewholediv">
     <!-- shell-->
+        
         <div id="fullpage1currentwims" class="fullpage1currentwims">
             <div class="headerdiv">
                 <div class="headerbackarrow" onclick="backfullpage1currentwims()">
