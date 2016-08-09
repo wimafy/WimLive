@@ -192,7 +192,7 @@ a {
   transform: translate(125vw, 0px)!important;
 }
 
-.ngviewtransitionin {
+.ngviewtransitionout {
   transform: translate(0vw, 0px)!important;
 }
 
