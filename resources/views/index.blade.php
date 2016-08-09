@@ -149,11 +149,11 @@
             function fullpage1currentwims() {
                 //alert("anything");
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
-                document.getElementById("loadinggif").classList.add('pagetransitionIN');
+                document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
                 
                  //alert("very first");
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
-                 document.getElementById("loadinggif").classList.remove('pagetransitionOUT');
+                 document.getElementById("loadinggiflevel1").classList.remove('pagetransitionOUT');
                 
                 
                  //alert('before');
