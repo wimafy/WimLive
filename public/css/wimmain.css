@@ -127,14 +127,14 @@ a {
 	z-index: 966;
 	background: url(/web_images/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
 	background-color: white;
-    z-index: -10;
+    z-index: 1;
     -ms-transform: translate(125vw, 0px); /* IE 9 */
     -webkit-transform: translate(125vw, 0px); /* Safari */
     transform: translate(125vw, 0px);
 }
 
-.loadinggifIN {
-    z-index: 0 !important;
+.loadinggifOUT {
+    z-index: -10 !important;
 }
 
 

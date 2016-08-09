@@ -188,7 +188,10 @@
                     
                    $(document).ready(function(){
                         console.log("document is ready");
+                       
                     alert('after 3');
+                       
+                    document.getElementById("loadinggif").classList.add('loadinggifOUT');
 
                     });
                     
