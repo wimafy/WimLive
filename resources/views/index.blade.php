@@ -161,10 +161,10 @@
                 
                     window.location.assign("#currentWims");
 
-                    console.log('after 2');
+                    alert('after 2');
                     
                    $(document).ready(function(){
-                        console.log("document is ready");
+                        alert("document is ready");
                        
                         //alert('after 3');
                        
@@ -174,7 +174,7 @@
                     
                     
                     
-                    console.log("last");
+                    alert("last");
                 
                 }, 100);
                 
