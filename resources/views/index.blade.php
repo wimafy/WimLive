@@ -142,6 +142,9 @@
                 <h1 class="headerpagetitle">Notifications</h1>
             </div>
         </div>
+        
+        <div class="loadinggif"></div>
+             
     <!-- end of shell-->
         
 		<div id="ngviewdiv" ng-view></div>
