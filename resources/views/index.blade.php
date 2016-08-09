@@ -167,13 +167,11 @@
             function fullpage1currentwims() {
                 //alert("anything");
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
-                
                 document.getElementById("loadinggif").classList.add('pagetransitionIN');
                 
                  //alert("very first");
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
-                
-                document.getElementById("loadinggif").classList.remove('pagetransitionOUT');
+                 document.getElementById("loadinggif").classList.remove('pagetransitionOUT');
                 
                 
                  //alert('before');
@@ -209,17 +207,30 @@
             function backfullpage1currentwims() {
                 //alert("anything");
                
-                window.location.assign("#/");
-                document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
-                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
-                
-                document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
-                
-                document.getElementById("loadinggif").classList.add('loadinggifIN');
-                
+               alert("D");
                 document.getElementById("loadinggif").classList.remove('loadinggifOUT');
                 
-                document.getElementById("loadinggif").classList.remove('pagetransitionIN');
+                
+               alert("D");
+              
+                window.location.assign("#/");
+              
+                
+               alert("D");
+              document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
+                
+                
+               alert("D");
+              document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
+                
+              
+               alert("D");
+              document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+                
+              
+               alert("D");
+                
+              document.getElementById("loadinggif").classList.remove('pagetransitionIN');
                 
                 
                 
@@ -233,10 +244,30 @@
             
 
             function fullpage2myprofile() {
-                //alert("anything");
-                checkifpageisloaded();
                 document.getElementById("fullpage2myprofile").classList.add('pagetransitionIN');
+                document.getElementById("loadinggif").classList.add('pagetransitionIN');
+                
+                 //alert("very first");
                 document.getElementById("fullpage2myprofile").classList.remove('pagetransitionOUT');
+                 document.getElementById("loadinggif").classList.remove('pagetransitionOUT');
+                 
+                setTimeout(function(){ 
+                
+                   //alert('after');
+                
+                    window.location.assign("#currentWims");
+
+                    //alert('after 2');
+                    
+                   $(document).ready(function(){
+                        console.log("document is ready");
+                        document.getElementById("loadinggif").classList.add('loadinggifOUT');
+
+                    });
+                
+                }, 100);
+                
+                
             }
 
             function backfullpage2myprofile() {

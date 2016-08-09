@@ -205,8 +205,8 @@ a {
     background-color: #ef5350;
     position: absolute;
     z-index: 9999;
-    box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.2);
     top: 0px;
+    box-shadow: 0px 3px 13px 1px rgba(0,0,0,0.3);
 }
 
 .homepagewimlogo {
