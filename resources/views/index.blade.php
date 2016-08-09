@@ -143,7 +143,7 @@
             </div>
         </div>
         
-        <div class="loadinggif"></div>
+        <div id="loadinggif" class="loadinggif"></div>
              
     <!-- end of shell-->
         
@@ -201,18 +201,15 @@
             function backfullpage1currentwims() {
                 //alert("anything");
                
-                //window.location.assign("#/");
+                window.location.assign("#/");
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
                 
                 document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
-               
                 
-               //checkifpageisloaded();
+                document.getElementById("loadinggif").classList.add('loadinggifIN');
                 
-               
-               document.getElementById("fullpage1currentwims").classList.add('pagezindexOUT');
-               document.getElementById("fullpage1currentwims").classList.remove('pagezindexIN');
+                
                 
                 
             }

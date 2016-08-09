@@ -131,6 +131,10 @@ a {
     z-index: -10;
 }
 
+.loadinggifIN {
+    z-index: 0 !important;
+}
+
 
 .pagetransitionIN {
   -webkit-transition: .1s;
