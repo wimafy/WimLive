@@ -219,7 +219,8 @@
                 
                 document.getElementById("loadinggif").classList.remove('loadinggifOUT');
                 
-                document.getElementById("loadinggif").classList.add('pagetransitionIN');
+                document.getElementById("loadinggif").classList.remove('pagetransitionIN');
+                
                 
                 
                 
