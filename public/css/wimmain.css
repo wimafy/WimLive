@@ -134,7 +134,7 @@ a {
 }
 
 .loadinggifOUT {
-  -webkit-transition: 1s;
+  -webkit-transition: 10s;
   -moz-transition: 10s;
   -ms-transition: 10s;
   -o-transition: 10s;
