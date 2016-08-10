@@ -1522,6 +1522,15 @@ button.link {
 
 /* notifications page */
 
+.notificationdiv {
+    width: 100vw;
+    height: 60px;
+    float: left;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+    border-bottom-width: 1px;
+}
+
 .notificationslable {
     width: 100%;
     height: 65px;

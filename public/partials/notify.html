@@ -15,13 +15,15 @@
 
     <div class="row">
 		<div class="col-md-12">
+            <!--
 			<p> Friend Requests </p>
 			<p>You currently have <b>{{ requests.length }}</b> friend requests.</p>
 			<ul>
-				<li ng-repeat="request in requests">
+            -->
+				<div class="notificationdiv" ng-repeat="request in requests">
 					<b>{{ request.username }}</b> <button type="button" class="btn btn-info" ng-click="acceptRequest(request.id)">Accept</button> <button type="button" class="btn btn-info" ng-click="denyRequest(request.id)">Deny</button>
-				</li>
-			</ul>
+				</div>
+			
 		</div>
 	</div>
 </div>
