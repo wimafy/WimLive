@@ -128,7 +128,7 @@
         
         <div id="fullpageB1selectedWim" class="fullpageB1selectedWim">
             <div class="headerdiv">
-                <a href="#currentWims">
+                <a onclick="backfullpageB1selectedWim()">
                     <div class="headerbackarrow">
                         <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
                     </div>
@@ -143,7 +143,7 @@
         
         <div id="fullpageC1wholepagemap" class="fullpageC1wholepagemap">
             <div class="headerdiv">
-                <a href="#selectedWim">
+                <a onclick="backfullpageC1wholepagemap()">
                     <div class="headerbackarrow">
                         <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
                     </div>
