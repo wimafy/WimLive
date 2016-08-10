@@ -126,6 +126,19 @@
             </div>
         </div>
         
+        <div id="fullpageB1selectedWim" class="fullpageB1selectedWim">
+            <div class="headerdiv">
+                <a onclick="backfullpageB1selectedWim()" href="#/">
+                    <div class="headerbackarrow">
+                        <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                    </div>
+                </a>
+
+                <h1 class="headerpagetitle">(selected wim)</h1>
+                <i id="profiletopactioncircleicon" class="material-icons">&#xE0C9;</i>
+            </div>
+        </div>
+        
         <div id="loadinggiflevel1" class="loadinggiflevel1"></div>
              
     <!-- end of shell-->
@@ -350,6 +363,52 @@
                   document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
                   
                   document.getElementById("loadinggiflevel1").classList.remove('killopacity');
+              }, 100);
+            }     
+
+            
+            
+            function fullpageB1selectedWim() {
+                  console.log("anything");
+                document.getElementById("fullpageB1selectedWim").classList.remove('pagetransitionOUT');
+                document.getElementById("fullpageB1selectedWim").classList.add('pagetransitionIN');
+                
+                document.getElementById("loadinggiflevel2").classList.add('pagetransitionIN');
+                 
+                setTimeout(function(){ 
+                
+                    window.location.assign("#notify");
+                    
+                   $(document).ready(function(){
+                       document.getElementById("loadinggiflevel12").classList.add('loadinggifOUTlevel2');
+
+                    });
+                
+                }, 100);  
+            }
+
+            function backfullpageB1selectedWim() {
+                  document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+                
+               document.getElementById("fullpageB1selectedWim").classList.remove('pagetransitionIN');
+                document.getElementById("fullpageB1selectedWim").classList.add('pagetransitionOUT');
+    
+              
+                window.location.assign("#/");
+              
+                    
+                   $(document).ready(function(){
+                        
+                       document.getElementById("loadinggiflevel2").classList.add('killopacity');
+                       document.getElementById("loadinggiflevel2").classList.remove('loadinggifOUTlevel1');
+
+                    });
+                
+                
+              setTimeout(function(){ 
+                  document.getElementById("loadinggiflevel2").classList.remove('pagetransitionIN');
+                  
+                  document.getElementById("loadinggiflevel2").classList.remove('killopacity');
               }, 100);
             }     
 
