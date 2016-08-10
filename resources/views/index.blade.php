@@ -197,12 +197,13 @@
                 
                 
                 
-                setTimeout(function(){ 
+                
                 
                     
                    $(document).ready(function(){
                         
-                        document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
+                       document.getElementById("loadinggiflevel1").classList.add('killopacity');
+                       document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
 
                     });
                     
@@ -210,9 +211,12 @@
                     
                     //alert("last");
                 
-                }, 100);
-              
-               
+                
+              setTimeout(function(){ 
+                  document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
+                  
+                  document.getElementById("loadinggiflevel1").classList.remove('killopacity');
+              }, 1000);
               
                 
                 
