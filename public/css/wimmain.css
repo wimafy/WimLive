@@ -1719,8 +1719,8 @@ button.link {
     float: right;
     padding: 0;
     margin: 0px 10px 0px;
-    background-color: white;
-    border-color: white;
+    background-color: white !important;
+    border-color: white !important;
 }
 
 #searchforfriendseachpersonaddbuttonicon {
