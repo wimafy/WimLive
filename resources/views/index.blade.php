@@ -370,18 +370,18 @@
             
             function fullpageB1selectedWim() {
                   console.log("anything");
-                document.getElementById("fullpageB1selectedWim").classList.remove('pagetransitionOUT');
-                document.getElementById("fullpageB1selectedWim").classList.add('pagetransitionIN');
-                
+               alert("D"); document.getElementById("fullpageB1selectedWim").classList.remove('pagetransitionOUT');
+               alert("D"); document.getElementById("fullpageB1selectedWim").classList.add('pagetransitionIN');
+                alert("D");
                 document.getElementById("loadinggiflevel2").classList.add('pagetransitionIN');
-                 
+                 alert("D");
                 setTimeout(function(){ 
-                
+                alert("D");
                     window.location.assign("#notify");
-                    
+                    alert("D");
                    $(document).ready(function(){
-                       document.getElementById("loadinggiflevel2").classList.add('loadinggifOUTlevel2');
-
+                      alert("D"); document.getElementById("loadinggiflevel2").classList.add('loadinggifOUTlevel2');
+alert("D");
                     });
                 
                 }, 100);  
@@ -394,7 +394,7 @@
                 document.getElementById("fullpageB1selectedWim").classList.add('pagetransitionOUT');
     
               
-                window.location.assign("#/");
+                window.location.assign("#/currentWims");
               
                     
                    $(document).ready(function(){
