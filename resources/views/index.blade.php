@@ -216,7 +216,7 @@
                   document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
                   
                   document.getElementById("loadinggiflevel1").classList.remove('killopacity');
-              }, 1000);
+              }, 100);
               
                 
                 
