@@ -378,7 +378,7 @@
                  alert("D");
                 setTimeout(function(){ 
                 alert("D");
-                    window.location.assign("#notify");
+                    window.location.assign("#selectedWim");
                     alert("D");
                    $(document).ready(function(){
                       alert("D"); document.getElementById("loadinggiflevel2").classList.add('loadinggifOUTlevel2');
