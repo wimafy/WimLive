@@ -127,16 +127,16 @@
         </div>
         
         <div id="fullpageB1selectedWim" class="fullpageB1selectedWim">
-            <div class="headerdiv">
-                <a onclick="backfullpageB1selectedWim()" href="#/">
-                    <div class="headerbackarrow">
-                        <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
-                    </div>
-                </a>
+            <a href="#currentWims">
+                <div class="headerbackarrow">
+                    <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                </div>
+            </a>
 
-                <h1 class="headerpagetitle">(selected wim)</h1>
-                <i id="profiletopactioncircleicon" class="material-icons">&#xE0C9;</i>
-            </div>
+            <h1 class="headerpagetitle">Birthday {{wim.title}}</h1>
+            <i class="individualwimheadericon material-icons" style="line-height: 50px; font-size: 20px;">&#xE7E9;</i>
+
+            <p class="individualwimheadercountdowntimer">2 Days</p>
         </div>
         
         <div id="loadinggiflevel1" class="loadinggiflevel1"></div>
