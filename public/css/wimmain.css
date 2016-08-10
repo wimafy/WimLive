@@ -127,7 +127,7 @@ a {
      -webkit-transform: translate(125vw, 0px); /* Safari */
      transform: translate(125vw, 0px);
      z-index: 200;
-     background-color: red;
+     background-color: #ef5350;
 }
 
 /*transitions*/

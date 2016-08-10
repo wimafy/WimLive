@@ -140,6 +140,7 @@
         </div>
         
         <div id="loadinggiflevel1" class="loadinggiflevel1"></div>
+        <div id="loadinggiflevel2" class="loadinggiflevel2"></div>
              
     <!-- end of shell-->
         
