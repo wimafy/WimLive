@@ -188,7 +188,7 @@
                alert("1"); 
                 document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
                 
-                             alert("1"); document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
+                              document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
                               alert("1"); document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
                    alert("1");
               
