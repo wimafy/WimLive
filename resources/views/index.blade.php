@@ -371,18 +371,18 @@
             
             function fullpageB1selectedWim() {
                   console.log("anything");
-               alert("D"); document.getElementById("fullpageB1selectedWim").classList.remove('pagetransitionOUT');
-               alert("D"); document.getElementById("fullpageB1selectedWim").classList.add('pagetransitionIN');
-                alert("D");
+                document.getElementById("fullpageB1selectedWim").classList.remove('pagetransitionOUT');
+                document.getElementById("fullpageB1selectedWim").classList.add('pagetransitionIN');
+                
                 document.getElementById("loadinggiflevel2").classList.add('pagetransitionIN');
-                 alert("D");
+                 
                 setTimeout(function(){ 
-                alert("D");
+                
                     window.location.assign("#selectedWim");
-                    alert("D");
+                    
                    $(document).ready(function(){
-                      alert("D"); document.getElementById("loadinggiflevel2").classList.add('loadinggifOUTlevel2');
-alert("D");
+                       document.getElementById("loadinggiflevel2").classList.add('loadinggifOUTlevel2');
+
                     });
                 
                 }, 100);  
