@@ -238,7 +238,7 @@
                  
                 setTimeout(function(){ 
                 
-                    window.location.assign("#newwim");
+                    window.location.assign("#newWim");
                     
                    $(document).ready(function(){
                        document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
@@ -278,7 +278,7 @@
                  
                 setTimeout(function(){ 
                 
-                    window.location.assign("#search");
+                    window.location.assign("#friendSearch");
                     
                    $(document).ready(function(){
                        document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
