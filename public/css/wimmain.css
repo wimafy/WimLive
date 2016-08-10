@@ -1533,11 +1533,34 @@ button.link {
 
 .notificationbutton {
     float: right;
-    background-color: #d50000;
+    background-color: 00B0FF;
     height: 25px;
-    margin: 17px 10px;
-    
+    margin: 17px 5px 17px 0px;
+    line-height: 25px;
+    padding: 0px;
+    text-align: center;
+    width: 45px;
+    font-size: 11px;
 }
+
+
+.notificationpicture {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lightgray;
+    float: left;
+    margin: 15px;
+}
+
+.notificationname {
+    float: left;
+    width: calc(100vw - 200px);
+    background-color: rebeccapurple;
+    line-height: 60px;
+    font-family: Roboto;
+}
+
 
 .notificationslable {
     width: 100%;

@@ -21,7 +21,10 @@
 			<ul>
             -->
 				<div class="notificationdiv" ng-repeat="request in requests">
-					<b>{{ request.username }}</b> <button type="button" class="btn btn-info notificationbutton" ng-click="acceptRequest(request.id)">Accept</button> <button type="button" class="btn btn-info notificationbutton" ng-click="denyRequest(request.id)">Deny</button>
+					<img class="notificationpicture" src="">
+                    <b class="notificationname">{{ request.username }}</b> 
+                    <button type="button" class="btn btn-info notificationbutton" ng-click="denyRequest(request.id)">Deny</button>
+                    <button type="button" class="btn btn-info notificationbutton" ng-click="acceptRequest(request.id)">Accept</button> 
 				</div>
 			
 		</div>
