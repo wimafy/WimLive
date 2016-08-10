@@ -23,7 +23,7 @@
 				<div class="notificationdiv" ng-repeat="request in requests">
 					<img class="notificationpicture" src="">
                     <b class="notificationname">{{ request.username }}</b> 
-                    <button type="button" class="btn btn-info notificationbutton" ng-click="denyRequest(request.id)">Deny</button>
+                    <button type="button" class="btn btn-info notificationbutton" ng-click="denyRequest(request.id)" style="background-color: #e53935; border-color: #e53935;">Decline</button>
                     <button type="button" class="btn btn-info notificationbutton" ng-click="acceptRequest(request.id)">Accept</button> 
 				</div>
 			

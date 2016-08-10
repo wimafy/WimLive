@@ -1555,10 +1555,10 @@ button.link {
 
 .notificationname {
     float: left;
-    width: calc(100vw - 200px);
-    background-color: rebeccapurple;
+    width: calc(100vw - 160px);
     line-height: 60px;
     font-family: Roboto;
+    font-size: 13px;
 }
 
 
