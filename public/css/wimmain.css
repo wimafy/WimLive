@@ -130,6 +130,19 @@ a {
      background-color: #ef5350;
 }
 
+.fullpageC1wholepagemap {
+    width: 100vw;
+     height: 50;
+     /* background-color: pink; */
+     margin: 0px;
+     position: absolute;
+     -ms-transform: translate(125vw, 0px); /* IE 9 */
+     -webkit-transform: translate(125vw, 0px); /* Safari */
+     transform: translate(125vw, 0px);
+     z-index: 300;
+     background-color: #ef5350;
+}
+
 /*transitions*/
 
 .killopacity {
@@ -171,6 +184,21 @@ a {
     opacity: 1;
 }
 
+.loadinggiflevel3 {
+    position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: calc(100vh - 0px);
+	background: url(/web_images/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
+	background-color: white;
+    z-index: 175;
+    -ms-transform: translate(125vw, 0px); /* IE 9 */
+    -webkit-transform: translate(125vw, 0px); /* Safari */
+    transform: translate(125vw, 0px);
+    opacity: 1;
+}
+
 .loadinggifOUTlevel1 {
   -webkit-transition: 1s;
   -moz-transition: 1s;
@@ -182,6 +210,15 @@ a {
 
 
 .loadinggifOUTlevel2 {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  z-index: 125 !important;
+}
+
+.loadinggifOUTlevel3 {
   -webkit-transition: 1s;
   -moz-transition: 1s;
   -ms-transition: 1s;

@@ -127,20 +127,43 @@
         </div>
         
         <div id="fullpageB1selectedWim" class="fullpageB1selectedWim">
-            <a href="#currentWims">
-                <div class="headerbackarrow">
-                    <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
-                </div>
-            </a>
+            <div class="headerdiv">
+                <a href="#currentWims">
+                    <div class="headerbackarrow">
+                        <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                    </div>
+                </a>
 
-            <h1 class="headerpagetitle">Birthday (wim title)</h1>
-            <i class="individualwimheadericon material-icons" style="line-height: 50px; font-size: 20px;">&#xE7E9;</i>
+                <h1 class="headerpagetitle">Birthday (wim title)</h1>
+                <i class="individualwimheadericon material-icons" style="line-height: 50px; font-size: 20px;">&#xE7E9;</i>
 
-            <p class="individualwimheadercountdowntimer">2 Days</p>
+                <p class="individualwimheadercountdowntimer">2 Days</p>
+            </div>
         </div>
+        
+        <div id="fullpageC1wholepagemap" class="fullpageC1wholepagemap">
+            <div class="headerdiv">
+                <a href="#selectedWim">
+                    <div class="headerbackarrow">
+                        <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                    </div>
+                    <h1 class="headerpagetitle">Birthday (wim.title)</h1>
+                    <i class="individualwimheadericon material-icons" style="line-height: 50px; font-size: 20px;">&#xE7E9;</i>
+                </a>
+
+                <h1 class="headerpagetitle"></h1>
+
+                <a href="https://www.google.com/maps/dir/''/google+maps+space+needle/@47.620485,-122.4193171,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x5490151f4ed5b7f9:0xdb2ba8689ed0920d!2m2!1d-122.3492774!2d47.6205063">
+                    <i class="bigmapgetdirectionsicon material-icons" style="margin-right: 15px; font-size: 30px; line-height: 50px;">&#xE52E;</i>
+                </a>
+
+            </div>
+        </div>
+        
         
         <div id="loadinggiflevel1" class="loadinggiflevel1"></div>
         <div id="loadinggiflevel2" class="loadinggiflevel2"></div>
+        <div id="loadinggiflevel3" class="loadinggiflevel3"></div>
              
     <!-- end of shell-->
         
@@ -411,7 +434,55 @@
                   
                   document.getElementById("loadinggiflevel2").classList.remove('killopacity');
               }, 100);
-            }     
+            }  
+            
+            
+           function fullpageC1wholepagemap() {
+                  console.log("anything");
+                document.getElementById("fullpageC1wholepagemap").classList.remove('pagetransitionOUT');
+                document.getElementById("fullpageC1wholepagemap").classList.add('pagetransitionIN');
+                
+                document.getElementById("loadinggiflevel3").classList.add('pagetransitionIN');
+                 
+                setTimeout(function(){ 
+                
+                    window.location.assign("#selectedWim");
+                    
+                   $(document).ready(function(){
+                       document.getElementById("loadinggiflevel3").classList.add('loadinggifOUTlevel3');
+
+                    });
+                
+                }, 100);  
+            }
+
+            function backfullpageC1wholepagemap() {
+                  document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+                
+               document.getElementById("fullpageC1wholepagemap").classList.remove('pagetransitionIN');
+                document.getElementById("fullpageC1wholepagemap").classList.add('pagetransitionOUT');
+    
+              
+                window.location.assign("#/selectedWim");
+              
+                    
+                   $(document).ready(function(){
+                        
+                       document.getElementById("loadinggiflevel3").classList.add('killopacity');
+                       document.getElementById("loadinggiflevel3").classList.remove('loadinggifOUTlevel3');
+
+                    });
+                
+                
+              setTimeout(function(){ 
+                  document.getElementById("loadinggiflevel3").classList.remove('pagetransitionIN');
+                  
+                  document.getElementById("loadinggiflevel3").classList.remove('killopacity');
+              }, 100);
+            }  
+            
+            
+            
 
         </script>
         
