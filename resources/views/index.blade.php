@@ -190,22 +190,22 @@
             function fullpage2myprofile() {
                
                  console.log("anything");
-                document.getElementById("fullpage2myprofile").classList.remove('pagetransitionOUT');
-                document.getElementById("fullpage2myprofile").classList.add('pagetransitionIN');
+               alert("a"); document.getElementById("fullpage2myprofile").classList.remove('pagetransitionOUT');
+               alert("a"); document.getElementById("fullpage2myprofile").classList.add('pagetransitionIN');
                 
-                document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
-                 
+               alert("a"); document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
+                 alert("a");
                 setTimeout(function(){ 
-                
+                alert("a");
                     window.location.assign("#profile");
-                    
+                    alert("a");
                    $(document).ready(function(){
-                       document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
-
+                      alert("a"); document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
+alert("a");
                     });
-                
+           alert("a");     
                 }, 100);    
-            }
+            }alert("a");
 
             
             function backfullpage2myprofile() {
