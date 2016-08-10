@@ -203,7 +203,7 @@
                    $(document).ready(function(){
                         
                        document.getElementById("loadinggiflevel1").classList.add('killopacity');
-                       //document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
+                       document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
 
                     });
                     
@@ -213,9 +213,9 @@
                 
                 
               setTimeout(function(){ 
-                  //document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
+                  document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
                   
-                  //document.getElementById("loadinggiflevel1").classList.remove('killopacity');
+                  document.getElementById("loadinggiflevel1").classList.remove('killopacity');
               }, 100);
               
                 
