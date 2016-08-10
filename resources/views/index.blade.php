@@ -318,7 +318,7 @@
                  
                 setTimeout(function(){ 
                 
-                    window.location.assign("#currentWims");
+                    window.location.assign("#notify");
                     
                    $(document).ready(function(){
                        document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
