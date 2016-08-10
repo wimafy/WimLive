@@ -185,37 +185,37 @@
             function backfullpage1currentwims() {
                 
                 
-               alert("1"); 
+                
                 document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
                 
-                              document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
-                              alert("1"); document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
-                   alert("1");
+               document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
+                document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
+    
               
                 window.location.assign("#/");
               
                 
-                               alert("1");
+                
                 
                 
                 
                     
                    $(document).ready(function(){
                         
-                                     alert("1"); document.getElementById("loadinggiflevel1").classList.add('killopacity');
-                                     alert("1"); document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
+                       document.getElementById("loadinggiflevel1").classList.add('killopacity');
+                       //document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
 
                     });
                     
-                                   alert("1");
+                    
                     
                     //alert("last");
                 
                 
               setTimeout(function(){ 
-                  document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
+                  //document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
                   
-                  document.getElementById("loadinggiflevel1").classList.remove('killopacity');
+                  //document.getElementById("loadinggiflevel1").classList.remove('killopacity');
               }, 100);
               
                 
