@@ -152,64 +152,154 @@
                 document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
                 
                 document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
-                
-                 //alert("very first");
                  
                 setTimeout(function(){ 
                 
-                   //alert('after');
-                
                     window.location.assign("#currentWims");
-
-                    //alert('after 2');
                     
                    $(document).ready(function(){
-                        //alert("document is ready");
-                       
-                        //alert('after 3');
-                       
-                        document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
-
+                       document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
                     });
-                    
-                    
-                    //alert("last");
                 
-                }, 100);
+                }, 100);  
                 
+            }
+
+            
+            function backfullpage1currentwims() {
+                document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+                document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
+                document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
+
+                window.location.assign("#/");
+              
+                   $(document).ready(function(){
+                       document.getElementById("loadinggiflevel1").classList.add('killopacity');
+                       document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
+                    });
+
+              setTimeout(function(){ 
+                  document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
+                  document.getElementById("loadinggiflevel1").classList.remove('killopacity');
+              }, 100);
                 
             }
             
-            // i need to make it so the ng-init div moves off to the right and then have a holder index page that fades out thill the actual index page loads (or have a loading screen)
-
-            function backfullpage1currentwims() {
-                
-                
-                
-                document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
-                
-               document.getElementById("fullpage1currentwims").classList.remove('pagetransitionIN');
-                document.getElementById("fullpage1currentwims").classList.add('pagetransitionOUT');
     
-              
-                window.location.assign("#/");
-              
+
+            function fullpage2myprofile() {
+               
+                 console.log("anything");
+                document.getElementById("fullpage2myprofile").classList.remove('pagetransitionOUT');
+                document.getElementById("fullpage2myprofile").classList.add('pagetransitionIN');
                 
+                document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
+                 
+                setTimeout(function(){ 
                 
-                
-                
-                
+                    window.location.assign("#currentWims");
                     
                    $(document).ready(function(){
-                        
+                       document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
+
+                    });
+                
+                }, 100);    
+            }
+
+            
+            function backfullpage2myprofile() {
+                 document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+                document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
+                document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
+
+                window.location.assign("#/");
+
+                   $(document).ready(function(){
                        document.getElementById("loadinggiflevel1").classList.add('killopacity');
                        document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
 
                     });
+                
+                
+              setTimeout(function(){ 
+                  document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
+                  document.getElementById("loadinggiflevel1").classList.remove('killopacity');
+              }, 100);
+            }
+
+            
+            
+            function fullpage3newwim() {
+                  console.log("anything");
+                document.getElementById("fullpage3newwim").classList.remove('pagetransitionOUT');
+                document.getElementById("fullpage3newwim").classList.add('pagetransitionIN');
+                document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
+                 
+                setTimeout(function(){ 
+                
+                    window.location.assign("#currentWims");
                     
+                   $(document).ready(function(){
+                       document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
+
+                    });
+                
+                }, 100);  
+            }
+
+            
+            function backfullpage3newwim() {
+                document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+                document.getElementById("fullpage3newwim").classList.remove('pagetransitionIN');
+                document.getElementById("fullpage3newwim").classList.add('pagetransitionOUT');
+                
+                window.location.assign("#/");
+     
+                   $(document).ready(function(){
+                       document.getElementById("loadinggiflevel1").classList.add('killopacity');
+                       document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
+
+                    });
+                
+                
+              setTimeout(function(){ 
+                  document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
+                  document.getElementById("loadinggiflevel1").classList.remove('killopacity');
+              }, 100);
+            }
+
+            
+             function fullpage4search() {
+                  console.log("anything");
+                document.getElementById("fullpage4search").classList.remove('pagetransitionOUT');
+                document.getElementById("fullpage4search").classList.add('pagetransitionIN');
+                 document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
+                 
+                setTimeout(function(){ 
+                
+                    window.location.assign("#currentWims");
                     
-                    
-                    //alert("last");
+                   $(document).ready(function(){
+                       document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
+
+                    });
+                
+                }, 100);  
+            }
+
+            function backfullpage4search() {
+                document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+                document.getElementById("fullpage4search").classList.remove('pagetransitionIN');
+                document.getElementById("fullpage4search").classList.add('pagetransitionOUT');
+                
+                window.location.assign("#/");
+     
+                   $(document).ready(function(){
+                         document.getElementById("loadinggiflevel1").classList.add('killopacity');
+                       document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
+
+                    });
                 
                 
               setTimeout(function(){ 
@@ -217,93 +307,50 @@
                   
                   document.getElementById("loadinggiflevel1").classList.remove('killopacity');
               }, 100);
-              
-                
-                
-                
-                
-                
-            }
-            
-            
-            
-            
-            
-
-            function fullpage2myprofile() {
-                document.getElementById("fullpage2myprofile").classList.add('pagetransitionIN');
-                document.getElementById("loadinggif").classList.add('pagetransitionIN');
-                
-                 //alert("very first");
-                document.getElementById("fullpage2myprofile").classList.remove('pagetransitionOUT');
-                 document.getElementById("loadinggif").classList.remove('pagetransitionOUT');
-                 
-                setTimeout(function(){ 
-                
-                   //alert('after');
-                
-                    window.location.assign("#currentWims");
-
-                    //alert('after 2');
-                    
-                   $(document).ready(function(){
-                        alert("document is ready");
-                        document.getElementById("loadinggif").classList.add('loadinggifOUT');
-
-                    });
-                
-                }, 100);
-                
-                
-            }
-
-            function backfullpage2myprofile() {
-                //alert("anything");
-                checkifpageisloaded();
-                document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
-                document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
-            }
-
-            function fullpage3newwim() {
-                //alert("anything");
-                checkifpageisloaded();
-                document.getElementById("fullpage3newwim").classList.add('pagetransitionIN');
-                document.getElementById("fullpage3newwim").classList.remove('pagetransitionOUt');
-            }
-
-            function backfullpage3newwim() {
-                //alert("anything");
-                checkifpageisloaded();
-                document.getElementById("fullpage3newwim").classList.add('pagetransitionOUT');
-                document.getElementById("fullpage3newwim").classList.remove('pagetransitionIN');
-            }
-
-             function fullpage4search() {
-                //alert("anything");
-                checkifpageisloaded();
-                document.getElementById("fullpage4search").classList.add('pagetransitionIN');
-                 document.getElementById("fullpage4search").classList.remove('pagetransitionOUT');
-            }
-
-            function backfullpage4search() {
-                //alert("anything");
-                checkifpageisloaded();
-                document.getElementById("fullpage4search").classList.add('pagetransitionOUT');
-                document.getElementById("fullpage4search").classList.remove('pagetransitionIN');
             }
 
             function fullpage5notifications() {
-                //alert("anything");
-                checkifpageisloaded();
+                  console.log("anything");
+                document.getElementById("fullpage5notifications").classList.remove('pagetransitionOUT');
                 document.getElementById("fullpage5notifications").classList.add('pagetransitionIN');
-                 document.getElementById("fullpage5notifications").classList.remove('pagetransitionOUT');
+                
+                document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
+                 
+                setTimeout(function(){ 
+                
+                    window.location.assign("#currentWims");
+                    
+                   $(document).ready(function(){
+                       document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
+
+                    });
+                
+                }, 100);  
             }
 
             function backfullpage5notifications() {
-                //alert("anything");
-                checkifpageisloaded();
+                  document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+                
+               document.getElementById("fullpage5notifications").classList.remove('pagetransitionIN');
                 document.getElementById("fullpage5notifications").classList.add('pagetransitionOUT');
-                document.getElementById("fullpage5notifications").classList.remove('pagetransitionIN');
+    
+              
+                window.location.assign("#/");
+              
+                    
+                   $(document).ready(function(){
+                        
+                       document.getElementById("loadinggiflevel1").classList.add('killopacity');
+                       document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
+
+                    });
+                
+                
+              setTimeout(function(){ 
+                  document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
+                  
+                  document.getElementById("loadinggiflevel1").classList.remove('killopacity');
+              }, 100);
             }     
 
         </script>
