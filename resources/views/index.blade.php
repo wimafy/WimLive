@@ -161,7 +161,7 @@
         </div>
         
         
-        <div id="loadinggiflevel1" class="loadinggiflevel1"></div>
+        <div id="loadinggiflevel1" class="loadinggiflevel1" style="background-color: blue;"></div>
         <div id="loadinggiflevel2" class="loadinggiflevel2"></div>
         <div id="loadinggiflevel3" class="loadinggiflevel3"></div>
              
