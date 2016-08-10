@@ -380,7 +380,7 @@
                     window.location.assign("#notify");
                     
                    $(document).ready(function(){
-                       document.getElementById("loadinggiflevel12").classList.add('loadinggifOUTlevel2');
+                       document.getElementById("loadinggiflevel2").classList.add('loadinggifOUTlevel2');
 
                     });
                 
@@ -400,7 +400,7 @@
                    $(document).ready(function(){
                         
                        document.getElementById("loadinggiflevel2").classList.add('killopacity');
-                       document.getElementById("loadinggiflevel2").classList.remove('loadinggifOUTlevel1');
+                       document.getElementById("loadinggiflevel2").classList.remove('loadinggifOUTlevel2');
 
                     });
                 
