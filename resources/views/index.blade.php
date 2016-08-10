@@ -197,7 +197,7 @@
                  
                 setTimeout(function(){ 
                 
-                    window.location.assign("#currentWims");
+                    window.location.assign("#profile");
                     
                    $(document).ready(function(){
                        document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
@@ -238,7 +238,7 @@
                  
                 setTimeout(function(){ 
                 
-                    window.location.assign("#currentWims");
+                    window.location.assign("#newwim");
                     
                    $(document).ready(function(){
                        document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
@@ -278,7 +278,7 @@
                  
                 setTimeout(function(){ 
                 
-                    window.location.assign("#currentWims");
+                    window.location.assign("#search");
                     
                    $(document).ready(function(){
                        document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
