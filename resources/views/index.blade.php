@@ -202,7 +202,7 @@
                     
                    $(document).ready(function(){
                         
-                        document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
+                        document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
 
                     });
                     
