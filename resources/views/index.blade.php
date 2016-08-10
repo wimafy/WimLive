@@ -149,8 +149,8 @@
             function fullpage1currentwims() {
                 console.log("anything");
                 document.getElementById("fullpage1currentwims").classList.remove('pagetransitionOUT');
-                /*                document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
-                */
+                document.getElementById("fullpage1currentwims").classList.add('pagetransitionIN');
+                
                 document.getElementById("loadinggiflevel1").classList.add('pagetransitionIN');
                 
                  //alert("very first");
@@ -172,7 +172,6 @@
 
                     });
                     
-                    document.getElementById("loadinggiflevel1").classList.remove('pagetransitionOUT');
                     
                     //alert("last");
                 

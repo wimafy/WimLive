@@ -135,12 +135,12 @@ a {
 }
 
 .loadinggifOUTlevel1 {
-  -webkit-transition: 10s;
-  -moz-transition: 10s;
-  -ms-transition: 10s;
-  -o-transition: 10s;
-  transition: 10s;
-  opacity: 0 !important;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  opacity: 10 !important;
   z-index: 25 !important;
 }
 
