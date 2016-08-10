@@ -1690,8 +1690,8 @@ button.link {
     border-bottom-style: solid;
     border-width: 1px;
     margin-left: -15px;
-    border-color: lightgray;
-    background-color: F5F5F5;
+    border-color: EEEEEE;
+    background-color: white;
 }
 
 .searchforfriendseachpersonpic {
@@ -1719,8 +1719,8 @@ button.link {
     float: right;
     padding: 0;
     margin: 0px 10px 0px;
-    background-color: F5F5F5;
-    border-color: F5F5F5;
+    background-color: white;
+    border-color: white;
 }
 
 #searchforfriendseachpersonaddbuttonicon {
