@@ -446,7 +446,7 @@
                  
                 setTimeout(function(){ 
                 
-                    window.location.assign("#selectedWim");
+                    window.location.assign("#testMap");
                     
                    $(document).ready(function(){
                        document.getElementById("loadinggiflevel3").classList.add('loadinggifOUTlevel3');
