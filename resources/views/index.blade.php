@@ -133,7 +133,7 @@
                 </div>
             </a>
 
-            <h1 class="headerpagetitle">Birthday {{wim.title}}</h1>
+            <h1 class="headerpagetitle">Birthday (wim title)</h1>
             <i class="individualwimheadericon material-icons" style="line-height: 50px; font-size: 20px;">&#xE7E9;</i>
 
             <p class="individualwimheadercountdowntimer">2 Days</p>
