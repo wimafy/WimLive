@@ -120,12 +120,12 @@ a {
 /*transitions*/
 
 .killopacity {
-    -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -ms-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
-  opacity: 0 !important;
+    -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  opacity: 0;
 }
 
 .loadinggiflevel1 {
