@@ -6,11 +6,31 @@
 
         <title>WIM(afy)</title>
 
-    
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/wimmain.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="bower_components/chosen/chosen.css" rel="stylesheet">
+	  
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
+        <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+        <script src="bower_components/lodash/lodash.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+        <script src="bower_components/restangular/dist/restangular.min.js"></script>
+		
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    
-        <script src = "js/jquery.ripple.js"></script>
-        <script src = "js/test.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+        
+		<script src = "js/app.js"></script>
+		<script src = "js/services.js"></script>
+		<script src = "js/controllers.js"></script>
+		<script src = "js/checkPass.js"></script>
+		<script src = "js/signupValidation.js"></script>
+		<script src = "js/dropdown.js"></script>
+		<script src = "js/profileActions.js"></script>
+        <script src = "src/jquery.ripple.js"></script>
+        <script src = "test/test.js"></script>
         
         
         
