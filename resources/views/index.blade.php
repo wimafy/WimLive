@@ -19,9 +19,6 @@
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
         <script src="bower_components/restangular/dist/restangular.min.js"></script>
 		
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-        
 		<script src = "js/app.js"></script>
 		<script src = "js/services.js"></script>
 		<script src = "js/controllers.js"></script>
@@ -29,15 +26,14 @@
 		<script src = "js/signupValidation.js"></script>
 		<script src = "js/dropdown.js"></script>
 		<script src = "js/profileActions.js"></script>
-        <script src = "js/jquery.ripple.js"></script>
-        <script src = "js/test.js"></script>
         
         
         
         <!--loading screen icon -->
         <!-- old jquery (it works though)
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
-       
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 
         <script>
         //paste this code under the head tag or in a separate js file.
