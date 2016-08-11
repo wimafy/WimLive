@@ -28,6 +28,19 @@
 		<script src = "js/profileActions.js"></script>
 
         
+        
+        <!-- material design stuffs-->
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+        
+        <!-- Bootstrap Material Design -->
+        <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
+        <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
+        
+        
+        
+        
+        
         <!--loading screen icon -->
         <!-- old jquery (it works though)
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
