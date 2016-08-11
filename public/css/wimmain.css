@@ -1362,7 +1362,7 @@ input:focus ~ .highlight {
 .profilebottomfriendsdiv {
     width: calc(100% - 0px);
     height: calc(100% - 0px);
-    background-color: lightgray;
+    background-color: #E0E0E0;
     position: absolute;
     /* bottom: 0px; */
     /* margin-top: 1px; */
@@ -1491,7 +1491,16 @@ input:focus ~ .highlight {
 }
 
 .profilefriendscarddiv{
-    
+    margin: 5px;
+    float: left;
+    width: calc(100vw - 10px);
+    border-radius: 4px;
+    background-color: white;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #E0E0E0;
+    box-shadow: 0px 3px 8px 0px #BDBDBD;
 }
 
 /*homepage */
