@@ -1456,7 +1456,9 @@ input:focus ~ .highlight {
     height: 50px;
     float: left;
     background-color: white;
-    margin-bottom: 1;
+    border-bottom-style: solid;
+    border-bottom-color: #E0E0E0;
+    border-width: 1px;
 }
 
 .profileinterestsimg {
