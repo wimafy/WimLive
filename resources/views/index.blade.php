@@ -18,7 +18,6 @@
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
         <script src="bower_components/restangular/dist/restangular.min.js"></script>
-       
 		
 		<script src = "js/app.js"></script>
 		<script src = "js/services.js"></script>
@@ -27,7 +26,7 @@
 		<script src = "js/signupValidation.js"></script>
 		<script src = "js/dropdown.js"></script>
 		<script src = "js/profileActions.js"></script>
-        
+        <script></script>
 
         
         
@@ -35,8 +34,12 @@
         <!-- old jquery (it works though)
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        
+        
+        
+        
 
         <script>
         //paste this code under the head tag or in a separate js file.
@@ -487,46 +490,44 @@
             
             
             
-
-        </script>
-        <!-- ripple.js -->
-        <script>
             (function (window, $) {
-
-                  $(function() {
-
-
-                    $('.ripple').on('click', function (event) {
-                      event.preventDefault();
-
-                      var $div = $('<div/>'),
-                          btnOffset = $(this).offset(),
-                            xPos = event.pageX - btnOffset.left,
-                            yPos = event.pageY - btnOffset.top;
+  
+              $(function() {
 
 
+                $('.ripple').on('click', function (event) {
+                  event.preventDefault();
 
-                      $div.addClass('ripple-effect');
-                      var $ripple = $(".ripple-effect");
+                  var $div = $('<div/>'),
+                      btnOffset = $(this).offset(),
+                        xPos = event.pageX - btnOffset.left,
+                        yPos = event.pageY - btnOffset.top;
 
-                      $ripple.css("height", $(this).height());
-                      $ripple.css("width", $(this).height());
-                      $div
-                        .css({
-                          top: yPos - ($ripple.height()/2),
-                          left: xPos - ($ripple.width()/2),
-                          background: $(this).data("ripple-color")
-                        }) 
-                        .appendTo($(this));
 
-                      window.setTimeout(function(){
-                        $div.remove();
-                      }, 2000);
-                    });
 
-                  });
+                  $div.addClass('ripple-effect');
+                  var $ripple = $(".ripple-effect");
 
-                })(window, jQuery);
+                  $ripple.css("height", $(this).height());
+                  $ripple.css("width", $(this).height());
+                  $div
+                    .css({
+                      top: yPos - ($ripple.height()/2),
+                      left: xPos - ($ripple.width()/2),
+                      background: $(this).data("ripple-color")
+                    }) 
+                    .appendTo($(this));
+
+                  window.setTimeout(function(){
+                    $div.remove();
+                  }, 2000);
+                });
+
+              });
+
+            })(window, jQuery);
+            
+
         </script>
         
     </body>
