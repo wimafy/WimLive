@@ -29,8 +29,8 @@
 		<script src = "js/signupValidation.js"></script>
 		<script src = "js/dropdown.js"></script>
 		<script src = "js/profileActions.js"></script>
-        <script src = "src/jquery.ripple.js"></script>
-        <script src = "test/test.js"></script>
+        <script src = "js/jquery.ripple.js"></script>
+        <script src = "js/test.js"></script>
         
         
         
