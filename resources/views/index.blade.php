@@ -6,7 +6,7 @@
 
         <title>WIM(afy)</title>
 
-        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
 		<link href="css/wimmain.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="bower_components/chosen/chosen.css" rel="stylesheet">
