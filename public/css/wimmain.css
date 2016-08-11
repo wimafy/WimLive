@@ -725,7 +725,7 @@ input:focus ~ .highlight {
 
 .eachfriend {
     width: 25%;
-    height: 100px;
+    height: 85px;
     float: left;
     border-style: solid;
     border-width: 2px;
@@ -734,13 +734,13 @@ input:focus ~ .highlight {
 }
 
 .myfriendspic {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: lightgray;
     display: block;
     margin-top: 10px;
-    margin-left: calc(50% - 25px);
+    margin-left: calc(50% - 20px);
 }
 
 .myfriendsname {
@@ -751,7 +751,7 @@ input:focus ~ .highlight {
         overflow: hidden;
         text-overflow: ellipsis;
         font-size: 12px;
-        margin-top: 2px;
+        margin-top: 4px;
 }
 
 .myfriendscheckmark {
