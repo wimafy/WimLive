@@ -144,19 +144,7 @@ a {
 }
 
 /*ripple css*/
-body {
-  font: 16px/1.6 sans-serif;
-  background: #eee; }
 
-.caution,
-.inputfollow-error {
-  color: #a94442; }
-
-.container {
-  width: 700px;
-  margin: 110px auto;
-  padding: 40px 0;
-}
 
 .wrap {
   overflow: hidden; }
@@ -218,6 +206,9 @@ body {
   .like-polymer a:active {
     -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); }
+
+
+
 
 
 /*transitions*/
