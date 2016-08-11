@@ -10,8 +10,8 @@
 		<link href="css/wimmain.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="bower_components/chosen/chosen.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="../../public/css/lv-ripple.css">
-		<link rel="stylesheet" type="text/css" href="../../public/css/ripplestyle.css">
+        <link rel="stylesheet" type="text/css" href="lv-ripple.css">
+		<link rel="stylesheet" type="text/css" href="ripplestyle.css">
 	  
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
