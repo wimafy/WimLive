@@ -6,7 +6,7 @@
 
         <title>WIM(afy)</title>
 
-        <!--<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">-->
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/wimmain.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="bower_components/chosen/chosen.css" rel="stylesheet">
@@ -27,22 +27,6 @@
 		<script src = "js/dropdown.js"></script>
 		<script src = "js/profileActions.js"></script>
 
-        
-        
-        <!-- material design stuffs-->
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
-        
-          <!-- Bootstrap -->
-          <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-        <!-- Bootstrap Material Design -->
-        <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-material-design.css">
-        <link rel="stylesheet" type="text/css" href="dist/css/ripples.min.css">
-        
-        
-        
-        
         
         <!--loading screen icon -->
         <!-- old jquery (it works though)
