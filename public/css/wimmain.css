@@ -383,7 +383,7 @@ a {
 
 .headerpagetitle {
     float: left;
-    line-height: 50px;
+    line-height: 46px;
     margin-top: 0px;
     color: white;
     font-family: Arial;
@@ -1410,8 +1410,8 @@ input:focus ~ .highlight {
 .profileinfoleftinfotitle {
     float: left;
     width: calc(100% - 181px);
-    font-size: 12px;
-    margin-top: 8px;
+    font-size: 11px;
+    margin-top: 6px;
     margin-bottom: 0px;
     font-family: roboto Black;
     line-height: 12px;
@@ -1419,14 +1419,14 @@ input:focus ~ .highlight {
 
 .profileinfoleftinfoinformation {
     float: left;
-    font-size: 16px;
-    margin-top: -27px;
-    width: calc(100% - 30px);
+    font-size: 12px;
+    margin-top: -33px;
+    width: calc(100% - 81px);
     font-family: roboto;
-    margin-left: 59px;
+    margin-left: 75px;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 16px;
+    line-height: 30px;
 }
 
 
@@ -1477,6 +1477,11 @@ input:focus ~ .highlight {
     font-size: 23px;
     color: black;
     float: left;
+    background-color: lightcoral;
+    margin-right: 15px;
+    border-bottom-style: solid;
+    border-bottom-color: #E0E0E0;
+    border-width: 1px;
 }
 
 .profileintereststext {
