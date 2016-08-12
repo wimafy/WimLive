@@ -1238,6 +1238,10 @@ input:focus ~ .highlight {
     -webkit-filter: blur(6px);
 }
 
+.profiletopprofilepictureholderdiv {
+    
+}
+
 .profiletopleftactioncircle {
     width: 50px;
     height: 50px;
