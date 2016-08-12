@@ -1423,7 +1423,7 @@ input:focus ~ .highlight {
     margin-top: -33px;
     width: calc(100% - 81px);
     font-family: roboto;
-    margin-left: 75px;
+    margin-left: 60px;
     overflow: hidden;
     text-overflow: ellipsis;
     line-height: 30px;
@@ -1477,8 +1477,7 @@ input:focus ~ .highlight {
     font-size: 23px;
     color: black;
     float: left;
-    background-color: lightcoral;
-    margin-right: 15px;
+    margin-right: 0px;
     border-bottom-style: solid;
     border-bottom-color: #E0E0E0;
     border-width: 1px;
@@ -1507,7 +1506,7 @@ input:focus ~ .highlight {
     border-width: 1px;
     border-style: solid;
     border-color: #E0E0E0;
-    box-shadow: 0px 2px 16px -3px #BDBDBD;
+    box-shadow: 0px 2px 7px 2px #BDBDBB;
 }
 
 /*homepage */

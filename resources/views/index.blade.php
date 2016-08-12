@@ -182,6 +182,9 @@
 			});
                
 		</script>
+        
+        
+        <!-- script for page movement -->
         <script>
     
             function fullpage1currentwims() {

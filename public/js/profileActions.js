@@ -6,6 +6,10 @@ function showFriendsTab() {
     document.getElementById("pastwims").style.opacity = "0";
     document.getElementById("friends").style.opacity = "10";
     document.getElementById("info").style.opacity = "0";
+    document.getElementById("interestsID").style.color = "black";
+    document.getElementById("friendsID").style.color = "#2196F3";
+    document.getElementById("contactinfoID").style.color = "black";
+    
 }
 
 function showPastwimsTab() {
@@ -16,6 +20,9 @@ function showPastwimsTab() {
     document.getElementById("pastwims").style.opacity = "10";
     document.getElementById("friends").style.opacity = "0";
     document.getElementById("info").style.opacity = "0";
+    document.getElementById("interestsID").style.color = "#2196F3";
+    document.getElementById("friendsID").style.color = "black";
+    document.getElementById("contactinfoID").style.color = "black";
 }
 
 function showUserinfoTab() {
@@ -26,4 +33,7 @@ function showUserinfoTab() {
 	document.getElementById("pastwims").style.opacity = "0";
 	document.getElementById("friends").style.opacity = "0";
 	document.getElementById("info").style.opacity = "10";
+    document.getElementById("interestsID").style.color = "black";
+    document.getElementById("friendsID").style.color = "black";
+    document.getElementById("contactinfoID").style.color = "#2196F3";
 }
