@@ -1020,8 +1020,8 @@ input:focus ~ .highlight {
 
 .individualwimdestinationdirectionsicon {
     float: right;
-    color: white;
-    position: relative;
+    color: black;
+    margin-top: -55px;
 }
 
 .individualwimdestinationicon {
