@@ -1886,14 +1886,20 @@ button.link {
 
 .newwiminputicons {
     width: 40px;
-    background-color: gray;
     text-align: center;
     height: 40px;
+    float: left;
+    margin-top: 15px;
 }
 
 .newwiminputforms {
-    width: calc(100vw - 100px);
+    width: calc(100vw - 80px);
     float: left;
+    border: none;
+    height: 40px;
+    margin-right: 40px;
+    font-size: 18px;
+    font-family: Roboto;
 }
 
 /* bigmap */
