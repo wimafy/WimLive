@@ -1885,11 +1885,15 @@ button.link {
 /* New Wim */
 
 .newwiminputicons {
-    
+    width: 40px;
+    background-color: gray;
+    text-align: center;
+    height: 40px;
 }
 
 .newwiminputforms {
-    
+    width: calc(100vw - 100px);
+    float: left;
 }
 
 /* bigmap */
