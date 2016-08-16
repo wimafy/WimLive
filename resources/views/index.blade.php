@@ -490,8 +490,12 @@
         
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places" type="text/javascript"></script>
 
+        
         <script>
+            alert("one");
             jQuery( document ).ready(function(){
+                
+                alert("anything");
                  var map = new google.maps.Map(document.getElementById('map-canvas'),{
                     center:{
                         lat: 27.72,
