@@ -1909,10 +1909,11 @@ button.link {
     float: left;
     border: none;
     height: 30px;
-    font-size: 20px;
-    font-family: Roboto Black;
+    font-size: 25px;
+    font-family: Roboto;
     border-radius: 0;
     margin-top: 12px;
+    color: black;
 }
 
 .newwiminputwimiconbutton {
