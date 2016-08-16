@@ -1948,11 +1948,12 @@ button.link {
 .newwimdiv006 {
     float: left;
     width: calc(40vw + 6px);
-    background-color: lightcoral;
 }
 
 .newwimdiv007 {
-    
+    float: left; 
+    border-bottom-style: solid; 
+    border-bottom-width: 1px;
 }
 
 .newwimdiv008 {
