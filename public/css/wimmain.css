@@ -1885,7 +1885,7 @@ button.link {
 /* New Wim */
 
 .newwiminputicons {
-    width: 40px;
+    width: 24px;
     text-align: center;
     height: 40px;
     float: left;
@@ -1940,13 +1940,15 @@ button.link {
 }
 
 .newwimdiv005 {
-    width: 40vw;
+    width: calc(40vw + 6px);
     background-color: green;
     float: left;
 }
 
 .newwimdiv006 {
-    
+    float: left;
+    width: calc(40vw + 6px);
+    background-color: lightcoral;
 }
 
 .newwimdiv007 {
