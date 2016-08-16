@@ -41,7 +41,7 @@
         <div class="newwimdiv008">
             <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 24px;">&#xE8D2;</i>
             <div class="newwimdiv003" style="float: left; border-bottom-style: solid; border-bottom-width: 1px;">
-                <textarea class="form-control newwiminputforms" ng-model="currentWimDescription" placeholder="Description..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0; height: 55px"></textarea>
+                <textarea class="form-control newwiminputforms" ng-model="currentWimDescription" placeholder="Description..." type="text" style="margin-top: 22px; padding: 0; border-color: white; box-shadow: inset 0 0 0; height: 45px"></textarea>
             </div>
         </div>
             
@@ -49,8 +49,7 @@
             <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 24px;">&#xE7FB;</i>
             <div class="newwimdiv003">
                 <!-- implement show friends here -->
-                <p class="newwiminputforms">Add People</p>
-               
+                <p class="newwiminputforms" style="line-height: 70px; font-family: Roboto; color: #9E9E9E; height: 45px;">Add People</p>
             </div>
         </div>
 		
@@ -58,20 +57,21 @@
         
 
 
-		
-        
-         <p>Invite Friends</p>
-                <p><select multiple="multiple" ng-model="friends">
-                        <option>1</option>
-                        <option>2</option>
-                        </select>
-                        </p>
-        <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
-        <input class="form-control newwiminputforms" ng-model="currentWimAttire" placeholder="Attire..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
-        <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
-         <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
-            <input class="form-control newwiminputforms" ng-model="currentWimAddress" placeholder="Address..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
-        <input class="form-control newwiminputforms" ng-model="currentWimTransportation" placeholder="Transportation..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
+		<div>
+
+             <p>Invite Friends</p>
+                    <p><select multiple="multiple" ng-model="friends">
+                            <option>1</option>
+                            <option>2</option>
+                            </select>
+                            </p>
+            <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
+            <input class="form-control newwiminputforms" ng-model="currentWimAttire" placeholder="Attire..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
+            <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
+             <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
+                <input class="form-control newwiminputforms" ng-model="currentWimAddress" placeholder="Address..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
+            <input class="form-control newwiminputforms" ng-model="currentWimTransportation" placeholder="Transportation..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
+        </div>
         
         <div>
             <!--Upon clicking the Save Wim button, this create function is fired to send the info to the API through the CurrentWimsController-->
