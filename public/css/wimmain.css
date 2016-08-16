@@ -1915,7 +1915,6 @@ button.link {
 .newwiminputwimiconbutton {
     width: 30px;
     height: 30px;
-    background-color: gray;
     float: left;
     margin-top: 12px;
     margin-left: 12px;
@@ -1984,7 +1983,11 @@ button.link {
 }
 
 .newwimiconicons {
-    
+    line-height: 15px;
+    font-size: 12px;
+    text-align: center;
+    width: 15px;
+    float: left;
 }
 
 
