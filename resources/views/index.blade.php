@@ -56,57 +56,6 @@
         </style>
         
         
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places" type="text/javascript"></script>
-
-        <script>
-            jQuery( document ).ready(function(){
-                 var map = new google.maps.Map(document.getElementById('map-canvas'),{
-                    center:{
-                        lat: 27.72,
-                        lng: 85.36
-                    },
-                    zoom:15
-                });
-
-                var marker = new google.maps.Marker({
-                    position:{
-                        lat: 27.72,
-                        lng:85.36
-                    },
-                    map:map,
-                    draggable:true
-                });
-
-                var searchBox = new google.maps.places.SearchBox(document.getElementById('mapsearch'));
-
-                //place cange event on search box
-                google.maps.event.addListener(searchBox, 'places_changed',function(){
-
-                    console.log(searchBox.getPlaces());
-                    var places = searchBox.getPlaces();
-
-                    //bound
-                    var bounds = new google.maps.LatLngBounds();
-                    var i, place;
-
-                    for(i=0; place=places[i];i++){
-
-                        // console.log(place.geometry.location);
-
-                        bounds.extend(place.geometry.location);
-                        marker.setPosition(place.geometry.location);
-
-                    }
-
-                    map.fitBounds(bounds);
-                    map.setZoom(15);
-
-                })
-            });
-
-
-
-        </script>
         
         
         
@@ -115,6 +64,11 @@
     <div class="se-pre-con"></div>
 
     <body style="background-color: #EEEEEE;">		
+        
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places" type="text/javascript"></script>
+
+
+        
     <div class="indexbladewholediv">
     <!-- shell-->
         
@@ -224,6 +178,57 @@
 		<div id="ngviewdiv" ng-view></div>
 		
     </div>    
+        
+        <script>
+            jQuery( document ).ready(function(){
+                 var map = new google.maps.Map(document.getElementById('map-canvas'),{
+                    center:{
+                        lat: 27.72,
+                        lng: 85.36
+                    },
+                    zoom:15
+                });
+
+                var marker = new google.maps.Marker({
+                    position:{
+                        lat: 27.72,
+                        lng:85.36
+                    },
+                    map:map,
+                    draggable:true
+                });
+
+                var searchBox = new google.maps.places.SearchBox(document.getElementById('mapsearch'));
+
+                //place cange event on search box
+                google.maps.event.addListener(searchBox, 'places_changed',function(){
+
+                    console.log(searchBox.getPlaces());
+                    var places = searchBox.getPlaces();
+
+                    //bound
+                    var bounds = new google.maps.LatLngBounds();
+                    var i, place;
+
+                    for(i=0; place=places[i];i++){
+
+                        // console.log(place.geometry.location);
+
+                        bounds.extend(place.geometry.location);
+                        marker.setPosition(place.geometry.location);
+
+                    }
+
+                    map.fitBounds(bounds);
+                    map.setZoom(15);
+
+                })
+            });
+
+
+
+        </script>
+        
         
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="bower_components/chosen/chosen.jquery.js" type="text/javascript"></script>
