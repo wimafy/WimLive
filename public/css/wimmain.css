@@ -1903,13 +1903,13 @@ button.link {
 }
 
 .newwiminputformwimtitle {
-    width: calc(100vw - 80px);
+    width: calc(80vw - 42px);
     float: left;
     border: none;
-    height: 40px;
-    margin-right: 40px;
-    font-size: 18px;
+    height: 54px;
+    font-size: 20px;
     font-family: Roboto;
+    border-radius: 0;
 }
 
 .newwiminputwimiconbutton {
@@ -1918,6 +1918,7 @@ button.link {
     background-color: gray;
     float: left;
     margin-top: 12px;
+    margin-left: 12px;
 }
 
 
