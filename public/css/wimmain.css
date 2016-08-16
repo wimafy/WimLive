@@ -1957,7 +1957,8 @@ button.link {
 }
 
 .newwimdiv008 {
-    
+    float: left;
+    margin-left: calc(10vw - 6px);
 }
 
 .newwimdiv009 {
