@@ -1906,10 +1906,11 @@ button.link {
     width: calc(80vw - 42px);
     float: left;
     border: none;
-    height: 54px;
+    height: 30px;
     font-size: 20px;
-    font-family: Roboto;
+    font-family: Roboto Black;
     border-radius: 0;
+    margin-top: 12px;
 }
 
 .newwiminputwimiconbutton {
