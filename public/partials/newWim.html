@@ -12,24 +12,30 @@
 
 <div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: white; position: absolute; z-index: 50;">
     <div>
-        <div style="float: left; width: calc(80vw + 12px); height: 55px; margin-top: 15px; border-bottom-style: solid; border-bottom-width: 1px; margin-left: calc(10vw - 6px);">
+        <div class="newwimdiv001" style="float: left; width: calc(80vw + 12px); height: 55px; margin-top: 15px; border-bottom-style: solid; border-bottom-width: 1px; margin-left: calc(10vw - 6px);">
             <input class="form-control newwiminputformwimtitle" ng-model="currentWimTitle" placeholder="WIM Title..." type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
             <div class="newwiminputwimiconbutton"></div>
         </div>
-        <div style="width: 100vw; float: left;">
-            <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 24px;">&#xE87C;</i>
-            <div style="float: left; border-bottom-style: solid; border-bottom-width: 1px;">
+        <div class="newwimdiv002" style="width: 100vw; float: left; margin-left: calc(10vw - 6px);">
+            <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 24px;">&#xE0C8;</i>
+            <div class="newwimdiv003" style="float: left; border-bottom-style: solid; border-bottom-width: 1px;">
                 <input class="form-control newwiminputforms" ng-model="currentWimLocation" placeholder="Destination..." type="text" style="margin-top: 14px;border-color: white; box-shadow: inset 0 0 0; padding: 0px;">
             </div>
         </div>
-        <div>
-        <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
-        <input class="form-control newwiminputforms" ng-model="currentWimAddress" placeholder="Address..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
+        <div class="newwimdiv004">
+            <div  class="newwimdiv005">
+            <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
+            <input class="form-control newwiminputforms" ng-model="currentWimDate" placeholder="Date..." type="date" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
+            <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
+            </div>
+            <div>
+            <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
+            <input class="form-control newwiminputforms" ng-model="currentWimAddress" placeholder="Address..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
+            </div>
+        
         </div>
 
-        <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
-        <input class="form-control newwiminputforms" ng-model="currentWimDate" placeholder="Date..." type="date" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
-        <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
+        
 		<input class="form-control newwiminputforms" ng-model="currentWimTime" placeholder="Time..." type="time" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
         <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
 		<input class="form-control newwiminputforms" ng-model="currentWimTransportation" placeholder="Transportation..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
