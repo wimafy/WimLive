@@ -1902,8 +1902,22 @@ button.link {
     font-family: Roboto;
 }
 
+.newwiminputformwimtitle {
+    width: calc(100vw - 80px);
+    float: left;
+    border: none;
+    height: 40px;
+    margin-right: 40px;
+    font-size: 18px;
+    font-family: Roboto;
+}
+
 .newwiminputwimiconbutton {
-    
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    float: left;
+    margin-top: 12px;
 }
 
 
