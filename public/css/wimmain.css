@@ -1983,11 +1983,12 @@ button.link {
 }
 
 .newwimiconicons {
-    line-height: 15px;
+    line-height: 14px;
     font-size: 12px;
     text-align: center;
-    width: 15px;
+    width: 14px;
     float: left;
+    border-style: solid;
 }
 
 
