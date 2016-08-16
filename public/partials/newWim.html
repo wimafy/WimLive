@@ -18,7 +18,7 @@
         </div>
         <div class="newwimdiv002" style="width: 100vw; float: left; margin-left: calc(10vw - 6px);">
             <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 24px;">&#xE0C8;</i>
-            <div class="newwimdiv003" style="float: left; border-bottom-style: solid; border-bottom-width: 1px;">
+            <div class="newwimdiv003">
                 <input class="form-control newwiminputforms" ng-model="currentWimLocation" placeholder="Destination..." type="text" style="margin-top: 14px;border-color: white; box-shadow: inset 0 0 0; padding: 0px;">
             </div>
         </div>
@@ -41,20 +41,22 @@
         <div class="newwimdiv008">
             <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 24px;">&#xE8D2;</i>
             <div class="newwimdiv003" style="float: left; border-bottom-style: solid; border-bottom-width: 1px;">
-            <textarea class="form-control newwiminputforms" ng-model="currentWimDescription" placeholder="Description..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;"></textarea>
+            <textarea class="form-control newwiminputforms" ng-model="currentWimDescription" placeholder="Description..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0; height: 55px"></textarea>
         </div>
             
-        <div class="newwimdiv008">
-            <!-- implement show friends here -->
+        <div class="newwimdiv008" style="width: 100vw; float: left; margin-left: calc(10vw - 6px);">
+            <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 24px;">&#xE7FB;</i>
+            <div class="newwimdiv003">
+                <!-- implement show friends here -->
 
-            <p>Invite Friends</p>
-            <p><select multiple="multiple" ng-model="friends">
-                    <option>1</option>
-                    <option>2</option>
-                    </select>
-                    </p>
+                <p>Invite Friends</p>
+                <p><select multiple="multiple" ng-model="friends">
+                        <option>1</option>
+                        <option>2</option>
+                        </select>
+                        </p>
+            </div>
         </div>
-		
 		
         
         

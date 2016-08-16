@@ -1930,7 +1930,9 @@ button.link {
 }
 
 .newwimdiv003 {
-    
+    float: left; 
+    border-bottom-style: solid; 
+    border-bottom-width: 1px;
 }
 
 .newwimdiv004 {
