@@ -1934,11 +1934,15 @@ button.link {
 }
 
 .newwimdiv004 {
-    
+    float: left;
+    background-color: lightblue;
+    margin-left: calc(10vw - 6px);
 }
 
 .newwimdiv005 {
-    
+    width: 40vw;
+    background-color: green;
+    float: left;
 }
 
 .newwimdiv006 {
