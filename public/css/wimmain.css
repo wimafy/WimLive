@@ -1893,13 +1893,13 @@ button.link {
 }
 
 .newwiminputforms {
-    width: calc(100vw - 80px);
+    width: calc(80vw - 12px);
     float: left;
     border: none;
     height: 40px;
-    margin-right: 40px;
     font-size: 18px;
     font-family: Roboto;
+    border-radius: 0;
 }
 
 .newwiminputformwimtitle {
