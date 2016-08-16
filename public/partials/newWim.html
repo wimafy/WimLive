@@ -57,7 +57,7 @@
         
 
 
-		<div>
+		<div style="position: absolute; left: 100vw;">
 
              <p>Invite Friends</p>
                     <p><select multiple="multiple" ng-model="friends">
@@ -73,7 +73,7 @@
             <input class="form-control newwiminputforms" ng-model="currentWimTransportation" placeholder="Transportation..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
         </div>
         
-        <div>
+        <div style="float: right; margin: calc(10vw - 6px);">
             <!--Upon clicking the Save Wim button, this create function is fired to send the info to the API through the CurrentWimsController-->
             <button type="button" class="btn btn-primary" ng-click="create()">Save Wim</button>
         </div>
