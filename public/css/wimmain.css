@@ -1893,15 +1893,14 @@ button.link {
 }
 
 .newwiminputforms {
-    width: calc(80vw - 37px);
+    width: calc(80vw - 24px);
     float: left;
     border: none;
     height: 40px;
-    font-size: 18px;
+    font-size: 14px;
     font-family: Roboto;
     border-radius: 0;
     color: black;
-    
 }
 
 .newwiminputformwimtitle {
@@ -1920,7 +1919,7 @@ button.link {
     width: 30px;
     height: 30px;
     float: left;
-    margin-top: 12px;
+    margin-top: 15px;
     margin-left: 12px;
 }
 
