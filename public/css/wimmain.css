@@ -1941,18 +1941,18 @@ button.link {
 .newwimdiv004 {
     float: left;
     /* background-color: lightblue; */
-    margin-left: calc(10vw - 6px);
+    margin-left: 20px;
 }
 
 .newwimdiv005 {
-    width: calc(40vw + 6px);
+    width: calc(50vw - 20px);
     /* background-color: green; */
     float: left;
 }
 
 .newwimdiv006 {
     float: left;
-    width: calc(40vw + 6px);
+    width: calc(50vw - 20px);
 }
 
 .newwimdiv007 {
@@ -1964,7 +1964,7 @@ button.link {
 
 .newwimdiv008 {
     float: left;
-    margin-left: calc(10vw - 6px);
+    margin-left: 20px;
 }
 
 .newwimdiv009 {
