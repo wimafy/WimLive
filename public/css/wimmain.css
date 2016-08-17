@@ -2011,6 +2011,7 @@ button.link {
     height: 100vh;
     margin-top: -50px;
     background-color: white;
+    left: 100vw;
 }
 
 .newwiminvitefriendscssdiv {
