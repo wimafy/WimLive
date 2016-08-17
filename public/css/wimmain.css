@@ -1995,6 +1995,18 @@ button.link {
     
 }
 
+.newwimadvancedoptionscssdiv {
+    position: absolute; 
+    left: 100vw; 
+    background-color: white;
+}
+
+.newwimmapsearchcssdiv {
+    position: absolute;
+    left: 100vw;
+    background-color: white;
+}
+
 .newwimiconicons {
     line-height: 14px;
     font-size: 12px;
