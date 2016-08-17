@@ -23,7 +23,7 @@
         </div>
         <div class="newwimdiv002" style="width: 100vw; float: left; margin-left: 20px;">
             <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE0C8;</i>
-            <div class="newwimdiv003">
+            <div class="newwimdiv003" onclick="showmapsearch()">
                 <input class="form-control newwiminputforms" ng-model="currentWimLocation" placeholder="Destination..." type="text" style="margin-top: 14px;border-color: white; box-shadow: inset 0 0 0; padding: 0px;">
             </div>
         </div>
@@ -52,7 +52,7 @@
             
         <div class="newwimdiv008" style="width: 100vw; float: left; margin-left: 20px;">
             <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE7FB;</i>
-            <div class="newwimdiv003">
+            <div class="newwimdiv003" onclick="showinvitefriends()">
                 <!-- implement show friends here -->
                 <p class="newwiminputforms" style="line-height: 70px; font-family: Roboto; color: #9E9E9E; height: 45px;">Add People</p>
             </div>
@@ -95,6 +95,11 @@
                 <div class="newwimdiv003">
                     <input class="form-control newwiminputforms" ng-model="currentWimTransportation" placeholder="Transportation..." type="text" style="margin-top: 14px;border-color: white; box-shadow: inset 0 0 0; padding: 0px;">
                 </div>
+            </div>
+            
+            <div style="float: right; margin: 20px;">
+                <!--Upon clicking the Save Wim button, this create function is fired to send the info to the API through the CurrentWimsController-->
+                <button type="button" class="btn btn-primary" style="padding: 10px">Back</button>
             </div>
         </div>
         
