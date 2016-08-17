@@ -18,7 +18,10 @@
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
         <script src="bower_components/restangular/dist/restangular.min.js"></script>
-		
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places" type="text/javascript"></script>
+
+        
+        
 		<script src = "js/app.js"></script>
 		<script src = "js/services.js"></script>
 		<script src = "js/controllers.js"></script>
@@ -26,6 +29,7 @@
 		<script src = "js/signupValidation.js"></script>
 		<script src = "js/dropdown.js"></script>
 		<script src = "js/profileActions.js"></script>
+        <script src = "js/searchmap.js"></script>
         
         
         
