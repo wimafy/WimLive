@@ -1968,11 +1968,19 @@ button.link {
 }
 
 .newwimdiv009 {
-    
+    width: 125px;
+    height: 35px;
+    float: left;
+    margin-left: calc(50vw - 62px);
+    margin-top: 10px;
 }
 
 .newwimdiv010 {
-    
+    font-family: Roboto;
+    font-size: 11px;
+    line-height: 40px;
+    float: left;
+    margin: 0;
 }
 
 .newwimdiv011 {
