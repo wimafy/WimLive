@@ -1893,7 +1893,7 @@ button.link {
 }
 
 .newwiminputforms {
-    width: calc(80vw - 24px);
+    width: calc(80vw - 14px);
     float: left;
     border: none;
     height: 40px;
