@@ -29,7 +29,8 @@
 		<script src = "js/signupValidation.js"></script>
 		<script src = "js/dropdown.js"></script>
 		<script src = "js/profileActions.js"></script>
-        <script src = "js/searchmap.js"></script>
+        <script src = "js/newwim.js"></script>
+        
         
         
         
