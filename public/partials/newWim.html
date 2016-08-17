@@ -69,15 +69,15 @@
 
 
 		<div id="newwimadvancedoptionsdiv" class="newwimadvancedoptionscssdiv">
-             <div onclick="hideadvancedoptions()">
-                 <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; float: left; font-size: 14px; margin: 0;">&#xE5CD;</i>
+            <div class="headerdiv">
+                <div class="headerbackarrow">
+                    <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                </div>
+                <h1 class="headerpagetitle">Advanced Options</h1>
             </div>
-             <p>Invite Friends</p>
-                    <p><select multiple="multiple" ng-model="friends">
-                            <option>1</option>
-                            <option>2</option>
-                            </select>
-                            </p>
+            
+            
+             
             <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
             <input class="form-control newwiminputforms" ng-model="currentWimAttire" placeholder="Attire..." type="text" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0;">
             <i class="material-icons newwiminputicons" style="line-height: 40px">&#xE87C;</i>
@@ -91,6 +91,15 @@
             <input type="text" id="mapsearch">
             <div id="map-canvas" style="background-color:gray"></div>
 
+        </div>
+        
+        <div id="newwiminvitefriendsdiv" class="newwiminvitefriendscssdiv">
+            <p>Invite Friends</p>
+            <p><select multiple="multiple" ng-model="friends">
+                    <option>1</option>
+                    <option>2</option>
+                    </select>
+                    </p>
         </div>
         
         

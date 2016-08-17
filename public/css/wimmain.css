@@ -2007,6 +2007,12 @@ button.link {
     background-color: white;
 }
 
+.newwiminvitefriendscssdiv {
+    position: absolute;
+    left: 100vw;
+    background-color: white;
+}
+
 .newwimiconicons {
     line-height: 14px;
     font-size: 12px;
