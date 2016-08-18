@@ -2114,6 +2114,12 @@ button.link {
 }
 
 .newwimwimtypeindivdualtypename {
+    float: left;
+    width: calc(100vw - 100px);
+    background-color: lightblue;
+    overflow: hidden;
+    display: inline;
+    text-overflow: ellipsis;
     
 }
 
