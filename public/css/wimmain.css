@@ -2055,7 +2055,7 @@ button.link {
     border-radius: 50%;
     margin-left: calc(12vw - 20px);
     float: left;
-    background-color: gray;
+    background-color: #9E9E9E;
     margin-top: 25px;
 }
 
@@ -2083,13 +2083,14 @@ button.link {
 .newwiminvitefriendsindividualpersonselectdiv {
     width: 14px;
     height: 14px;
-    background-color: blue;
+    background-color: #00B0FF;
     position: absolute;
     margin: 49px calc(12vw + 5px);
     border-radius: 50%;
     border-style: solid;
     border-width: 2px;
     border-color: white;
+    opacity: 1;
 }
 
 /* bigmap */
