@@ -30,10 +30,9 @@ function newwimselectfriend(friendID) {
     var selectedID = "select" + friendID;
     var selecteddiv = document.getElementById(selectedID);
     if(document.getElementById(selectedID).style.opacity  == 1){
-        alert("woo");
         document.getElementById(selectedID).style.opacity = "0";
     }else{
-        alert("blah");
+        document.getElementById(selectedID).style.opacity = "1";
     }
     
     
