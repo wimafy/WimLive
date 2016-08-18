@@ -25,6 +25,15 @@ function hideinvitefriends() {
 }
 
 
+function showwimwimtype() {
+    document.getElementById("newwimwimtypediv").style.left = "0vw";
+}
+
+function hidewimwimtype() {
+    document.getElementById("newwimwimtypediv").style.left = "100vw";
+}
+
+
 function newwimselectfriend(friendID) {
     //alert(friendID);
     var selectedID = "select" + friendID;
