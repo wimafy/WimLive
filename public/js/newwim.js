@@ -28,5 +28,6 @@ function hideinvitefriends() {
 function newwimselectfriend(friendID) {
     //alert(friendID);
     var selectedID = "select" + friendID;
-    alert(selectedID);
+    //alert(selectedID);
+    document.getElementById("selectedID").style.opacity = "0";
 }
