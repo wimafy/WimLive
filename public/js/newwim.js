@@ -3,7 +3,7 @@ function showadvancedoptions() {
 }
 
 function hideadvancedoptions() {
-    document.getElementById("newwimadvancedoptionsdiv").style.left = "100vw";
+    document.getElementById("newwimadvancedoptionsdiv").style.left = "120vw";
 }
 
 
@@ -12,7 +12,7 @@ function showmapsearch() {
 }
 
 function hidemapsearch() {
-    document.getElementById("newwimmapsearchdiv").style.left = "100vw";
+    document.getElementById("newwimmapsearchdiv").style.left = "120vw";
 }
 
 
@@ -21,7 +21,7 @@ function showinvitefriends() {
 }
 
 function hideinvitefriends() {
-    document.getElementById("newwiminvitefriendsdiv").style.left = "100vw";
+    document.getElementById("newwiminvitefriendsdiv").style.left = "120vw";
 }
 
 
@@ -30,7 +30,7 @@ function showwimwimtype() {
 }
 
 function hidewimwimtype() {
-    document.getElementById("newwimwimtypediv").style.left = "100vw";
+    document.getElementById("newwimwimtypediv").style.left = "120vw";
 }
 
 

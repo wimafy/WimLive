@@ -1998,7 +1998,7 @@ button.link {
 
 .newwimadvancedoptionscssdiv {
     position: absolute;
-    left: 100vw;
+    left: 120vw;
     background-color: white;
     width: 100vw;
     height: 100vh;
@@ -2011,12 +2011,12 @@ button.link {
     height: 100vh;
     margin-top: -50px;
     background-color: white;
-    left: 100vw;
+    left: 120vw;
 }
 
 .newwiminvitefriendscssdiv {
     position: absolute;
-    left: 100vw;
+    left: 120vw;
     background-color: white;
     width: 100vw;
     height: 100vh;
@@ -2025,7 +2025,7 @@ button.link {
 
 .newwimwimtypecssdiv {
     position: absolute;
-    left: 100vw;
+    left: 120vw;
     background-color: white;
     width: 100vw;
     height: 100vh;
