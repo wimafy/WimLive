@@ -2103,6 +2103,24 @@ button.link {
     opacity: 1;
 }
 
+.newwimwimtypeindividualtypediv {
+    width: 100vw;
+    height: 55px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+    border-bottom-width: 1px;
+    margin: 0px;
+    float: left;
+}
+
+.newwimwimtypeindivdualtypename {
+    
+}
+
+.newwimwimtypeindivdualcheckbox {
+    
+}
+
 /* bigmap */
 
 .bigmapgetdirectionsicon {
