@@ -26,5 +26,7 @@ function hideinvitefriends() {
 
 
 function newwimselectfriend(friendID) {
-    alert(friendID);
+    //alert(friendID);
+    var selectedID = "select" + friendID;
+    alert(selectedID);
 }
