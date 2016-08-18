@@ -29,9 +29,9 @@ function newwimselectfriend(friendID) {
     //alert(friendID);
     var selectedID = "select" + friendID;
     var selecteddiv = document.getElementById(selectedID);
-    if(selecteddiv.style.opacity  == 0){
+    if(document.getElementById(selectedID).style.opacity  == 1){
         alert("woo");
-        document.getElementById(selectedID).style.opacity = "1";
+        document.getElementById(selectedID).style.opacity = "0";
     }else{
         alert("blah");
     }
