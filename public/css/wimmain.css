@@ -2045,8 +2045,8 @@ button.link {
 .newwiminvitefriendsindividualpersondiv {
     width: 25vw;
     height: 100px;
-    background-color: lightcoral;
     float: left;
+    margin-bottom: 1;
 }
 
 .newwiminvitefriendsindividualpersonimg {
@@ -2055,6 +2055,8 @@ button.link {
     border-radius: 50%;
     margin-left: calc(12vw - 20px);
     float: left;
+    background-color: gray;
+    margin-top: 25px;
 }
 
 .newwiminvitefriendsindividualpersonlable {
@@ -2064,12 +2066,22 @@ button.link {
     overflow: hidden;
     text-overflow: ellipsis;
     float: left;
+    line-height: 30px;
+    height: 35px;
+    margin-bottom: 0;
+    font-size: 10px;
+    font-family: Roboto Black;
 }
 
 .newwiminvitefriendscssdivforscrolling {
     width: 100vw;
     height: calc(100vh - 50px);
-    background-color: lightblue;
+    float: left;
+    margin-top: -10px;
+}
+
+.newwiminvitefriendsindividualpersonselectdiv {
+    
 }
 
 /* bigmap */
