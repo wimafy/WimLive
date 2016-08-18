@@ -2042,19 +2042,34 @@ button.link {
     border-style: solid;
 }
 
-::-webkit-input-placeholder { /* Chrome */
-  color: red;
+.newwiminvitefriendsindividualpersondiv {
+    width: 25vw;
+    height: 100px;
+    background-color: lightcoral;
+    float: left;
 }
-:-ms-input-placeholder { /* IE 10+ */
-  color: red;
+
+.newwiminvitefriendsindividualpersonimg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: calc(12vw - 20px);
+    float: left;
 }
-::-moz-placeholder { /* Firefox 19+ */
-  color: red;
-  opacity: 1;
+
+.newwiminvitefriendsindividualpersonlable {
+    width: 25vw;
+    text-align: center;
+    display: inline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    float: left;
 }
-:-moz-placeholder { /* Firefox 4 - 18 */
-  color: red;
-  opacity: 1;
+
+.newwiminvitefriendscssdivforscrolling {
+    width: 100vw;
+    height: calc(100vh - 50px);
+    background-color: lightblue;
 }
 
 /* bigmap */
