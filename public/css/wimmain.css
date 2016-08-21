@@ -2002,7 +2002,8 @@ button.link {
     background-color: white;
     width: 100vw;
     height: 100vh;
-    margin-top: -50px'
+    margin-top: 0px;
+    top: 0px;
 }
 
 .newwimmapsearchcssdiv {
@@ -2012,6 +2013,7 @@ button.link {
     margin-top: -50px;
     background-color: white;
     left: 120vw;
+    top: 0;
 }
 
 .newwiminvitefriendscssdiv {
@@ -2021,6 +2023,7 @@ button.link {
     width: 100vw;
     height: 100vh;
     margin-top: -50px;
+    top: 0;
 }
 
 .newwimwimtypecssdiv {
@@ -2030,6 +2033,7 @@ button.link {
     width: 100vw;
     height: 100vh;
     margin-top: -50px;
+    top: 0;
 }
 
 .newwimheaderdiv {
@@ -2088,6 +2092,7 @@ button.link {
     height: calc(100vh - 50px);
     float: left;
     margin-top: -10px;
+    top: 0px;
 }
 
 .newwiminvitefriendsindividualpersonselectdiv {
