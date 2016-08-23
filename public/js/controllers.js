@@ -116,6 +116,12 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 		});
 	
 	}
+	
+	$scope.onExit = function() {
+		$localStorage.$reset();//it will delete all the data from localstorage.
+    };
+
+    $window.onbeforeunload =  $scope.onExit;
 
 	$scope.profile = [];
 	$scope.refresh();
