@@ -851,7 +851,6 @@ input:focus ~ .highlight {
 }
 
 .homepagebuttonlable {
-    margin: auto;
     width: 100;
     font-family: Arial;
     color: white;
