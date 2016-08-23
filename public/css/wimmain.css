@@ -1972,7 +1972,7 @@ button.link {
     width: 125px;
     height: 35px;
     float: left;
-    margin-left: calc(50vw - 62px);
+    margin: 0px calc(50vw - 62px);
     margin-top: 10px;
 }
 
