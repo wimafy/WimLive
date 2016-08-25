@@ -12,13 +12,26 @@
 
 <div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: white; position: absolute; z-index: 50;">
 
-    <div id="01newwimwimtitle" class="newwimslidedivs" onclick="newwimadvanceslide('02newwimdestination')" style="background-color: blue; z-index: 51; -ms-transform: translate(0px, 0px); /* IE 9 */
+    <div id="01newwimwimtitle" class="newwimslidedivs" style="background-color: blue; z-index: 51; -ms-transform: translate(0px, 0px); /* IE 9 */
      -webkit-transform: translate(0px, 0px); /* Safari */
-     transform: translate(0px, 0px);"></div>
-    <div id="02newwimdestination" class="newwimslidedivs" style=" background-color: green; z-index: 52;" onclick="newwimadvanceslide('03newwimdatetime')"></div>
-    <div id="03newwimdatetime" class="newwimslidedivs" style=" background-color: red; z-index: 53;" onclick="newwimadvanceslide('04newwimaddpeople')"></div>
-    <div id="04newwimaddpeople" class="newwimslidedivs" style=" background-color: orange; z-index: 54;" onclick="newwimadvanceslide('05newwimadditionaloptions')"></div>
-    <div id="05newwimadditionaloptions" class="newwimslidedivs" style=" background-color: pink; z-index: 55;"></div>
+     transform: translate(0px, 0px);">
+        <button onclick="newwimadvanceslide('02newwimdestination')">next</button>
+    </div>
+    <div id="02newwimdestination" class="newwimslidedivs" style=" background-color: green; z-index: 52;" >
+        <button onclick="newwimadvanceslide('03newwimdatetime')">next</button>
+        <button onclick="newwimbackslide('02newwimdestination')">back</button>
+    </div>
+    <div id="03newwimdatetime" class="newwimslidedivs" style=" background-color: red; z-index: 53;">
+        <button onclick="newwimadvanceslide('04newwimaddpeople')">next</button>
+        <button onclick="newwimbackslide('03newwimdatetime')">back</button>
+    </div>
+    <div id="04newwimaddpeople" class="newwimslidedivs" style=" background-color: orange; z-index: 54;" >
+        <button onclick="newwimadvanceslide('05newwimadditionaloptions')">next</button>
+        <button onclick="newwimbackslide('04newwimaddpeople')">back</button>
+    </div>
+    <div id="05newwimadditionaloptions" class="newwimslidedivs" style=" background-color: pink; z-index: 55;">
+        <button onclick="newwimbackslide('05newwimadditionaloptions')">back</button>
+    </div>
     
     
     
