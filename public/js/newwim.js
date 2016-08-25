@@ -9,10 +9,13 @@ function hideadvancedoptions() {
 
 function showmapsearch() {
     document.getElementById("newwimmapsearchdiv").style.left = "0vw";
+    document.getElementById("fullpage3newwim").style.zIndex = "49";
+    
 }
 
 function hidemapsearch() {
     document.getElementById("newwimmapsearchdiv").style.left = "120vw";
+    document.getElementById("fullpage3newwim").style.zIndex = "100";
 }
 
 
