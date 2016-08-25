@@ -1,9 +1,11 @@
 function showadvancedoptions() {
     document.getElementById("newwimadvancedoptionsdiv").style.left = "0vw";
+    document.getElementById("fullpage3newwim").style.zIndex = "49";
 }
 
 function hideadvancedoptions() {
     document.getElementById("newwimadvancedoptionsdiv").style.left = "120vw";
+    document.getElementById("fullpage3newwim").style.zIndex = "100";
 }
 
 
@@ -21,19 +23,23 @@ function hidemapsearch() {
 
 function showinvitefriends() {
     document.getElementById("newwiminvitefriendsdiv").style.left = "0vw";
+    document.getElementById("fullpage3newwim").style.zIndex = "49";
 }
 
 function hideinvitefriends() {
     document.getElementById("newwiminvitefriendsdiv").style.left = "120vw";
+    document.getElementById("fullpage3newwim").style.zIndex = "100";
 }
 
 
 function showwimwimtype() {
     document.getElementById("newwimwimtypediv").style.left = "0vw";
+    document.getElementById("fullpage3newwim").style.zIndex = "49";
 }
 
 function hidewimwimtype() {
     document.getElementById("newwimwimtypediv").style.left = "120vw";
+    document.getElementById("fullpage3newwim").style.zIndex = "100";
 }
 
 
