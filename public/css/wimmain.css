@@ -2143,7 +2143,7 @@ button.link {
 /* new wim v2*/
 
 .newwimslidedivs {
-    height: calc(100% - 50px);
+    height: calc(100vh - 50px);
     width: 100vw;
     top: 50px;
     background-color: white;
