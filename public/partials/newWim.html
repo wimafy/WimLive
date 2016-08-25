@@ -12,7 +12,9 @@
 
 <div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: white; position: absolute; z-index: 50;">
 
-    <div id="01newwimwimtitle" class="newwimslidedivs" onclick="newwimadvanceslide('02newwimdestination')" style="background-color: blue; z-index: 51;"></div>
+    <div id="01newwimwimtitle" class="newwimslidedivs" onclick="newwimadvanceslide('02newwimdestination')" style="background-color: blue; z-index: 51; -ms-transform: translate(0px, 0px); /* IE 9 */
+     -webkit-transform: translate(0px, 0px); /* Safari */
+     transform: translate(0px, 0px);"></div>
     <div id="02newwimdestination" class="newwimslidedivs" style=" background-color: green; z-index: 52;" onclick="newwimadvanceslide('03newwimdatetime')"></div>
     <div id="03newwimdatetime" class="newwimslidedivs" style=" background-color: red; z-index: 53;" onclick="newwimadvanceslide('04newwimaddpeople')"></div>
     <div id="04newwimaddpeople" class="newwimslidedivs" style=" background-color: orange; z-index: 54;" onclick="newwimadvanceslide('05newwimadditionaloptions')"></div>
