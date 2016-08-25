@@ -2140,6 +2140,18 @@ button.link {
     border-color: gray;
 }
 
+/* new wim v2*/
+
+.newwimslidedivs {
+    height: calc(100% - 50px);
+    width: 100vw;
+    top: 50px;
+    background-color: white;
+    position: absolute;
+    z-index: 50;
+}
+
+
 /* bigmap */
 
 .bigmapgetdirectionsicon {

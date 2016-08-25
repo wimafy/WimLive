@@ -77,3 +77,13 @@ function newwimwimtype(wimtypeID) {
     
 }
 
+//new wim v2
+
+function newwimadvanceslide(divID) {
+    document.getElementById(divID).style.left = "0vw";
+}
+
+function newwimbackslide(divID) {
+    document.getElementById(divID).style.left = "120vw";
+}
+
