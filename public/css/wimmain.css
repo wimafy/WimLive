@@ -2145,7 +2145,6 @@ button.link {
 .newwimslidedivs {
     height: calc(100vh - 50px);
     width: 100vw;
-    top: 50px;
     background-color: white;
     position: absolute;
     z-index: 50;
