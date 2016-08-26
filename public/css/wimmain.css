@@ -1946,7 +1946,7 @@ button.link {
     float: left;
     width: calc(100vw - 14px);
     height: 70px;
-    margin-top: calc(50vh - 100px);
+    margin-top: 30px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     margin-left: 7px;
@@ -2020,7 +2020,7 @@ button.link {
     float: left;
     width: calc(100vw - 14px);
     height: 70px;
-    margin-top: calc(50vh - 100px);
+    margin-top: 12vh;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     margin-left: 7px;
