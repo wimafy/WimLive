@@ -92,12 +92,10 @@ function newwimbackslide(divID) {
 }
 
 function newwimdestinationpagein() {
-    document.getElementById('newwimmapsearchdiv').classList.add('pagetransitionIN');
-    document.getElementById('newwimmapsearchdiv').classList.remove('pagetransitionOUT');
+    document.getElementById('newwimmapsearchdiv').style.left = "0vw";
 }
 
 
 function newwimdestinationpageout() {
-    document.getElementById('newwimmapsearchdiv').classList.remove('pagetransitionIN');
-    document.getElementById('newwimmapsearchdiv').classList.add('pagetransitionOUT');
+     document.getElementById('newwimmapsearchdiv').style.left = "125vw";
 }
