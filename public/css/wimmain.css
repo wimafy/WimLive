@@ -2053,12 +2053,11 @@ button.link {
 .newwimdiv011 {
     float: left;
     width: calc(100vw - 14px);
-    height: 70px;
     margin-top: 30px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     margin-left: 7px;
-    padding: 10px;
+    padding-bottom: 100px;
     border-radius: 4px;
     background-color: white;
     overflow: hidden;
@@ -2137,7 +2136,7 @@ button.link {
 }
 
 .newwiminvitefriendsindividualpersondiv {
-    width: 25vw;
+    width: calc(25vw - 4px);
     height: 100px;
     float: left;
     margin-bottom: 1;
@@ -2242,7 +2241,7 @@ button.link {
     position: absolute;
     height: 100%;
     width: 100%;
-    padding-bottom: 130px;
+    padding-bottom: 10px;
 }
 
 .newwimnextbutton {
