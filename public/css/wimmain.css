@@ -2243,6 +2243,7 @@ button.link {
     font-family: Roboto;
     font-size: 20px;
     border-radius: 2px;
+    box-shadow: 2px 2px 5px 2px #BDBDBB;
 }
 
 .newwimpreviousbutton {
@@ -2257,6 +2258,7 @@ button.link {
     font-family: Roboto;
     font-size: 20px;
     border-radius: 2px;
+    box-shadow: 2px 2px 5px 2px #BDBDBB;
 }
 
 .newwimsubmitwimbutton {
