@@ -1983,6 +1983,7 @@ button.link {
 .newwimdiv008 {
     float: left;
     margin-left: 20px;
+    margin-top: 30px;
 }
 
 .newwimdiv009 {
@@ -2210,6 +2211,19 @@ button.link {
     border-radius: 2px;
 }
 
+.newwimsubmitwimbutton {
+    position: absolute;
+    bottom: 10vh;
+    right: 10vw;
+    width: 65px;
+    height: 30px;
+    background-color: #00C853;
+    border-style: none;
+    color: white;
+    font-family: Roboto;
+    font-size: 20px;
+    border-radius: 2px;
+}
 
 /* bigmap */
 
