@@ -1887,9 +1887,9 @@ button.link {
 .newwiminputicons {
     width: 24px;
     text-align: center;
-    height: 30px;
+    height: 50px;
     float: left;
-    margin-top: 12px;
+    margin-top: 0;
 }
 
 .newwiminputforms {
@@ -1907,12 +1907,13 @@ button.link {
     width: calc(100vw - 76px);
     float: left;
     border: none;
-    height: 30px;
+    height: 50px;
     font-size: 25px;
     font-family: Roboto;
     border-radius: 0;
-    margin-top: 12px;
+    margin: 0px;
     color: black;
+    line-height: 50px;
 }
 
 .newwiminputwimiconbutton {
