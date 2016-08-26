@@ -1923,9 +1923,7 @@ button.link {
     margin-left: 12px;
 }
 
-.newwimdiv001 {
-    
-}
+.newwimdiv001 {float: left;width: calc(100vw - 40px);height: 50px;margin-top: calc(50vh - 100px);border-bottom-style: solid;border-bottom-width: 1px;margin-left: 20px;border-color: #E0E0E0;}
 
 .newwimdiv002 {
     
@@ -2154,11 +2152,31 @@ button.link {
 }
 
 .newwimnextbutton {
-    
+    position: absolute;
+    bottom: 10vh;
+    right: 10vw;
+    width: 65px;
+    height: 30px;
+    background-color: #00B0FF;
+    border-style: none;
+    color: white;
+    font-family: Roboto;
+    font-size: 20px;
+    border-radius: 2px;
 }
 
 .newwimpreviousbutton {
-    
+    position: absolute;
+    bottom: 10vh;
+    left: 10vw;
+    width: 65px;
+    height: 30px;
+    background-color: #00B0FF;
+    border-style: none;
+    color: white;
+    font-family: Roboto;
+    font-size: 20px;
+    border-radius: 2px;
 }
 
 
