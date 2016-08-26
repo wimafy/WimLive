@@ -475,7 +475,7 @@ a {
 * { box-sizing:border-box; }
 
 /* basic stylings ------------------------------------------ */
-body
+body                 { background:url(http://scotch.io/wp-content/uploads/2014/07/61.jpg); }
 .container      { 
   font-family:'Roboto';
   width:600px; 
@@ -2001,7 +2001,7 @@ button.link {
     background-color: white;
     width: 100vw;
     height: 100vh;
-    margin-top: 0px;
+    margin-top: -50px;
     top: 0px;
 }
 
@@ -2139,6 +2139,28 @@ button.link {
     border-style: solid;
     border-color: gray;
 }
+
+/* new wim v2*/
+
+.newwimslidedivs {
+    height: calc(100vh - 50px);
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    z-index: 50;
+     -ms-transform: translate(125vw, 0px); /* IE 9 */
+     -webkit-transform: translate(125vw, 0px); /* Safari */
+     transform: translate(125vw, 0px);
+}
+
+.newwimnextbutton {
+    
+}
+
+.newwimpreviousbutton {
+    
+}
+
 
 /* bigmap */
 

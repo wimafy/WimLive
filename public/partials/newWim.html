@@ -11,271 +11,31 @@
 
 
 <div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: white; position: absolute; z-index: 50;">
-    <div>
+
+    <div id="01newwimwimtitle" class="newwimslidedivs" style="background-color: blue; z-index: 51; -ms-transform: translate(0px, 0px); /* IE 9 */
+     -webkit-transform: translate(0px, 0px); /* Safari */
+     transform: translate(0px, 0px);">
         <div class="newwimdiv001" style="float: left; width: calc(100vw - 40px); height: 50px; margin-top: 15px; border-bottom-style: solid; border-bottom-width: 1px; margin-left: 20px; border-color: #E0E0E0;">
             <input class="form-control newwiminputformwimtitle" ng-model="currentWimTitle" placeholder="WIM Title..." type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
-            <div class="newwiminputwimiconbutton">
-            </div>
+            <button class="newwimnextbutton" onclick="newwimadvanceslide('02newwimdestination')">next</button>
         </div>
-        
-        <div class="newwimdiv002" style="width: 100vw; float: left; margin-left: 20px;">
-            <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE0C8;</i>
-            <div class="newwimdiv003" onclick="showmapsearch()">
-                <input class="form-control newwiminputforms" ng-model="currentWimLocation" placeholder="Destination..." type="text" style="margin-top: 14px;border-color: white; box-shadow: inset 0 0 0; padding: 0px;">
-            </div>
-        </div>
-        <div class="newwimdiv004">
-            <div  class="newwimdiv005">
-                <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE8DF;</i>
-                <div  style="float: left; border-bottom-style: solid; border-bottom-width: 1px; width: calc(100% - 48px); border-color: #E0E0E0;">
-                    <input class="form-control newwiminputforms" ng-model="currentWimDate" placeholder="Date..." type="date" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0; width: 100%; padding: 0; font-size: 10px">
-                </div>
-            </div>
-            <div class="newwimdiv006">
-                <i class="material-icons newwiminputicons" style="line-height: 40px; width: 40px; margin-left: 2px;">&#xE192;</i>
-                <div class="newwimdiv007">
-                    <input class="form-control newwiminputforms" ng-model="currentWimTime" placeholder="Time..." type="time" style="margin-top: 15px;border-color: white; box-shadow: inset 0 0 0; width: calc(50vw - 62px); font-size: 14px;">
-                </div>
-            </div>
-        </div>
-        
-        <div class="newwimdiv008" style="width: 100vw; float: left; margin-left: 20px;">
-            <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE871;</i>
-            <div class="newwimdiv003" onclick="showwimwimtype()">
-                <!-- implement show friends here -->
-                <p class="newwiminputforms" style="line-height: 70px; font-family: Roboto; color: #9E9E9E; height: 45px;">WIM Type</p>
-            </div>
-        </div>
-
-        <div class="newwimdiv008">
-            <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE8D2;</i>
-            <div class="newwimdiv003" style="float: left; border-bottom-style: solid; border-bottom-width: 1px;">
-                <textarea class="form-control newwiminputforms" ng-model="currentWimDescription" placeholder="Description..." type="text" style="margin-top: 22px; padding: 0; border-color: white; box-shadow: inset 0 0 0; height: 45px"></textarea>
-            </div>
-        </div>
-            
-        <div class="newwimdiv008" style="width: 100vw; float: left; margin-left: 20px;">
-            <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE7FB;</i>
-            <div class="newwimdiv003" onclick="showinvitefriends()">
-                <!-- implement show friends here -->
-                <p class="newwiminputforms" style="line-height: 70px; font-family: Roboto; color: #9E9E9E; height: 45px;">Add People</p>
-            </div>
-        </div>
-        
-        <div class="newwimdiv009">
-            <div onclick="showadvancedoptions()">
-                <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; float: left; font-size: 14px; margin: 0;">&#xE8B8;</i>
-		        <p class="newwimdiv010">Advanced options</p>
-            </div>
-        </div>
-        
-        
-
-
-		<div id="newwimadvancedoptionsdiv" class="newwimadvancedoptionscssdiv">
-            <div class="newwimheaderdiv">
-                <div class="headerbackarrow" onclick="hideadvancedoptions()">
-                    <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
-                </div>
-                <h1 class="headerpagetitle">Advanced Options</h1>
-            </div>
-            
-            <div class="newwimdiv002" style="width: 100vw; float: left; margin-left: 20px;">
-                <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE566;</i>
-                <div class="newwimdiv003">
-                    <input class="form-control newwiminputforms" ng-model="currentWimAttire" placeholder="Attire..." type="text" style="margin-top: 14px;border-color: white; box-shadow: inset 0 0 0; padding: 0px;">
-                </div>
-            </div>
-            
-            <div class="newwimdiv002" style="width: 100vw; float: left; margin-left: 20px;">
-                <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE0C8;</i>
-                <div class="newwimdiv003">
-                    <input class="form-control newwiminputforms" ng-model="currentWimAddress" placeholder="Address..." type="text" style="margin-top: 14px;border-color: white; box-shadow: inset 0 0 0; padding: 0px;">
-                </div>
-            </div>
-            
-            <div class="newwimdiv002" style="width: 100vw; float: left; margin-left: 20px;">
-                <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE531;</i>
-                <div class="newwimdiv003">
-                    <input class="form-control newwiminputforms" ng-model="currentWimTransportation" placeholder="Transportation..." type="text" style="margin-top: 14px;border-color: white; box-shadow: inset 0 0 0; padding: 0px;">
-                </div>
-            </div>
-            
-            <div style="float: right; margin: 20px;">
-                <!--Upon clicking the Save Wim button, this create function is fired to send the info to the API through the CurrentWimsController-->
-                <button type="button" class="btn btn-primary" style="padding: 10px" onclick="hideadvancedoptions()">Back</button>
-            </div>
-        </div>
-        
-        
-        <div id="newwimmapsearchdiv" class="newwimmapsearchcssdiv">
-            <div class="newwimheaderdiv">
-                <div class="headerbackarrow" onclick="hidemapsearch()">
-                    <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
-                </div>
-                <h1 class="headerpagetitle">Search Destination</h1>
-            </div>
-            <input type="text" id="mapsearch">
-            <div id="map-canvas" style="background-color:gray"></div>
-
-        </div>
-        
-        <div id="newwimwimtypediv" class="newwimwimtypecssdiv">
-            <div class="newwimheaderdiv">
-                <div class="headerbackarrow" onclick="hidewimwimtype()">
-                    <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
-                </div>
-                <h1 class="headerpagetitle">WIM Type</h1>
-            </div>
-            <div class="newwiminvitefriendscssdivforscrolling">
-                <div class="newwimwimtypeindividualtypediv" onclick="newwimwimtype('&#xE541')">
-                    <i class="material-icons" style="line-height: 55px; width: 55px; font-size: 30px; color: black; text-align: center; float: left;">&#xE541;</i>
-                    <p class="newwimwimtypeindivdualtypename">Coffee</p>
-                    <div class="newwimwimtypeindivdualcheckbox">
-                        <i id="select&#xE541" class="material-icons" style="line-height: 6px; width: 8px; font-size: 30px; color: #00B0FF; text-align: center; text-indent: -2px; opacity: 0;">&#xE5CA;</i>
-                    </div>
-                </div>
-                <div class="newwimwimtypeindividualtypediv" onclick="newwimwimtype('&#xE405')">
-                    <i class="material-icons" style="line-height: 55px; width: 55px; font-size: 30px; color: black; text-align: center; float: left;">&#xE405;</i>
-                    <p class="newwimwimtypeindivdualtypename">Jam Session</p>
-                    <div class="newwimwimtypeindivdualcheckbox">
-                        <i id="select&#xE405" class="material-icons" style="line-height: 6px; width: 8px; font-size: 30px; color: #00B0FF; text-align: center; text-indent: -2px; opacity: 0;">&#xE5CA;</i>
-                    </div>
-                </div>
-                <div class="newwimwimtypeindividualtypediv" onclick="newwimwimtype('&#xE54D')">
-                    <i class="material-icons" style="line-height: 55px; width: 55px; font-size: 30px; color: black; text-align: center; float: left;">&#xE54D;</i>
-                    <p class="newwimwimtypeindivdualtypename">Movie</p>
-                    <div class="newwimwimtypeindivdualcheckbox">
-                        <i id="select&#xE54D" class="material-icons" style="line-height: 6px; width: 8px; font-size: 30px; color: #00B0FF; text-align: center; text-indent: -2px; opacity: 0;">&#xE5CA;</i>
-                    </div>
-                </div>
-                <div class="newwimwimtypeindividualtypediv" onclick="newwimwimtype('&#xE56C')">
-                    <i class="material-icons" style="line-height: 55px; width: 55px; font-size: 30px; color: black; text-align: center; float: left;">&#xE56C;</i>
-                    <p class="newwimwimtypeindivdualtypename">Food</p>
-                    <div class="newwimwimtypeindivdualcheckbox">
-                        <i id="select&#xE56C" class="material-icons" style="line-height: 6px; width: 8px; font-size: 30px; color: #00B0FF; text-align: center; text-indent: -2px; opacity: 0; opacity: 0px;">&#xE5CA;</i>
-                    </div>
-                </div>
-                <div class="newwimwimtypeindividualtypediv" onclick="newwimwimtype('&#xE40A')">
-                    <i class="material-icons" style="line-height: 55px; width: 55px; font-size: 30px; color: black; text-align: center; float: left;">&#xE40A;</i>
-                    <p class="newwimwimtypeindivdualtypename">Artify</p>
-                    <div class="newwimwimtypeindivdualcheckbox">
-                        <i id="select&#xE40A" class="material-icons" style="line-height: 6px; width: 8px; font-size: 30px; color: #00B0FF; text-align: center; text-indent: -2px; opacity: 0; opacity: 0px;">&#xE5CA;</i>
-                    </div>
-                </div>
-                <div class="newwimwimtypeindividualtypediv" onclick="newwimwimtype('&#xE407')">
-                    <i class="material-icons" style="line-height: 55px; width: 55px; font-size: 30px; color: black; text-align: center; float: left;">&#xE407;</i>
-                    <p class="newwimwimtypeindivdualtypename">Nature</p>
-                    <div class="newwimwimtypeindivdualcheckbox">
-                        <i id="select&#xE407" class="material-icons" style="line-height: 6px; width: 8px; font-size: 30px; color: #00B0FF; text-align: center; text-indent: -2px; opacity: 0; opacity: 0px;">&#xE5CA;</i>
-                    </div>
-                </div>
-                
-                
-                
-            </div>
-
-        </div>
-        
-        
-        <div id="newwiminvitefriendsdiv" class="newwiminvitefriendscssdiv">
-            <div class="newwimheaderdiv">
-                <div class="headerbackarrow" onclick="hideinvitefriends()">
-                    <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
-                </div>
-                <h1 class="headerpagetitle">Invite Friends</h1>
-            </div>
-            <!--
-            <p>Invite Friends</p>
-            <p><select multiple="multiple" ng-model="friends">
-                    <option>1</option>
-                    <option>2</option>
-                    </select>
-                    </p>
-            -->
-            <div class="newwiminvitefriendscssdivforscrolling">
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('001')">
-                    <img class="newwiminvitefriendsindividualpersonimg" src="">
-                    <div id="select001" class="newwiminvitefriendsindividualpersonselectdiv" style="opacity: 0;">
-                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
-                    </div>
-                    <p class="newwiminvitefriendsindividualpersonlable">Nathan</p>
-                </div>
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('002')">
-                    <img class="newwiminvitefriendsindividualpersonimg" src="">
-                    <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select002" style="opacity: 0;">
-                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
-                    </div>
-                    <p class="newwiminvitefriendsindividualpersonlable">Braxton</p>
-                </div>
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('003')">
-                    <img class="newwiminvitefriendsindividualpersonimg" src="">
-                    <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select003" style="opacity: 0;">
-                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
-                    </div>
-                    <p class="newwiminvitefriendsindividualpersonlable">George</p>
-                </div>
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('004')">
-                    <img class="newwiminvitefriendsindividualpersonimg" src="">
-                    <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select004" style="opacity: 0;">
-                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
-                    </div>
-                    <p class="newwiminvitefriendsindividualpersonlable">Melissa</p>
-                </div>
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('005')">
-                    <img class="newwiminvitefriendsindividualpersonimg" src="">
-                    <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select005" style="opacity: 0;">
-                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
-                    </div>
-                    <p class="newwiminvitefriendsindividualpersonlable">Victoria</p>
-                </div>
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('006')">
-                    <img class="newwiminvitefriendsindividualpersonimg" src="">
-                    <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select006" style="opacity: 0;">
-                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
-                    </div>
-                    <p class="newwiminvitefriendsindividualpersonlable">Riley</p>
-                </div>
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('007')">
-                    <img class="newwiminvitefriendsindividualpersonimg" src="">
-                    <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select007" style="opacity: 0;">
-                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
-                    </div>
-                    <p class="newwiminvitefriendsindividualpersonlable">Jane</p>
-                </div>
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('008')">
-                    <img class="newwiminvitefriendsindividualpersonimg" src="">
-                    <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select008" style="opacity: 0;">
-                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
-                    </div>
-                    <p class="newwiminvitefriendsindividualpersonlable">DJ</p>
-                </div>
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('009')">
-                    <img class="newwiminvitefriendsindividualpersonimg" src="">
-                    <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select009" style="opacity: 0;">
-                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
-                    </div>
-                    <p class="newwiminvitefriendsindividualpersonlable">Isaac</p>
-                </div>
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('010')">
-                    <img class="newwiminvitefriendsindividualpersonimg" src="">
-                    <div class="newwiminvitefriendsindividualpersonselectdiv" id="select010" style="opacity: 0;">
-                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
-                    </div>
-                    <p class="newwiminvitefriendsindividualpersonlable">Laney</p>
-                </div>
-            </div>
-            
-            
-            
-        </div>
-        
-        
-        
-        <div style="float: right; margin: 20px;">
-            <!--Upon clicking the Save Wim button, this create function is fired to send the info to the API through the CurrentWimsController-->
-            <button type="button" class="btn btn-primary" ng-click="create()" style="padding: 10px">Save Wim</button>
-        </div>
-           </div>
+    </div>
+    <div id="02newwimdestination" class="newwimslidedivs" style=" background-color: green; z-index: 52;" >
+        <button class="newwimnextbutton" onclick="newwimadvanceslide('03newwimdatetime')">next</button>
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('02newwimdestination')">back</button>
+    </div>
+    <div id="03newwimdatetime" class="newwimslidedivs" style=" background-color: red; z-index: 53;">
+        <button class="newwimnextbutton" onclick="newwimadvanceslide('04newwimaddpeople')">next</button>
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('03newwimdatetime')">back</button>
+    </div>
+    <div id="04newwimaddpeople" class="newwimslidedivs" style=" background-color: orange; z-index: 54;" >
+        <button class="newwimnextbutton" onclick="newwimadvanceslide('05newwimadditionaloptions')">next</button>
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('04newwimaddpeople')">back</button>
+    </div>
+    <div id="05newwimadditionaloptions" class="newwimslidedivs" style=" background-color: pink; z-index: 55;">
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('05newwimadditionaloptions')">back</button>
+    </div>
+    
+    
     
 </div>
