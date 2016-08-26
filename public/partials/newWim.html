@@ -15,15 +15,21 @@
     <div id="01newwimwimtitle" class="newwimslidedivs" style="background-color: white; z-index: 51; -ms-transform: translate(0px, 0px); /* IE 9 */
      -webkit-transform: translate(0px, 0px); /* Safari */
      transform: translate(0px, 0px);">
-        <div class="newwimdiv001" style="float: left; width: calc(100vw - 40px); height: 50px; margin-top: 15px; border-bottom-style: solid; border-bottom-width: 1px; margin-left: 20px; border-color: #E0E0E0;">
-            <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE8DF;</i>
+        <div class="newwimdiv001">
+            <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE264;</i>
             <input class="form-control newwiminputformwimtitle" ng-model="currentWimTitle" placeholder="WIM Title..." type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
             <button class="newwimnextbutton" onclick="newwimadvanceslide('02newwimdestination')">next</button>
         </div>
     </div>
-    <div id="02newwimdestination" class="newwimslidedivs" style=" background-color: green; z-index: 52;" >
-        <button class="newwimnextbutton" onclick="newwimadvanceslide('03newwimdatetime')">next</button>
-        <button class="newwimpreviousbutton" onclick="newwimbackslide('02newwimdestination')">back</button>
+    <div id="02newwimdestination" class="newwimslidedivs" style=" background-color: white; z-index: 52;" >
+        <div class="newwimdiv001">
+            <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE0C8;</i>
+            <p class="newwiminputformwimtitle" style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">Destination</p>
+            <button class="newwimnextbutton" onclick="newwimadvanceslide('03newwimdatetime')">next</button>
+            <button class="newwimpreviousbutton" onclick="newwimbackslide('02newwimdestination')">back</button>
+        </div>
+        
+        
     </div>
     <div id="03newwimdatetime" class="newwimslidedivs" style=" background-color: red; z-index: 53;">
         <button class="newwimnextbutton" onclick="newwimadvanceslide('04newwimaddpeople')">next</button>
