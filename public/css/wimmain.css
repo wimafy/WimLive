@@ -1923,7 +1923,16 @@ button.link {
     margin-left: 12px;
 }
 
-.newwimdiv001 {float: left;width: calc(100vw - 40px);height: 50px;margin-top: calc(50vh - 100px);border-bottom-style: solid;border-bottom-width: 1px;margin-left: 20px;border-color: #E0E0E0;}
+.newwimdiv001 {
+    float: left;
+    width: calc(100vw - 40px);
+    height: 50px;
+    margin-top: calc(50vh - 100px);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left: 20px;
+    border-color: #E0E0E0;
+}
 
 .newwimdiv002 {
     
@@ -1943,14 +1952,25 @@ button.link {
 }
 
 .newwimdiv005 {
-    width: calc(50vw - 20px);
-    /* background-color: green; */
-    float: left;
+   float: left;
+    width: calc(100vw - 40px);
+    height: 50px;
+    margin-top: calc(50vh - 100px);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left: 20px;
+    border-color: #E0E0E0;
 }
 
 .newwimdiv006 {
     float: left;
-    width: calc(50vw - 20px);
+    width: calc(100vw - 40px);
+    height: 50px;
+    margin-top: 20px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left: 20px;
+    border-color: #E0E0E0;
 }
 
 .newwimdiv007 {
@@ -2006,6 +2026,7 @@ button.link {
 .newwimmapsearchcssdiv {
     position: absolute;
     width: 100vw;
+    height: 100vh;
     height: 100vh;
     margin-top: -50px;
     background-color: white;
