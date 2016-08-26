@@ -2176,6 +2176,7 @@ button.link {
 .newwimfriendsscrolldiv {
     overflow: hidden;
     overflow-y: auto;
+    position: absolute;
 }
 
 .newwimnextbutton {
