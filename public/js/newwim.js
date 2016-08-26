@@ -90,3 +90,14 @@ function newwimbackslide(divID) {
     document.getElementById(divID).classList.add('pagetransitionOUT');
     //document.getElementById(divID).style.left = "120vw";
 }
+
+function newwimdestinationpagein() {
+    document.getElementById('newwimmapsearchdiv').classList.add('pagetransitionIN');
+    document.getElementById('newwimmapsearchdiv').classList.remove('pagetransitionOUT');
+}
+
+
+function newwimdestinationpageout() {
+    document.getElementById('newwimmapsearchdiv').classList.remove('pagetransitionIN');
+    document.getElementById('newwimmapsearchdiv').classList.add('pagetransitionOUT');
+}
