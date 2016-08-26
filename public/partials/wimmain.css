@@ -14,340 +14,6 @@ a {
     text-decoration: none;
 }
 
-/*loading icon */
-
-.no-js #loader { display: none;  }
-.js #loader { display: block; position: absolute; left: 100px; top: 0; }
-.se-pre-con {
-	position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100vw;
-	height: calc(100vh - 0px);
-	z-index: 966;
-	background: url(/web_images/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
-	background-color: white;
-}
-
-
-/* whole app css */
-
-.indexbladewholediv {
-    width: 100vw;
-    background-color: lightgray;
-    height: 100vh;
-    overflow: hidden;
-    position: absolute;
-}
-
-.fullpageindexpage {
-    width: 100vw;
-    height: 100vh;
-    background-color: blue;
-    margin: 0px;
-    position: absolute;
-    -ms-transform: translate(0vw, 0px); /* IE 9 */
-    -webkit-transform: translate(0vw, 0px); /* Safari */
-    transform: translate(0vw, 0px);
-    top: 0px;
-    z-index: 0;
-}
-
-.fullpage1currentwims{
-     width: 100vw;
-     height: 50px;
-     margin: 0px;
-     position: absolute;
-     -ms-transform: translate(100vw, 0px); /* IE 9 */
-     -webkit-transform: translate(100vw, 0px); /* Safari */
-     transform: translate(125vw, 0px);
-     z-index: 100;
-    background-color: red;
-}
-
-.fullpage2myprofile{
-     width: 100vw;
-     height: 50px;
-     /* background-color: red; */
-     margin: 0px;
-     position: absolute;
-     -ms-transform: translate(100vw, 0px); /* IE 9 */
-     -webkit-transform: translate(100vw, 0px); /* Safari */
-     transform: translate(125vw, 0px);
-     z-index: 100;
-    background-color: red;
-}
-
-.fullpage3newwim{
-     width: 100vw;
-     height: 50px;
-     /* background-color: yellow; */
-     margin: 0px;
-     position: absolute;
-     -ms-transform: translate(100vw, 0px); /* IE 9 */
-     -webkit-transform: translate(100vw, 0px); /* Safari */
-     transform: translate(125vw, 0px);
-     z-index: 100;
-     background-color: red;
-}
-
-.fullpage4search{
-     width: 100vw;
-     height: 50px;
-     /* background-color: orange; */
-     margin: 0px;
-     position: absolute;
-     -ms-transform: translate(100vw, 0px); /* IE 9 */
-     -webkit-transform: translate(100vw, 0px); /* Safari */
-     transform: translate(125vw, 0px);
-     z-index: 100;
-     background-color: red;
-}
-
-.fullpage5notifications {
-     width: 100vw;
-     height: 50;
-     /* background-color: pink; */
-     margin: 0px;
-     position: absolute;
-     -ms-transform: translate(125vw, 0px); /* IE 9 */
-     -webkit-transform: translate(125vw, 0px); /* Safari */
-     transform: translate(125vw, 0px);
-     z-index: 100;
-     background-color: red;
-}
-
-.fullpageB1selectedWim {
-     width: 100vw;
-     height: 50;
-     /* background-color: pink; */
-     margin: 0px;
-     position: absolute;
-     -ms-transform: translate(125vw, 0px); /* IE 9 */
-     -webkit-transform: translate(125vw, 0px); /* Safari */
-     transform: translate(125vw, 0px);
-     z-index: 200;
-     background-color: #ef5350;
-}
-
-.fullpageC1wholepagemap {
-    width: 100vw;
-     height: 50;
-     /* background-color: pink; */
-     margin: 0px;
-     position: absolute;
-     -ms-transform: translate(125vw, 0px); /* IE 9 */
-     -webkit-transform: translate(125vw, 0px); /* Safari */
-     transform: translate(125vw, 0px);
-     z-index: 300;
-     background-color: #ef5350;
-}
-
-/*ripple css*/
-
-
-.wrap {
-  overflow: hidden; }
-
-.link-wrap {
-  margin: 0 1.4em 1.4em 0;
-  float: left; }
-  .link-wrap a {
-    background: #fff;
-    border: 1px solid #ccc;
-    display: block;
-    width: 180px;
-    height: 180px;
-    line-height: 180px;
-    text-align: center; }
-
-.round a {
-  height: 100px;
-  line-height: 100px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  border-radius: 15px; }
-
-.circle a {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%; }
-
-.oval a {
-  height: 100px;
-  line-height: 100px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%; }
-
-.like-polymer a {
-  background: #fafafa;
-  color: #333;
-  text-decoration: none;
-  display: inline-block;
-  padding: 10px 10px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4); }
-  .like-polymer a:hover {
-    background: #fff;
-    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); }
-  .like-polymer a:active {
-    -webkit-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); }
-
-
-
-
-
-/*transitions*/
-
-.killopacity {
-    -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  opacity: 0 !important;
-}
-
-.loadinggiflevel1 {
-    position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100vw;
-	height: calc(100vh - 0px);
-	background: url(/web_images/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
-	background-color: white;
-    z-index: 75;
-    -ms-transform: translate(125vw, 0px); /* IE 9 */
-    -webkit-transform: translate(125vw, 0px); /* Safari */
-    transform: translate(125vw, 0px);
-    opacity: 1;
-}
-
-.loadinggiflevel2 {
-    position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100vw;
-	height: calc(100vh - 0px);
-	background: url(/web_images/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
-	background-color: white;
-    z-index: 175;
-    -ms-transform: translate(125vw, 0px); /* IE 9 */
-    -webkit-transform: translate(125vw, 0px); /* Safari */
-    transform: translate(125vw, 0px);
-    opacity: 1;
-}
-
-.loadinggiflevel3 {
-    position: fixed;
-	left: 0px;
-	top: 0px;
-	width: 100vw;
-	height: calc(100vh - 0px);
-	background: url(/web_images/simple-pre-loader/images/loader-64x/Preloader_2.gif) center no-repeat #fff;
-	background-color: white;
-    z-index: 175;
-    -ms-transform: translate(125vw, 0px); /* IE 9 */
-    -webkit-transform: translate(125vw, 0px); /* Safari */
-    transform: translate(125vw, 0px);
-    opacity: 1;
-}
-
-.loadinggifOUTlevel1 {
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  z-index: 25 !important;
-}
-
-
-.loadinggifOUTlevel2 {
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  z-index: 125 !important;
-}
-
-.loadinggifOUTlevel3 {
-  -webkit-transition: 1s;
-  -moz-transition: 1s;
-  -ms-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  z-index: 125 !important;
-}
-
-.pagetransitionIN {
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -ms-transition: .1s;
-  -o-transition: .1s;
-  transition: .1s;
-  transform: translate(0vw, 0px)!important;
-}
-
-.pagetransitionOUT {
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -ms-transition: .1s;
-  -o-transition: .1s;
-  transition: .1s;
-  transform: translate(125vw, 0px)!important;
-}
-
-.pagezindexIN {
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -ms-transition: .1s;
-  -o-transition: .1s;
-  transition: .1s;
-  opacity: 0;
-  z-index: 0 !important;
-}
-
-.pagezindexOUT {
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -ms-transition: .1s;
-  -o-transition: .1s;
-  transition: .1s;
-  opacity: 10;
-  z-index: 10 !important;
-  
-}
-
-.ngviewtransitionout {
-  -webkit-transition: .1s;
-  -moz-transition: .1s;
-  -ms-transition: .1s;
-  -o-transition: .1s;
-  transition: .1s;
-  transform: translate(125vw, 0px)!important;
-}
-
-.ngviewtransitionIN {
-  transform: translate(0vw, 0px)!important;
-}
-
-
 /*standard page code */
 
 .headerdiv {
@@ -355,7 +21,8 @@ a {
     height: 50px;
     background-color: #ef5350;
     position: absolute;
-    box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    box-shadow: 0px 7px 16px 4px rgba(0,0,0,0.2);
     top: 0px;
 }
 
@@ -383,17 +50,13 @@ a {
 
 .headerpagetitle {
     float: left;
-    line-height: 55px;
+    line-height: 50px;
+    max-width: 500px;
     margin-top: 0px;
     color: white;
     font-family: Arial;
     font-size: 18px;
     margin-left: 0px;
-    max-width: calc(70vw - 50px);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    margin-bottom: 0px;
 }
 
 .headerplusicon {
@@ -414,7 +77,6 @@ a {
     overflow: hidden;
     top: 40px;
     position: absolute;
-    z-index: 50;
 }
 
 
@@ -470,12 +132,10 @@ a {
 }
 
 
-
-
 * { box-sizing:border-box; }
 
 /* basic stylings ------------------------------------------ */
-body
+body                 { background:url(http://scotch.io/wp-content/uploads/2014/07/61.jpg); }
 .container      { 
   font-family:'Roboto';
   width:600px; 
@@ -484,11 +144,10 @@ body
   background:#FFF;
   padding:10px 50px 50px;
 }
-h2       {
-  text-align:center;
-  margin-bottom:50px;
+h2       { 
+  text-align:center; 
+  margin-bottom:50px; 
   color: white;
-  font-family: Roboto;
 }
 h2 small { 
   font-weight:normal; 
@@ -653,7 +312,6 @@ input:focus ~ .highlight {
 }
 
 
-/*sign up */
 
 .linktoanewaccount {
     text-align: center;
@@ -678,17 +336,6 @@ input:focus ~ .highlight {
     line-height: 35px;
     text-indent: 10px;
 }
-
-.signupinterestbuttons {
-    width: 33.3%;
-    background-color: lightgray;
-    float: left;
-    height: 75px;
-    text-align: center;
-    font-family: Roboto;
-}
-
-
 
 /*friends page*/
 .backarrow {
@@ -726,7 +373,7 @@ input:focus ~ .highlight {
 
 .eachfriend {
     width: 25%;
-    height: 85px;
+    height: 100px;
     float: left;
     border-style: solid;
     border-width: 2px;
@@ -735,13 +382,13 @@ input:focus ~ .highlight {
 }
 
 .myfriendspic {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-color: lightgray;
     display: block;
     margin-top: 10px;
-    margin-left: calc(50% - 20px);
+    margin-left: calc(50% - 25px);
 }
 
 .myfriendsname {
@@ -752,7 +399,7 @@ input:focus ~ .highlight {
         overflow: hidden;
         text-overflow: ellipsis;
         font-size: 12px;
-        margin-top: 4px;
+        margin-top: 2px;
 }
 
 .myfriendscheckmark {
@@ -851,6 +498,7 @@ input:focus ~ .highlight {
 }
 
 .homepagebuttonlable {
+    margin: auto;
     width: 100;
     font-family: Arial;
     color: white;
@@ -870,12 +518,8 @@ input:focus ~ .highlight {
     width: 100vw;
     height: 70px;
     background-color: white;
-    margin-bottom: 0;
+    margin-bottom: 1px;
     float: left;
-    border: darkgray;
-    border-style: none none solid none;
-    border-width: 1px;
-    box-shadow: 0px 3px 13px 1px rgba(0,0,0,0.2);
 }
 
 
@@ -892,7 +536,7 @@ input:focus ~ .highlight {
     font-size: 60px;
     line-height: 60px;
     box-shadow: 4px 4px 10px 2px rgba(0,0,0,0.2);
-    z-index: 60;
+    z-index: 1;
 }
 
 .currentwimswimtypeimg {
@@ -988,223 +632,33 @@ input:focus ~ .highlight {
 }
 
 /*WIM info*/
-.individualwimheadercountdowntimer {
-    line-height: 50px;
-    font-family: Roboto Black;
-    float: right;
-    margin-right: 20px;
-    color: white;
-}
 
 .individualwimtopdiv {
     width: 100vw;
+    height: 40%;
+    position: absolute;
+    top: 50px;
     float: left;
-    background-color: lightgray;
 }
 
 .individualwimbottomdiv {
     width: 100vw;
+    position: absolute;
+    top: 50px;
     float: left;
 }
 
 .individualwimdestinationdiv {
     width: 100vw;
     height: 50px;
-    background-color: white;
-    margin-bottom: 1px;
-    border: darkgray;
-    border-style: solid none solid;
-    border-width: 1px;
-    box-shadow: 0px 3px 13px 1px rgba(0,0,0,0.2);
-}
-
-.individualwimdestinationdirectionsicon {
-    float: right;
-    color: black;
-    margin-top: -55px;
+    background-color: red;
 }
 
 .individualwimdestinationicon {
-    width: 45px;
+    width: 50xp;
     color: black;
     text-align: center;
     float: left;
-}
-
-.individualwimdestination {
-    width: calc(100vw - 50px);
-    line-height: 38px;
-    font-family: Roboto Black;
-    font-size: 17px;
-}
-
-.individualwimdestinationstreetname {
-    /* width: calc(100vw - 50px); */
-    line-height: 20px;
-    font-family: Roboto black;
-    font-size: 9px;
-    margin-top: -24px;
-}
-
-.individualwimattendeesdiv {
-    width: 105vw;
-    height: 101px;
-    background-color: white;
-    float: left;
-    border: darkgray;
-    border-style: solid none solid;
-    border-width: 1px;
-    box-shadow: 0px 3px 13px 1px rgba(0,0,0,0.2);
-}
-
-.individualwimattendees {
-    width: 100vw;
-    float: left;
-    margin-top: 5px;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    overflow-x: auto;
-}
-
-.individualwimpersonsdiv {
-    width: 70px;
-    height: 101px;
-    /* float: left; */
-    /* position: relative; */
-    /* display: inline-block; */
-    position: relative;
-    display: inline-block;
-    margin: 0px -2px -5px;
-}
-
-.individualwimpersonsimg {
-    width: 50px;
-    height: 50px;
-    margin: 5px 10px;
-    float: left;
-    background-color: gray;
-    border-radius: 50%;
-}
-
-.individualwimpersonsname {
-    width: 70px;
-    font-family: Roboto Black;
-    font-size: 12px;
-    text-align: center;
-    float: left;
-    margin-top: -3px;
-}
-
-.individualwimpersonresponse {
-    float: left;
-    width: inherit;
-    text-align: center;
-    font-size: 11px;
-    font-family: Roboto;
-    margin-top: -12px;
-}
-
-
-.individualwiminvitedlabeldiv {
-    
-}
-
-.individualwiminvitedlabelwords {
-    line-height: 40px;
-    margin: 0;
-    font-size: 14px;
-    font-family: Roboto Black;
-}
-
-.individualwimpersonsresponse {
-    height: 19px;
-    width: 19px;
-    border-radius: 50%;
-    background-color: gray;
-    color: white;
-    margin: 37px -27px;
-    position: absolute;
-    /* line-height: 7; */
-    text-align: center;
-    border-style: solid;
-    border-width: 2px;
-}
-
-.individualwimheadericon {
-    color: white;
-    width: 30px;
-    text-align: center;
-}
-
-.individualwimdetailsdiv {
-    width: 100vw;
-    height: 200px;
-    background-color: white;
-    float: left;
-    border: darkgray;
-    border-style: solid none solid;
-    border-width: 1px;
-    box-shadow: 0px 3px 13px 1px rgba(0,0,0,0.2);
-    margin-bottom: 20;
-}
-
-.individualwimdatetimediv {
-    width: 100vw;
-    height: 50px; */
-    background-color: white;
-    margin-bottom: 0px;
-    float: left;
-    background-color: white;
-    border: darkgray;
-    border-style: solid none solid;
-    border-width: 1px;
-    box-shadow: 0px 4px 13px 1px rgba(0,0,0,0.2);
-    z-index: 1;
-    position: relative;
-}
-
-.individualwimdetailsdatetime {
-    width: 100vw;
-    height: 50px;
-    background-color: white;
-    float: left;
-    border: lightgray;
-    border-style: none none solid;
-    border-width: 1px;
-}
-
-#individualwimdetailsdatetimeicon {
-    font-size: 30px;
-    line-height: 50px;
-    float: left;
-    margin-left: calc(50% - 70px);
-}
-
-.individualwimdetailsdatetimetext {
-    font-family: Roboto Black;
-    font-size: 12px;
-    line-height: 50px;
-    float: left;
-    text-indent: 5px;
-}
-
-.individualwimdetailsdivbottomdetails {
-    width: 100vw;
-    /* height: 50px; */
-    background-color: white;
-    margin-bottom: 0px;
-    border: lightgray;
-    border-style: none none solid;
-    border-width: 1px;
-    float: left;
-}
-
-.individualwimdestinationstreetnamediv {
-    width: calc(100vw - 65px);
-    float: left;
-    margin-left: 45px;
-    margin-top: 3px;
 }
 
 /*profile page */
@@ -1242,10 +696,6 @@ input:focus ~ .highlight {
     background-size: 106%;
     background-position: center center;
     -webkit-filter: blur(6px);
-}
-
-.profiletopprofilepictureholderdiv {
-    
 }
 
 .profiletopleftactioncircle {
@@ -1372,7 +822,7 @@ input:focus ~ .highlight {
 .profilebottomfriendsdiv {
     width: calc(100% - 0px);
     height: calc(100% - 0px);
-    background-color: #E0E0E0;
+    background-color: lightgray;
     position: absolute;
     /* bottom: 0px; */
     /* margin-top: 1px; */
@@ -1420,8 +870,8 @@ input:focus ~ .highlight {
 .profileinfoleftinfotitle {
     float: left;
     width: calc(100% - 181px);
-    font-size: 11px;
-    margin-top: 6px;
+    font-size: 12px;
+    margin-top: 8px;
     margin-bottom: 0px;
     font-family: roboto Black;
     line-height: 12px;
@@ -1429,14 +879,14 @@ input:focus ~ .highlight {
 
 .profileinfoleftinfoinformation {
     float: left;
-    font-size: 12px;
-    margin-top: -33px;
-    width: calc(100% - 81px);
+    font-size: 16px;
+    margin-top: -27px;
+    width: calc(100% - 30px);
     font-family: roboto;
-    margin-left: 60px;
+    margin-left: 59px;
     overflow: hidden;
     text-overflow: ellipsis;
-    line-height: 30px;
+    line-height: 16px;
 }
 
 
@@ -1463,12 +913,10 @@ input:focus ~ .highlight {
 
 .profileinterestsdiv {
     width: 100vw;
-    height: 45px;
+    height: 50px;
     float: left;
     background-color: white;
-    border-bottom-style: solid;
-    border-bottom-color: #E0E0E0;
-    border-width: 1px;
+    margin-bottom: 1;
 }
 
 .profileinterestsimg {
@@ -1482,42 +930,26 @@ input:focus ~ .highlight {
 
 #profileinterestsimgicon {
     width: 60px;
-    line-height: 45px;
+    line-height: 50px;
     text-align: center;
-    font-size: 23px;
+    font-size: 25px;
     color: black;
     float: left;
-    margin-right: 0px;
-    border-bottom-style: solid;
-    border-bottom-color: #E0E0E0;
-    border-width: 1px;
 }
 
 .profileintereststext {
-    line-height: 45px;
-    width: calc(100vw - 75px);
+    line-height: 50px;
+    width: calc(100vw - 60px);
     overflow: hidden;
     text-overflow: ellipsis;
-    font-family: Roboto;
-    font-size: 14px;
+    font-family: Roboto Black;
+    font-size: 15px;
     margin-top: 0px;
     float: left;
     color: black;
     margin: 0;
 }
 
-.profilefriendscarddiv{
-    margin: 5px;
-    float: left;
-    width: calc(100vw - 10px);
-    border-radius: 4px;
-    background-color: white;
-    overflow: hidden;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #E0E0E0;
-    box-shadow: 0px 2px 7px 2px #BDBDBB;
-}
 
 /*homepage */
 
@@ -1617,46 +1049,6 @@ button.link {
 
 
 /* notifications page */
-
-.notificationdiv {
-    width: 100vw;
-    height: 60px;
-    float: left;
-    border-bottom-style: solid;
-    border-bottom-color: lightgray;
-    border-bottom-width: 1px;
-}
-
-.notificationbutton {
-    float: right;
-    background-color: 00B0FF;
-    height: 25px;
-    margin: 17px 5px 17px 0px;
-    line-height: 25px;
-    padding: 0px;
-    text-align: center;
-    width: 45px;
-    font-size: 11px;
-}
-
-
-.notificationpicture {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: lightgray;
-    float: left;
-    margin: 15px;
-}
-
-.notificationname {
-    float: left;
-    width: calc(100vw - 160px);
-    line-height: 60px;
-    font-family: Roboto;
-    font-size: 13px;
-}
-
 
 .notificationslable {
     width: 100%;
@@ -1811,347 +1203,8 @@ button.link {
 /* search page */
 
 .searchforfriendsinput {
-    height: 50px;
-    width: calc(100vw - 40px);
-    color: red;
-    border-radius: 0;
-    float: left;
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-}
-
-.searchforfriendseachperson {
-    float: left;
-    height: 50px;
-    width: 100vw;
-    border-bottom-style: solid;
-    border-width: 1px;
-    margin-left: -15px;
-    border-color: EEEEEE;
-    background-color: white;
-}
-
-.searchforfriendseachpersonpic {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    float: left;
-    margin: 10;
-    background-color: lightgray;
-}
-
-.searchforfriendseachpersonname {
-    float: left;
-    width: calc(100vw - 140px);
-    text-indent: 0px;
-    overflow: hidden;
-    display: inline;
-    text-overflow: ellipsis;
-    line-height: 50px;
-    font-family: Roboto;
-    font-size: 12px;
-}
-
-.searchforfriendseachpersonaddbutton {
-    float: right;
-    padding: 0;
-    margin: 0px 10px 0px;
-    background-color: white !important;
-    border-color: white !important;
-}
-
-#searchforfriendseachpersonaddbuttonicon {
-    color: 4CAF50;
-    font-size: 30px;
-    line-height: 47px;
-}
-
-#searchforfriendseachinputsherlocicon {
-    font-size: 30px;
-    line-height: 50px;
-    width: 40px;
-    text-align: center;
-    color: #616161;
-    float: left;
-}
-
-.searchforfriendseachresultsdiv {
-    width: 100vw;
-    height: calc(100vh - 100px);
-    overflow: hidden;
-    overflow-y: auto;
-        
-}
-
-/* New Wim */
-
-.newwiminputicons {
-    width: 24px;
-    text-align: center;
-    height: 40px;
-    float: left;
-    margin-top: 15px;
-}
-
-.newwiminputforms {
-    width: calc(80vw - 14px);
-    float: left;
-    border: none;
-    height: 40px;
-    font-size: 14px;
-    font-family: Roboto;
-    border-radius: 0;
-    color: black;
-}
-
-.newwiminputformwimtitle {
-    width: calc(80vw - 42px);
-    float: left;
-    border: none;
-    height: 30px;
-    font-size: 25px;
-    font-family: Roboto;
-    border-radius: 0;
-    margin-top: 12px;
-    color: black;
-}
-
-.newwiminputwimiconbutton {
-    width: 30px;
-    height: 30px;
-    float: left;
-    margin-top: 15px;
-    margin-left: 12px;
-}
-
-.newwimdiv001 {
-    
-}
-
-.newwimdiv002 {
-    
-}
-
-.newwimdiv003 {
-    float: left; 
-    border-bottom-style: solid; 
-    border-bottom-width: 1px;
-    border-color: #E0E0E0;
-}
-
-.newwimdiv004 {
-    float: left;
-    /* background-color: lightblue; */
-    margin-left: 20px;
-}
-
-.newwimdiv005 {
-    width: calc(50vw - 20px);
-    /* background-color: green; */
-    float: left;
-}
-
-.newwimdiv006 {
-    float: left;
-    width: calc(50vw - 20px);
-}
-
-.newwimdiv007 {
-    float: left; 
-    border-bottom-style: solid; 
-    border-bottom-width: 1px;
-    border-color: #E0E0E0;
-}
-
-.newwimdiv008 {
-    float: left;
-    margin-left: 20px;
-}
-
-.newwimdiv009 {
-    width: 125px;
-    height: 35px;
-    float: left;
-    margin: 0px calc(50vw - 62px);
-    margin-top: 10px;
-}
-
-.newwimdiv010 {
-    font-family: Roboto;
-    font-size: 11px;
-    line-height: 40px;
-    float: left;
-    margin: 0;
-}
-
-.newwimdiv011 {
-    
-}
-
-.newwimdiv012 {
-    
-}
-
-.newwimdiv013 {
-    
-}
-
-.newwimadvancedoptionscssdiv {
-    position: absolute;
-    left: 120vw;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    margin-top: 0px;
-    top: 0px;
-}
-
-.newwimmapsearchcssdiv {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    margin-top: -50px;
-    background-color: white;
-    left: 120vw;
-    top: 0;
-}
-
-.newwiminvitefriendscssdiv {
-    position: absolute;
-    left: 120vw;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    margin-top: -50px;
-    top: 0;
-}
-
-.newwimwimtypecssdiv {
-    position: absolute;
-    left: 120vw;
-    background-color: white;
-    width: 100vw;
-    height: 100vh;
-    margin-top: -50px;
-    top: 0;
-}
-
-.newwimheaderdiv {
+    height: 200px;
     width: 100%;
-    height: 50px;
-    background-color: #ef5350;
-    box-shadow: 0px 2px 9px 0px rgba(0,0,0,0.2);
-    top: 0px;
-    z-index: 1;
-    margin-bottom: 0px;
-}
-
-.newwimiconicons {
-    line-height: 14px;
-    font-size: 12px;
-    text-align: center;
-    width: 14px;
-    float: left;
-    border-style: solid;
-}
-
-.newwiminvitefriendsindividualpersondiv {
-    width: 25vw;
-    height: 100px;
-    float: left;
-    margin-bottom: 1;
-}
-
-
-.newwiminvitefriendsindividualpersonimg {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: calc(12vw - 20px);
-    float: left;
-    background-color: #9E9E9E;
-    margin-top: 25px;
-}
-
-.newwiminvitefriendsindividualpersonlable {
-    width: 25vw;
-    text-align: center;
-    display: inline;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    float: left;
-    line-height: 30px;
-    height: 35px;
-    margin-bottom: 0;
-    font-size: 10px;
-    font-family: Roboto Black;
-}
-
-.newwiminvitefriendscssdivforscrolling {
-    width: 100vw;
-    height: calc(100vh - 50px);
-    float: left;
-    margin-top: -10px;
-    top: 0px;
-}
-
-.newwiminvitefriendsindividualpersonselectdiv {
-    width: 14px;
-    height: 14px;
-    background-color: #00B0FF;
-    position: absolute;
-    margin: 49px calc(12vw + 5px);
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
-    opacity: 1;
-}
-
-.newwimwimtypeindividualtypediv {
-    width: 100vw;
-    height: 55px;
-    border-bottom-style: solid;
-    border-bottom-color: lightgray;
-    border-bottom-width: 1px;
-    margin: 0px;
-    float: left;
-}
-
-.newwimwimtypeindivdualtypename {
-    float: left;
-    width: calc(100vw - 110px);
-    overflow: hidden;
-    display: inline;
-    text-overflow: ellipsis;
-    height: 55px;
-    line-height: 55px;
-    font-family: Roboto Black;
-    font-size: 18px;
-    margin: 0;
-    text-indent: 5px;
-}
-
-.newwimwimtypeindivdualcheckbox {
-    width: 21px;
-    height: 21px;
-    float: right;
-    margin: 17px;
-    border-style: solid;
-    border-color: gray;
-}
-
-/* bigmap */
-
-.bigmapgetdirectionsicon {
-    float: right;
-    color: white;
-    position: relative;
-}
-
-
-/* searchmape */
-
-#map-canvas {
-    width: 700px;
-    height: 700px;
+    color: red;
+    background-color: green;
 }

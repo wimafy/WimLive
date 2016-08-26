@@ -303,5 +303,6 @@ wimControllers.controller('MainController', ['userService', '$location', '$scope
 	}
 	
 	if(!userService.checkIfLoggedIn())
-		$location.path('/login');	
+		$location.path('/login');
+
 }]);

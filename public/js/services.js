@@ -86,7 +86,7 @@ wimServices.factory('profileService', ['Restangular', 'userService', 'localStora
 			
 			onSuccess(response);
 			
-		}, function(){
+		}, function(response){
 			
 			onError(response);
 		});
