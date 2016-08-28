@@ -1745,6 +1745,7 @@ button.link {
     height: calc(100vh - 100px);
     background-color: lightgray;
     float: left;
+    margin-left: -100vw;
 }
 
 .indexpagebottompagesliderdiv {
@@ -1760,7 +1761,7 @@ button.link {
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
-  transform: translate(0vw, 0px)!important;
+  transform: translate(100vw, 0px)!important;
 }
 
 .indexpagebottompagesliderdivposition2 {
@@ -1769,7 +1770,7 @@ button.link {
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
-  transform: translate(100vw, 0px)!important;
+  transform: translate(0vw, 0px)!important;
 }
 
 .indexpagebottompagesliderdivposition3 {
@@ -1778,7 +1779,7 @@ button.link {
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
-  transform: translate(200vw, 0px)!important;
+  transform: translate(-100vw, 0px)!important;
 }
 
 
