@@ -1705,7 +1705,7 @@ button.link {
 #indexpagebuttonhighligher {
     width: 33.33vw;
     height: 2px;
-    background-color: #304FFE;
+    background-color: rgb(33, 150, 243);
     float: left;
     position: relative;
     margin-top: -2px;
