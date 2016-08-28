@@ -1621,6 +1621,7 @@ button.link {
     width: 100vw;
     height: 100vh;
     float: left;
+    overflow: hidden;
 }
 
 .indexpageheaderdiv {
@@ -1740,12 +1741,18 @@ button.link {
 }
 
 .indexpagebottomdiv {
-    width: 100vw;
+    width: 300vw;
     height: calc(100vh - 100px);
     background-color: lightgray;
     float: left;
 }
 
+.indexpagebottompagesliderdiv {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    float: left;
+    background-color: olive;
+}
 
 
 
@@ -2423,6 +2430,7 @@ button.link {
     border-radius: 2px;
     box-shadow: 2px 2px 5px 2px #BDBDBB;
 }
+
 
 /* bigmap */
 
