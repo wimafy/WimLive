@@ -1635,6 +1635,9 @@ button.link {
     height: 60px;
     float: left;
     background-color: ef5350;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+    border-bottom-width: 1px;
 }
 
 .indexpageprofileimage {
@@ -1669,9 +1672,12 @@ button.link {
 
 .indexpagebottomheaderdiv {
     width: 100vw;
-    height: 40px;
+    height: 45px;
     float: left;
     background-color: lightyellow;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-color: gray;
 }
 
 .indexpagebottomheaderbuttondiv {
