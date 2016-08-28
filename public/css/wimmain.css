@@ -1672,11 +1672,11 @@ button.link {
 
 .indexpagebottomheaderdiv {
     width: 100vw;
-    height: 45px;
+    height: 44px;
     float: left;
     background-color: lightyellow;
     border-bottom-style: solid;
-    border-bottom-width: 3px;
+    border-bottom-width: 5px;
     border-color: gray;
 }
 
@@ -1709,14 +1709,31 @@ button.link {
 }
 
 #indexpagebuttonhighligher {
-    
+    width: 33.33vw;
+    height: 2px;
+    background-color: #304FFE;
+    float: left;
+    position: relative;
+    margin-top: -2px;
+    margin-left: 33.33vw;
+}
+
+.indexpagebuttonhighlightertransitionnotify {
+    -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  margin-left: 0px !important;
 }
 
 .indexpagebottomdiv {
     width: 100vw;
     height: calc(100vh - 100px);
     background-color: lightgray;
+    float: left;
 }
+
 
 
 
