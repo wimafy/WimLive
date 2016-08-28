@@ -1727,6 +1727,24 @@ button.link {
   margin-left: 0px !important;
 }
 
+.indexpagebuttonhighlightertransitioncurrentwims {
+    -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  margin-left: 33.33vw !important;
+}
+
+.indexpagebuttonhighlightertransitionnewwim {
+    -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  margin-left: 66.66vw !important;
+}
+
 .indexpagebottomdiv {
     width: 100vw;
     height: calc(100vh - 100px);

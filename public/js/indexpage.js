@@ -1,16 +1,18 @@
 function indexpagebuttonnotify() {
-    alert("wweee");
-    //document.getElementById("interestsID").style.color = "#2196F3";
-    //document.getElementById("friendsID").style.color = "black";
-    //document.getElementById("contactinfoID").style.color = "black";
     document.getElementById("indexpagebuttonhighligher").classList.add('indexpagebuttonhighlightertransitionnotify');
+    document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitioncurrentwims');
+    document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnewwim');
     
 }
 
 function indexpagebuttoncurrentwims() {
-    alert("two");
+    document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnotify');
+    document.getElementById("indexpagebuttonhighligher").classList.add('indexpagebuttonhighlightertransitioncurrentwims');
+    document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnewwim');
 }
 
 function indexpagebuttonnewwim() {
-    alert("three");
+    document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnotify');
+    document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitioncurrentwims');
+    document.getElementById("indexpagebuttonhighligher").classList.add('indexpagebuttonhighlightertransitionnewwim');
 }
