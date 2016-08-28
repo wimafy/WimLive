@@ -1,0 +1,87 @@
+<body style="background-color: lightgray; min-width: 300px; min-height: 500px;">
+<div style="background-color: #ef5350; width: 100vw; height: 100vh;">
+    <div class="homepagewimlogo" style="height: 50px; width: 100px; padding: 5px; position: absolute; left: 0; top: 0;" > 
+        <img src="web_images/Drawing%20(5).png" style="background-color: #ef5350; height: 30px; width: 60px; margin-top: 6px;">
+    </div>
+    
+    <div style="height: 50px; margin: 5px; right: 0; top: 0px; position: absolute;" ng-controller="ProfileController">        
+        <div class="dropdown">
+			<button onclick="dropdown()" class="material-icons homepagesettingsdownarrow" style="font-size: 40px; color: white; background-color: #ef5350; border: none; float: right; height: 50px; text-indent: -5px; line-height: 50px; width: 45px;">&#xE313;</button>
+			<div id="homepageSettingsDropdown" class="dropdown-content">
+				<button class="link" ng-click="logout()">Logout</button>
+			</div>
+		</div>
+        
+        <a onclick="fullpage5notifications()" style="text-decoration: none;">
+            <p style="height: 50px; line-height: 50px; float: right; padding: 0px 5px 0px 5px; color: white; font-size: 12px;" ng-repeat="p in profile"> {{p.FirstName }} {{ p.LastName }}</p>
+            <div style="float: right;" ng-repeat="p in profile">
+                <img style="float: right; height: 22px; width: 22px; border-radius: 50%; background-color: white; margin-top: 14px;" src={{p.ProfilePic}}>
+                <div class="homepagenotificationsbackgroundcircle"></div>
+                <div class="homepagenotifications">2</div>
+
+            </div>
+        </a>
+        
+        
+    </div>     
+    
+    
+    
+    <div style="width: 100vw;height: 300px;background-color: none;position: absolute;top: calc(50% - 150px);">
+        <div style="width: 100vw; height: 100px; background-color: none; float: left;"> 
+            
+             
+                <div class="homepagebuttondiv">
+                    <a onclick="fullpage1currentwims()" class='homepagebuttondiv' style="text-decoration: none;">
+                        <i class="material-icons" id="homepagebuttonpics" >&#xE80E;</i>
+                    </a>
+                </div>
+                <div style="margin: auto; width: 100px;">
+                    <a onclick="fullpage1currentwims()" class='homepagebuttondiv' style="text-decoration: none;">
+                        <p class="homepagebuttonlable">Current WIMs</p>
+                    </a> 
+                </div>
+                    
+        </div>
+        <div style="width: 50vw; height: 100px; background-color: none; float: left;">
+
+                <div class="homepagebuttondiv">
+                    <a onclick="fullpage2myprofile()" class='homepagebuttondiv' style="text-decoration: none;">
+                        <i class="material-icons" id="homepagebuttonpics" >&#xE7FD;</i>
+                    </a>
+                </div>
+                <div style="margin: auto; width: 100px;">
+                    <a onclick="fullpage2myprofile()" class='homepagebuttondiv' style="text-decoration: none;">
+                        <p class="homepagebuttonlable">My Profile</p>
+                    </a>
+                </div>
+        </div>
+        <div style="width: 50vw; height: 100px; background-color: none; float: left;">
+              
+                <div class="homepagebuttondiv">
+                    <a onclick="fullpage3newwim()" class='homepagebuttondiv' style="text-decoration: none;">
+                        <i class="material-icons" id="homepagebuttonpics" >&#xE148;</i>
+                    </a>
+                </div>
+                <div style="margin: auto; width: 100px;">
+                    <a onclick="fullpage3newwim()" class='homepagebuttondiv' style="text-decoration: none;">
+                        <p id="homepagetopbuttonlable" class="homepagebuttonlable" style="">New WIM</p>
+                    </a>
+                </div>
+           
+            
+        </div>
+        <div style="width: 100vw; height: 100px; background-color: none; float: left;">            
+                <div class="homepagebuttondiv">
+                    <a onclick="fullpage4search()" class='homepagebuttondiv' style="text-decoration: none;">
+                        <i class="material-icons" id="homepagebuttonpics" >&#xE8B6;</i>
+                    </a>
+                </div>
+                <div style="margin: auto; width: 100px;">                             <a onclick="fullpage4search()" class='homepagebuttondiv' style="text-decoration: none;">
+                        <p class="homepagebuttonlable">Search</p>
+                    </a>
+                </div>    
+        </div>
+
+    </div> 
+</div>
