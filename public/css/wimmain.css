@@ -1634,19 +1634,37 @@ button.link {
     width: 100vw;
     height: 60px;
     float: left;
-    background-color: lightgreen;
+    background-color: ef5350;
 }
 
 .indexpageprofileimage {
-    
+    width: 30px;
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+    margin: 15px 5px 15px 10px;
+    float: left;
 }
 
 .indexpageusername {
-    
+    width: calc(70vw - 115px);
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    font-family: Roboto;
+    font-size: 16px;
+    overflow: hidden;
+    display: inline;
+    text-overflow: ellipsis;
+    color: white;
 }
 
 .indexpagesearchbutton {
-    
+    width: 60px;
+    float: right;
+    text-align: center;
+    height: 60px;
+    color: white;
 }
 
 .indexpagebottomheaderdiv {
