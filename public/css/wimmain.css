@@ -1644,11 +1644,30 @@ button.link {
     background-color: lightyellow;
 }
 
+.indexpagebottomheaderbuttondiv {
+    width: 33.33vw;
+    float: left;
+    background-color: lightpink;
+}
+
+.indexpagebottomheaderbuttonicon {
+    
+}
+
+.indexpagebottomheaderbuttontext {
+    width: 33.33vw;
+    text-align: center;
+    
+    
+}
+
 .indexpagebottomdiv {
     width: 100vw;
     height: calc(100vh - 100px);
     background-color: lightgray;
 }
+
+
 
 
 
