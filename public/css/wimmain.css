@@ -1637,6 +1637,18 @@ button.link {
     background-color: lightgreen;
 }
 
+.indexpageprofileimage {
+    
+}
+
+.indexpageusername {
+    
+}
+
+.indexpagesearchbutton {
+    
+}
+
 .indexpagebottomheaderdiv {
     width: 100vw;
     height: 40px;
@@ -1647,7 +1659,8 @@ button.link {
 .indexpagebottomheaderbuttondiv {
     width: 33.33vw;
     float: left;
-    background-color: lightpink;
+    /* background-color: lightpink; */
+    height: 40px;
 }
 
 .indexpagebottomheaderbuttonicon {
@@ -1657,12 +1670,18 @@ button.link {
 .indexpagebottomheaderbuttontext {
     width: 33.33vw;
     text-align: center;
-    
-    
+    font-family: Roboto Black;
+    font-size: 10px;
+    padding-top: 0px;
+    margin: 0;
+    height: 17px;
 }
 
 #indexpagebuttonpics {
-    
+    width: 33.33vw;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
 }
 
 .indexpagebottomdiv {
