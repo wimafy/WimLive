@@ -3,6 +3,13 @@ function indexpagebuttonnotify() {
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitioncurrentwims');
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnewwim');
     
+    document.getElementById("indexpagebuttonpics1").style.color = "#2196F3";
+    document.getElementById("indexpagebuttonpics12").style.color = "#2196F3";
+    document.getElementById("indexpagebuttonpics21").style.color = "black";
+    document.getElementById("indexpagebuttonpics22").style.color = "black";
+    document.getElementById("indexpagebuttonpics31").style.color = "black";
+    document.getElementById("indexpagebuttonpics32").style.color = "black";
+    
 }
 
 function indexpagebuttoncurrentwims() {
