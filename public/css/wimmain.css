@@ -1754,8 +1754,32 @@ button.link {
     background-color: olive;
 }
 
+.indexpagebottompagesliderdivposition1 {
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  transform: translate(0vw, 0px)!important;
+}
 
+.indexpagebottompagesliderdivposition2 {
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  transform: translate(100vw, 0px)!important;
+}
 
+.indexpagebottompagesliderdivposition3 {
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  transform: translate(200vw, 0px)!important;
+}
 
 
 /* notifications page */
