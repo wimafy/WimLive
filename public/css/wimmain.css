@@ -1617,6 +1617,40 @@ button.link {
 
 /* new index page */
 
+.indexpagewholediv {
+    width: 100vw;
+    height: 100vh;
+    float: left;
+}
+
+.indexpageheaderdiv {
+    width: 100vw;
+    height: 100px;
+    background-color: orange;
+    float: left;
+}
+
+.indexpagetopheaderdiv {
+    width: 100vw;
+    height: 60px;
+    float: left;
+    background-color: lightgreen;
+}
+
+.indexpagebottomheaderdiv {
+    width: 100vw;
+    height: 40px;
+    float: left;
+    background-color: lightyellow;
+}
+
+.indexpagebottomdiv {
+    width: 100vw;
+    height: calc(100vh - 100px);
+    background-color: lightgray;
+}
+
+
 
 /* notifications page */
 

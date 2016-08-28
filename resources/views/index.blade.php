@@ -30,6 +30,7 @@
 		<script src = "js/dropdown.js"></script>
 		<script src = "js/profileActions.js"></script>
         <script src = "js/newwim.js"></script>
+        <script src = "js/indexpage.js"></script>
         
         
         
