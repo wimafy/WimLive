@@ -1,8 +1,8 @@
 <div class="indexpagewholediv">
     <div class="indexpageheaderdiv">
-        <div class="indexpagetopheaderdiv">
-            <img src="../profile_pics/Dr%20Bob.jpg" class="indexpageprofileimage">
-            <p class="indexpageusername">Braxton</p>
+        <div class="indexpagetopheaderdiv" ng-controller="ProfileController">
+            <img src={{p.ProfilePic}} class="indexpageprofileimage">
+            <p class="indexpageusername"ng-repeat="p in profile"> {{p.FirstName }} {{ p.LastName }</p>
             <i class="indexpagesearchbutton material-icons" id="" style="line-height: 50px; font-size: 30px;">&#xE8B6;</i>
         </div>
         <div class="indexpagebottomheaderdiv">
