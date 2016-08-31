@@ -1,11 +1,12 @@
 <div class="indexpagewholediv">
     <div class="indexpageheaderdiv" ng-controller="ProfileController">
         <div class="indexpagetopheaderdiv" ng-repeat="p in profile">
-            <div onclick="fullpage2myprofile()">
-                <img class="indexpageprofileimage" src={{p.ProfilePic}}>
-                <p class="indexpageusername"> {{p.FirstName }} {{p.LastName}}</p>
-            </div>
             <i onclick="fullpage4search()" class="indexpagesearchbutton material-icons" id="" style="line-height: 50px; font-size: 30px;">&#xE8B6;</i>
+            <div onclick="fullpage2myprofile()">
+                <p class="indexpageusername"> {{p.FirstName }} {{p.LastName}}</p>
+                <img class="indexpageprofileimage" src={{p.ProfilePic}}>
+            </div>
+            
         </div>
         <div class="indexpagebottomheaderdiv">
             <div class="indexpagebottomheaderbuttondiv" onclick="indexpagebuttonnotify()">
