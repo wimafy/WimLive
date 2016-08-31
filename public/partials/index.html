@@ -1,9 +1,11 @@
 <div class="indexpagewholediv">
     <div class="indexpageheaderdiv" ng-controller="ProfileController">
         <div class="indexpagetopheaderdiv" ng-repeat="p in profile">
-            <img class="indexpageprofileimage" src={{p.ProfilePic}}>
-            <p class="indexpageusername"> {{p.FirstName }} {{p.LastName}}</p>
-            <i class="indexpagesearchbutton material-icons" id="" style="line-height: 50px; font-size: 30px;">&#xE8B6;</i>
+            <div onclick="fullpage2myprofile()">
+                <img class="indexpageprofileimage" src={{p.ProfilePic}}>
+                <p class="indexpageusername"> {{p.FirstName }} {{p.LastName}}</p>
+            </div>
+            <i onclick="fullpage4search()" class="indexpagesearchbutton material-icons" id="" style="line-height: 50px; font-size: 30px;">&#xE8B6;</i>
         </div>
         <div class="indexpagebottomheaderdiv">
             <div class="indexpagebottomheaderbuttondiv" onclick="indexpagebuttonnotify()">
@@ -46,7 +48,7 @@
         </div>
         <div id="indexpagebottomcurrentwimsdiv" class="indexpagebottompagesliderdiv" style="background-color: pink;">
             <!--This first button is a hyperlink to the Create New Wim page-->
-            <button type="button" onclick="fullpage3newwim()" class="currentwimaddwimbutton"><i class="material-icons">&#xE145;</i></button>
+            <button type="button" onclick="fullpage3newwim()" class="currentwimaddwimbutton"><i class="material-icons" style="font-size: 35px;">&#xE145;</i></button>
 
             <div style="height: 100%; width: 100vw; top: 50px; background-color: #EEEEEE; float: left; overflow: hidden; overflow-y: auto; z-index: 50;">
 
@@ -104,7 +106,7 @@
         
         </div>
         <div id="indexpagebottomnewwimdiv" class="indexpagebottompagesliderdiv" style="background-color: #EEEEEE;">
-            <div class="indexpagenewwimbutton">
+            <div onclick="fullpage3newwim()" class="indexpagenewwimbutton">
                 <i class="indexpagebottomheaderbuttonicon material-icons" id="indexpagebuttonpics1" style="width: 25%; text-align: center;  font-size: 40; margin: 0; line-height: 50px; float: left;  color: #424242;">&#xE148;</i>
                 <p class="indexpagecreatewimtext">Create WIM</p>
             </div>
