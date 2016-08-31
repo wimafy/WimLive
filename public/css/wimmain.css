@@ -885,14 +885,14 @@ input:focus ~ .highlight {
     height: 60px;
     border-radius: 50%;
     position: absolute;
-    right: 10%;
-    bottom: 7%;
+    right: 112vw;
+    bottom: 8vh;
     border: none;
     color: white;
     font-size: 60px;
     line-height: 60px;
     box-shadow: 4px 4px 10px 2px rgba(0,0,0,0.2);
-    z-index: 60;
+    z-index: 79;
 }
 
 .currentwimswimtypeimg {
