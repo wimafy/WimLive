@@ -1673,7 +1673,7 @@ button.link {
     border-top-width: 1px;
     border-color: gray;
     position: absolute;
-    bottom: 0px;
+    bottom: calc(-100vh + 50px);
 }
 
 .indexpagebottomheaderbuttondiv {
@@ -1810,7 +1810,7 @@ button.link {
 .indexpageyouhavenonotifications {
     width: 100vw;
     text-align: center;
-    margin-top: calc(50vh - 120px);
+    margin-top: calc(50vh - 62px);
     font-family: Roboto;
     font-size: 18px;
 }
