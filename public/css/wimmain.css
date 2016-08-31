@@ -1627,7 +1627,7 @@ button.link {
 .indexpageheaderdiv {
     width: 100vw;
     height: 100px;
-    background-color: orange;
+    background-color: #ef5350;
     float: left;
     box-shadow: 0px -5px 16px 11px #BDBDBB;
     position: absolute;
@@ -1638,7 +1638,7 @@ button.link {
     width: 100vw;
     height: 50px;
     float: left;
-    background-color: ef5350;
+    background-color: #ef5350;
     border-bottom-style: solid;
     border-bottom-color: lightgray;
     border-bottom-width: 1px;
