@@ -473,7 +473,7 @@
                 document.getElementById("fullpageC1wholepagemap").classList.add('pagetransitionOUT');
     
               
-                window.location.assign("#/selectedWim");
+                window.location.assign("#/index");
               
                     
                    $(document).ready(function(){
