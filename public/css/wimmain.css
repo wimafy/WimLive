@@ -990,11 +990,15 @@ input:focus ~ .highlight {
     width: 100vw;
     float: left;
     background-color: lightgray;
+    position: absolute;
+    top: 50px;
 }
 
 .individualwimbottomdiv {
     width: 100vw;
     float: left;
+    position: absolute;
+    top: 200px;
 }
 
 .individualwimdestinationdiv {
@@ -1151,7 +1155,7 @@ input:focus ~ .highlight {
     border-width: 1px;
     box-shadow: 0px 4px 13px 1px rgba(0,0,0,0.2);
     z-index: 1;
-    position: relative;
+    position: absolute;
 }
 
 .individualwimdetailsdatetime {
