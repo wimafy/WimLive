@@ -871,16 +871,16 @@ input:focus ~ .highlight {
 
 .currentwimaddwimbutton {
     background-color: #5cb85c;
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     position: absolute;
     right: 112vw;
     bottom: 8vh;
     border: none;
     color: white;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 45px;
+    line-height: 45px;
     box-shadow: 4px 4px 10px 2px rgba(0,0,0,0.2);
     z-index: 79;
 }
