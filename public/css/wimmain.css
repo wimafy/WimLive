@@ -1616,7 +1616,7 @@ button.link {
 
 .indexpageheaderdiv {
     width: 100vw;
-    height: 50px;
+    height: 100px;
     background-color: #ef5350;
     float: left;
     box-shadow: 0px -5px 16px 11px #BDBDBB;
@@ -1669,11 +1669,11 @@ button.link {
     height: 50px;
     float: left;
     background-color: lightyellow;
-    border-top-style: solid;
-    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
     border-color: gray;
     position: absolute;
-    bottom: 0px;
+    top: 50px;
 }
 
 .indexpagebottomheaderbuttondiv {
@@ -1695,13 +1695,12 @@ button.link {
     padding-top: 0px;
     margin: 0;
     height: 17px;
-    color: #757575;
 }
 
 
 #indexpagebuttonhighligher {
     width: 33.33vw;
-    height: 2px;
+    height: 3px;
     background-color: rgb(33, 150, 243);
     float: left;
     position: relative;
@@ -1743,7 +1742,7 @@ button.link {
     float: left;
     margin-left: -100vw;
     position: absolute;
-    top: 50px;
+    top: 100px;
 }
 
 .indexpagebottompagesliderdiv {
