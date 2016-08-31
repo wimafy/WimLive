@@ -1806,7 +1806,12 @@ button.link {
 }
 
 .indexpagecreatewimtext {
-    
+    float: left;
+    line-height: 50px;
+    font-family: Roboto Black;
+    font-size: 30px;
+    text-align: left;
+    width: 75%;
 }
 
 /* notifications page */
