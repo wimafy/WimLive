@@ -1640,12 +1640,11 @@ button.link {
     background-color: gray;
     border-radius: 50%;
     margin: 15px 7px 15px 10px;
-    float: left;
+    float: right;
 }
 
 .indexpageusername {
-    width: calc(70vw - 115px);
-    float: left;
+    max-width: calc(70vw - 115px);
     height: 50px;
     line-height: 50px;
     font-family: Roboto;
@@ -1654,6 +1653,7 @@ button.link {
     display: inline;
     text-overflow: ellipsis;
     color: white;
+    float: right;
 }
 
 .indexpagesearchbutton {
