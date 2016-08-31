@@ -1672,6 +1672,8 @@ button.link {
     border-bottom-style: solid;
     border-bottom-width: 2px;
     border-color: gray;
+    position: absolute;
+    top: 50px;
 }
 
 .indexpagebottomheaderbuttondiv {
