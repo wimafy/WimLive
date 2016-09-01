@@ -17,6 +17,8 @@ function indexpagebuttonnotify() {
     document.getElementById("indexpagebuttonpics12").style.color = "#2196F3";
     document.getElementById("indexpagebuttonpics2").style.color = "#757575";
     document.getElementById("indexpagebuttonpics22").style.color = "#757575";
+    document.getElementById("indexpagebuttonpics3").style.color = "#757575";
+    document.getElementById("indexpagebuttonpics32").style.color = "#757575";
     document.getElementById("indexpagebuttonpics4").style.color = "#757575";
     document.getElementById("indexpagebuttonpics42").style.color = "#757575";
     
@@ -40,6 +42,8 @@ function indexpagebuttoncurrentwims() {
     document.getElementById("indexpagebuttonpics12").style.color = "#757575";
     document.getElementById("indexpagebuttonpics2").style.color = "#2196F3";
     document.getElementById("indexpagebuttonpics22").style.color = "#2196F3";
+    document.getElementById("indexpagebuttonpics3").style.color = "#757575";
+    document.getElementById("indexpagebuttonpics32").style.color = "#757575";
     document.getElementById("indexpagebuttonpics4").style.color = "#757575";
     document.getElementById("indexpagebuttonpics42").style.color = "#757575";
 }
@@ -61,8 +65,10 @@ function indexpagebuttonsearch() {
     
      document.getElementById("indexpagebuttonpics1").style.color = "#757575";
     document.getElementById("indexpagebuttonpics12").style.color = "#757575";
-    document.getElementById("indexpagebuttonpics2").style.color = "#2196F3";
-    document.getElementById("indexpagebuttonpics22").style.color = "#2196F3";
+    document.getElementById("indexpagebuttonpics2").style.color = "#757575";
+    document.getElementById("indexpagebuttonpics22").style.color = "#757575";
+    document.getElementById("indexpagebuttonpics3").style.color = "#2196F3";
+    document.getElementById("indexpagebuttonpics32").style.color = "#2196F3";
     document.getElementById("indexpagebuttonpics4").style.color = "#757575";
     document.getElementById("indexpagebuttonpics42").style.color = "#757575";
 }
@@ -87,6 +93,8 @@ function indexpagebuttonnewwim() {
     document.getElementById("indexpagebuttonpics12").style.color = "#757575";
     document.getElementById("indexpagebuttonpics2").style.color = "#757575";
     document.getElementById("indexpagebuttonpics22").style.color = "#757575";
+    document.getElementById("indexpagebuttonpics3").style.color = "#2196F3";
+    document.getElementById("indexpagebuttonpics32").style.color = "#2196F3";
     document.getElementById("indexpagebuttonpics4").style.color = "#2196F3";
     document.getElementById("indexpagebuttonpics42").style.color = "#2196F3";
 }
