@@ -875,8 +875,8 @@ input:focus ~ .highlight {
     height: 45px;
     border-radius: 50%;
     position: absolute;
-    right: 112vw;
-    bottom: 8vh;
+    right: 204vw;
+    bottom: 4vh;
     border: none;
     color: white;
     font-size: 45px;

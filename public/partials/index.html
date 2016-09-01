@@ -3,7 +3,6 @@
         <div class="indexpagetopheaderdiv" ng-repeat="p in profile">
             <img src="web_images/wimlogowhitealpha.png" style="height: 25px;
 float: left; margin: 12px;">
-            <i onclick="fullpage4search()" class="indexpagesearchbutton material-icons" id="" style="line-height: 50px; font-size: 30px;">&#xE8B6;</i>
             <div onclick="fullpage2myprofile()">
                 <p class="indexpageusername"> {{p.FirstName }}</p>
                 <img class="indexpageprofileimage" src={{p.ProfilePic}}>
@@ -114,7 +113,30 @@ float: left; margin: 12px;">
         
         </div>
         <div id="indexpagebottomsearchdiv" class="indexpagebottompagesliderdiv">
-        
+            
+            <div style="box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2); z-index: 4; position: relative; width: 100vw; height: 50px;">
+                <i id="searchforfriendseachinputsherlocicon" class="material-icons">&#xE8B6;</i> 
+                <input type="text" class="searchforfriendsinput" ng-model="searchFor">
+            </div>
+
+            <div class="searchforfriendseachresultsdiv">
+                <div class="col-md-12">
+                    <!--I am pulling in the 'users' array that is created in the FriendController in controller.js-->
+                    <!--
+                    <p>There are currently <b>{{ relationships.length }}</b> users that you could be friends with!</p>
+                    -->
+                        <!--This ng-repeat is basically a for loop that loops through the users array and filters for matches that are similar to what was inputed above-->
+                        <div ng-repeat="relationship in relationships | filter:searchFor" class="searchforfriendseachperson">
+                            <!--I pass the user id to the addFriend function which will pass the userId onto the API to create a new friend-->
+                            <img class="searchforfriendseachpersonpic" src={{relationship.ProfilePic}}>
+                            <b class="searchforfriendseachpersonname">{{ relationship.FirstName }} {{relationship.LastName}}</b>
+                            <button type="button" class="searchforfriendseachpersonaddbutton btn btn-info" ng-click="sendFriendRequest(relationship.id)">
+                                <i id="searchforfriendseachpersonaddbuttonicon" class="material-icons">&#xE148;</i>  
+                            </button>
+                        </div>
+
+                </div>
+            </div>    
         </div>
         <div id="indexpagebottomnewwimdiv" class="indexpagebottompagesliderdiv" style="background-color: #EEEEEE;">
             <div onclick="fullpage3newwim()" class="indexpagenewwimbutton">
