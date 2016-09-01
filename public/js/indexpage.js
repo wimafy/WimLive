@@ -68,8 +68,8 @@ function indexpagebuttonsearch() {
 }
 
 
-indexpagebuttonhighlightertransitionsearch
-indexpagebottompagesliderdivposition4
+//indexpagebuttonhighlightertransitionsearch
+//indexpagebottompagesliderdivposition4
 
 
 
