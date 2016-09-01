@@ -1681,7 +1681,7 @@ button.link {
 }
 
 .indexpagebottomheaderbuttondiv {
-    width: 33.33vw;
+    width: 25vw;
     float: left;
     background-color: white;
     height: 48px;
@@ -1692,7 +1692,7 @@ button.link {
 }
 
 .indexpagebottomheaderbuttontext {
-    width: 33.33vw;
+    width: 25vw;
     text-align: center;
     font-family: Roboto Black;
     font-size: 10px;
@@ -1703,13 +1703,13 @@ button.link {
 
 
 #indexpagebuttonhighligher {
-    width: 33.33vw;
+    width: 25vw;
     height: 3px;
     background-color: rgb(33, 150, 243);
     float: left;
     position: relative;
     margin-top: -1px;
-    margin-left: 33.33vw;
+    margin-left: 25vw;
 }
 
 .indexpagebuttonhighlightertransitionnotify {
@@ -1727,7 +1727,16 @@ button.link {
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
-  margin-left: 33.33vw !important;
+  margin-left: 25vw !important;
+}
+
+.indexpagebuttonhighlightertransitionsearch {
+    -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  margin-left: 50vw !important;
 }
 
 .indexpagebuttonhighlightertransitionnewwim {
@@ -1736,8 +1745,9 @@ button.link {
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
-  margin-left: 66.66vw !important;
+  margin-left: 75vw !important;
 }
+
 
 .indexpagebottomdiv {
     width: 300vw;
@@ -1782,6 +1792,17 @@ button.link {
   transition: .1s;
   transform: translate(-100vw, 0px)!important;
 }
+
+.indexpagebottompagesliderdivposition4 {
+  -webkit-transition: .1s;
+  -moz-transition: .1s;
+  -ms-transition: .1s;
+  -o-transition: .1s;
+  transition: .1s;
+  transform: translate(-200vw, 0px)!important;
+}
+
+
 
 .indexpagenewwimbutton {
     float: left;
