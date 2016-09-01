@@ -45,7 +45,8 @@ function indexpagebuttoncurrentwims() {
 }
 
 
-function indexpagebuttoncurrentwims() {
+function indexpagebuttonsearch() {
+    alert("wee");
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnotify');
     document.getElementById("indexpagebuttonhighligher").classList.add('indexpagebuttonhighlightertransitioncurrentwims');
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnewwim');
@@ -68,6 +69,7 @@ function indexpagebuttoncurrentwims() {
 
 
 indexpagebuttonhighlightertransitionsearch
+indexpagebottompagesliderdivposition4
 
 
 
