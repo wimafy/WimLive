@@ -1763,7 +1763,7 @@ button.link {
     width: 100vw;
     height: calc(100vh - 100px);
     float: left;
-    background-color: olive;
+    background-color: #EEEEEE;
 }
 
 .indexpagebottompagesliderdivposition1 {
@@ -2100,10 +2100,9 @@ button.link {
 
 .searchforfriendseachresultsdiv {
     width: 100vw;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 149px);
     overflow: hidden;
     overflow-y: auto;
-        
 }
 
 /* New Wim */
