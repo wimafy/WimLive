@@ -1750,7 +1750,7 @@ button.link {
 
 
 .indexpagebottomdiv {
-    width: 300vw;
+    width: 400vw;
     height: calc(100vh - 100px);
     background-color: lightgray;
     float: left;
