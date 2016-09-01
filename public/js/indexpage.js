@@ -1,6 +1,7 @@
 function indexpagebuttonnotify() {
     document.getElementById("indexpagebuttonhighligher").classList.add('indexpagebuttonhighlightertransitionnotify');
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitioncurrentwims');
+    document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionsearch');
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnewwim');
     
     
@@ -28,6 +29,7 @@ function indexpagebuttonnotify() {
 function indexpagebuttoncurrentwims() {
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnotify');
     document.getElementById("indexpagebuttonhighligher").classList.add('indexpagebuttonhighlightertransitioncurrentwims');
+    document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionsearch');
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnewwim');
     
     
@@ -50,9 +52,10 @@ function indexpagebuttoncurrentwims() {
 
 
 function indexpagebuttonsearch() {
-    alert("wee");
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnotify');
-    document.getElementById("indexpagebuttonhighligher").classList.add('indexpagebuttonhighlightertransitioncurrentwims');
+    document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitioncurrentwims');
+   
+    document.getElementById("indexpagebuttonhighligher").classList.add('indexpagebuttonhighlightertransitionsearch');
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnewwim');
     
     
@@ -82,6 +85,7 @@ function indexpagebuttonsearch() {
 function indexpagebuttonnewwim() {
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionnotify');
     document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitioncurrentwims');
+    document.getElementById("indexpagebuttonhighligher").classList.remove('indexpagebuttonhighlightertransitionsearch');
     document.getElementById("indexpagebuttonhighligher").classList.add('indexpagebuttonhighlightertransitionnewwim');
     
     
