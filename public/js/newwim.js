@@ -93,9 +93,13 @@ function newwimbackslide(divID) {
 
 function newwimdestinationpagein() {
     document.getElementById('newwimmapsearchdiv').style.left = "0vw";
+    document.getElementById('fullpage3newwim').style.z-index = "50";
+    
+    
 }
 
 
 function newwimdestinationpageout() {
      document.getElementById('newwimmapsearchdiv').style.left = "125vw";
+    document.getElementById('fullpage3newwim').style.z-index = "100";
 }
