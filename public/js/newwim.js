@@ -101,7 +101,7 @@ function newwimdestinationpagein() {
                 lat: 27.72,
                 lng: 85.36
             },
-            zoom:15
+            zoom:5
         });
         console.log("helo");
         var marker = new google.maps.Marker({
