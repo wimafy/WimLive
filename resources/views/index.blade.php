@@ -503,7 +503,7 @@
                 },
                 zoom:15
             });
-
+            console.log("helo");
             var marker = new google.maps.Marker({
                 position:{
                     lat: 27.72,
