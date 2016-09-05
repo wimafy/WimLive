@@ -2525,6 +2525,6 @@ button.link {
 /* searchmape */
 
 #map-canvas {
-    width: 700px;
-    height: 700px;
+    width: 100vw;
+    height: calc(100vh - 95px);
 }
