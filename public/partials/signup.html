@@ -12,9 +12,10 @@
     </div>
     
     <div id="02slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 52;" >
-        <div class="newwimdiv001">
+        <div class="newwimdiv001" style="height: 130px;">
             <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE899;</i>
             <input class="form-control newwiminputformwimtitle" placeholder="Password..." id="password" ng-model="password" type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
+            <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE899;</i>
             <input class="form-control newwiminputformwimtitle" placeholder="Confirm password..." id="password_confirmation" ng-model="password_confirmation" type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
             
             <button class="newwimnextbutton" onclick="newwimadvanceslide('03slide')">next</button>
@@ -24,18 +25,19 @@
         
     </div>
     <div id="03slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 53;">
-            <div  class="newwimdiv005">
-                <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE8DF;</i>
+            <div  class="newwimdiv001">
+                <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE;</i>
                 <div  style="float: left; border-bottom-style: solid; border-bottom-width: 1px; width: calc(100% - 48px); border-color: #E0E0E0;">
-                    <input class="form-control newwiminputformwimtitle" ng-model="currentWimDate" placeholder="Date..." type="date" style="border-color: white; box-shadow: inset 0 0 0; width: calc(100vw - 76px); font-size: 20px; height: 34px; line-height: 40px;">
+                    <input type="file" ngf-select ng-model="ProfilePic" name="file" 
+						accept="image/*" ngf-max-size="2MB"
+						ngf-model-invalid="errorFile"
+						ngf-allow-dir="false" accept="image/jpeg,image/jpg,image/png" 
+						ngf-pattern="'image/jpeg,image/jpg,image/png'" 
+						ngf-resize="{quality: 1.0, type: 'image/png', restoreExif: false}">
+				    <img ng-show="upload.file.$valid"> <button ng-click="ProfilePic = null" ng-show="ProfilePic">Remove</button>
                 </div>
             </div>
-            <div class="newwimdiv006">
-                <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE192;</i>
-                <div class="newwimdiv007">
-                    <input class="form-control newwiminputformwimtitle" ng-model="currentWimTime" placeholder="Time..." type="time" style="border-color: white; box-shadow: inset 0 0 0; width: calc(100vw - 76px); font-size: 20px; height: 34px; line-height: 40px;">
-                </div>
-            </div>
+            
 
         <button class="newwimnextbutton" onclick="newwimadvanceslide('04slide')">next</button>
         <button class="newwimpreviousbutton" onclick="newwimbackslide('03slide')">back</button>
