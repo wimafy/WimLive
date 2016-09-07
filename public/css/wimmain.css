@@ -689,6 +689,19 @@ input:focus ~ .highlight {
 }
 
 
+.signupslidedivs {
+    height: calc(100vh - 50px);
+    width: 100vw;
+    background-color: white;
+    position: absolute;
+    z-index: 50;
+     -ms-transform: translate(125vw, 0px); /* IE 9 */
+     -webkit-transform: translate(125vw, 0px); /* Safari */
+     transform: translate(125vw, 0px);
+}
+
+
+
 
 /*friends page*/
 .backarrow {

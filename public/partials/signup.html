@@ -1,37 +1,25 @@
 <div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: white; position: absolute; z-index: 50;">
 
-    <div id="01newwimwimtitle" class="newwimslidedivs" style="background-color: #E0E0E0; z-index: 51; -ms-transform: translate(0px, 0px); /* IE 9 */
+    <div id="01slide" class="signupslidedivs" style="background-color: #E0E0E0; z-index: 51; -ms-transform: translate(0px, 0px); /* IE 9 */
      -webkit-transform: translate(0px, 0px); /* Safari */
      transform: translate(0px, 0px);">
         <div class="newwimdiv001">
             <i class="material-icons newwiminputicons" style="line-height: 55px; margin-right: 12px; font-size: 30px">&#xE8F4;</i>
             <input class="form-control newwiminputformwimtitle" ng-model="currentWimTitle" placeholder="WIM Title..." type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
-            <button class="newwimnextbutton" onclick="newwimadvanceslide('02newwimdestination')">next</button>
+            <button class="newwimnextbutton" onclick="newwimadvanceslide('02slide')">next</button>
         </div>
     </div>
-    <div id="02newwimdestination" class="newwimslidedivs" style=" background-color: #E0E0E0; z-index: 52;" >
+    <div id="02slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 52;" >
         <div class="newwimdiv001">
             <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE0C8;</i>
             <p onclick="newwimdestinationpagein()" class="newwiminputformwimtitle" style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">Destination</p>
-            <button class="newwimnextbutton" onclick="newwimadvanceslide('03newwimdatetime')">next</button>
-            <button class="newwimpreviousbutton" onclick="newwimbackslide('02newwimdestination')">back</button>
+            <button class="newwimnextbutton" onclick="newwimadvanceslide('03slide')">next</button>
+            <button class="newwimpreviousbutton" onclick="newwimbackslide('01slide')">back</button>
         </div>
         
-        <div id="newwimmapsearchdiv" class="newwimmapsearchcssdiv">
-            <div class="newwimheaderdiv">
-                <div class="headerbackarrow" onclick="newwimdestinationpageout()">
-                    <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
-                </div>
-                <h1 class="headerpagetitle">Search Destination</h1>
-            </div>
-            <i class="material-icons newwiminputicons" style="margin-right: 12px; font-size: 24px; color: #9E9E9E; line-height: 45px; left: 0; width: 50px; position: absolute; height: 45px; background-color: white;">&#xE8B6;</i>
-            <input type="text" id="mapsearch" style="position: absolute; height: 45px; font-family: Roboto; font-size: 24px; width: calc(100vw - 50px); border: none; box-shadow: none; left: 50; border-radius: 0; padding: 0px;">
-            <div id="map-canvas" style="background-color:gray; position: absolute;"></div>
-
-        </div>
         
     </div>
-    <div id="03newwimdatetime" class="newwimslidedivs" style=" background-color: #E0E0E0; z-index: 53;">
+    <div id="03slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 53;">
             <div  class="newwimdiv005">
                 <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE8DF;</i>
                 <div  style="float: left; border-bottom-style: solid; border-bottom-width: 1px; width: calc(100% - 48px); border-color: #E0E0E0;">
@@ -45,10 +33,10 @@
                 </div>
             </div>
 
-        <button class="newwimnextbutton" onclick="newwimadvanceslide('04newwimaddpeople')">next</button>
-        <button class="newwimpreviousbutton" onclick="newwimbackslide('03newwimdatetime')">back</button>
+        <button class="newwimnextbutton" onclick="newwimadvanceslide('04slide')">next</button>
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('02slide')">back</button>
     </div>
-    <div id="04newwimaddpeople" class="newwimslidedivs" style=" background-color: #E0E0E0; z-index: 54;" >
+    <div id="04slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 54;" >
         <div class="newwimfriendsscrolldiv">
             <div class="newwimdiv011">
                 <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('002')">
@@ -75,15 +63,15 @@
                 </div>
             </div>
         </div>
-        <button class="newwimnextbutton" onclick="newwimadvanceslide('05newwimadditionaloptions')">next</button>
-        <button class="newwimpreviousbutton" onclick="newwimbackslide('04newwimaddpeople')">back</button>
+        <button class="newwimnextbutton" onclick="newwimadvanceslide('05slide')">next</button>
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('03slide')">back</button>
 
     </div>
 
         
         
     
-    <div id="05newwimadditionaloptions" class="newwimslidedivs" style=" background-color: #E0E0E0; z-index: 55;">
+    <div id="05slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 55;">
         <div class="newwimdiv008">
             <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE8D2;</i>
             <div class="newwimdiv003" style="float: left; border-bottom-style: solid; border-bottom-width: 1px;">
@@ -104,7 +92,7 @@
             </div>
         </div>
         
-        <button class="newwimpreviousbutton" onclick="newwimbackslide('05newwimadditionaloptions')">back</button>
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('04slide')">back</button>
         <button type="button" class="newwimsubmitwimbutton" ng-click="create()">Post Wim</button>
     </div>
     
