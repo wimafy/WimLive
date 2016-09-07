@@ -1,3 +1,119 @@
+<div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: white; position: absolute; z-index: 50;">
+
+    <div id="01newwimwimtitle" class="newwimslidedivs" style="background-color: #E0E0E0; z-index: 51; -ms-transform: translate(0px, 0px); /* IE 9 */
+     -webkit-transform: translate(0px, 0px); /* Safari */
+     transform: translate(0px, 0px);">
+        <div class="newwimdiv001">
+            <i class="material-icons newwiminputicons" style="line-height: 55px; margin-right: 12px; font-size: 30px">&#xE8F4;</i>
+            <input class="form-control newwiminputformwimtitle" ng-model="currentWimTitle" placeholder="WIM Title..." type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
+            <button class="newwimnextbutton" onclick="newwimadvanceslide('02newwimdestination')">next</button>
+        </div>
+    </div>
+    <div id="02newwimdestination" class="newwimslidedivs" style=" background-color: #E0E0E0; z-index: 52;" >
+        <div class="newwimdiv001">
+            <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE0C8;</i>
+            <p onclick="newwimdestinationpagein()" class="newwiminputformwimtitle" style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">Destination</p>
+            <button class="newwimnextbutton" onclick="newwimadvanceslide('03newwimdatetime')">next</button>
+            <button class="newwimpreviousbutton" onclick="newwimbackslide('02newwimdestination')">back</button>
+        </div>
+        
+        <div id="newwimmapsearchdiv" class="newwimmapsearchcssdiv">
+            <div class="newwimheaderdiv">
+                <div class="headerbackarrow" onclick="newwimdestinationpageout()">
+                    <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+                </div>
+                <h1 class="headerpagetitle">Search Destination</h1>
+            </div>
+            <i class="material-icons newwiminputicons" style="margin-right: 12px; font-size: 24px; color: #9E9E9E; line-height: 45px; left: 0; width: 50px; position: absolute; height: 45px; background-color: white;">&#xE8B6;</i>
+            <input type="text" id="mapsearch" style="position: absolute; height: 45px; font-family: Roboto; font-size: 24px; width: calc(100vw - 50px); border: none; box-shadow: none; left: 50; border-radius: 0; padding: 0px;">
+            <div id="map-canvas" style="background-color:gray; position: absolute;"></div>
+
+        </div>
+        
+    </div>
+    <div id="03newwimdatetime" class="newwimslidedivs" style=" background-color: #E0E0E0; z-index: 53;">
+            <div  class="newwimdiv005">
+                <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE8DF;</i>
+                <div  style="float: left; border-bottom-style: solid; border-bottom-width: 1px; width: calc(100% - 48px); border-color: #E0E0E0;">
+                    <input class="form-control newwiminputformwimtitle" ng-model="currentWimDate" placeholder="Date..." type="date" style="border-color: white; box-shadow: inset 0 0 0; width: calc(100vw - 76px); font-size: 20px; height: 34px; line-height: 40px;">
+                </div>
+            </div>
+            <div class="newwimdiv006">
+                <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE192;</i>
+                <div class="newwimdiv007">
+                    <input class="form-control newwiminputformwimtitle" ng-model="currentWimTime" placeholder="Time..." type="time" style="border-color: white; box-shadow: inset 0 0 0; width: calc(100vw - 76px); font-size: 20px; height: 34px; line-height: 40px;">
+                </div>
+            </div>
+
+        <button class="newwimnextbutton" onclick="newwimadvanceslide('04newwimaddpeople')">next</button>
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('03newwimdatetime')">back</button>
+    </div>
+    <div id="04newwimaddpeople" class="newwimslidedivs" style=" background-color: #E0E0E0; z-index: 54;" >
+        <div class="newwimfriendsscrolldiv">
+            <div class="newwimdiv011">
+                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('002')">
+                    <img class="newwiminvitefriendsindividualpersonimg" src="">
+                    <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select002" style="opacity: 0;">
+                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
+                    </div>
+                    <p class="newwiminvitefriendsindividualpersonlable">Braxton</p>
+                </div>
+                
+                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('009')">
+                    <img class="newwiminvitefriendsindividualpersonimg" src="">
+                    <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select009" style="opacity: 0;">
+                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
+                    </div>
+                    <p class="newwiminvitefriendsindividualpersonlable">Isaac</p>
+                </div>
+                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('010')">
+                    <img class="newwiminvitefriendsindividualpersonimg" src="">
+                    <div class="newwiminvitefriendsindividualpersonselectdiv" id="select010" style="opacity: 0;">
+                        <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
+                    </div>
+                    <p class="newwiminvitefriendsindividualpersonlable">Laney</p>
+                </div>
+            </div>
+        </div>
+        <button class="newwimnextbutton" onclick="newwimadvanceslide('05newwimadditionaloptions')">next</button>
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('04newwimaddpeople')">back</button>
+
+    </div>
+
+        
+        
+    
+    <div id="05newwimadditionaloptions" class="newwimslidedivs" style=" background-color: #E0E0E0; z-index: 55;">
+        <div class="newwimdiv008">
+            <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE8D2;</i>
+            <div class="newwimdiv003" style="float: left; border-bottom-style: solid; border-bottom-width: 1px;">
+                <textarea class="form-control newwiminputforms" ng-model="currentWimDescription" placeholder="Description..." type="text" style="padding: 0; border-color: white; box-shadow: inset 0 0 0; height: 50px"></textarea>
+            </div>
+        </div>
+        <div class="newwimdiv002" style="float: left; margin-left: 7px;">
+            <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE566;</i>
+            <div class="newwimdiv003">
+                <input class="form-control newwiminputforms" ng-model="currentWimAttire" placeholder="Attire..." type="text" style="border-color: white; box-shadow: inset 0 0 0; padding: 0px;">
+            </div>
+        </div>
+
+        <div class="newwimdiv002" style="float: left; margin-left: 7px;">
+            <i class="material-icons newwiminputicons" style="line-height: 40px; width: 24px; margin-right: 14px;">&#xE531;</i>
+            <div class="newwimdiv003">
+                <input class="form-control newwiminputforms" ng-model="currentWimTransportation" placeholder="Transportation..." type="text" style="border-color: white; box-shadow: inset 0 0 0; padding: 0px;">
+            </div>
+        </div>
+        
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('05newwimadditionaloptions')">back</button>
+        <button type="button" class="newwimsubmitwimbutton" ng-click="create()">Post Wim</button>
+    </div>
+    
+    
+    
+</div>
+
+
+<!--
 <div style="background-color: #ef5350; width: 100vw; height: 100vh; overflow-y: auto;">
 <div class="row" style="margin: 5px; margin-top: 0px;">
     <div class="col-md-4 col-md-offset-4">
@@ -191,6 +307,8 @@
 		<p><input type="text" class="form-control" placeholder="City..." ng-model="city" style="width: 60%; float: left;"></p>
 		
 		<!-- todo: support for other countries -->
+
+<!--
 		<p>
 		<select id="state" name="state" ng-model="state" style="width: calc(40% - 4px); margin-left: 4px; height: 34px; border-radius: 4px; color: #555; background-color: #fff; background-image: none; border: 1px solid #ccc;"> 
 			<option value="" disabled selected>State</option>
@@ -277,6 +395,7 @@
         <hr>
 		
 		<!--type="button" class="btn btn-success form-control"-->
+<!--
         <p><button id="nextbutton" class="signinbutton" ng-click="signup(ProfilePic)">Signup</button></p>
         <hr>
 		
