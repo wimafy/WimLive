@@ -1,18 +1,23 @@
+<!--
 <div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: white; position: absolute; z-index: 50;">
 
     <div id="01slide" class="signupslidedivs" style="background-color: #E0E0E0; z-index: 51; -ms-transform: translate(0px, 0px); /* IE 9 */
      -webkit-transform: translate(0px, 0px); /* Safari */
      transform: translate(0px, 0px);">
         <div class="newwimdiv001">
-            <i class="material-icons newwiminputicons" style="line-height: 55px; margin-right: 12px; font-size: 30px">&#xE8F4;</i>
-            <input class="form-control newwiminputformwimtitle" ng-model="currentWimTitle" placeholder="WIM Title..." type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
+            <i class="material-icons newwiminputicons" style="line-height: 55px; margin-right: 12px; font-size: 30px">&#xE7FD;</i>
+            <input class="form-control newwiminputformwimtitle" placeholder="Username..." ng-model="username" type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
+            
             <button class="newwimnextbutton" onclick="newwimadvanceslide('02slide')">next</button>
         </div>
     </div>
+    
     <div id="02slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 52;" >
         <div class="newwimdiv001">
-            <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE0C8;</i>
-            <p onclick="newwimdestinationpagein()" class="newwiminputformwimtitle" style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">Destination</p>
+            <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE899;</i>
+            <input class="form-control newwiminputformwimtitle" placeholder="Password..." id="password" ng-model="password" type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
+            <input class="form-control newwiminputformwimtitle" placeholder="Confirm password..." id="password_confirmation" ng-model="password_confirmation" type="text"  style="padding: 3px; border-color: white; box-shadow: inset 0 0 0;">
+            
             <button class="newwimnextbutton" onclick="newwimadvanceslide('03slide')">next</button>
             <button class="newwimpreviousbutton" onclick="newwimbackslide('02slide')">back</button>
         </div>
@@ -94,15 +99,17 @@
         </div>
         
         <button class="newwimpreviousbutton" onclick="newwimbackslide('05slide')">back</button>
-        <button type="button" class="newwimsubmitwimbutton" ng-click="create()">Post Wim</button>
+        <button type="button" class="newwimsubmitwimbutton">Sign Up</button>
     </div>
     
     
     
 </div>
 
+-->
 
-<!--
+
+
 <div style="background-color: #ef5350; width: 100vw; height: 100vh; overflow-y: auto;">
 <div class="row" style="margin: 5px; margin-top: 0px;">
     <div class="col-md-4 col-md-offset-4">
@@ -296,8 +303,7 @@
 		<p><input type="text" class="form-control" placeholder="City..." ng-model="city" style="width: 60%; float: left;"></p>
 		
 		<!-- todo: support for other countries -->
-
-<!--
+        
 		<p>
 		<select id="state" name="state" ng-model="state" style="width: calc(40% - 4px); margin-left: 4px; height: 34px; border-radius: 4px; color: #555; background-color: #fff; background-image: none; border: 1px solid #ccc;"> 
 			<option value="" disabled selected>State</option>
@@ -384,7 +390,7 @@
         <hr>
 		
 		<!--type="button" class="btn btn-success form-control"-->
-<!--
+                
         <p><button id="nextbutton" class="signinbutton" ng-click="signup(ProfilePic)">Signup</button></p>
         <hr>
 		
