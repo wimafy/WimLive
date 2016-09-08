@@ -2511,7 +2511,7 @@ button.link {
 
 .newwimnextbutton {
     position: absolute;
-    bottom: 10vh;
+    bottom: 12vh;
     right: 10vw;
     width: 65px;
     height: 30px;
@@ -2526,7 +2526,7 @@ button.link {
 
 .newwimpreviousbutton {
     position: absolute;
-    bottom: 10vh;
+    bottom: 12vh;
     left: 10vw;
     width: 65px;
     height: 30px;
