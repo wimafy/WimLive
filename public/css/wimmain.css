@@ -709,6 +709,15 @@ input:focus ~ .highlight {
     font-family: Roboto;
 }
 
+.signupprofilepicimg {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    background-color: gray;
+    border-radius: 50%;
+    left: calc(50vw - 37px);
+    top: calc(25vh - 90px);
+}
 
 /*friends page*/
 .backarrow {
@@ -2170,7 +2179,6 @@ button.link {
 .newwimdiv001 {
     float: left;
     width: calc(100vw - 14px);
-    height: 70px;
     margin-top: calc(50vh - 100px);
     border-bottom-style: solid;
     border-bottom-width: 1px;
