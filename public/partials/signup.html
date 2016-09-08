@@ -26,17 +26,17 @@
     </div>
     <div id="03slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 53;">
             <div  class="newwimdiv001">
-                <i class="material-icons newwiminputicons" style="line-height: 40px; margin-right: 12px;">&#xE412;</i>
+                <i class="material-icons newwiminputicons" style="line-height: 50px; margin-right: 12px;">&#xE412;</i>
                 <div  style="float: left; width: calc(100% - 48px);">
-                    <input type="file" name="file-1" id="file-1" ngf-select ng-model="ProfilePic" name="file" 
+                    <input type="file" id="file-1" ngf-select ng-model="ProfilePic" name="file" 
 						accept="image/*" ngf-max-size="2MB"
 						ngf-model-invalid="errorFile"
 						ngf-allow-dir="false" accept="image/jpeg,image/jpg,image/png" 
 						ngf-pattern="'image/jpeg,image/jpg,image/png'" 
-						ngf-resize="{quality: 1.0, type: 'image/png', restoreExif: false}"/>
-                    <label class="signupfileuploadlable" for="file-1">lable and stuff</label>
+						ngf-resize="{quality: 1.0, type: 'image/png', restoreExif: false}" style="width: 0.1px; height: 0.1px; opacity: 0; overflow: hidden; position: absolute; z-index: -1;"/>
+                    <label class="signupfileuploadlable" for="file-1" style="font-size: 20px; color: black;">Profile Picture</label>
                     
-                    
+                    <div style=""></div>
 				    <img ng-show="upload.file.$valid"> 
                     
                     <button ng-click="ProfilePic = null" ng-show="ProfilePic">Remove</button>
