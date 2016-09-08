@@ -700,7 +700,9 @@ input:focus ~ .highlight {
      transform: translate(125vw, 0px);
 }
 
-
+.signupfileuploadlable {
+    pointer-events: all;
+}
 
 
 /*friends page*/
