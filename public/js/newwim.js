@@ -95,12 +95,12 @@ function newwimbackslide(divID) {
 
 function newwimdestinationpagein() {
     
-    var ipaddressvar = geoplugin_request();
+    //var ipaddressvar = geoplugin_request();
     var latitudevar = Number(geoplugin_latitude()).toFixed(2);
     var longitudevar = Number(geoplugin_longitude()).toFixed(2);
-    console.log(ipaddressvar);
-    console.log(typeof(parseFloat(latitudevar)));
-    console.log(typeof(parseFloat(longitudevar)));
+    //console.log(ipaddressvar);
+    //console.log(typeof(parseFloat(latitudevar)));
+    //console.log(typeof(parseFloat(longitudevar)));
     var one = parseFloat(latitudevar);
     var two = parseFloat(longitudevar);
     
@@ -114,7 +114,7 @@ function newwimdestinationpagein() {
                 lat: one,
                 lng: two
             },
-            zoom:5
+            zoom:16
         });
         console.log("helo");
         var marker = new google.maps.Marker({
