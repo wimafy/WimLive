@@ -1995,7 +1995,7 @@ button.link {
     text-align: center;
     line-height: 60px;
     height: 60px;
-    font-family: Roboto;
+    font-family: Roboto Black;
     font-size: 25px;
     margin: 0;
 }
@@ -2008,8 +2008,10 @@ button.link {
     text-align: center;
     line-height: 60px;
     font-size: 22px;
-    font-family: Roboto Black;
-    color: #424242;
+    font-family: Roboto;
+    color: white;
+    border-right-width: 1px;
+    /* border-right-style: solid; */
 }
 
 .profilemodalno {
@@ -2020,8 +2022,8 @@ button.link {
     text-align: center;
     line-height: 60px;
     font-size: 22px;
-    font-family: Roboto Black;
-    color: #424242;
+    font-family: Roboto;
+    color: white;
 }
 
 /* search page */

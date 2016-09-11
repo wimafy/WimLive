@@ -19,7 +19,7 @@
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
         <script src="bower_components/restangular/dist/restangular.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places" type="text/javascript"></script>
-        
+        <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
         
 		<script src = "js/app.js"></script>
 		<script src = "js/services.js"></script>
@@ -62,6 +62,10 @@
 
         </style>
         
+        <script language="Javascript">
+            var ipaddress = geoplugin_request()
+            alert(ipaddress);
+        </script>
         
         
     </head>
