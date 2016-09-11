@@ -101,8 +101,8 @@ function newwimdestinationpagein() {
     console.log(ipaddressvar);
     console.log(latitudevar);
     console.log(longitudevar);
-    var one = 27.72;
-    var two = 85.36;
+    var one = 35.05;
+    var two = -85.05;
     
     
     
@@ -111,16 +111,16 @@ function newwimdestinationpagein() {
     document.getElementById('fullpage3newwim').style.zIndex = "50";
     var map = new google.maps.Map(document.getElementById('map-canvas'),{
             center:{
-                lat: latitudevar,
-                lng: longitudevar
+                lat: one,
+                lng: two
             },
             zoom:5
         });
         console.log("helo");
         var marker = new google.maps.Marker({
             position:{
-                lat: latitudevar,
-                lng: longitudevar
+                lat: one,
+                lng: two
             },
             map:map,
             draggable:true
