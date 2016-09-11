@@ -1,6 +1,11 @@
 function profilemodalcall() {
-    alert("anything");
     var modal = document.getElementById("profilemodal");
  
-    modal.style.zIndex = "1";
+    modal.style.zIndex = "100";
+}
+
+function profilemodalaway() {
+    var modal = document.getElementById("profilemodal");
+ 
+    modal.style.zIndex = "-100";
 }
