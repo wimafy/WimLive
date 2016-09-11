@@ -95,26 +95,28 @@ function newwimbackslide(divID) {
 
 function newwimdestinationpagein() {
     
-    var ipaddress = geoplugin_request();
-    var latitude = geoplugin_latitude();
-    var longitude = geoplugin_longitude();
-    alert(ipaddress);
-    alert("something");
+    var ipaddressvar = geoplugin_request();
+    var latitudevar = geoplugin_latitude();
+    var longitudevar = geoplugin_longitude();
+    console.log(ipaddressvar);
+    console.log(latitudevar);
+    console.log(longitudevar);
+    
     
     document.getElementById('newwimmapsearchdiv').style.left = "0vw";
     document.getElementById('fullpage3newwim').style.zIndex = "50";
     var map = new google.maps.Map(document.getElementById('map-canvas'),{
             center:{
-                lat: 27.72,
-                lng: 85.36
+                lat: latitudevar,
+                lng: longitudevar
             },
             zoom:5
         });
         console.log("helo");
         var marker = new google.maps.Marker({
             position:{
-                lat: 27.72,
-                lng:85.36
+                lat: latitudevar,
+                lng:longitudevar
             },
             map:map,
             draggable:true

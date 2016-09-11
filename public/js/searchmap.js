@@ -1,9 +1,4 @@
 
-//var ipaddress = geoplugin_request();
-//var latitude = geoplugin_latitude();
-//var longitude = geoplugin_longitude();
-//alert(ipaddress);
-//alert("something");
 var map = new google.maps.Map(document.getElementById('map-canvas'),{
             center:{
                 lat: 27.72,
