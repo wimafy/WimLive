@@ -94,6 +94,13 @@ function newwimbackslide(divID) {
 }
 
 function newwimdestinationpagein() {
+    
+    var ipaddress = geoplugin_request();
+    var latitude = geoplugin_latitude();
+    var longitude = geoplugin_longitude();
+    alert(ipaddress);
+    alert("something");
+    
     document.getElementById('newwimmapsearchdiv').style.left = "0vw";
     document.getElementById('fullpage3newwim').style.zIndex = "50";
     var map = new google.maps.Map(document.getElementById('map-canvas'),{
