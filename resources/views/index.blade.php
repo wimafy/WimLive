@@ -62,10 +62,6 @@
 
         </style>
         
-        <script language="Javascript">
-            var ipaddress = geoplugin_request()
-            alert(ipaddress);
-        </script>
         
         
     </head>
