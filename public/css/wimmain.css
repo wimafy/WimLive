@@ -2005,6 +2005,11 @@ button.link {
     height: 60px;
     width: 50%;
     background-color: #4CAF50;
+    text-align: center;
+    line-height: 60px;
+    font-size: 22px;
+    font-family: Roboto Black;
+    color: #424242;
 }
 
 .profilemodalno {
@@ -2012,6 +2017,11 @@ button.link {
     height: 60px;
     width: 50%;
     background-color: #f44336;
+    text-align: center;
+    line-height: 60px;
+    font-size: 22px;
+    font-family: Roboto Black;
+    color: #424242;
 }
 
 /* search page */
