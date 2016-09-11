@@ -31,6 +31,7 @@
         <script src = "js/newwim.js"></script>
         <script src = "js/indexpage.js"></script>
         <script src = "js/signup.js"></script>
+        <script src = "js/modal.js"></script>
         
         
         
