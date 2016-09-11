@@ -1988,6 +1988,15 @@ button.link {
 
 /* Modal Content */
 
+.profilemodaldiv {
+    width: 100vw;
+    height: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: .3;
+}
 
 /* search page */
 

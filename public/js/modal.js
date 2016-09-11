@@ -1,9 +1,5 @@
-function modalfunction() {
-    var x;
-    if (confirm("Press a button!") == true) {
-        x = "You pressed OK!";
-    } else {
-        x = "You pressed Cancel!";
-    }
-    document.getElementById("demo").innerHTML = x;
+function profilemodalcall() {
+    var modal = document.getElementById(profilemodal);
+ 
+    modal.style.zIndex = "-100";
 }
