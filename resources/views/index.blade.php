@@ -92,8 +92,7 @@
                 </a>
 
                 <h1 class="headerpagetitle"> Profile</h1>
-                <i id="profiletopactioncircleicon" class="material-icons" style="margin-right: 10px;">&#xE7FE;</i>
-                <i id="profiletopactioncircleicon" class="material-icons">&#xE0C9;</i>
+                 <i id="profiletopactioncircleicon" onclick="profilemodalcall()" class="material-icons">&#xE8B8;</i>
             </div>
         </div>
 
