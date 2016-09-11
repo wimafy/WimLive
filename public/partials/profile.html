@@ -8,9 +8,9 @@
     <h1 class="headerpagetitle" ng-repeat="p in profile">{{p.FirstName}}'s Profile</h1>
     
     <i id="profiletopactioncircleicon" onclick="profilemodalcall()" class="material-icons">&#xE8B8;</i>
-    
-    <div id="profilemodal" class="profilemodaldiv" onclick="profilemodalaway()">
-        <div class="profilemodalwhitespace">
+    <div>
+        <div id="profilemodalbackground" class="profilemodaldiv" onclick="profilemodalaway()"></div>
+        <div id="profilemodal" class="profilemodalwhitespace">
             <p class="profilemodalwords">Log out?</p>
             <div class="profilemodalyes" ng-click="logout()"></div>
             <div class="profilemodalno"></div>

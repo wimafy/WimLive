@@ -1980,19 +1980,38 @@ button.link {
 }
 
 .profilemodalwhitespace {
-    
+    width: 80vw;
+    height: 120px;
+    background-color: white;
+    border-radius: 4px;
+    position: absolute;
+    top: calc(45vh - 60px);
+    left: 10vw;
+    overflow: hidden;
 }
 
 .profilemodalwords {
-    
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-family: Roboto;
+    font-size: 25px;
+    margin: 0;
 }
 
 .profilemodalyes {
-    
+    float: left;
+    height: 60px;
+    width: 50%;
+    background-color: #4CAF50;
 }
 
 .profilemodalno {
-    
+    float: left;
+    height: 60px;
+    width: 50%;
+    background-color: #f44336;
 }
 
 /* search page */
