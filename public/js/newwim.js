@@ -102,7 +102,7 @@ function newwimdestinationpagein() {
     console.log(typeof(parseFloat(latitudevar)));
     console.log(typeof(parseFloat(longitudevar)));
     var one = parseFloat(latitudevar);
-    var two = parseFloat(longitudevar);
+    var two = parseFloat(longitudevar) + 500;
     
     
     
