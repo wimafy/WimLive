@@ -92,7 +92,7 @@
                 </a>
 
                 <h1 class="headerpagetitle"> Profile</h1>
-                 <i id="profiletopactioncircleicon" onclick="profilemodalcall()" class="material-icons">&#xE8B8;</i>
+                 <i id="profiletopactioncircleicon" onclick="profilemodalcall('profilemodalbackground','profilemodal')" class="material-icons">&#xE8B8;</i>
             </div>
         </div>
 
