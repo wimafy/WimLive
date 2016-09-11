@@ -111,16 +111,16 @@ function newwimdestinationpagein() {
     document.getElementById('fullpage3newwim').style.zIndex = "50";
     var map = new google.maps.Map(document.getElementById('map-canvas'),{
             center:{
-                lat: one,
-                lng: two
+                lat: latitudevar,
+                lng: longitudevar
             },
             zoom:5
         });
         console.log("helo");
         var marker = new google.maps.Marker({
             position:{
-                lat: one,
-                lng: two
+                lat: latitudevar,
+                lng: longitudevar
             },
             map:map,
             draggable:true
