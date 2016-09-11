@@ -96,11 +96,11 @@ function newwimbackslide(divID) {
 function newwimdestinationpagein() {
     
     var ipaddressvar = geoplugin_request();
-    var latitudevar = parseFloat(geoplugin_latitude()).toFixed(2);
-    var longitudevar = parseFloat(geoplugin_longitude()).toFixed(2);
+    var latitudevar = parseFloat(geoplugin_latitude().toFixed(2));
+    var longitudevar = parseFloat(geoplugin_longitude().toFixed(2));
     console.log(ipaddressvar);
-    console.log(typeof(latitudevar);
-    console.log(typeof(longitudevar);
+    console.log(typeof(parseFloat(latitudevar);
+    console.log(typeof(parseFloat(longitudevar);
     var one = 35.05;
     var two = -85.05;
     
