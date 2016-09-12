@@ -42,7 +42,6 @@ float: left; margin: 12px;">
                         <ul>
                         -->
                             <div class="notificationdiv" ng-repeat="request in requests">
-								<p> {{request.FirstName}} </p>
                                 <img class="notificationpicture" src={{request.ProfilePic}}>
                                 <b class="notificationname">{{ request.FirstName }} {{ request.LastName }}</b> 
                                 <button type="button" class="btn btn-info notificationbutton" ng-click="denyRequest(request.id)" style="background-color: #e53935; border-color: #e53935;">Decline</button>
