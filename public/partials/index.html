@@ -112,7 +112,7 @@ float: left; margin: 12px;">
             </div>
         
         </div>
-        <div id="indexpagebottomsearchdiv" class="indexpagebottompagesliderdiv">
+        <div id="indexpagebottomsearchdiv" class="indexpagebottompagesliderdiv" ng-controller="UserListController">
             
             <div style="box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2); z-index: 4; position: relative; width: 100vw; height: 50px; background-color: white;">
                 <i id="searchforfriendseachinputsherlocicon" class="material-icons">&#xE8B6;</i> 
@@ -121,7 +121,7 @@ float: left; margin: 12px;">
 
             <div class="searchforfriendseachresultsdiv">
                 <div class="col-md-12">
-                    <!--I am pulling in the 'users' array that is created in the FriendController in controller.js-->
+                    <!--I am pulling in the 'users' array that is created in the UserListController in controller.js-->
                     <!--
                     <p>There are currently <b>{{ relationships.length }}</b> users that you could be friends with!</p>
                     -->
