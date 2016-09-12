@@ -58,7 +58,7 @@ return [
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'wimdb'),
             'username' => env('DB_USERNAME', 'wimafy'),
-            'password' => env('DB_PASSWORD', 'planthings'),
+            'password' => env('DB_PASSWORD', 'PlanThings'),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
