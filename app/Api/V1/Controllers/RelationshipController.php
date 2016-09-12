@@ -17,6 +17,13 @@ use Illuminate\Support\Facades\Password;
 use Tymon\JWTAuth\Exceptions\JWTException;
 use Dingo\Api\Exception\ValidationHttpException;
 
+
+// RELATIONSHIP STATUS KEY
+// 0 = Pending
+// 1 = Acceted
+// 2 = Denied
+// 3 = Blocked
+
 class RelationshipController extends Controller
 {
 	use Helpers;

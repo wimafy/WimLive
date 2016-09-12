@@ -35,15 +35,15 @@ float: left; margin: 12px;">
         <div id="indexpagebottomnotifydiv" class="indexpagebottompagesliderdiv">
             <div style="height: 100%; width: 100vw; background-color: #EEEEEE; position: absolute; z-index: 50;">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" ng-controller="RequestController">
                         <!--
                         <p> Friend Requests </p>
                         <p>You currently have <b>{{ requests.length }}</b> friend requests.</p>
                         <ul>
                         -->
                             <div class="notificationdiv" ng-repeat="request in requests">
-                                <img class="notificationpicture" src="">
-                                <b class="notificationname">{{ request.username }}</b> 
+                                <img class="notificationpicture" src={{request.ProfilePic}}>
+                                <b class="notificationname">{{ request.FirstName }} {{ request.LastName }}</b> 
                                 <button type="button" class="btn btn-info notificationbutton" ng-click="denyRequest(request.id)" style="background-color: #e53935; border-color: #e53935;">Decline</button>
                                 <button type="button" class="btn btn-info notificationbutton" ng-click="acceptRequest(request.id)">Accept</button> 
                             </div>
@@ -112,7 +112,7 @@ float: left; margin: 12px;">
             </div>
         
         </div>
-        <div id="indexpagebottomsearchdiv" class="indexpagebottompagesliderdiv" ng-controller="UserListController">
+        <div id="indexpagebottomsearchdiv" class="indexpagebottompagesliderdiv">
             
             <div style="box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2); z-index: 4; position: relative; width: 100vw; height: 50px; background-color: white;">
                 <i id="searchforfriendseachinputsherlocicon" class="material-icons">&#xE8B6;</i> 
@@ -120,7 +120,7 @@ float: left; margin: 12px;">
             </div>
 
             <div class="searchforfriendseachresultsdiv">
-                <div class="col-md-12">
+                <div class="col-md-12" ng-controller="UserListController">
                     <!--I am pulling in the 'users' array that is created in the UserListController in controller.js-->
                     <!--
                     <p>There are currently <b>{{ relationships.length }}</b> users that you could be friends with!</p>
