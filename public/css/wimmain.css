@@ -1724,7 +1724,7 @@ button.link {
 }
 
 .indexpagebottomheaderbuttondiv {
-    width: 25vw;
+    width: 33.33vw;
     float: left;
     background-color: white;
     height: 48px;
@@ -1746,7 +1746,7 @@ button.link {
 
 
 #indexpagebuttonhighligher {
-    width: 25vw;
+    width: 33.33vw;
     height: 3px;
     background-color: rgb(33, 150, 243);
     float: left;
@@ -1770,7 +1770,7 @@ button.link {
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
-  margin-left: 25vw !important;
+  margin-left: 33.33vw !important;
 }
 
 .indexpagebuttonhighlightertransitionsearch {
@@ -1779,7 +1779,7 @@ button.link {
   -ms-transition: .1s;
   -o-transition: .1s;
   transition: .1s;
-  margin-left: 50vw !important;
+  margin-left: 66.66vw !important;
 }
 
 .indexpagebuttonhighlightertransitionnewwim {
