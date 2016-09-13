@@ -1756,38 +1756,38 @@ button.link {
 }
 
 .indexpagebuttonhighlightertransitionnotify {
-    -webkit-transition: .1s;
+   /* -webkit-transition: .1s;
   -moz-transition: .1s;
   -ms-transition: .1s;
   -o-transition: .1s;
-  transition: .1s;
+  transition: .1s;*/
   margin-left: 0px !important;
 }
 
 .indexpagebuttonhighlightertransitioncurrentwims {
-    -webkit-transition: .1s;
+  /*  -webkit-transition: .1s;
   -moz-transition: .1s;
   -ms-transition: .1s;
   -o-transition: .1s;
-  transition: .1s;
+  transition: .1s; */
   margin-left: 33.33vw !important;
 }
 
 .indexpagebuttonhighlightertransitionsearch {
-    -webkit-transition: .1s;
+  /*  -webkit-transition: .1s;
   -moz-transition: .1s;
   -ms-transition: .1s;
   -o-transition: .1s;
-  transition: .1s;
+  transition: .1s;*/
   margin-left: 66.66vw !important;
 }
 
 .indexpagebuttonhighlightertransitionnewwim {
-    -webkit-transition: .1s;
+  /*  -webkit-transition: .1s;
   -moz-transition: .1s;
   -ms-transition: .1s;
   -o-transition: .1s;
-  transition: .1s;
+  transition: .1s; */
   margin-left: 75vw !important;
 }
 
