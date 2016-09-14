@@ -1327,7 +1327,7 @@ input:focus ~ .highlight {
     background-color: lightgray;
     float: left;
     margin-left: calc(50% - 50px);
-    margin-top: calc(10% - 0px);
+    margin-top: calc(17vh - 61px);
     position: relative;
     z-index: 1;
     box-shadow: 6px 8px 16px 0px rgba(0,0,0,0.2);
