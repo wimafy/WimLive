@@ -99,7 +99,7 @@ function newwimdestinationpagein() {
     var latitudevar = Number(geoplugin_latitude()).toFixed(2);
     var longitudevar = Number(geoplugin_longitude()).toFixed(2);
     //console.log(ipaddressvar);
-    //alert((parseFloat(latitudevar)));
+    alert((parseFloat(latitudevar)));
     //console.log(typeof(parseFloat(longitudevar)));
     var one = parseFloat(latitudevar);
     var two = parseFloat(longitudevar);
@@ -109,81 +109,48 @@ function newwimdestinationpagein() {
     
     document.getElementById('newwimmapsearchdiv').style.left = "0vw";
     document.getElementById('fullpage3newwim').style.zIndex = "50";
-    
-    // This example adds a search box to a map, using the Google Place Autocomplete
-      // feature. People can enter geographical searches. The search box will return a
-      // pick list containing a mix of places and predicted search terms.
-
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-      // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
-
-      function initAutocomplete() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: -33.8688, lng: 151.2195},
-          zoom: 13,
-          mapTypeId: 'roadmap'
+    var map = new google.maps.Map(document.getElementById('map-canvas'),{
+            center:{
+                lat: one,
+                lng: two
+            },
+            zoom:16
+        });
+        console.log("helo");
+        var marker = new google.maps.Marker({
+            position:{
+                lat: one,
+                lng: two
+            },
+            map:map,
+            draggable:true
         });
 
-        // Create the search box and link it to the UI element.
-        var input = document.getElementById('pac-input');
-        var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+        var searchBox = new google.maps.places.SearchBox(document.getElementById('mapsearch'));
 
-        // Bias the SearchBox results towards current map's viewport.
-        map.addListener('bounds_changed', function() {
-          searchBox.setBounds(map.getBounds());
-        });
+        //place cange event on search box
+        google.maps.event.addListener(searchBox, 'places_changed',function(){
 
-        var markers = [];
-        // Listen for the event fired when the user selects a prediction and retrieve
-        // more details for that place.
-        searchBox.addListener('places_changed', function() {
-          var places = searchBox.getPlaces();
+            console.log(searchBox.getPlaces());
+            var places = searchBox.getPlaces();
 
-          if (places.length == 0) {
-            return;
-          }
+            //bound
+            var bounds = new google.maps.LatLngBounds();
+            var i, place;
 
-          // Clear out the old markers.
-          markers.forEach(function(marker) {
-            marker.setMap(null);
-          });
-          markers = [];
+            for(i=0; place=places[i];i++){
 
-          // For each place, get the icon, name and location.
-          var bounds = new google.maps.LatLngBounds();
-          places.forEach(function(place) {
-            if (!place.geometry) {
-              console.log("Returned place contains no geometry");
-              return;
+                // console.log(place.geometry.location);
+
+                bounds.extend(place.geometry.location);
+                marker.setPosition(place.geometry.location);
+
             }
-            var icon = {
-              url: place.icon,
-              size: new google.maps.Size(71, 71),
-              origin: new google.maps.Point(0, 0),
-              anchor: new google.maps.Point(17, 34),
-              scaledSize: new google.maps.Size(25, 25)
-            };
 
-            // Create a marker for each place.
-            markers.push(new google.maps.Marker({
-              map: map,
-              icon: icon,
-              title: place.name,
-              position: place.geometry.location
-            }));
+            map.fitBounds(bounds);
+            map.setZoom(17);
 
-            if (place.geometry.viewport) {
-              // Only geocodes have viewport.
-              bounds.union(place.geometry.viewport);
-            } else {
-              bounds.extend(place.geometry.location);
-            }
-          });
-          map.fitBounds(bounds);
         });
-      }
 }
 
 
