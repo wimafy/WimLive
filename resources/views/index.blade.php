@@ -19,7 +19,7 @@
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
         <script src="bower_components/restangular/dist/restangular.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places&callback=initAutocomplete" type="text/javascript"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places" type="text/javascript"></script>
         <script src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q" type="text/javascript"></script>
         <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
         

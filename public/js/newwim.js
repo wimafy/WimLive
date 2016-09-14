@@ -115,7 +115,7 @@ function newwimdestinationpagein() {
             },
             zoom:16
         });
-        console.log("helo");
+       /*
         var marker = new google.maps.Marker({
             position:{
                 lat: one,
@@ -124,7 +124,7 @@ function newwimdestinationpagein() {
             map:map,
             draggable:true
         });
-
+        */
         var searchBox = new google.maps.places.SearchBox(document.getElementById('mapsearch'));
 
         //place cange event on search box
