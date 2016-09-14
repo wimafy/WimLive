@@ -48,6 +48,7 @@ float: left; margin: 12px;">
                                 <b class="notificationname">{{ request.FirstName }} {{ request.LastName }}</b> 
                                 <button type="button" class="btn btn-info notificationbutton" ng-click="denyRequest(request.id)" style="background-color: #e53935; border-color: #e53935;">Decline</button>
                                 <button type="button" class="btn btn-info notificationbutton" ng-click="acceptRequest(request.id)">Accept</button> 
+                                <button type="button" class="btn btn-info " ng-click="acceptRequest(request.id)">Accept</button> 
                             </div>
 
                     </div>
@@ -128,6 +129,7 @@ float: left; margin: 12px;">
                     <p>There are currently <b>{{ relationships.length }}</b> users that you could be friends with!</p>
                     -->
                         <!--This ng-repeat is basically a for loop that loops through the users array and filters for matches that are similar to what was inputed above-->
+                        <div style="float:left; height; 2px;"></div>
                         <div ng-repeat="relationship in relationships | filter:searchFor" class="searchforfriendseachperson">
                             <!--I pass the user id to the addFriend function which will pass the userId onto the API to create a new friend-->
                             <img class="searchforfriendseachpersonpic" src={{relationship.ProfilePic}}>
@@ -136,6 +138,7 @@ float: left; margin: 12px;">
                                 <i id="searchforfriendseachpersonaddbuttonicon" class="material-icons">&#xE7FE;</i>  
                             </button>
                         </div>
+                        <div style="float:left; height; 2px;"></div>
 
                 </div>
             </div>    
