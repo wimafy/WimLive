@@ -146,16 +146,16 @@
                 <div style="height: calc(100vh - 35vh - 79px); width: 100%; overflow: hidden; overflow-y: scroll;">
                     
                     <div class="profilefriendscarddiv">
-                        
+                        <!--
 						<div onclick="testbutton('03')" id="03" class="eachfriend">
                             <img src="profile_pics/inari_boy.png" class="myfriendspic">
                             <p class="myfriendsname">Kenta Ito</p>
                         </div>
-                        
-                        <li ng-repeat="friend in friends">
+                        -->
+                        <div onclick="testbutton('03')" id="03" class="eachfriend" ng-repeat="friend in friends">
                             <img src={{friend.ProfilePic}} class="myfriendspic">
 								<p class="myfriendsname">{{friend.FirstName}} {{friend.LastName}}</p>
-                        </li>
+                        </div>
 
                     </div>
                 </div>
