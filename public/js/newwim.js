@@ -114,9 +114,11 @@ function newwimdestinationpagein() {
                 lat: one,
                 lng: two
             },
-            zoom:16
+            zoom:16,
+            mapTypeId: 'roadmap'
         });
-        console.log("helo");
+    
+        /*
         var marker = new google.maps.Marker({
             position:{
                 lat: one,
@@ -125,6 +127,7 @@ function newwimdestinationpagein() {
             map:map,
             draggable:true
         });
+*/
 
         var searchBox = new google.maps.places.SearchBox(document.getElementById('mapsearch'));
 
