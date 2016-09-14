@@ -129,7 +129,7 @@ float: left; margin: 12px;">
                     <p>There are currently <b>{{ relationships.length }}</b> users that you could be friends with!</p>
                     -->
                         <!--This ng-repeat is basically a for loop that loops through the users array and filters for matches that are similar to what was inputed above-->
-                        <div style="float:left; height; 2px;"></div>
+                        <div style="float:left;height: 4px;width: 1;"></div>
                         <div ng-repeat="relationship in relationships | filter:searchFor" class="searchforfriendseachperson">
                             <!--I pass the user id to the addFriend function which will pass the userId onto the API to create a new friend-->
                             <img class="searchforfriendseachpersonpic" src={{relationship.ProfilePic}}>
@@ -138,7 +138,7 @@ float: left; margin: 12px;">
                                 <i id="searchforfriendseachpersonaddbuttonicon" class="material-icons">&#xE7FE;</i>  
                             </button>
                         </div>
-                        <div style="float:left; height; 2px;"></div>
+                        <div style="float:left;height: 4px;width: 1;"></div>
 
                 </div>
             </div>    
