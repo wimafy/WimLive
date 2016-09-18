@@ -1022,29 +1022,48 @@ input:focus ~ .highlight {
 }
 
 .individualwimtopdiv {
-    width: 100vw;
-    float: left;
-    background-color: lightgray;
     position: absolute;
-    top: 50px;
+    top: 65px;
+    float: left;
+    width: calc(100vw - 14px);
+    height: 150px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left: 7px;
+    border-radius: 4px;
+    background-color: lightgray;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #BDBDBD;
+    box-shadow: 0px 2px 5px 0px #BDBDBB;
+    margin-top: 6px;
 }
 
 .individualwimbottomdiv {
     width: 100vw;
     float: left;
     position: absolute;
-    top: 200px;
+    top: 220px;
 }
 
 .individualwimdestinationdiv {
-    width: 100vw;
-    height: 50px;
-    background-color: white;
     margin-bottom: 1px;
     border: darkgray;
-    border-style: solid none solid;
+    float: left;
+    width: calc(100vw - 14px);
+    height: 50px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left: 7px;
+    border-radius: 4px;
+    background-color: white;
+    overflow: hidden;
     border-width: 1px;
-    box-shadow: 0px 3px 13px 1px rgba(0,0,0,0.2);
+    border-style: solid;
+    border-color: #BDBDBD;
+    box-shadow: 0px 2px 5px 0px #BDBDBB;
+    margin-top: 7px;
 }
 
 .individualwimdestinationdirectionsicon {
@@ -1076,14 +1095,21 @@ input:focus ~ .highlight {
 }
 
 .individualwimattendeesdiv {
-    width: 105vw;
-    height: 101px;
-    background-color: white;
-    float: left;
     border: darkgray;
-    border-style: solid none solid;
+    float: left;
+    width: calc(100vw - 14px);
+    height: 100px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    margin-left: 7px;
+    border-radius: 4px;
+    background-color: white;
+    overflow: hidden;
     border-width: 1px;
-    box-shadow: 0px 3px 13px 1px rgba(0,0,0,0.2);
+    border-style: solid;
+    border-color: #BDBDBD;
+    box-shadow: 0px 2px 5px 0px #BDBDBB;
+    margin-top: 6px;
 }
 
 .individualwimattendees {
@@ -1179,18 +1205,23 @@ input:focus ~ .highlight {
 }
 
 .individualwimdatetimediv {
-    width: 100vw;
-    height: 50px; */
-    background-color: white;
-    margin-bottom: 0px;
-    float: left;
-    background-color: white;
-    border: darkgray;
-    border-style: solid none solid;
-    border-width: 1px;
-    box-shadow: 0px 4px 13px 1px rgba(0,0,0,0.2);
-    z-index: 1;
-    position: absolute;
+     */
+     background-color: white;
+     float: left;
+     width: calc(100vw - 14px);
+     height: 50px;
+     border-bottom-style: solid;
+     border-bottom-width: 1px;
+     margin-left: 7px;
+     border-radius: 4px;
+     background-color: white;
+     overflow: hidden;
+     border-width: 1px;
+     border-style: solid;
+     border-color: #BDBDBD;
+     box-shadow: 0px 2px 5px 0px #BDBDBB;
+     margin-top: 6px;
+     z-index: 1;
 }
 
 .individualwimdetailsdatetime {
