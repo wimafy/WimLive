@@ -217,8 +217,7 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
 	$scope.refresh();
     
     
-    $scope.newwimselectfriend = function(friendID){
-        alert(friendID);
+    $scope.newwimselectfriend = function(){
         alert("dsjlk");
         
 
