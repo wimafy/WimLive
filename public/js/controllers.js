@@ -135,7 +135,7 @@ wimControllers.controller('UserListController', ['$scope', '$location', 'userSer
 		}, function(){
 			alert('Friend request sent!');
 		}, function(){
-			alert('Some errors occurred while communicating with the service. RIP');
+			alert('A friendship status is already pending.');
 		});
 	}
 	
@@ -235,33 +235,38 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
         
         //This is ghetto right now...Basically pulling the array of strings that represent friend ids and recreating the $scope.friends as an array of integers
 		//TODO adjust this to get the actual id once the form actually generates a friends list.
-        for(i = 0; i < $scope.friends.length; i++) {
-            $scope.friends[i] = parseInt($scope.friends[i]);
-        }
+		if ($scope.friends.length > 1)
+			{
+				for(i = 0; i < $scope.friends.length; i++) {
+					$scope.friends[i] = parseInt($scope.friends[i]);
+				}		
+			}
+		else {
 
-        //Sends the user supplied values to the wimService in services.js to create the new Wim
-        wimService.create({
-            title: $scope.currentWimTitle,
-            location: $scope.currentWimLocation,
-            address: $scope.currentWimAddress,
-            date: $scope.currentWimDate,
-			time: $scope.currentWimTime,
-			transportation: $scope.currentWimTransportation,
-            attire: $scope.currentWimAttire,
-            description: $scope.currentWimDescription,
-            friends: $scope.friends
-        }, function(){
+			//Sends the user supplied values to the wimService in services.js to create the new Wim
+			wimService.create({
+				title: $scope.currentWimTitle,
+				location: $scope.currentWimLocation,
+				address: $scope.currentWimAddress,
+				date: $scope.currentWimDate,
+				time: $scope.currentWimTime,
+				transportation: $scope.currentWimTransportation,
+				attire: $scope.currentWimAttire,
+				description: $scope.currentWimDescription,
+				friends: $scope.friends
+			}, function(){
 
-            //If succussful, refesh the Wims on the currentWims page and redirect to that page
-            $scope.refresh();
-            $location.path('/currentWims');
+				//If succussful, refesh the Wims on the currentWims page and redirect to that page
+				$scope.refresh();
+				$location.path('/currentWims');
 
-        }, function(){
+			}, function(){
 
-            //If error, alert user
-            alert('Some errors occurred while communicating with the service. Try again later.');
+				//If error, alert user
+				alert('Some errors occurred while communicating with the service. Try again later.');
 
-        });
+			});
+		}
 
     }
 
