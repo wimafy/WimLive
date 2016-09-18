@@ -68,12 +68,12 @@
             <div class="newwimdiv011" ng-controller="FriendController">
                 
                 <div class="newwiminvitefriendsindividualpersondiv"  ng-repeat="friend in friends">
-                    <div class="eachfriend" onclick="newwimselectfriend({{friend.id}})" style="width: 25vw; height: 100px; margin-top: 12px;">
+                    <div class="eachfriend" onclick="newwimselectfriend(friend.id)" style="width: 25vw; height: 100px; margin-top: 12px;">
                         <img src={{friend.ProfilePic}} class="myfriendspic">
                         <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select{{friend.id}}" style="opacity: 0;">
                             <i class="material-icons" style="line-height: 12px; width: 11px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
                         </div>
-                        <p class="myfriendsname">{{friend.FirstName}} {{friend.LastName}}</p>
+                        <p class="myfriendsname">{{friend.FirstName}} {{friend.LastName}}{{friend.id}}</p>
                     </div>
                 </div>
                 
