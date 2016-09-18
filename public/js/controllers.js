@@ -230,7 +230,8 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
         if(document.getElementById(IDnumber).style.opacity  == 1){
             document.getElementById(IDnumber).style.opacity = "0";
             var newwiminvtefriendsindex = newwiminvitedfriends.indexOf(IDnumber);
-            newwiminvitedfriends.delete(newwiminvtefriendsindex);
+            alert(newwiminvtefriendsindex);
+            delete newwiminvitedfriends[newwiminvtefriendsindex];
             alert(newwiminvitedfriends);
             
             
