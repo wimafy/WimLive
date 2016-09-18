@@ -215,6 +215,19 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
 		$location.path('/login');
 	$scope.friends = [];
 	$scope.refresh();
+    
+    $scope.newwimwimtype = function(wimtypeID) {
+    alert(wimtypeID);
+    var selectedID = "select" + wimtypeID;
+    var selecteddiv = document.getElementById(selectedID);
+        if(document.getElementById(selectedID).style.opacity  == 1){
+            document.getElementById(selectedID).style.opacity = "0";
+        }else{
+            document.getElementById(selectedID).style.opacity = "1";
+        }
+
+
+    }
 	
 }]);
 
