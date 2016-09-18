@@ -128,7 +128,7 @@ wimServices.factory('relationshipService', ['Restangular', 'userService', functi
 	function acceptRequest(senderID, data, onSuccess, onError){
 		Restangular.one('api/relationship/acceptRequest').customPUT(data, senderID).then(function(response){
 			onSuccess(response);
-		}, function(response){
+		}, function(){
 			onError(response);
 		});
 	}
@@ -136,7 +136,7 @@ wimServices.factory('relationshipService', ['Restangular', 'userService', functi
 	function denyRequest(senderID, data, onSuccess, onError){
 		Restangular.one('api/relationship/denyRequest').customPUT(data, senderID).then(function(response){
 			onSuccess(response);
-		}, function(response){
+		}, function(){
 			onError(response);
 		});
 	}

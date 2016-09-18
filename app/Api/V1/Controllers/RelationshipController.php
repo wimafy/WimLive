@@ -117,7 +117,6 @@ class RelationshipController extends Controller
 
 		$friendRequest->status = 1;
 		$friendRequest->action_user_id = $currentUser->id;;
-		Log::info($friendRequest);
 		if($friendRequest->save())
 			return $this->response->noContent();
 		else
