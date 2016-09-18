@@ -98,7 +98,7 @@ function initAutocomplete() {
     var latitudevar = Number(geoplugin_latitude()).toFixed(2);
     var longitudevar = Number(geoplugin_longitude()).toFixed(2);
     //console.log(ipaddressvar);
-    alert((parseFloat(latitudevar)));
+    //alert((parseFloat(latitudevar)));
     //console.log(typeof(parseFloat(longitudevar)));
     var one = parseFloat(latitudevar);
     var two = parseFloat(longitudevar);
