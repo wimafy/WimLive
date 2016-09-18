@@ -225,11 +225,7 @@ function initAutocomplete() {
     
 }
 
-var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-    $scope.firstname = "John";
-    $scope.lastname = "Doe";
-});
+
 
 function newwimdestinationpageout() {
      document.getElementById('newwimmapsearchdiv').style.left = "125vw";
