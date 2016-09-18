@@ -118,7 +118,7 @@ class RelationshipController extends Controller
 		$friendRequest->status = 1;
 		$friendRequest->action_user_id = $currentUser->id;;
 		if($friendRequest->save())
-			return $this->response->noContent();
+			return $this->response->created();
 		else
 			return $this->response->error('could_not_accept_request', 500);
 	}
@@ -135,7 +135,7 @@ class RelationshipController extends Controller
 		$friendRequest->status = 2;
 		$friendRequest->action_user_id = $currentUser->id;;
 		if($friendRequest->save())
-			return $this->response->noContent();
+			return $this->response->created();
 		else
 			return $this->response->error('could_not_accept_request', 500);
 	}
