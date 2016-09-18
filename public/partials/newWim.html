@@ -71,13 +71,13 @@
                     <p class="newwiminvitefriendsindividualpersonlable">Braxton</p>
                 </div>
                 
-                <div class="newwiminvitefriendsindividualpersondiv" onclick="newwimselectfriend('033')">
-                    <div class="eachfriend" ng-repeat="friend in friends" style="width: 25vw; height: 100px; margin-top: 12px;">
+                <div class="newwiminvitefriendsindividualpersondiv"  ng-repeat="friend in friends">
+                    <div class="eachfriend" onclick="newwimselectfriend('033')" style="width: 25vw; height: 100px; margin-top: 12px;">
                         <img src={{friend.ProfilePic}} class="myfriendspic">
                         <div class="newwiminvitefriendsindividualpersonselectdiv"  id="select033" style="opacity: 0;">
                             <i class="material-icons" style="line-height: 11px; width: 9px; font-size: 8px; color: white; text-align: center;">&#xE5CA;</i>
                         </div>
-                        <p class="myfriendsname">{{friend.FirstName}} {{friend.LastName}}</p>
+                        <p class="myfriendsname">{{friend.FirstName}} {{friend.LastName}} {{friend.ID}}</p>
                     </div>
                 </div>
                 
