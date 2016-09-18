@@ -219,7 +219,7 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
     
     $scope.newwimselectfriend = function(IDnumber){
         
-        alert(IDnumber);
+        alert("Task Id is "+IDnumber);
         
 
 
