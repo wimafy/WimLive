@@ -160,15 +160,17 @@ wimControllers.controller('RequestController', ['$scope', '$log', '$location', '
 	$scope.logout = function(){
 		userService.logout();
 		$location.path('/login');
-	}
+	};
 	
 	$scope.acceptRequest = function(senderID){
-		relationshipService.acceptRequest(senderID, function(){
-			alert('Friend request accepted!');
+		relationshipService.acceptRequest({
+			senderID
+		}, function(){
+			alert('Friend request accepted!');		
 		}, function(){
 			alert('Some errors happened when accepting the friend request.');
 		});
-	}
+	};
 	
 	$scope.denyRequest = function(senderID){
 		relationshipService.denyRequest(senderID, function(){
@@ -176,7 +178,7 @@ wimControllers.controller('RequestController', ['$scope', '$log', '$location', '
 		}, function(){
 			alert('Some errors happened when denying the friend request.');
 		});
-	}
+	};
 	
 	$scope.refresh = function(){
 		
