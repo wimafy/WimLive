@@ -228,6 +228,24 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
 
 
     }
+    
+    
+    $scope.newwimselectfriend = function(friendID) {
+        alert(friendID);
+        var selectedID = "select" + friendID;
+        var selecteddiv = document.getElementById(selectedID);
+        if(document.getElementById(selectedID).style.opacity  == 1){
+            document.getElementById(selectedID).style.opacity = "0";
+            
+        }else{
+            document.getElementById(selectedID).style.opacity = "1";
+            
+        }
+
+
+    }
+    
+    
 	
 }]);
 

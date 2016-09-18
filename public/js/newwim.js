@@ -51,9 +51,12 @@ function hidewimwimtype() {
 }
 
 
-function newwimselectfriend(friendID) {
+
+
+
+function newwimwimtype(wimtypeID) {
     //alert(friendID);
-    var selectedID = "select" + friendID;
+    var selectedID = "select" + wimtypeID;
     var selecteddiv = document.getElementById(selectedID);
     if(document.getElementById(selectedID).style.opacity  == 1){
         document.getElementById(selectedID).style.opacity = "0";
@@ -63,9 +66,6 @@ function newwimselectfriend(friendID) {
     
     
 }
-
-
-
 
 //new wim v2
 
