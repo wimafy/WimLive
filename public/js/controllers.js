@@ -167,7 +167,8 @@ wimControllers.controller('RequestController', ['$scope', '$log', '$location', '
 	$scope.acceptRequest = function(senderID){
 		relationshipService.acceptRequest(senderID, function(){		
 		}, function(){
-			alert('Friend request accepted!');		
+			alert('Friend request accepted!');	
+			window.location.reload();
 		}, function(){
 			alert('Some errors happened when accepting the friend request.');
 		});
@@ -175,6 +176,7 @@ wimControllers.controller('RequestController', ['$scope', '$log', '$location', '
 	
 	$scope.denyRequest = function(senderID){
 		relationshipService.denyRequest(senderID, function(){
+		}, function(){
 			alert('Friend request denied!');
 		}, function(){
 			alert('Some errors happened when denying the friend request.');
