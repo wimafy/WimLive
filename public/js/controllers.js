@@ -255,6 +255,7 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
 				}		
 			}
 		else {
+			$scope.friends[0] = 0;
 
 			//Sends the user supplied values to the wimService in services.js to create the new Wim
 			wimService.create({
