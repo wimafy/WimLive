@@ -49,7 +49,6 @@ float: left; margin: 12px;">
                                 <b class="notificationname">{{ request.FirstName }} {{ request.LastName }}</b> 
                                 <button type="button" class="btn btn-info notificationbutton" ng-click="denyRequest(request.id)" style="background-color: #e53935; border-color: #e53935;">Decline</button>
                                 <button type="button" class="btn btn-info notificationbutton" ng-click="acceptRequest(request.id)">Accept</button> 
-                                <button type="button" class="btn btn-info " ng-click="acceptRequest(request.id)">Accept</button> 
                             </div>
 
                     </div>
@@ -136,7 +135,7 @@ float: left; margin: 12px;">
                             <img class="searchforfriendseachpersonpic" src={{relationship.ProfilePic}}>
                             <b class="searchforfriendseachpersonname">{{ relationship.FirstName }} {{relationship.LastName}}</b>
                             <button type="button" class="searchforfriendseachpersonaddbutton btn btn-info" ng-click="sendFriendRequest(relationship.id)">
-                                <i id="searchforfriendseachpersonaddbuttonicon" class="material-icons">&#xE7FE;</i>
+                                Send<!--<i id="searchforfriendseachpersonaddbuttonicon" class="material-icons">&#xE7FE;</i> -->
                             </button>
                         </div>
                         <div style="float:left;height: 4px;width: 1;"></div>
