@@ -225,8 +225,8 @@ function initAutocomplete() {
     
 }
 
-var wimdestination = angular.module('wimDestination', []);
-    wimdestination.controller('newWIM', function($scope) {
+var app = angular.module('wimDestination', []);
+    app.controller('newWIM', function($scope) {
     $scope.destination = "Destination";
     
 });
