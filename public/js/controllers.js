@@ -163,8 +163,7 @@ wimControllers.controller('RequestController', ['$scope', '$log', '$location', '
 	};
 	
 	$scope.acceptRequest = function(senderID){
-		relationshipService.acceptRequest({
-			senderID
+		relationshipService.acceptRequest(senderID, function(){		
 		}, function(){
 			alert('Friend request accepted!');		
 		}, function(){
