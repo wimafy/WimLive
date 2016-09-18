@@ -109,6 +109,7 @@ class RelationshipController extends Controller
 	public function acceptRequest($senderID)
 	{
 		$currentUser = JWTAuth::parseToken()->authenticate();
+
 		$friendRequest = Relationship::where('user_two_id', '=', $currentUser->id)
 			->where('user_one_id', '=', $senderID) 
 			->where('status', '=', '0')
@@ -118,7 +119,7 @@ class RelationshipController extends Controller
 		$friendRequest->action_user_id = $currentUser->id;;
 		Log::info($friendRequest);
 		if($friendRequest->save())
-			return $this->response->created();
+			return $this->response->noContent();
 		else
 			return $this->response->error('could_not_accept_request', 500);
 	}
@@ -133,7 +134,7 @@ class RelationshipController extends Controller
 			->first();
 
 		$friendRequest->status = 2;
-		$friendRequest->action_user_id = $currentUser-id;;
+		$friendRequest->action_user_id = $currentUser->id;;
 		if($friendRequest->save())
 			return $this->response->noContent();
 		else
