@@ -227,14 +227,15 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
         
         //console.log("Task Id is "+IDnumber);
         
-        var selectedID = IDnumber;
-        var selecteddiv = document.getElementById(selectedID);
-        if(document.getElementById(selectedID).style.opacity  == 1){
-            document.getElementById(selectedID).style.opacity = "0";
+        var selecteddiv = document.getElementById(IDnumber);
+        if(document.getElementById(IDnumber).style.opacity  == 1){
+            document.getElementById(IDnumber).style.opacity = "0";
+            newwiminvitedfriends.indexOf(IDnumber)
+            
             
         }else{
-            document.getElementById(selectedID).style.opacity = "1";
-            newwiminvitedfriends.push(selectedID);
+            document.getElementById(IDnumber).style.opacity = "1";
+            newwiminvitedfriends.push(IDnumber);
             alert(newwiminvitedfriends);
         }
 
