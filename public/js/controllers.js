@@ -221,14 +221,16 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
     
     $scope.newwimselectfriend = function(IDnumber){
         
-        console.log("Task Id is "+IDnumber);
+        //console.log("Task Id is "+IDnumber);
         
-        var selectedID = "select" + IDnumber;
+        var selectedID = IDnumber;
         var selecteddiv = document.getElementById(selectedID);
         if(document.getElementById(selectedID).style.opacity  == 1){
             document.getElementById(selectedID).style.opacity = "0";
+            
         }else{
             document.getElementById(selectedID).style.opacity = "1";
+            
         }
 
 
