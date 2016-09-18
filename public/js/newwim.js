@@ -92,7 +92,7 @@ function newwimbackslide(divID) {
     //document.getElementById(divID).style.left = "120vw";
 }
 
-function newwimdestinationpagein() {
+function initAutocomplete() {
     
     //var ipaddressvar = geoplugin_request();
     var latitudevar = Number(geoplugin_latitude()).toFixed(2);
@@ -163,7 +163,7 @@ function newwimdestinationpagein() {
         });
 
         // Create the search box and link it to the UI element.
-        var input = document.getElementById('pac-input');
+        var input = document.getElementById('mapsearchbox');
         var searchBox = new google.maps.places.SearchBox(input);
         map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 

@@ -787,16 +787,7 @@ input:focus ~ .highlight {
     margin-left: calc(50% - 20px);
 }
 
-.myfriendsname {
-        text-align: center;
-        font-family: Arial;
-        margin-top: px;
-        color: #3f3f3f;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        font-size: 12px;
-        margin-top: 4px;
-}
+.myfriendsname {width: 25vw;text-align: center;display: inline;overflow: hidden;text-overflow: ellipsis;float: left;line-height: 30px;height: 35px;margin-bottom: 0;font-size: 10px;font-family: Roboto Black;}
 
 .myfriendscheckmark {
     position: absolute;
