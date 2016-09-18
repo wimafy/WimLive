@@ -125,6 +125,7 @@ function newwimdestinationpagein() {
             draggable:true
         });
         */
+    
         var searchBox = new google.maps.places.SearchBox(document.getElementById('mapsearch'));
 
         //place cange event on search box
