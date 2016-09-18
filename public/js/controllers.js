@@ -167,8 +167,7 @@ wimControllers.controller('RequestController', ['$scope', '$log', '$location', '
 	$scope.acceptRequest = function(senderID){
 		relationshipService.acceptRequest(senderID, function(){		
 		}, function(){
-			alert('Friend request accepted!');	
-			window.location.reload();
+			alert('Friend request accepted!');
 		}, function(){
 			alert('Some errors happened when accepting the friend request.');
 		});
