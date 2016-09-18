@@ -225,6 +225,12 @@ function initAutocomplete() {
     
 }
 
+var wimdestination = angular.module('wimDestination', []);
+    wimdestination.controller('newWIM', function($scope) {
+    $scope.destination = "Destination";
+    
+});
+
 
 function newwimdestinationpageout() {
      document.getElementById('newwimmapsearchdiv').style.left = "125vw";
