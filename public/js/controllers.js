@@ -1,5 +1,7 @@
 var wimControllers = angular.module('wimControllers', ['ngFileUpload']);
 
+var newwiminvitedfriends = []
+
 wimControllers.controller('LoginController', ['userService', '$location', '$scope', '$http', function (userService, $location, $scope, $http) {
 
 	$scope.login = function() {
@@ -220,14 +222,18 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
     
     $scope.newwimselectfriend = function(IDnumber){
         
-        console.log("Task Id is "+IDnumber);
         
-        var selectedID = "select" + IDnumber;
+        //console.log("Task Id is "+IDnumber);
+        
+        var selectedID = IDnumber;
         var selecteddiv = document.getElementById(selectedID);
         if(document.getElementById(selectedID).style.opacity  == 1){
             document.getElementById(selectedID).style.opacity = "0";
+            
         }else{
             document.getElementById(selectedID).style.opacity = "1";
+            newwiminvitedfriends.push(selectedID);
+            alert(newwiminvitedfriends);
         }
 
 
