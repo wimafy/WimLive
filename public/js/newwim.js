@@ -151,7 +151,14 @@ function initAutocomplete() {
           mapTypeId: 'roadmap'
         });
     
-    
+        var home = new google.maps.Marker({
+            position:{
+                lat: one,
+                lng: two
+            },
+            map:map,
+            draggable:false
+        });
 
         // Create the search box and link it to the UI element.
         var input = document.getElementById('mapsearchbox');
