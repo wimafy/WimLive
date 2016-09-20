@@ -180,6 +180,10 @@ function initAutocomplete() {
           if (places.length == 0) {
             return;
           }
+            
+          else (places.length == 1) {
+              alert("something");
+          }
 
           // Clear out the old markers.
           markers.forEach(function(marker) {
