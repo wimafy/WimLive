@@ -1,4 +1,12 @@
-<p class="signupheader">Sign Up</p>
+<div class="signupheader">
+    <a href="#/login">
+        <div class="headerbackarrow">
+            <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
+        </div>
+    </a>
+	
+    <h1 class="headerpagetitle">Sign Up</h1>
+</div>
 <div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: white; position: absolute; z-index: 50;">
     
     <a href="#/">
@@ -25,11 +33,46 @@
             
             <button class="newwimnextbutton" onclick="newwimadvanceslide('03slide')">next</button>
             <button class="newwimpreviousbutton" onclick="newwimbackslide('02slide')">back</button>
-        </div>
-        
-        
+        </div> 
     </div>
-    <div id="03slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 53;">
+    
+    <div id="03slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 52;" >
+        <div class="newwimdiv001" style="height: 130px; margin-top: calc(50vh - 130px);">
+            <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE899;</i>
+            <input class="form-control newwiminputformwimtitle" placeholder="First name" id="password" ng-model="password" type="text"  style="padding: 0px; border-color: #9E9E9E; box-shadow: inset 0 0 0; padding-top: 10; border-bottom-style: solid; border-bottom-width: 1px;">
+            <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE899;</i>
+            <input class="form-control newwiminputformwimtitle" placeholder="Last name" id="password_confirmation" ng-model="password_confirmation" type="text"  style="padding: 0px;    border-color: #9E9E9E; box-shadow: inset 0 0 0; padding-top: 10; border-bottom-style: solid; border-bottom-width: 1px;">
+            
+            <button class="newwimnextbutton" onclick="newwimadvanceslide('04slide')">next</button>
+            <button class="newwimpreviousbutton" onclick="newwimbackslide('03slide')">back</button>
+        </div> 
+    </div>
+    
+    <div id="04slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 52;" >
+        <div class="newwimdiv001" style="height: 130px; margin-top: calc(50vh - 130px);">
+            <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE899;</i>
+            <input class="form-control newwiminputformwimtitle" placeholder="First name" id="password" ng-model="password" type="text"  style="padding: 0px; border-color: #9E9E9E; box-shadow: inset 0 0 0; padding-top: 10; border-bottom-style: solid; border-bottom-width: 1px;">
+            <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE899;</i>
+            <input class="form-control newwiminputformwimtitle" placeholder="Last name" id="password_confirmation" ng-model="password_confirmation" type="text"  style="padding: 0px;    border-color: #9E9E9E; box-shadow: inset 0 0 0; padding-top: 10; border-bottom-style: solid; border-bottom-width: 1px;">
+            
+            <button class="newwimnextbutton" onclick="newwimadvanceslide('05slide')">next</button>
+            <button class="newwimpreviousbutton" onclick="newwimbackslide('04slide')">back</button>
+        </div> 
+    </div>
+    
+    <div id="05slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 52;" >
+        <div class="newwimdiv001" style="height: 130px; margin-top: calc(50vh - 130px);">
+            <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE899;</i>
+            <input class="form-control newwiminputformwimtitle" placeholder="First name" id="password" ng-model="password" type="text"  style="padding: 0px; border-color: #9E9E9E; box-shadow: inset 0 0 0; padding-top: 10; border-bottom-style: solid; border-bottom-width: 1px;">
+            <i class="material-icons newwiminputicons" style="line-height: 57px; margin-right: 12px;">&#xE899;</i>
+            <input class="form-control newwiminputformwimtitle" placeholder="Last name" id="password_confirmation" ng-model="password_confirmation" type="text"  style="padding: 0px;    border-color: #9E9E9E; box-shadow: inset 0 0 0; padding-top: 10; border-bottom-style: solid; border-bottom-width: 1px;">
+            
+            <button class="newwimnextbutton" onclick="newwimadvanceslide('06slide')">next</button>
+            <button class="newwimpreviousbutton" onclick="newwimbackslide('05slide')">back</button>
+        </div> 
+    </div>
+    
+    <div id="06slide" class="signupslidedivs" style=" background-color: #E0E0E0; z-index: 53;">
             <div  class="newwimdiv001" style="margin-top: calc(50vh - 50px);">
                 <i class="material-icons newwiminputicons" style="line-height: 50px; margin-right: 12px;">&#xE412;</i>
                 <div  style="float: left; width: calc(100% - 48px);">
@@ -50,7 +93,7 @@
             
 
 		<button id="nextbutton" class="newwimsubmitwimbutton" ng-click="signup(ProfilePic)">Signup</button>
-        <button class="newwimpreviousbutton" onclick="newwimbackslide('03slide')">back</button>
+        <button class="newwimpreviousbutton" onclick="newwimbackslide('06slide')">back</button>
     </div>
     
     
