@@ -94,6 +94,7 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
 	$scope.interests = '';
 	$scope.bio = '';
 	file = '';
+    
 	
 	if(userService.checkIfLoggedIn())
 		$location.path('/');
