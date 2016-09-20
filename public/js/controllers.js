@@ -261,6 +261,9 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
 
         //Redirects the the user to the login page
         $location.path('/login');
+        
+        //pushes profile window out of the way
+        backfullpage2myprofile();
     }
 
     //Attempts to create a new Wim
