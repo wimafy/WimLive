@@ -757,6 +757,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     margin: 1px;
     background-color: #FAFAFA;
     border-radius: 2px;
+    float: left;
 }
 
 .signupinterstsselectdivicon {
