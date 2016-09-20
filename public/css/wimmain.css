@@ -775,6 +775,10 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     opacity: 1;
 }
 
+.signupselectinterestsseletdivname {
+    
+}
+
 /*friends page*/
 .backarrow {
     position: absolute;
