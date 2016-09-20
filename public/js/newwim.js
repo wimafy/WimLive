@@ -150,6 +150,15 @@ function initAutocomplete() {
           zoom: 13,
           mapTypeId: 'roadmap'
         });
+    
+        var location = new google.maps.Marker({
+            position:{
+                lat: one,
+                lng: two
+            },
+            map:map,
+            draggable:true
+        });
 
         // Create the search box and link it to the UI element.
         var input = document.getElementById('mapsearchbox');
