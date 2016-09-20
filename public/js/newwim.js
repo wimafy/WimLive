@@ -180,6 +180,10 @@ function initAutocomplete() {
           if (places.length == 0) {
             return;
           }
+          
+          if (places.length == 1) {
+              location.setPosition(place.geometry.location);
+          }
 
           // Clear out the old markers.
           markers.forEach(function(marker) {
@@ -189,6 +193,7 @@ function initAutocomplete() {
 
           // For each place, get the icon, name and location.
           var bounds = new google.maps.LatLngBounds();
+            
           places.forEach(function(place) {
             if (!place.geometry) {
               console.log("Returned place contains no geometry");
