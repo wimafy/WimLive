@@ -12,3 +12,9 @@ function newwimbackslide(divID) {
 
 
 console.log("hellos");
+
+// try to hide the first option
+$('option.hide').hide();
+
+// to select the first visible option
+$('option:visible').first().attr('selected', 'selected');
