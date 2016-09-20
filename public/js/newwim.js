@@ -183,9 +183,10 @@ function initAutocomplete() {
           
           if (places.length == 1) {
               var locationinput = document.getElementById('mapsearchbox').value;
-              alert(document.getElementById('mapsearchbox').value);
+              var locationcoordinates = place.geometry.location;
               alert(locationinput);
-              alert("something");
+              alert(locationcoordinates);
+              
           }
 
           // Clear out the old markers.
