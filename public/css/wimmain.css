@@ -747,11 +747,15 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .signupinterstsselectheader {
-    
+    font-family: Roboto Black;
+    font-size: 14px;
 }
 
 .signupinterstsselectdiv {
-    
+    width: calc(25% - 2px);
+    height: 75px;
+    margin: 1px;
+    background-color: #F5F5F5;
 }
 
 .signupinterstsselectdivicon {
