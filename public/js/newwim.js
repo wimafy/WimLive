@@ -182,7 +182,10 @@ function initAutocomplete() {
           }
           
           if (places.length == 1) {
-              alert("S");
+              var locationinput = document.getElementById('mapsearchbox').value;
+              alert(document.getElementById('mapsearchbox').value);
+              alert(locationinput);
+              alert("something");
           }
 
           // Clear out the old markers.
