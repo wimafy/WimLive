@@ -183,8 +183,9 @@ function initAutocomplete() {
           
           if (places.length == 1) {
               var locationinput = document.getElementById('mapsearchbox').value;
-              var locationcoordinates = place.geometry.location;
+              var locationcoordinates = places.geometry.location;
               alert(locationinput);
+              alert(locationcoordinates);
               
           }
 
@@ -211,7 +212,6 @@ function initAutocomplete() {
 
             // Create a marker for each place.
               
-            alert(place.geometry.location);
               
             markers.push(new google.maps.Marker({
               map: map,
