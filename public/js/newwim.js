@@ -209,7 +209,7 @@ function initAutocomplete() {
           if (places.length == 1) {
               var locationinput = document.getElementById('mapsearchbox').value;
               alert(locationinput);
-              alert(icon['url']);
+              alert(icon['anchor']);
           }  
               
             markers.push(new google.maps.Marker({
