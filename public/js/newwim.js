@@ -210,10 +210,10 @@ function initAutocomplete() {
               var locationinput = document.getElementById('mapsearchbox').value;
               alert(locationinput);
               alert(place.geometry.location);
-              alert(place.geometry.formatted_address);
-              alert(place.geometry.id);
-              alert(place.geometry.name);
-              alert(place.geometry.open_now);
+              alert(place.formatted_address);
+              alert(place.id);
+              alert(place.name);
+              alert(place.open_now);
           }  
               
             markers.push(new google.maps.Marker({
