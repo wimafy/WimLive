@@ -181,11 +181,7 @@ function initAutocomplete() {
             return;
           }
           
-          if (places.length == 1) {
-              var locationinput = document.getElementById('mapsearchbox').value;
-              alert(locationinput);
-              
-          }
+
 
           // Clear out the old markers.
           markers.forEach(function(marker) {
@@ -210,6 +206,11 @@ function initAutocomplete() {
 
             // Create a marker for each place.
               
+          if (places.length == 1) {
+              var locationinput = document.getElementById('mapsearchbox').value;
+              alert(locationinput);
+              alert(icon['url']);
+          }  
               
             markers.push(new google.maps.Marker({
               map: map,
