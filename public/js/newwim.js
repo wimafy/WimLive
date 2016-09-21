@@ -207,9 +207,10 @@ function initAutocomplete() {
             // Create a marker for each place.
               
           if (places.length == 1) {
-              var locationinput = document.getElementById('mapsearchbox').value;
-              alert(locationinput);
-              alert(icon['anchor']);
+              //var locationinput = document.getElementById('mapsearchbox').value;
+              //alert(locationinput);
+              alert(icon['url']);
+              alert(place.geometry.location);
           }  
               
             markers.push(new google.maps.Marker({
