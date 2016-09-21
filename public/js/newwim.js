@@ -207,10 +207,13 @@ function initAutocomplete() {
             // Create a marker for each place.
               
           if (places.length == 1) {
-              //var locationinput = document.getElementById('mapsearchbox').value;
-              //alert(locationinput);
-              alert(icon['url']);
+              var locationinput = document.getElementById('mapsearchbox').value;
+              alert(locationinput);
               alert(place.geometry.location);
+              alert(place.geometry.formatted_address);
+              alert(place.geometry.id);
+              alert(place.geometry.name);
+              alert(place.geometry.open_now);
           }  
               
             markers.push(new google.maps.Marker({
