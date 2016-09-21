@@ -183,9 +183,7 @@ function initAutocomplete() {
           
           if (places.length == 1) {
               var locationinput = document.getElementById('mapsearchbox').value;
-              var locationcoordinates = places.geometry.location;
               alert(locationinput);
-              alert(locationcoordinates);
               
           }
 
