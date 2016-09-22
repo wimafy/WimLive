@@ -171,7 +171,7 @@ function initAutocomplete() {
           searchBox.setBounds(map.getBounds());
         });
 
-        var markers = [];
+        var marker = [];
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
         searchBox.addListener('places_changed', function() {
@@ -183,11 +183,11 @@ function initAutocomplete() {
           
 
 
-          // Clear out the old markers.
-          markers.forEach(function(marker) {
+          // Clear out the old marker.
+          marker.forEach(function(marker) {
             marker.setMap(null);
           });
-          markers = [];
+          marker = [];
 
           // For each place, get the icon, name and location.
           var bounds = new google.maps.LatLngBounds();
@@ -216,14 +216,14 @@ function initAutocomplete() {
               alert(place.open_now);
           }  
               
-            markers.push(new google.maps.Marker({
+            marker.push(new google.maps.Marker({
               map: map,
               icon: icon,
               title: place.name,
               position: place.geometry.location
             }));
               
-            markers.addListener('click', function() {
+            marker.addListener('click', function() {
                 map.setZoom(8);
                 map.setCenter(marker.getPosition());
               });
