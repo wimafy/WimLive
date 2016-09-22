@@ -239,7 +239,7 @@ function initAutocomplete() {
           map.fitBounds(bounds);
         });
     
-        google.maps.event.addListener(marker, 'click', function() {   
+       marker.addListener('click', function() {   
             alert("wop");
           });
     
