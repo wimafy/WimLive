@@ -154,11 +154,12 @@ function initAutocomplete() {
         var home = new google.maps.Marker({
             position:{
                 lat: one,
-                lng: two,
-                icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+                lng: two
+
             },
             map:map,
-            draggable:false
+            draggable:false,
+            icon: 'http://www.ppgps.info/UserManual/ppgps_position.png'
         });
 
         // Create the search box and link it to the UI element.
