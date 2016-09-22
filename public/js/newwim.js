@@ -222,11 +222,11 @@ function initAutocomplete() {
               title: place.name,
               position: place.geometry.location
             }));
-              
+            /*  
             markers.addListener('click', function() {
                 alert("wippie");    
             });
-
+            */
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
               bounds.union(place.geometry.viewport);
