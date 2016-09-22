@@ -155,7 +155,7 @@ function initAutocomplete() {
             position:{
                 lat: one,
                 lng: two,
-                icon: 'http://www.ppgps.info/UserManual/ppgps_position.png'
+                icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
             },
             map:map,
             draggable:false
