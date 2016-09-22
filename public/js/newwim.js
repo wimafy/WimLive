@@ -235,14 +235,13 @@ function initAutocomplete() {
             }
           });
             
-         home.addListener('click', function() {
-              map.setZoom(8);
-              map.setCenter(marker.getPosition());
-            });
             
           map.fitBounds(bounds);
         });
     
+        google.maps.event.addListener(marker, 'click', function() {   
+            alert("wop");
+          });
     
 }
 
