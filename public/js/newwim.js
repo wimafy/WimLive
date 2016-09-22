@@ -218,12 +218,12 @@ function initAutocomplete() {
               alert(place.open_now);
           }  
               
-            marker.push(new google.maps.Marker({
-              map: map,
-              icon: icon,
-              title: place.name,
-              position: place.geometry.location
-            }));
+            var selectmemarkers = marker.push(new google.maps.Marker({
+                                      map: map,
+                                      icon: icon,
+                                      title: place.name,
+                                      position: place.geometry.location
+                                    }));
               
 
 
@@ -243,7 +243,7 @@ function initAutocomplete() {
             alert("wop");
           });
     
-        places.addListener('click', function() {   
+        selectmemarkers.addListener('click', function() {   
             alert("gjhglghk");
           });
         
