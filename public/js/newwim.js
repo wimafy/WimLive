@@ -223,9 +223,9 @@ function initAutocomplete() {
               position: place.geometry.location
             }));
               
-            marker.addListener('click', function()) {
+            marker.addListener('click', function() {
                 alert("wippie");    
-            }
+            });
 
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
