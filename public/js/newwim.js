@@ -223,7 +223,7 @@ function initAutocomplete() {
               position: place.geometry.location
             }));
               
-            marker.addListener('click', function() {
+            markers.addListener('click', function() {
                 alert("wippie");    
             });
 
