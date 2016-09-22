@@ -217,23 +217,13 @@ function initAutocomplete() {
               alert(place.name);
               alert(place.open_now);
           }  
-            
-              /*
+              
             marker.push(new google.maps.Marker({
               map: map,
               icon: icon,
               title: place.name,
               position: place.geometry.location
             }));
-              */
-            for (var i = 0; i < marker.length; ++i) {
-              var locationmarkers = new google.maps.Marker({
-                map: map,
-                icon: icon,
-                title: place.name,
-                position: place.geometry.location
-              });
-            };
               
 
 
@@ -252,6 +242,11 @@ function initAutocomplete() {
        home.addListener('click', function() {   
             alert("wop");
           });
+    
+        places.addListener('click', function() {   
+            alert("gjhglghk");
+          });
+        
     
 }
 
