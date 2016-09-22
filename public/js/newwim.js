@@ -223,7 +223,7 @@ function initAutocomplete() {
               position: place.geometry.location
             }));
               
-           
+
 
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
@@ -233,7 +233,12 @@ function initAutocomplete() {
             }
           });
             
+          google.maps.event.addListener(marker, 'click', function() {   
+            alert("wop");
+            window.location.href = marker.url;
                 
+          });
+            
           map.fitBounds(bounds);
         });
     
