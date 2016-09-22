@@ -235,11 +235,10 @@ function initAutocomplete() {
             }
           });
             
-          google.maps.event.addListener(marker, 'click', function() {   
-            alert("wop");
-            
-                
-          });
+         marker.addListener('click', function() {
+              map.setZoom(8);
+              map.setCenter(marker.getPosition());
+            });
             
           map.fitBounds(bounds);
         });
