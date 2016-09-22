@@ -235,7 +235,7 @@ function initAutocomplete() {
             }
           });
             
-         marker.addListener('click', function() {
+         home.addListener('click', function() {
               map.setZoom(8);
               map.setCenter(marker.getPosition());
             });
