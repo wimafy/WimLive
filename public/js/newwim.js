@@ -239,7 +239,7 @@ function initAutocomplete() {
           map.fitBounds(bounds);
         });
     
-       marker.addListener('click', function() {   
+       home.addListener('click', function() {   
             alert("wop");
           });
     
