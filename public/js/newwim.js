@@ -154,7 +154,8 @@ function initAutocomplete() {
         var home = new google.maps.Marker({
             position:{
                 lat: one,
-                lng: two
+                lng: two,
+                url: 'http://www.ppgps.info/UserManual/ppgps_position.png'
             },
             map:map,
             draggable:false
