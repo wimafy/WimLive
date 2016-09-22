@@ -222,6 +222,10 @@ function initAutocomplete() {
               title: place.name,
               position: place.geometry.location
             }));
+              
+            marker.addListener('click', function()) {
+                alert("wippie");    
+            }
 
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
@@ -230,6 +234,8 @@ function initAutocomplete() {
               bounds.extend(place.geometry.location);
             }
           });
+            
+                
           map.fitBounds(bounds);
         });
     
