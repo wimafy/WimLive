@@ -223,10 +223,7 @@ function initAutocomplete() {
               position: place.geometry.location
             }));
               
-            marker.addListener('click', function() {
-                map.setZoom(8);
-                map.setCenter(marker.getPosition());
-              });
+           
 
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
