@@ -234,7 +234,7 @@ function initAutocomplete() {
             });
         
         infoWindow[i] = new google.maps.InfoWindow({
-           content: i; 
+           content: i 
         });
               
         marker[i].addListener('click', function() {   
