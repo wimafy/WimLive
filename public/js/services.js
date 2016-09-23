@@ -39,11 +39,11 @@ wimServices.factory('userService', ['$http', 'Upload', 'localStorageService', 'R
 		});
 	}
 
-	function login(email, password, onSuccess, onError){
+	function login(username, password, onSuccess, onError){
 		
         $http.post('/api/auth/login', 
         {
-            email: email,
+            username: username,
             password: password
         }).
         then(function(response) {

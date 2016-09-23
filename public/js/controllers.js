@@ -6,7 +6,7 @@ wimControllers.controller('LoginController', ['userService', '$location', '$scop
 
 	$scope.login = function() {
         userService.login(
-            $scope.email, $scope.password,
+            $scope.username, $scope.password,
             function(response){
                 $location.path('/');
             },
@@ -16,7 +16,7 @@ wimControllers.controller('LoginController', ['userService', '$location', '$scop
         );
     }
 
-    $scope.email = '';
+    $scope.username = '';
     $scope.password = '';
 
     if(userService.checkIfLoggedIn())
