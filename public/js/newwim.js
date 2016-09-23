@@ -241,17 +241,18 @@ function initAutocomplete() {
           map.fitBounds(bounds);
         });  
       
+        home.addListener('click', function() {   
+            console.log("wop");
+          });
 
+        map.addListener('click', function() {
+             console.log('biggitybop'); 
+          });
+
+    
 }
 
- home.addListener('click', function() {   
-    alert("wop");
-  });
-    
-map.addListener('click', function() {
-     //console.log('biggitybop'); 
-  });
-
+ 
 
 
 function newwimdestinationpageout() {
