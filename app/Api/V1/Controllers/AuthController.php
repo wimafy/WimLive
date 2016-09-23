@@ -24,7 +24,11 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         //If the request does not contain an email field change the required email field to userName
-        $login = $request->only('username');
+        if( $request->only('email') == array('email' => NULL,) ) {
+            $login = 'username';
+        }else{
+            $login = 'email';
+        }
         
         //Retrieve the required values from the the request for login
         $credentials = $request->only([$login, 'password']);
