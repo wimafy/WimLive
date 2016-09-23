@@ -20,6 +20,6 @@ $('option.hide').hide();
 $('option:visible').first().attr('selected', 'selected');
 
 function signupgenderselect(gender) {
-    alert(gender);
-    document.getElementById('signupgendermale').checked = true;
+    console.log(gender);
+    document.getElementById(gender).checked = true;
 }
