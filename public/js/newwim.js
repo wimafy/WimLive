@@ -234,11 +234,11 @@ function initAutocomplete() {
             });
         
         infoWindow[i] = new google.maps.InfoWindow({
-           content: i 
+           content: "ID is : "+ i 
         });
               
         marker[i].addListener('click', function() {   
-            alert(i);
+            //alert(i);
             infoWindow[i].open(map, marker[i]);
           });
             
