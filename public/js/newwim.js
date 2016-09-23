@@ -230,7 +230,11 @@ function initAutocomplete() {
               title: place.name,
               position: place.geometry.location
             });
-
+              
+              
+        placesmarker.addListener('click', function() {   
+            console.log("placesmaker3000");
+          });
 
 
             if (place.geometry.viewport) {
