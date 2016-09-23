@@ -18,3 +18,8 @@ $('option.hide').hide();
 
 // to select the first visible option
 $('option:visible').first().attr('selected', 'selected');
+
+function signupgenderselect(gender) {
+    alert(gender);
+    document.getElementById('signupgendermale').checked = true;
+}
