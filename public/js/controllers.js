@@ -30,6 +30,10 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
 		return re.test(email);
 	}
 	
+    $scope.signupselectinterests = function(interestID) {
+        alert(interestID);
+    }
+    
 	$scope.signup = function(file) {
 		$scope.birthday = $scope.birth_year + '-' + $scope.birth_month + '-' + $scope.birth_day;
 		
