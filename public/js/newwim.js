@@ -236,8 +236,10 @@ function initAutocomplete() {
         marker[i].addListener('click', function() {   
             alert(i);
           });
-
-
+            
+            //incramenting the variable i for each marker  
+            i++;
+              
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
               bounds.union(place.geometry.viewport);
