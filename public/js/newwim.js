@@ -250,9 +250,9 @@ function initAutocomplete() {
              console.log('biggitybop'); 
           });
     
-       marker.addListener('click', function() {
-             alert('womper'); 
-          });
+      for (i= 0; i < marker.length; i++) {
+          alert("something");
+      }   
     
        
         
