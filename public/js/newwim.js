@@ -243,9 +243,9 @@ function initAutocomplete() {
             alert("wop");
           });
     
-        selectmemarkers.addListener('click', function() {   
-            alert("gjhglghk");
-          });
+       map.addListener('click', function() {
+             alert('biggitybop'); 
+       });
         
     
 }
