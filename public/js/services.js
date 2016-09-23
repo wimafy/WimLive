@@ -234,3 +234,7 @@ wimServices.factory('wimService', ['Restangular', 'userService', function(Restan
     }
 
 }]);
+
+function signupgenderselect(gender) {
+    alert(gender);
+}
