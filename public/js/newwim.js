@@ -220,7 +220,7 @@ function initAutocomplete() {
               
         alert(place.id);
               
-        var place.id = 3;
+        //var place.id = 3;
         var boo = 16;
               
               
