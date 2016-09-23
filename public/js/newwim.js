@@ -239,11 +239,7 @@ function initAutocomplete() {
           map.fitBounds(bounds);
         });
     
-        for(var i=0;i< marker.length;i++){
-                marker[i].addListener('click',function(){
-                    alert("scoobydoo");
-                });
-            }
+        
 
     
        home.addListener('click', function() {   
@@ -252,7 +248,11 @@ function initAutocomplete() {
     
        map.addListener('click', function() {
              console.log('biggitybop'); 
-       });
+          });
+    
+       marker.addListener('click', function() {
+             alert('womper'); 
+          });
     
        
         
