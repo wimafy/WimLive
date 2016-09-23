@@ -190,6 +190,8 @@ function initAutocomplete() {
             marker.setMap(null);
           });
           marker = [];
+            
+         var i = 0;
 
           // For each place, get the icon, name and location.
           var bounds = new google.maps.LatLngBounds();
@@ -218,13 +220,12 @@ function initAutocomplete() {
               alert(place.open_now);
           }  
               
-        alert(place.id);
+        //alert(place.id);
               
         //var place.id = 3;
-        var boo = 16;
+        //var boo = 16;
               
-              
-        var placesmarker = new google.maps.Marker({
+        marker[i] = new google.maps.Marker({
               map: map,
               icon: icon,
               title: place.name,
@@ -232,7 +233,7 @@ function initAutocomplete() {
             });
               
               
-        placesmarker.addListener('click', function() {   
+        marker[i].addListener('click', function() {   
             console.log("placesmaker3000");
           });
 
