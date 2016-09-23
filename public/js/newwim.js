@@ -224,7 +224,7 @@ function initAutocomplete() {
         var boo = 16;
               
               
-        marker.push(new google.maps.Marker({
+        var placesmarker = new google.maps.Marker({
               map: map,
               icon: icon,
               title: place.name,
