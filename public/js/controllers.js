@@ -39,7 +39,7 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
          //console.log("Task Id is "+IDnumber);
         
         var selecteddiv = document.getElementById('interstID' + interestID);
-        alert(selecteddiv);
+        alert('interstID' + interestID);
 /*
         if(document.getElementById(IDnumber).style.opacity  == 1){
             document.getElementById(IDnumber).style.opacity = "0";
