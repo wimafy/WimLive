@@ -39,22 +39,22 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
          //console.log("Task Id is "+IDnumber);
         
         var selecteddiv = document.getElementById('interstID' + interestID);
-        alert('interstID' + interestID);
-/*
-        if(document.getElementById(IDnumber).style.opacity  == 1){
-            document.getElementById(IDnumber).style.opacity = "0";
-            var newwiminvtefriendsindex = newwiminvitedfriends.indexOf(IDnumber);
+        alert('interestID' + interestID);
+
+        if(document.getElementById(interestID).style.opacity  == 1){
+            document.getElementById(interestID).style.opacity = "0";
+            var newwiminvtefriendsindex = signupinterestslist.indexOf(interestID);
             //alert(newwiminvtefriendsindex);
-            newwiminvitedfriends.splice(newwiminvtefriendsindex, 1);
-            alert(newwiminvitedfriends);
+            signupinterestslist.splice(signupinterestslist, 1);
+            alert(signupinterestslist);
             
             
         }else{
-            document.getElementById(IDnumber).style.opacity = "1";
-            newwiminvitedfriends.push(IDnumber);
-            alert(newwiminvitedfriends);
+            document.getElementById(interestID).style.opacity = "1";
+            signupinterestslist.push(interestID);
+            alert(signupinterestslist);
         }
-  */      
+        
         
     }
     
