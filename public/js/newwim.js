@@ -233,32 +233,24 @@ function initAutocomplete() {
             } else {
               bounds.extend(place.geometry.location);
             }
+              
+              
           });
             
             
           map.fitBounds(bounds);
-        });
-    
-        
+        });  
+      
 
-    
-       home.addListener('click', function() {   
-            alert("wop");
-          });
-    
-       map.addListener('click', function() {
-             console.log('biggitybop'); 
-             for (i= 0; i < marker.length; i++) {
-                  alert(i);
-              }
-          });
-    
-         
-    
-       
-        
-    
 }
+
+ home.addListener('click', function() {   
+    alert("wop");
+  });
+    
+map.addListener('click', function() {
+     //console.log('biggitybop'); 
+  });
 
 
 
