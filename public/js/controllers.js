@@ -41,8 +41,8 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
         var selecteddiv = document.getElementById('interstID' + interestID);
         alert('interestID' + interestID);
 
-        if(document.getElementById(interestID).style.opacity  == 1){
-            document.getElementById(interestID).style.opacity = "0";
+        if(selecteddiv.style.opacity  == 1){
+            selecteddiv.style.opacity = "0";
             var newwiminvtefriendsindex = signupinterestslist.indexOf(interestID);
             //alert(newwiminvtefriendsindex);
             signupinterestslist.splice(signupinterestslist, 1);
@@ -50,7 +50,7 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
             
             
         }else{
-            document.getElementById(interestID).style.opacity = "1";
+            selecteddiv.style.opacity = "1";
             signupinterestslist.push(interestID);
             alert(signupinterestslist);
         }
