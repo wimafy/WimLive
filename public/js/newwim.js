@@ -242,7 +242,7 @@ function initAutocomplete() {
             return function() {
                 //place 
                 alert(place.formatted_address);
-                //infoWindow.setContent('ID: '+ place.id);
+                infoWindow.setContent('ID: '+ place.id);
                 //infoWindow.open(map, marker);
             }
         })(marker, i));
