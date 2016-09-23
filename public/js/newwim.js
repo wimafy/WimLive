@@ -234,7 +234,7 @@ function initAutocomplete() {
               
               
         marker[i].addListener('click', function() {   
-            console.log("placesmaker3000");
+            alert(i);
           });
 
 
