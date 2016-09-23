@@ -47,7 +47,7 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
             var newwiminvtefriendsindex = signupinterestslist.indexOf(interestID);
             //alert(newwiminvtefriendsindex);
             signupinterestslist.splice(newwiminvtefriendsindex, 1);
-            alert(signupinterestslist);
+            //alert(signupinterestslist);
             
             
         }else{
