@@ -218,6 +218,9 @@ function initAutocomplete() {
               alert(place.open_now);
           }  
               
+        alert(place);
+              
+              
         marker.push(new google.maps.Marker({
               map: map,
               icon: icon,
