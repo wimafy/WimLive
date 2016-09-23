@@ -46,30 +46,33 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
 		else if ($scope.password.length < 8){
 			alert("Your password is too short.");
 		}
-		else if (!(validateEmail($scope.email))){
+		/*else if (!(validateEmail($scope.email))){
 			alert("Please enter a valid email.");
 		}
+		*/
 		else if ($scope.FirstName == ""){
 			alert("Please enter your first name.");
 		}
 		else if ($scope.LastName == ""){
 			alert("Please enter your last name.");
 		}
-		else if ($scope.birth_year == null || $scope.birth_month == null || $scope.birth_day == null){
+		/*else if ($scope.birth_year == null || $scope.birth_month == null || $scope.birth_day == null){
 			alert("Please enter your birthday.");
 		}
+		*/
 		else if ($scope.gender == ""){
 			alert("Please enter your gender.");
 		}
-		else if ($scope.city == ""){
+		/*else if ($scope.city == ""){
 			alert("Please enter your city.");
 		}
+		*/
 		else if ($scope.state == ""){
 			alert("Please enter your state.");
 		}
 		else{
 			userService.signup(
-				$scope.username, $scope.password, $scope.email, $scope.FirstName, $scope.LastName, $scope.birthday, $scope.gender, $scope.city, $scope.state, $scope.interests, $scope.bio, file,
+				$scope.username, $scope.password, $scope.FirstName, $scope.LastName, $scope.gender, $scope.interests, file,
 				function(response){
 					alert('Great! You are signed up! Welcome to WIM(afy), ' + $scope.FirstName + '!');
 					$location.path('/');
@@ -84,15 +87,15 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
 	$scope.username = '';
 	$scope.password = '';
 	$scope.password_confirmation = '';
-	$scope.email = '';
+	//$scope.email = '';
 	$scope.FirstName = '';
 	$scope.LastName = '';
-	$scope.birthday = '';
+	//$scope.birthday = '';
 	$scope.gender = '';
-	$scope.city = '';
-	$scope.state = '';
+	//$scope.city = '';
+	//$scope.state = '';
 	$scope.interests = '';
-	$scope.bio = '';
+	//$scope.bio = '';
 	file = '';
     
 	

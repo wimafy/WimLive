@@ -13,21 +13,21 @@ wimServices.factory('userService', ['$http', 'Upload', 'localStorageService', 'R
 			return false;
 	}
 
-	function signup(username, password, email, FirstName, LastName, birthday, gender, city, state, interests, bio, file, onSuccess, onError) {
+	function signup(username, password, FirstName, LastName, gender, interests, file, onSuccess, onError) {
 		Upload.upload({
 			url: '/api/auth/signup',
 			data: {
 				username: username,
 				password: password,
-				email: email,
+				//email: email,
 				FirstName: FirstName,
 				LastName: LastName,
-				birthday: birthday,
+				//birthday: birthday,
 				gender: gender,
-				city: city,
-				state: state,
+				//city: city,
+				//state: state,
 				interests: interests,
-				bio: bio,
+				//bio: bio,
 				ProfilePic: file,
 			}
 		}).

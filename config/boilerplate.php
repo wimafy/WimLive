@@ -13,7 +13,7 @@ return [
     |
     */
     'signup_fields' => [
-        'username', 'password', 'email', 'FirstName', 'LastName', 'birthday', 'gender', 'city', 'state', 'interests', 'bio', 'ProfilePic'		
+        'username', 'password', 'FirstName', 'LastName', 'gender', 'interests', 'ProfilePic'		
     ],
 
     /*
@@ -28,15 +28,15 @@ return [
     'signup_fields_rules' => [
 		'username' => 'required|unique:users',
 		'password' => 'required|min:8',
-		'email' => 'required|email|unique:users',
+		//'email' => 'required|email|unique:users',
 		'FirstName' => 'required',
 		'LastName' => 'required',
-		'birthday' => 'required',
+		//'birthday' => 'required',
 		'gender' => 'required',
-		'city' => 'required',
-		'state' => 'required',
+		//'city' => 'required',
+		//'state' => 'required',
 		'interests',
-		'bio' => "max:500",
+		//'bio' => "max:500",
 		'ProfilePic'
     ],
 
@@ -99,13 +99,13 @@ return [
     */
     'profile_fields_rules' => [
 		'username' => 'required|unique:users',
-		'email' => 'required|email|unique:users',
+		'email' => 'email|unique:users',
 		'FirstName' => 'required',
 		'LastName' => 'required',
 		'PhoneNumber',
-		'city' => 'required',
-		'state' => 'required',
-		'birthday' => 'required',
+		'city',
+		'state',
+		'birthday',
 		'gender' => 'required',
 		'interests',
 		'bio' => 'max:500',
