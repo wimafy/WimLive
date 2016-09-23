@@ -240,6 +240,8 @@ function initAutocomplete() {
               
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
+                //place 
+                alert(place.name);
                 infoWindow.setContent('ID: '+ place.id);
                 infoWindow.open(map, marker);
             }
