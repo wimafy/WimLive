@@ -192,7 +192,7 @@ function initAutocomplete() {
           marker = [];
             
          var i = 0,
-             infoWindow = [];
+             infoWindow;
 
           // For each place, get the icon, name and location.
           var bounds = new google.maps.LatLngBounds();
@@ -233,13 +233,13 @@ function initAutocomplete() {
               position: place.geometry.location
             });
         
-        infoWindow[i] = new google.maps.InfoWindow({
+        infoWindow = new google.maps.InfoWindow({
            content: "ID is : "+ i 
         });
               
         marker[i].addListener('click', function() {   
             //alert(i);
-            infoWindow[i].open(map, marker[i]);
+            infoWindow.open(map, marker[i]);
           });
             
             //incramenting the variable i for each marker  
