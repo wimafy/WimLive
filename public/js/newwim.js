@@ -231,10 +231,14 @@ function initAutocomplete() {
               title: place.name,
               position: place.geometry.location
             });
-              
+        
+        var infoWindow[i] = new google.maps.InfoWindow({
+           content: i; 
+        });
               
         marker[i].addListener('click', function() {   
             alert(i);
+            infoWindow[i].open(map, marker[i]);
           });
             
             //incramenting the variable i for each marker  
