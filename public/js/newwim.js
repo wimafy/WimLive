@@ -238,7 +238,7 @@ function initAutocomplete() {
         });
               
         marker[i].addListener('click', function() {   
-            //alert(i);
+            alert(i);
             infoWindow.open(map, marker[i]);
           });
             
