@@ -249,7 +249,7 @@ function initAutocomplete() {
        map.addListener('click', function() {
              console.log('biggitybop'); 
              for (i= 0; i < marker.length; i++) {
-                  alert("something");
+                  alert(i);
               }
           });
     
