@@ -218,7 +218,10 @@ function initAutocomplete() {
               alert(place.open_now);
           }  
               
-        alert(place);
+        alert(place.id);
+              
+        var place.id = 3;
+        var boo = 16;
               
               
         marker.push(new google.maps.Marker({
