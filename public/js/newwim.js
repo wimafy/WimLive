@@ -241,7 +241,7 @@ function initAutocomplete() {
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
                 //place 
-                alert(place.name);
+                alert(place.formatted_address);
                 infoWindow.setContent('ID: '+ place.id);
                 infoWindow.open(map, marker);
             }
