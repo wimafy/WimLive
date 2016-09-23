@@ -39,18 +39,19 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
          //console.log("Task Id is "+IDnumber);
         
         var selecteddiv = document.getElementById('interstID' + interestID);
-        alert('interestID' + interestID);
+        var actualinterestID = 'interestID' + interestID;
+        alert(actualinterestID);
 
-        if(selecteddiv.style.opacity  == 1){
-            selecteddiv.style.opacity = "0";
+        if(document.getElementById(actualinterestID).style.opacity  == 1){
+            document.getElementById(actualinterestID).style.opacity = "0";
             var newwiminvtefriendsindex = signupinterestslist.indexOf(interestID);
             //alert(newwiminvtefriendsindex);
-            signupinterestslist.splice(signupinterestslist, 1);
+            signupinterestslist.splice(newwiminvtefriendsindex, 1);
             alert(signupinterestslist);
             
             
         }else{
-            selecteddiv.style.opacity = "1";
+            document.getElementById(actualinterestID).style.opacity = "1";
             signupinterestslist.push(interestID);
             alert(signupinterestslist);
         }
