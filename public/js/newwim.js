@@ -229,7 +229,7 @@ function initAutocomplete() {
               icon: icon,
               title: place.name,
               position: place.geometry.location
-            }));
+            });
 
 
 
