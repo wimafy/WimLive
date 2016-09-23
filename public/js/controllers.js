@@ -1,6 +1,7 @@
 var wimControllers = angular.module('wimControllers', ['ngFileUpload']);
 
-var newwiminvitedfriends = []
+var newwiminvitedfriends = [];
+var signupinterestslist = [];
 
 wimControllers.controller('LoginController', ['userService', '$location', '$scope', '$http', function (userService, $location, $scope, $http) {
 
@@ -32,6 +33,29 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
 	
     $scope.signupselectinterests = function(interestID) {
         alert(interestID);
+        
+        
+        
+         //console.log("Task Id is "+IDnumber);
+        
+        var selecteddiv = document.getElementById('interstID' + interestID);
+        alert(selecteddiv);
+/*
+        if(document.getElementById(IDnumber).style.opacity  == 1){
+            document.getElementById(IDnumber).style.opacity = "0";
+            var newwiminvtefriendsindex = newwiminvitedfriends.indexOf(IDnumber);
+            //alert(newwiminvtefriendsindex);
+            newwiminvitedfriends.splice(newwiminvtefriendsindex, 1);
+            alert(newwiminvitedfriends);
+            
+            
+        }else{
+            document.getElementById(IDnumber).style.opacity = "1";
+            newwiminvitedfriends.push(IDnumber);
+            alert(newwiminvitedfriends);
+        }
+  */      
+        
     }
     
 	$scope.signup = function(file) {
