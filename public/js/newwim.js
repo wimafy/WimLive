@@ -218,13 +218,13 @@ function initAutocomplete() {
               alert(place.open_now);
           }  
               
-            var selectmemarkers = marker.push(new google.maps.Marker({
-                                      map: map,
-                                      icon: icon,
-                                      title: place.name,
-                                      position: place.geometry.location
-                                    }));
-              
+        marker.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+
 
 
             if (place.geometry.viewport) {
@@ -239,13 +239,22 @@ function initAutocomplete() {
           map.fitBounds(bounds);
         });
     
+        for(var i=0;i< marker.length;i++){
+                marker[i].addListener('click',function(){
+                    alert("scoobydoo");
+                });
+            }
+
+    
        home.addListener('click', function() {   
             alert("wop");
           });
     
        map.addListener('click', function() {
-             alert('biggitybop'); 
+             console.log('biggitybop'); 
        });
+    
+       
         
     
 }
