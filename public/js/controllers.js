@@ -32,7 +32,7 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
 	}
 	
     $scope.signupselectinterests = function(interestID) {
-        alert(interestID);
+        //alert(interestID);
         
         
         
@@ -40,7 +40,7 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
         
         var selecteddiv = document.getElementById('interstID' + interestID);
         var actualinterestID = 'interestID' + interestID;
-        alert(actualinterestID);
+        //alert(actualinterestID);
 
         if(document.getElementById(actualinterestID).style.backgroundColor == "#4CAF50" || document.getElementById(actualinterestID).style.backgroundColor == "rgb(76, 175, 80)"){
             document.getElementById(actualinterestID).style.backgroundColor = "#FAFAFA";
@@ -53,7 +53,7 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
         }else{
             document.getElementById(actualinterestID).style.backgroundColor = "#4CAF50";
             signupinterestslist.push(interestID);
-            alert(signupinterestslist);
+            //alert(signupinterestslist);
         }
         
         
@@ -265,13 +265,13 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
             var newwiminvtefriendsindex = newwiminvitedfriends.indexOf(IDnumber);
             //alert(newwiminvtefriendsindex);
             newwiminvitedfriends.splice(newwiminvtefriendsindex, 1);
-            alert(newwiminvitedfriends);
+            //alert(newwiminvitedfriends);
             
             
         }else{
             document.getElementById(IDnumber).style.opacity = "1";
             newwiminvitedfriends.push(IDnumber);
-            alert(newwiminvitedfriends);
+            //alert(newwiminvitedfriends);
         }
 
 
