@@ -220,7 +220,7 @@ function initAutocomplete() {
               alert(place.id);
               alert(place.name);
               alert(place.open_now);
-              document.getElementById("newwimdestinationbuttontext").innerHTML = place.formatted_address;
+              //document.getElementById("newwimdestinationbuttontext").innerHTML = place.formatted_address;
           }  
               
         //alert(place.id);
