@@ -403,7 +403,7 @@ wimControllers.controller('MainController', ['userService', '$location', '$scope
 //Countdown Timer
 //https://codepen.io/garethdweaver/pen/eNpWBb
 //Gareth Weaver
-
+/*
 angular.module 'countdownapp', []
 
 .directive 'countdown', ['Util', '$interval', (Util, $interval) ->
