@@ -7,10 +7,9 @@
 	
     <h1 class="headerpagetitle" ng-repeat="p in profile">{{p.FirstName}}'s Profile</h1>
     
-    
+    <i id="profiletopactioncircleicon" class="material-icons">&#xE5D4;</i>
     <div class="dropdown">
-        
-        <i id="profiletopactioncircleicon" class="material-icons" onclick="profilepagedropdownFunction()">&#xE5D4;</i>
+        <button onclick="profilepagedropdownFunction()" class="dropbtn">Dropdown</button>
           <div id="myDropdown" class="dropdown-content">
             <a href="#home">Home</a>
             <a href="#about">About</a>
