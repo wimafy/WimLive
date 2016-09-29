@@ -114,6 +114,9 @@
                             <p class="profileintereststext">Swimming</p>
 
                         </div>
+                        
+                        <!--This first button is a hyperlink to the Create New Wim page-->
+                        <button type="button" onclick="" class="currentwimaddwimbutton"><i class="material-icons" style="font-size: 27px;">&#xE145;</i></button>
                     </div>
                 </div>
                 <!-- #commenting out past wims
@@ -145,7 +148,7 @@
             <div id="friends" class="profilebottomfriendsdiv" ng-controller="FriendController" style="z-index: 2; opacity: 0;">
                 <div style="height: calc(100vh - 35vh - 79px); width: 100%; overflow: hidden; overflow-y: scroll;">
                     
-                    <div class="profilefriendscarddiv">
+                    <div class="profilefriendscarddiv" style="min-height: calc(90% - 35px); background-color: white;">
                         <!--
 						<div onclick="testbutton('03')" id="03" class="eachfriend">
                             <img src="profile_pics/inari_boy.png" class="myfriendspic">
@@ -210,7 +213,7 @@
 
                             </div>
                         </div>
-                        <div style="width: 20px; height: 20px; float: left;"></div>
+                        <div style="width: 20px; height: 0px; float: left;"></div>
                     </div>
                 </div>
             </div>
