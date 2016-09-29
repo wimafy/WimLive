@@ -48,11 +48,6 @@
             <div id="interestsID" class="profileoptiondiv" onclick="showPastwimsTab()" style="color: #2196F3;">
                 <i class="material-icons profileoptionpic">&#xE88E;</i>
                 <p class="profileoptionchoosertext">Interests</p>
-                <div ng-if="myVar">
-                    <h1>Welcome</h1>
-                    <p>Welcome to my home.</p>
-                    <hr>
-                </div>
             </div>
                     
             <div id="friendsID" class="profileoptiondiv" onclick="showFriendsTab()">
@@ -81,6 +76,11 @@
                             <i id="profileinterestsimgicon" class="material-icons">&#xE195;</i>
                             <p class="profileintereststext">Traveling</p>
 
+                        </div>
+                        <div ng-if="myVar">
+                            <h1>Welcome</h1>
+                            <p>Welcome to my home.</p>
+                            <hr>
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE3B7;</i>
