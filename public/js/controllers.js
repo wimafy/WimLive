@@ -140,7 +140,7 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 	$scope.logout = function(){
 		userService.logout();
 		$location.path('/login');
-        alert("1");
+        //alert("1");
         
         document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
         document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
