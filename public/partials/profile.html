@@ -32,7 +32,7 @@
         </div>
     
         <div class="profileoptionchooser">
-            <div id="interestsID" class="profileoptiondiv" onclick="showPastwimsTab()">
+            <div id="interestsID" class="profileoptiondiv" onclick="showPastwimsTab()" style="color: #2196F3;">
                 <i class="material-icons profileoptionpic">&#xE88E;</i>
                 <p class="profileoptionchoosertext">Interests</p>
             </div>
@@ -42,7 +42,7 @@
                 <p class="profileoptionchoosertext">Friends</p>
             </div>
                     
-            <div id="contactinfoID"class="profileoptiondiv" onclick="showUserinfoTab()" style="color: #2196F3;">
+            <div id="contactinfoID"class="profileoptiondiv" onclick="showUserinfoTab()">
                 <i class="material-icons profileoptionpic">&#xE87C;</i>
                 <p class="profileoptionchoosertext">Contact Info</p>
             </div>
@@ -50,7 +50,7 @@
         </div>
 
         <div class="profilebottomdiv">
-            <div id="pastwims" class="profilebottompastwimsdiv" style="opacity: 0;">
+            <div id="pastwims" class="profilebottompastwimsdiv" style="z-index: 5;">
                 <div style="height: calc(100vh - 35vh - 79px); width: 100%; overflow: hidden; overflow-y: scroll; background-color: white;">
                     
                     <div class="profilefriendscarddiv">
@@ -163,7 +163,7 @@
                 
                 
             </div>
-            <div id="info" class="profilebottominfodiv" style="z-index: 5;" ng-repeat="p in profile">
+            <div id="info" class="profilebottominfodiv" style="opacity: 0;" ng-repeat="p in profile">
                 <div style="height: calc(100vh - 35vh - 79px); width: 100%; overflow: hidden; overflow-y: scroll;">
                     <div class="profileinfoleftdiv">
                         <div class="profilefriendscarddiv">
@@ -203,8 +203,8 @@
 
                             </div>
 
-                            <div class="profileinterestsdiv">
-                                <i id="profileinterestsimgicon" class="material-icons">&#xE24D;</i>
+                            <div class="profileinterestsdiv" style="height: 100px;">
+                                <i id="profileinterestsimgicon" class="material-icons" style="border-bottom-color: white;">&#xE24D;</i>
                                 <p class="profileinfoleftinfotitle">Bio</p>
                                 <p class="profileinfoleftinfoinformation">{{p.bio}}</p>
 

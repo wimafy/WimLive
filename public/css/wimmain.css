@@ -1627,11 +1627,11 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     float: left;
     width: calc(100vw - 10px);
     border-radius: 4px;
-    overflow: auto;
     border-width: 1px;
     border-style: solid;
     border-color: #E0E0E0;
     box-shadow: 0px 2px 7px 2px #BDBDBB;
+    margin-bottom: 30px;
 }
 
 /*homepage */
