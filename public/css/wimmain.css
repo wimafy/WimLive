@@ -1505,7 +1505,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .profileinfoleftdiv {
-    background-color: lightgray;
+    /* background-color: lightgray; */
     float: left;
     width: 100%;
     margin-top: 0;
@@ -1578,7 +1578,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .profileinterestsdiv {
-    width: 100vw;
+    width: calc(100vw - 12px);
     height: 45px;
     float: left;
     background-color: white;
@@ -1627,7 +1627,6 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     float: left;
     width: calc(100vw - 10px);
     border-radius: 4px;
-    background-color: white;
     overflow: auto;
     border-width: 1px;
     border-style: solid;
