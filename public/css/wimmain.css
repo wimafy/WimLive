@@ -847,16 +847,15 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 /* friends drop down menu */
 
 .dropbtn {
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
     color: white;
-    padding: 16px;
     font-size: 16px;
     border: none;
     cursor: pointer;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+    /* background-color: #3e8e41; */
 }
 
 .dropdown {
@@ -1389,13 +1388,12 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 #profiletopactioncircleicon {
-    width: 40px;
+    width: 55px;
     line-height: 50px;
     font-size: 25px;
     text-align: center;
     color: white;
     float: right;
-    
 }
 
 .profiletopprofilepiccircle {
@@ -1636,16 +1634,15 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 /*profile dropdown */
 .dropbtn {
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
     color: white;
-    padding: 16px;
-    font-size: 16px;
     border: none;
     cursor: pointer;
+    height: 50px;
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
+    /* background-color: #3e8e41; */
 }
 
 .dropdown {
