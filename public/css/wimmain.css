@@ -868,16 +868,12 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 80px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
 }
 
 .dropdown a:hover {background-color: #f1f1f1}
@@ -1639,6 +1635,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     border: none;
     cursor: pointer;
     height: 50px;
+    width: 55px;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -1654,18 +1651,19 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    width: 80px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 60;
-    margin-top: -4px;
+    margin-left: -25px;
 }
 
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
     text-decoration: none;
     display: block;
+    width: 80px;
+    padding: 12px;
 }
 
 .dropdown a:hover {background-color: #f1f1f1}
