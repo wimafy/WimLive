@@ -14,7 +14,7 @@
         </div>
           <div id="myDropdown" class="dropdown-content">
             <a href="#home">Edit profile</a>
-            <a href="#about">About</a>
+            <input type="checkbox" ng-model="checked" ng-init="checked=true" />
             <a href="#about">About</a>
             <a onclick="profilemodalcall('profilemodalbackground','profilemodal')">Log out</a>
           </div>
@@ -99,6 +99,9 @@
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE52F;</i>
                             <p class="profileintereststext">Cycling</p>
+                            <span ng-if="checked" class="animate-if">
+                              This is removed when the checkbox is unchecked.
+                            </span>
 
                         </div>
                         <div class="profileinterestsdiv">
