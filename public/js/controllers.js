@@ -42,7 +42,7 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
         var actualinterestID = 'interestID' + interestID;
         //alert(actualinterestID);
 
-        if(document.getElementById(actualinterestID).style.backgroundColor == "#5cb85c" || document.getElementById(actualinterestID).style.backgroundColor == "rgb(76, 175, 80)"){
+        if(document.getElementById(actualinterestID).style.backgroundColor == "#5cb85c" || document.getElementById(actualinterestID).style.backgroundColor == "rgb(92, 184, 92)"){
             document.getElementById(actualinterestID).style.backgroundColor = "#FAFAFA";
             document.getElementById(actualinterestID).style.color = "black";
             var newwiminvtefriendsindex = signupinterestslist.indexOf(interestID);
