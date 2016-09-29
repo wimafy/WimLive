@@ -42,8 +42,9 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
         var actualinterestID = 'interestID' + interestID;
         //alert(actualinterestID);
 
-        if(document.getElementById(actualinterestID).style.backgroundColor == "#4CAF50" || document.getElementById(actualinterestID).style.backgroundColor == "rgb(76, 175, 80)"){
+        if(document.getElementById(actualinterestID).style.backgroundColor == "#5cb85c" || document.getElementById(actualinterestID).style.backgroundColor == "rgb(76, 175, 80)"){
             document.getElementById(actualinterestID).style.backgroundColor = "#FAFAFA";
+            document.getElementById(actualinterestID).style.color = "black";
             var newwiminvtefriendsindex = signupinterestslist.indexOf(interestID);
             //alert(newwiminvtefriendsindex);
             signupinterestslist.splice(newwiminvtefriendsindex, 1);
@@ -51,7 +52,8 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
             
             
         }else{
-            document.getElementById(actualinterestID).style.backgroundColor = "#4CAF50";
+            document.getElementById(actualinterestID).style.backgroundColor = "#5cb85c";
+            document.getElementById(actualinterestID).style.color = "white";
             signupinterestslist.push(interestID);
             //alert(signupinterestslist);
         }

@@ -116,7 +116,7 @@
                         </div>
                         
                         <!--This first button is a hyperlink to the Create New Wim page-->
-                        <button type="button" onclick="" class="currentwimaddwimbutton"><i class="material-icons" style="font-size: 27px;">&#xE145;</i></button>
+                        <button type="button" onclick="" class="currentwimaddwimbutton"><i class="material-icons" style="font-size: 27px; position: absolute; right: 5vw; top: calc(65vh - 180px); bottom: 0;">&#xE145;</i></button>
                     </div>
                 </div>
                 <!-- #commenting out past wims
@@ -155,7 +155,7 @@
                             <p class="myfriendsname">Kenta Ito</p>
                         </div>
                         -->
-                        <div onclick="testbutton('03')" id="03" class="eachfriend" ng-repeat="friend in friends">
+                        <div onclick="testbutton('03')" id="03" class="eachfriend" ng-repeat="friend in friends" >
                             <img src={{friend.ProfilePic}} class="myfriendspic">
 								<p class="myfriendsname">{{friend.FirstName}} {{friend.LastName}}</p>
                         </div>

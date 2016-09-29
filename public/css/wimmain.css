@@ -953,8 +953,8 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 .currentwimaddwimbutton {
     background-color: #5cb85c;
-    width: 55px;
-    height: 55px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     position: absolute;
     right: 207vw;
