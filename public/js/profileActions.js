@@ -43,12 +43,13 @@ function showUserinfoTab() {
 toggle between hiding and showing the dropdown content */
 function profilepagedropdownFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
+    console.log("1");
 }
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
-
+    console.log("click");
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
