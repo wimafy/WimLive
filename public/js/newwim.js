@@ -81,12 +81,6 @@ function newwimbackslide(divID) {
     //document.getElementById(divID).style.left = "120vw";
 }
 
-//adds text input for select attire if name == other
-function showfield(name){
-    if(name=='Other')document.getElementById('div1').innerHTML='Other: <input type="text" name="other" />';
-    else document.getElementById('div1').innerHTML='';
-}
-
 function initAutocomplete() {
     
     //var ipaddressvar = geoplugin_request();
