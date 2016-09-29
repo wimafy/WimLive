@@ -296,7 +296,24 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
         $location.path('/login');
         
         //pushes profile window out of the way
-        backfullpage2myprofile();
+        document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+                document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
+                document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
+
+                window.location.assign("#/");
+
+                   $(document).ready(function(){
+                       document.getElementById("loadinggiflevel1").classList.add('killopacity');
+                       document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
+
+                    });
+                
+                
+              setTimeout(function(){ 
+                  document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
+                  document.getElementById("loadinggiflevel1").classList.remove('killopacity');
+              }, 100);
+        
     }
 
     //Attempts to create a new Wim
