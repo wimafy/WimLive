@@ -291,9 +291,10 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
 
         //Removes the user's JWT
         userService.logout();
-
-        //Redirects the the user to the login page
-        $location.path('/login');
+        
+        
+        
+        
         
         //pushes profile window out of the way
         document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
@@ -308,7 +309,9 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
 
                     });
                 
-                
+              //Redirects the the user to the login page
+              $location.path('/login');        
+        
               setTimeout(function(){ 
                   document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
                   document.getElementById("loadinggiflevel1").classList.remove('killopacity');
