@@ -1651,18 +1651,18 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    width: 80px;
+    width: 100px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 60;
-    margin-left: -25px;
+    margin-left: -35px;
 }
 
 .dropdown-content a {
     color: black;
     text-decoration: none;
     display: block;
-    width: 80px;
+    width: 100px;
     padding: 12px;
 }
 
