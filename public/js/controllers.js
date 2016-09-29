@@ -300,7 +300,7 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
                 document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
                 document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
 
-                window.location.assign("#/");
+                alert("woop");
 
                    $(document).ready(function(){
                        document.getElementById("loadinggiflevel1").classList.add('killopacity');
