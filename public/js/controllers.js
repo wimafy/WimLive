@@ -139,6 +139,22 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 		userService.logout();
 		$location.path('/login');
         alert("1");
+        
+        document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
+        document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
+        document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
+
+           $(document).ready(function(){
+               document.getElementById("loadinggiflevel1").classList.add('killopacity');
+               document.getElementById("loadinggiflevel1").classList.remove('loadinggifOUTlevel1');
+
+            });
+
+
+      setTimeout(function(){ 
+          document.getElementById("loadinggiflevel1").classList.remove('pagetransitionIN');
+          document.getElementById("loadinggiflevel1").classList.remove('killopacity');
+      }, 100);
 	}
 	
 	if(!userService.checkIfLoggedIn())
@@ -162,7 +178,6 @@ wimControllers.controller('UserListController', ['$scope', '$location', 'userSer
 	$scope.logout = function(){
 		userService.logout();
 		$location.path('/login');
-        alert("2");
 	}
 	
 	$scope.sendFriendRequest = function(id){
@@ -197,7 +212,6 @@ wimControllers.controller('RequestController', ['$scope', '$log', '$location', '
 	$scope.logout = function(){
 		userService.logout();
 		$location.path('/login');
-        alert("3");
 	};
 	
 	$scope.acceptRequest = function(senderID){
@@ -240,7 +254,6 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
 	$scope.logout = function(){
 		userService.logout();
 		$location.path('/login');
-        alert("4");
 	}
 	
 	//view friend list
@@ -298,7 +311,7 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
 
         //Redirects the the user to the login page
         $location.path('/login');
-        alert("5");
+        
         //pushes profile window out of the way
         
         
@@ -380,7 +393,6 @@ wimControllers.controller('MainController', ['userService', '$location', '$scope
 	$scope.logout = function(){
 		userService.logout();
 		$location.path('/login');
-        alert("6");
 	}
 	
 	if(!userService.checkIfLoggedIn())
