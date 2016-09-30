@@ -1622,12 +1622,12 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     text-align: center;
     font-size: 23px;
     color: black;
-    float: right;
+    float: left;
     margin-right: 0px;
-    border-bottom-style: solid;
-    border-bottom-color: #E0E0E0;
-    border-width: 1px;
-    margin-top: 0px;
+    margin: 0px;
+    height: 45px;
+    position: absolute;
+    right: 0;
 }
 
 #profileinterestsediticondoneediting {
@@ -1635,12 +1635,9 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     line-height: 45px;
     text-align: center;
     font-size: 23px;
-    color: black;
+    color: white;
     float: left;
     margin-right: 0px;
-    border-bottom-style: solid;
-    border-bottom-color: #E0E0E0;
-    border-width: 1px;
 }
 
 
