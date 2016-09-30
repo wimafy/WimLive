@@ -6,11 +6,6 @@
     </a>
 	
     <h1 class="headerpagetitle" ng-repeat="p in profile">{{p.FirstName}}'s Profile</h1>
-    
-    <div>
-        <i id="profileinterestsediticondoneediting" class="material-icons">&#xE86C;</i>
-        <p>Done editing</p>
-    </div>
         
     <div class="dropdown">
         <div onclick="profilepagedropdownFunction()" class="dropbtn">
@@ -21,6 +16,11 @@
             <a href="#about">About</a>
             <a onclick="profilemodalcall('profilemodalbackground','profilemodal')">Log out</a>
           </div>
+    </div>
+    
+    <div style="width: 60px; height: 50px; float: right;">
+        <i id="profileinterestsediticondoneediting" class="material-icons">&#xE86C;</i>
+        <p>Done editing</p>
     </div>
     
     <div>
@@ -84,51 +84,61 @@
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE3B7;</i>
                             <p class="profileintereststext">Painting</p>
+                            <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE92B;</i>
 
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE407;</i>
                             <p class="profileintereststext">Nature</p>
+                            <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE92B;</i>
 
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE405;</i>
                             <p class="profileintereststext">Music</p>
+                            <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE92B;</i>
 
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE412;</i>
                             <p class="profileintereststext">Photography</p>
+                            <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE92B;</i>
 
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE52F;</i>
                             <p class="profileintereststext">Cycling</p>
+                            <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE92B;</i>
 
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE566;</i>
                             <p class="profileintereststext">Running</p>
+                            <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE92B;</i>
 
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE541;</i>
                             <p class="profileintereststext">Coffee</p>
+                            <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE92B;</i>
 
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE556;</i>
                             <p class="profileintereststext">Cooking</p>
+                            <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE92B;</i>
 
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xEB43;</i>
                             <p class="profileintereststext">Gains</p>
+                            <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE92B;</i>
 
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xEB48;</i>
                             <p class="profileintereststext">Swimming</p>
+                            <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE92B;</i>
 
                         </div>
                         
@@ -211,6 +221,7 @@
                                 <i id="profileinterestsimgicon" class="material-icons">&#xE0E1;</i>
                                 <p class="profileinfoleftinfotitle">Email</p>
                                 <p class="profileinfoleftinfoinformation">{{p.email}}</p>
+                                <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE254;</i>
 
                             </div>
 
@@ -218,6 +229,7 @@
                                 <i id="profileinterestsimgicon" class="material-icons">&#xE7F1;</i>
                                 <p class="profileinfoleftinfotitle">Location</p>
                                 <p class="profileinfoleftinfoinformation">{{p.city}}, {{p.state}}</p>
+                                <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE254;</i>
 
                             </div>
 
@@ -225,6 +237,7 @@
                                 <i id="profileinterestsimgicon" class="material-icons">&#xE7E9;</i>
                                 <p class="profileinfoleftinfotitle">Birthday</p>
                                 <p class="profileinfoleftinfoinformation">{{p.birthday}}</p>
+                                <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE254;</i>
 
                             </div>
 
@@ -232,6 +245,7 @@
                                 <i id="profileinterestsimgicon" class="material-icons">&#xE63D;</i>
                                 <p class="profileinfoleftinfotitle">Gender</p>
                                 <p class="profileinfoleftinfoinformation">{{p.gender}}</p>
+                                <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE254;</i>
 
                             </div>
 
@@ -239,6 +253,7 @@
                                 <i id="profileinterestsimgicon" class="material-icons" style="border-bottom-color: white;">&#xE24D;</i>
                                 <p class="profileinfoleftinfotitle">Bio</p>
                                 <p class="profileinfoleftinfoinformation">{{p.bio}}</p>
+                                <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE254;</i>
 
                             </div>
                         </div>

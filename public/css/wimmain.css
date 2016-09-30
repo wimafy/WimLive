@@ -1541,7 +1541,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     float: left;
     font-size: 12px;
     margin-top: -33px;
-    width: calc(100% - 81px);
+    width: calc(100% - 110px);
     font-family: roboto;
     margin-left: 60px;
     overflow: hidden;
@@ -1622,11 +1622,12 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     text-align: center;
     font-size: 23px;
     color: black;
-    float: left;
+    float: right;
     margin-right: 0px;
     border-bottom-style: solid;
     border-bottom-color: #E0E0E0;
     border-width: 1px;
+    margin-top: 0px;
 }
 
 #profileinterestsediticondoneediting {
@@ -1646,7 +1647,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 .profileintereststext {
     line-height: 45px;
-    width: calc(100vw - 75px);
+    width: calc(100vw - 135px);
     overflow: hidden;
     text-overflow: ellipsis;
     font-family: Roboto;
