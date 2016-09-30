@@ -7,6 +7,7 @@
 	
     <h1 class="headerpagetitle" ng-repeat="p in profile">{{p.FirstName}}'s Profile</h1>
     
+    <i id="profileinterestsediticon" class="material-icons">&#xE86C;</i>
     
     <div class="dropdown">
         <div onclick="profilepagedropdownFunction()" class="dropbtn">
@@ -68,11 +69,13 @@
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE8D1;</i>
                             <p class="profileintereststext">Shopping</p>
-
+                            <i id="profileinterestsediticon" class="material-icons">&#xE92B;</i>
+                            
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE195;</i>
                             <p class="profileintereststext">Traveling</p>
+                            <i id="profileinterestsediticon" class="material-icons">&#xE14A;</i>
 
                         </div>
                         <div class="profileinterestsdiv">
@@ -198,7 +201,7 @@
                                 <i id="profileinterestsimgicon" class="material-icons">&#xE0CD;</i>
                                 <p class="profileinfoleftinfotitle">Phone</p>
                                 <p class="profileinfoleftinfoinformation">{{p.PhoneNumber}}</p>
-
+                                <i id="profileinterestsediticon" class="material-icons">&#xE254;</i>
                             </div>
 
                             <div class="profileinterestsdiv">

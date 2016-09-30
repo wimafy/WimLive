@@ -1603,6 +1603,21 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     border-width: 1px;
 }
 
+#profileinterestsediticon {
+    width: 60px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 23px;
+    color: black;
+    float: left;
+    margin-right: 0px;
+    border-bottom-style: solid;
+    border-bottom-color: #E0E0E0;
+    border-width: 1px;
+}
+
+
+
 .profileintereststext {
     line-height: 45px;
     width: calc(100vw - 75px);
