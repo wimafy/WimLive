@@ -98,10 +98,6 @@
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE52F;</i>
                             <p class="profileintereststext">Cycling</p>
-                            <div><input type="checkbox" ng-model="checked" ng-init="checked=true" /></div>
-                            <p ng-if="checked">
-                              This is removed when the checkbox is unchecked.
-                            </p>
 
                         </div>
                         <div class="profileinterestsdiv">
@@ -174,7 +170,18 @@
                             <img src={{friend.ProfilePic}} class="myfriendspic">
 								<p class="myfriendsname">{{friend.FirstName}} {{friend.LastName}}</p>
                         </div>
+                        
+                        Keep HTML: <input type="checkbox" ng-model="myVar" ng-init="myVar = true">
 
+                        <div ng-if="myVar">
+                        <h1>Welcome</h1>
+                        <p>Welcome to my home.</p>
+                        <hr>
+                        </div>
+
+                        <p>The DIV element will be removed when the checkbox is not checked.</p>
+                        <p>The DIV element will return, if you check the checkbox.</p>
+                        
                     </div>
                 </div>
                     
