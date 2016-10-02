@@ -12,7 +12,8 @@
             <i id="profiletopactioncircleicon" class="material-icons dropbtn">&#xE5D4;</i>
         </div>
           <div id="myDropdown" class="dropdown-content">
-            <a ng-model="myVar" ng-init="myVar = false" ng-click="myVar = true">Edit profile</a>
+            <a ng-model="myVar" ng-click="myVar = False">Edit profile</a>
+            <div ng-model="myVar" ng-click="myVar = True">Edit profile</div>
             <a href="#about">About</a>
             <a onclick="profilemodalcall('profilemodalbackground','profilemodal')">Log out</a>
           </div>
