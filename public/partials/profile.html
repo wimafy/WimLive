@@ -20,11 +20,13 @@
           </div>
     </div>
     
-    <div style="width: 60px; height: 50px; float: right;">
-        <i id="profileinterestsediticondoneediting" class="material-icons">&#xE86C;</i>
-        <p class="profiledoneeditingtext">Done editing</p>
+    <div ng-if="editProfileVar">
+        <div style="width: 60px; height: 50px; float: right;">
+            <i id="profileinterestsediticondoneediting" class="material-icons">&#xE86C;</i>
+            <p class="profiledoneeditingtext">Done editing</p>
+        </div>
     </div>
-    
+        
     <div>
         <div id="profilemodalbackground" class="profilemodaldiv" onclick="profilemodalaway('profilemodalbackground','profilemodal')"></div>
         <div id="profilemodal" class="profilemodalwhitespace">
@@ -73,10 +75,9 @@
                     <div class="profilefriendscarddiv">
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE8D1;</i>
-                            <p class="profileintereststext">Shopping</p>
-                            <div ng-if="editProfileVar">
-                                <i id="profileinterestsediticoninterests" class="material-icons">&#xE92B;</i>
-                            </div>
+                            <p class="profileintereststext">Shopping</p>    
+                            <i id="profileinterestsediticoninterests" class="material-icons">&#xE92B;</i>
+                            
                                 
                         </div>
                         <div class="profileinterestsdiv">
