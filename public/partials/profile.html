@@ -12,8 +12,7 @@
             <i id="profiletopactioncircleicon" class="material-icons dropbtn">&#xE5D4;</i>
         </div>
           <div id="myDropdown" class="dropdown-content">
-            <a ng-init="myVar = true" ng-model="myVar" ng-click="myVar = False">Edit profile</a>
-            <div ng-model="myVar" ng-click="myVar = False">Edit profile</div>
+            <a ng-init="editProfileVar = False" ng-model="editProfileVar" ng-click="editProfileVar = True">Edit profile</a>
             <a href="#about">About</a>
             <a onclick="profilemodalcall('profilemodalbackground','profilemodal')">Log out</a>
           </div>
@@ -196,10 +195,11 @@
                         <p>Welcome to my home.</p>
                         <hr>
                         </div>
+                        <div ng-if="editProfileVar">
 
                         <p>The DIV element will be removed when the checkbox is not checked.</p>
                         <p>The DIV element will return, if you check the checkbox.</p>
-                        
+                        </div>
                     </div>
                 </div>
                     
