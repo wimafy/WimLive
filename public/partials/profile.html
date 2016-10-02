@@ -13,8 +13,7 @@
         </div>
           <div id="myDropdown" class="dropdown-content">
             <a ng-model="editProfileVar" ng-click="editProfileVar = True">Edit profile</a>
-              <p ng-model="myVar" ng-click="myVar = False"></p>
-            <a href="#about">About</a>
+            <a ng-model="editProfileVar" ng-click="editProfileVar = False">About</a>
             <a onclick="profilemodalcall('profilemodalbackground','profilemodal')">Log out</a>
           </div>
     </div>
@@ -73,8 +72,10 @@
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE8D1;</i>
                             <p class="profileintereststext">Shopping</p>
-                            <i id="profileinterestsediticoninterests" class="material-icons">&#xE92B;</i>
-                            
+                            <div ng-if="editProfileVar">
+                                <i id="profileinterestsediticoninterests" class="material-icons">&#xE92B;</i>
+                            </div>
+                                
                         </div>
                         <div class="profileinterestsdiv">
                             <i id="profileinterestsimgicon" class="material-icons">&#xE195;</i>
