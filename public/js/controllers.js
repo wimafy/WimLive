@@ -273,6 +273,32 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
 	$scope.refresh();
     
     
+    $scope.newwimselectfriend = function(IDnumber){
+        
+        
+        //console.log("Task Id is "+IDnumber);
+        
+        var selecteddiv = document.getElementById(IDnumber);
+        if(document.getElementById(IDnumber).style.opacity  == 1){
+            document.getElementById(IDnumber).style.opacity = "0";
+            var newwiminvtefriendsindex = newwiminvitedfriends.indexOf(IDnumber);
+            //alert(newwiminvtefriendsindex);
+            newwiminvitedfriends.splice(newwiminvtefriendsindex, 1);
+            //alert(newwiminvitedfriends);
+            
+            
+        }else{
+            document.getElementById(IDnumber).style.opacity = "1";
+            newwiminvitedfriends.push(IDnumber);
+            //alert(newwiminvitedfriends);
+        }
+
+
+        
+
+
+    }
+    
     
 	
 }]);
@@ -292,37 +318,20 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
         
         
     }
-	
-	$scope.newwimselectfriend = function(IDnumber){
-        
-        //console.log("Task Id is "+IDnumber);
-        
-        var selecteddiv = document.getElementById(IDnumber);
-        if(document.getElementById(IDnumber).style.opacity  == 1){
-            document.getElementById(IDnumber).style.opacity = "0";
-            var newwiminvtefriendsindex = newwiminvitedfriends.indexOf(IDnumber);
-            //alert(newwiminvtefriendsindex);
-            newwiminvitedfriends.splice(newwiminvtefriendsindex, 1);
-            //alert(newwiminvitedfriends);
-            
-        }else{
-            document.getElementById(IDnumber).style.opacity = "1";
-            newwiminvitedfriends.push(IDnumber);
-            //alert(newwiminvitedfriends);
-        }
-
-
-        
-
-
-    }
 
     //Attempts to create a new Wim
     $scope.create = function(){
         
         //This is ghetto right now...Basically pulling the array of strings that represent friend ids and recreating the $scope.friends as an array of integers
 		//TODO adjust this to get the actual id once the form actually generates a friends list.
-		$scope.friends = $scope.newwimselectfriend;
+		if ($scope.friends.length > 1)
+			{
+				for(i = 0; i < $scope.friends.length; i++) {
+					$scope.friends[i] = parseInt($scope.friends[i]);
+				}		
+			}
+		else {
+			$scope.friends[0] = 0;
 
 			//Sends the user supplied values to the wimService in services.js to create the new Wim
 			wimService.create({
