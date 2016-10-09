@@ -231,15 +231,18 @@
                                 <i id="profileinterestsimgicon" class="material-icons">&#xE0CD;</i>
                                 <p class="profileinfoleftinfotitle">Phone</p>
                                 <p class="profileinfoleftinfoinformation">{{p.PhoneNumber}}</p>
-                                <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE254;</i>
+                                <div ng-if="isClicked">
+                                    <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE254;</i>
+                                </div>
                             </div>
 
                             <div class="profileinterestsdiv">
                                 <i id="profileinterestsimgicon" class="material-icons">&#xE0E1;</i>
                                 <p class="profileinfoleftinfotitle">Email</p>
                                 <p class="profileinfoleftinfoinformation">{{p.email}}</p>
-                                <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE254;</i>
-
+                                <div ng-if="isClicked">
+                                    <i id="profileinterestsediticoncontactinfo" class="material-icons">&#xE254;</i>
+                                </div>
                             </div>
 
                             <div class="profileinterestsdiv">
