@@ -222,8 +222,8 @@ function initAutocomplete() {
               //alert(place.name);
               //alert(place.open_now);
               //document.getElementById("newwimdestinationbuttontext").innerHTML = place.formatted_address;
-              document.getElementById("newwiminputdestinationID").innerHTML = place.formatted_address;
-              document.getElementById("newwiminputdestinationaddressID").innerHTML = place.name;
+              document.getElementById("newwiminputdestinationID").innerHTML = place.name;
+              document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
               
           }  
               
@@ -249,8 +249,8 @@ function initAutocomplete() {
                 //alert(place.formatted_address);
                 infoWindow.setContent('ID: '+ place.id);
                 //infoWindow.open(map, marker);
-                document.getElementById("newwiminputdestinationID").innerHTML = place.formatted_address;
-                document.getElementById("newwiminputdestinationaddressID").innerHTML = place.name;
+                document.getElementById("newwiminputdestinationID").innerHTML = place.name;
+                document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
              
             }
         })(marker, i));
