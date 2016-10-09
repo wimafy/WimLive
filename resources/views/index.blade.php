@@ -89,7 +89,6 @@
 
         <div id="fullpage2myprofile" class="fullpage2myprofile">
             <div class="headerdiv">
-                <!--
                 <a onclick="backfullpage2myprofile()" href="#/">
                     <div class="headerbackarrow">
                         <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
@@ -98,44 +97,6 @@
 
                 <h1 class="headerpagetitle"> Profile</h1>
                  <i id="profiletopactioncircleicon" onclick="profilemodalcall('profilemodalbackground','profilemodal')" class="material-icons">&#xE8B8;</i>
-                -->
-                <a href="#/">
-                    <div class="headerbackarrow">
-                        <i id="headerbackarrowicon" class="material-icons">&#xE314;</i>
-                    </div>
-                </a>
-
-                <h1 class="headerpagetitle" ng-repeat="p in profile">{{p.FirstName}}'s Profile</h1>
-
-                <div class="dropdown">
-                    <div onclick="profilepagedropdownFunction()" class="dropbtn">
-                        <i id="profiletopactioncircleicon" class="material-icons dropbtn">&#xE5D4;</i>
-                    </div>
-                    <div id="myDropdown" class="dropdown-content">
-                        <a ng-click="isClicked =!isClicked">Edit profile</a>
-                        <a>About</a>
-                        <a onclick="profilemodalcall('profilemodalbackground','profilemodal')">Log out</a>
-                    </div>
-                </div>
-
-                <div ng-if="isClicked"  ng-click="isClicked =!isClicked">
-
-                    <div style="width: 60px; height: 50px; float: right;">
-                        <i id="profileinterestsediticondoneediting" class="material-icons">&#xE86C;</i>
-                        <p class="profiledoneeditingtext">Done editing</p>
-                    </div>
-
-                </div>
-
-                <div>
-                    <div id="profilemodalbackground" class="profilemodaldiv" onclick="profilemodalaway('profilemodalbackground','profilemodal')"></div>
-                    <div id="profilemodal" class="profilemodalwhitespace">
-                        <p class="profilemodalwords">Log out?</p>
-                        <div class="profilemodalyes" ng-click="logout()">Yes</div>
-                        <div class="profilemodalno" onclick="profilemodalaway('profilemodalbackground','profilemodal')">Nope</div>
-                    </div>
-                </div>
-                
             </div>
         </div>
 
