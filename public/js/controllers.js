@@ -136,6 +136,9 @@ wimControllers.controller('SignupController', [ 'userService', '$scope', '$http'
 }]);
 
 wimControllers.controller('ProfileController', ['$scope', '$log', '$location', 'userService', 'profileService', '$http', function($scope, $log, $location, userService, profileService, $http){
+    
+    
+    $scope.isClicked = false;
 	
 	$scope.logout = function(){
 		userService.logout();
