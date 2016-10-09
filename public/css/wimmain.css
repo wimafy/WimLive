@@ -2310,7 +2310,14 @@ button.link {
 }
 
 .newwiminputformdestinationaddress {
-    
+    width: calc(100vw - 76px);
+    float: left;
+    margin-left: 40px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 5px;
+    margin-top: -1px;
 }
 
 .newwiminputwimiconbutton {

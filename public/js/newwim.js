@@ -214,13 +214,17 @@ function initAutocomplete() {
               
           if (places.length == 1) {
               var locationinput = document.getElementById('mapsearchbox').value;
-              alert(locationinput);
-              alert(place.geometry.location);
-              alert(place.formatted_address);
-              alert(place.id);
-              alert(place.name);
-              alert(place.open_now);
+              alert("Location Set");
+              //alert(locationinput);
+              //alert(place.geometry.location);
+              //alert(place.formatted_address);
+              //alert(place.id);
+              //alert(place.name);
+              //alert(place.open_now);
               //document.getElementById("newwimdestinationbuttontext").innerHTML = place.formatted_address;
+              document.getElementsById("newwiminputdestinationID").innerHTML = place.formatted_address;
+              document.getElementsById("newwiminputdestinationaddressID").innerHTML = place.name;
+              
           }  
               
         //alert(place.id);
@@ -242,9 +246,12 @@ function initAutocomplete() {
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
                 //place 
-                alert(place.formatted_address);
+                //alert(place.formatted_address);
                 infoWindow.setContent('ID: '+ place.id);
                 //infoWindow.open(map, marker);
+                document.getElementsById("newwiminputdestinationID").innerHTML = place.formatted_address;
+                document.getElementsById("newwiminputdestinationaddressID").innerHTML = place.name;
+             
             }
         })(marker, i));
               
