@@ -18,14 +18,7 @@
         </div>
     </div>
     
-    <div ng-if="isClicked"  ng-click="isClicked =!isClicked">
-
-        <div style="width: 60px; height: 50px; float: right;">
-            <i id="profileinterestsediticondoneediting" class="material-icons">&#xE86C;</i>
-            <p class="profiledoneeditingtext">Done editing</p>
-        </div>
-
-    </div>
+    
         
 </div>
 
@@ -40,6 +33,15 @@
 
 
 <div class="notheaderdiv" ng-repeat="p in profile">
+    
+        <div ng-if="isClicked"  ng-click="isClicked =!isClicked">
+
+            <div style="width: 60px; height: 50px; float: right; z-index">
+                <i id="profileinterestsediticondoneediting" class="material-icons">&#xE86C;</i>
+                <p class="profiledoneeditingtext">Done editing</p>
+            </div>
+
+        </div>
         
         <div class="profiletopdivbackgroundblur" style="background-image: url({{p.ProfilePic}});"></div>
         <div class="profiletopdivbackgroundpic"></div>
