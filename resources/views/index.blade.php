@@ -257,8 +257,6 @@
                    $(document).ready(function(){
                        document.getElementById("loadinggiflevel1").classList.add('loadinggifOUTlevel1');
                        
-                       document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
-                       document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
 
                     });
                 
@@ -268,7 +266,8 @@
             
             function backfullpage2myprofile() {
                  document.getElementById("ngviewdiv").classList.add('ngviewtransitionout');
-                
+                document.getElementById("fullpage2myprofile").classList.remove('pagetransitionIN');
+                document.getElementById("fullpage2myprofile").classList.add('pagetransitionOUT');
 
                 window.location.assign("#/");
 
