@@ -179,7 +179,7 @@ function initAutocomplete() {
         searchBox.addListener('places_changed', function() {
           var places = searchBox.getPlaces();
             
-          document.getElementById("map-canvas").focus();    
+          document.getElementById("idforselectingtogetridofkeyboard").focus();    
 
           if (places.length == 0) {
             return;
