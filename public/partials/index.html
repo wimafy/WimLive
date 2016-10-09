@@ -122,33 +122,35 @@ float: left; margin: 12px;">
                 <input type="text" class="searchforfriendsinput" ng-model="searchFor">
             </div>
             
-            <div ng-init="filter_len = (entries | filter: { country_code : countryCode }).length">
-                
-             <p  data-ng-repeat="entry in entries | filter: { country_code : countryCode }"  >{{entry.name}}</p>
+            <span ng-if="searchFor!=null && searchFor!=''">
+                <div ng-init="filter_len = (entries | filter: { country_code : countryCode }).length">
 
-                
+                 <p  data-ng-repeat="entry in entries | filter: { country_code : countryCode }"  >{{entry.name}}</p>
 
-            <div class="searchforfriendseachresultsdiv">
-                <div class="col-md-12" ng-controller="UserListController">
-                    <!--I am pulling in the 'users' array that is created in the UserListController in controller.js-->
-                    <!--
-                    <p>There are currently <b>{{ relationships.length }}</b> users that you could be friends with!</p>
-                    -->
-                        <!--This ng-repeat is basically a for loop that loops through the users array and filters for matches that are similar to what was inputed above-->
-                        <div style="float:left;height: 4px;width: 1;"></div>
-                        <div ng-repeat="relationship in relationships | filter:searchFor" class="searchforfriendseachperson">
-                            <!--I pass the user id to the addFriend function which will pass the userId onto the API to create a new friend-->
-                            <img class="searchforfriendseachpersonpic" src={{relationship.ProfilePic}}>
-                            <b class="searchforfriendseachpersonname">{{ relationship.FirstName }} {{relationship.LastName}}</b>
-                            <button type="button" class="btn btn-info notificationbutton" ng-click="sendFriendRequest(relationship.id)">Send</button>
-							<!--<i id="searchforfriendseachpersonaddbuttonicon" class="material-icons">&#xE7FE;</i> -->
+
+
+                <div class="searchforfriendseachresultsdiv">
+                    <div class="col-md-12" ng-controller="UserListController">
+                        <!--I am pulling in the 'users' array that is created in the UserListController in controller.js-->
+                        <!--
+                        <p>There are currently <b>{{ relationships.length }}</b> users that you could be friends with!</p>
+                        -->
+                            <!--This ng-repeat is basically a for loop that loops through the users array and filters for matches that are similar to what was inputed above-->
+                            <div style="float:left;height: 4px;width: 1;"></div>
+                            <div ng-repeat="relationship in relationships | filter:searchFor" class="searchforfriendseachperson">
+                                <!--I pass the user id to the addFriend function which will pass the userId onto the API to create a new friend-->
+                                <img class="searchforfriendseachpersonpic" src={{relationship.ProfilePic}}>
+                                <b class="searchforfriendseachpersonname">{{ relationship.FirstName }} {{relationship.LastName}}</b>
+                                <button type="button" class="btn btn-info notificationbutton" ng-click="sendFriendRequest(relationship.id)">Send</button>
+                                <!--<i id="searchforfriendseachpersonaddbuttonicon" class="material-icons">&#xE7FE;</i> -->
+                            </div>
+                            <div style="float:left;height: 4px;width: 1;"></div>
+
                         </div>
-                        <div style="float:left;height: 4px;width: 1;"></div>
-
+                    </div>    
                 </div>
-            </div>    
-        </div>
-        
+            </span>
+
     </div>
 
 </div>
