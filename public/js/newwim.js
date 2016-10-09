@@ -179,7 +179,7 @@ function initAutocomplete() {
         searchBox.addListener('places_changed', function() {
           var places = searchBox.getPlaces();
             
-          document.getzlementById("map-canvas").focus();    
+          document.getelementById("map-canvas").focus();    
 
           if (places.length == 0) {
             return;
