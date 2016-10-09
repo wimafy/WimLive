@@ -96,7 +96,11 @@
                 </a>
 
                 <h1 class="headerpagetitle"> Profile</h1>
-                 <i id="profiletopactioncircleicon" onclick="profilemodalcall('profilemodalbackground','profilemodal')" class="material-icons">&#xE8B8;</i>
+                <div class="dropdown">
+                    <div onclick="profilepagedropdownFunction()" class="dropbtn">
+                        <i id="profiletopactioncircleicon" class="material-icons dropbtn">&#xE5D4;</i>
+                    </div>
+                </div>
             </div>
         </div>
 
