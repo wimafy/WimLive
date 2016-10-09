@@ -18,11 +18,13 @@
           </div>
     </div>
     
-    <div ng-if="isClicked" ng-click="isClicked =!isClicked">
-        <div style="width: 60px; height: 50px; float: right;">
-            <i id="profileinterestsediticondoneediting" class="material-icons">&#xE86C;</i>
-            <p class="profiledoneeditingtext">Done editing</p>
-        </div>
+    <div ng-if="isClicked">
+        <span ng-click="isClicked =!isClicked">
+            <div style="width: 60px; height: 50px; float: right;">
+                <i id="profileinterestsediticondoneediting" class="material-icons">&#xE86C;</i>
+                <p class="profiledoneeditingtext">Done editing</p>
+            </div>
+        </span>
     </div>
         
     <div>
