@@ -121,6 +121,12 @@ float: left; margin: 12px;">
                 <i id="searchforfriendseachinputsherlocicon" class="material-icons">&#xE8B6;</i> 
                 <input type="text" class="searchforfriendsinput" ng-model="searchFor">
             </div>
+            
+            <div ng-init="filter_len = (entries | filter: { country_code : countryCode }).length">
+                
+             <p  data-ng-repeat="entry in entries | filter: { country_code : countryCode }"  >{{entry.name}}</p>
+
+                
 
             <div class="searchforfriendseachresultsdiv">
                 <div class="col-md-12" ng-controller="UserListController">
