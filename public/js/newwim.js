@@ -178,6 +178,8 @@ function initAutocomplete() {
         // more details for that place.
         searchBox.addListener('places_changed', function() {
           var places = searchBox.getPlaces();
+            
+          document.getzlementById("map-canvas").focus();    
 
           if (places.length == 0) {
             return;
