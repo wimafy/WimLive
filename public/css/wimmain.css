@@ -1330,6 +1330,23 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     z-index: 16;
 }
 
+.profileplusbutton {
+    background-color: #5cb85c;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    right: 10vw;
+    bottom: 50vh;
+    border: none;
+    color: white;
+    font-size: 45px;
+    line-height: 45px;
+    box-shadow: 4px 4px 10px 2px rgba(0,0,0,0.2);
+    z-index: 79;
+    padding: 0px;
+}
+
 .profiletopdivbackgroundpic {
     width: 100%;
     height: 35vh;
