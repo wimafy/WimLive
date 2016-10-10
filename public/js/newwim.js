@@ -176,13 +176,13 @@ function initAutocomplete() {
           }
           
 
-
+/*
           // Clear out the old marker.
           marker.forEach(function(marker) {
             marker.setMap(null);
           });
           marker = [];
-          
+  */        
             
          var i = 0,
              marker, infoWindow, location;
