@@ -2713,6 +2713,16 @@ button.link {
     box-shadow: 2px 2px 5px 2px #BDBDBB;
 }
 
+.newwiminfivefriendsheader {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 20px;
+    height: 35px;
+    margin: 0px;
+    line-height: 41px;
+    text-indent: 18px;
+    margin-bottom: -13px;
+}
 
 /* bigmap */
 
