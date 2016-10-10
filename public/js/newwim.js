@@ -83,7 +83,13 @@ function newwimbackslide(divID) {
 
 function initAutocompleteroundonesetupmap() {
     
-     //var ipaddressvar = geoplugin_request();
+   
+}
+
+
+function initAutocomplete() {
+    
+      //var ipaddressvar = geoplugin_request();
     var latitudevar = Number(geoplugin_latitude()).toFixed(2);
     var longitudevar = Number(geoplugin_longitude()).toFixed(2);
     //console.log(ipaddressvar);
@@ -109,15 +115,6 @@ function initAutocompleteroundonesetupmap() {
             draggable:false,
             icon: 'http://www.ppgps.info/UserManual/ppgps_position.png'
         });
-    
-    document.getElementById('newwimmapsearchdiv').style.left = "0vw";
-    document.getElementById('fullpage3newwim').style.zIndex = "50";
-    
-}
-
-
-function initAutocomplete() {
-    
      var marker = [];
     
      // Clear out the old marker.
@@ -125,9 +122,13 @@ function initAutocomplete() {
           marker[i].setMap(null);
         }
         marker = [];
-
     
-  
+   
+    
+    
+    
+    document.getElementById('newwimmapsearchdiv').style.left = "0vw";
+    document.getElementById('fullpage3newwim').style.zIndex = "50";
     
     /*
     var map = new google.maps.Map(document.getElementById('map-canvas'),{
