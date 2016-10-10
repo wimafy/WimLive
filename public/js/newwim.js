@@ -280,7 +280,11 @@ function initAutocomplete() {
             
             
           map.fitBounds(bounds);
+          alert("Location Set");
+            
         });  
+    
+        
       
         home.addListener('click', function() {   
             console.log("wop");
