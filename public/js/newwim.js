@@ -81,13 +81,40 @@ function newwimbackslide(divID) {
     //document.getElementById(divID).style.left = "120vw";
 }
 
+function initAutocompleteroundonesetupmap() {
+    
+     //var ipaddressvar = geoplugin_request();
+    var latitudevar = Number(geoplugin_latitude()).toFixed(2);
+    var longitudevar = Number(geoplugin_longitude()).toFixed(2);
+    //console.log(ipaddressvar);
+    //alert((parseFloat(latitudevar)));
+    //console.log(typeof(parseFloat(longitudevar)));
+    var one = parseFloat(latitudevar);
+    var two = parseFloat(longitudevar);
+    
+    
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+          center: {lat: one, lng: two},
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
+    
+        var home = new google.maps.Marker({
+            position:{
+                lat: one,
+                lng: two
 
-//sets up google map
-var map = new google.maps.Map(document.getElementById('map-canvas'), {
-      center: {lat: one, lng: two},
-      zoom: 13,
-      mapTypeId: 'roadmap'
-    });
+            },
+            map:map,
+            draggable:false,
+            icon: 'http://www.ppgps.info/UserManual/ppgps_position.png'
+        });
+    
+    document.getElementById('newwimmapsearchdiv').style.left = "0vw";
+    document.getElementById('fullpage3newwim').style.zIndex = "50";
+    
+}
+
 
 function initAutocomplete() {
     
@@ -98,21 +125,9 @@ function initAutocomplete() {
           marker[i].setMap(null);
         }
         marker = [];
+
     
-    //var ipaddressvar = geoplugin_request();
-    var latitudevar = Number(geoplugin_latitude()).toFixed(2);
-    var longitudevar = Number(geoplugin_longitude()).toFixed(2);
-    //console.log(ipaddressvar);
-    //alert((parseFloat(latitudevar)));
-    //console.log(typeof(parseFloat(longitudevar)));
-    var one = parseFloat(latitudevar);
-    var two = parseFloat(longitudevar);
-    
-    
-    
-    
-    document.getElementById('newwimmapsearchdiv').style.left = "0vw";
-    document.getElementById('fullpage3newwim').style.zIndex = "50";
+  
     
     /*
     var map = new google.maps.Map(document.getElementById('map-canvas'),{
@@ -161,18 +176,7 @@ function initAutocomplete() {
     */
     ////////////////////////////////////
     
-   
     
-        var home = new google.maps.Marker({
-            position:{
-                lat: one,
-                lng: two
-
-            },
-            map:map,
-            draggable:false,
-            icon: 'http://www.ppgps.info/UserManual/ppgps_position.png'
-        });
 
         // Create the search box and link it to the UI element.
         var input = document.getElementById('mapsearchbox');
