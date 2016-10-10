@@ -9,12 +9,12 @@ Gist
   Star 0
  Fork 0 wimafy/WimLive
  Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
-Tree: 9e1ebeb284 Find file Copy pathWimLive/public/js/newwim.js
-9e1ebeb  20 minutes ago
-@wimafy wimafy css
+Tree: fe8f770a96 Find file Copy pathWimLive/public/js/newwim.js
+fe8f770  an hour ago
+@wimafy wimafy remove markers
 2 contributors @wimafy @kentaito
 RawBlameHistory     
-310 lines (222 sloc)  9.09 KB
+309 lines (220 sloc)  9 KB
 
 function showadvancedoptions() {
     document.getElementById("fullpage3newwim").style.zIndex = "49";
@@ -100,14 +100,6 @@ function newwimbackslide(divID) {
 
 function initAutocomplete() {
     
-     var marker = [];
-    
-     // Clear out the old marker.
-         for (var i = 0; i < marker.length; i++) {
-          marker[i].setMap(null);
-        }
-        marker = [];
-    
     //var ipaddressvar = geoplugin_request();
     var latitudevar = Number(geoplugin_latitude()).toFixed(2);
     var longitudevar = Number(geoplugin_longitude()).toFixed(2);
@@ -189,7 +181,7 @@ function initAutocomplete() {
           searchBox.setBounds(map.getBounds());
         });
 
-        marker = [];
+        var marker = [];
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
         searchBox.addListener('places_changed', function() {
@@ -200,6 +192,14 @@ function initAutocomplete() {
           if (places.length == 0) {
             return;
           }
+          
+
+
+          // Clear out the old marker.
+          marker.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          marker = [];
           
             
          var i = 0,
@@ -234,7 +234,6 @@ function initAutocomplete() {
               //document.getElementById("newwimdestinationbuttontext").innerHTML = place.formatted_address;
               document.getElementById("newwiminputdestinationID").innerHTML = place.name;
               document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
-              document.getElementById("myText").value = place.formatted_address; 
               
           }  
               
@@ -290,7 +289,7 @@ function initAutocomplete() {
             
           map.fitBounds(bounds);
             
-          //alert("Location Set");
+          alert("Location Set");
             
         });  
     
