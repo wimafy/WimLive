@@ -251,7 +251,7 @@ function initAutocomplete() {
                 //alert(place.formatted_address);
                 infoWindow.setContent('ID: '+ place.id);
                 //infoWindow.open(map, marker);
-                alert("Location Set");
+                //alert("Location Set");
                 document.getElementById("newwiminputdestinationID").innerHTML = place.name;
                 document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
              
