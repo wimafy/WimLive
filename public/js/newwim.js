@@ -1,21 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Gist
- @wimafy
- Unwatch 4
-  Star 0
- Fork 0 wimafy/WimLive
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
-Tree: fe8f770a96 Find file Copy pathWimLive/public/js/newwim.js
-fe8f770  an hour ago
-@wimafy wimafy remove markers
-2 contributors @wimafy @kentaito
-RawBlameHistory     
-309 lines (220 sloc)  9 KB
-
 function showadvancedoptions() {
     document.getElementById("fullpage3newwim").style.zIndex = "49";
     document.getElementById("newwimadvancedoptionsdiv").style.left = "0vw";
@@ -315,5 +297,3 @@ function newwimdestinationpageout() {
 }
 
 //google maps search stuff
-Contact GitHub API Training Shop Blog About
-© 2016 GitHub, Inc. Terms Privacy Security Status Help
