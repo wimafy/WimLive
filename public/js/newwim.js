@@ -86,11 +86,10 @@ function initAutocomplete() {
      var marker = [];
     
      // Clear out the old marker.
-          marker.forEach(function(marker) {
-                marker.setMap(null);
-                marker = null;
-          });
-          marker = [];
+         for (var i = 0; i < marker.length; i++) {
+          marker[i].setMap(map);
+        }
+        marker = [];
     
     //var ipaddressvar = geoplugin_request();
     var latitudevar = Number(geoplugin_latitude()).toFixed(2);
