@@ -1,3 +1,20 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @wimafy
+ Unwatch 4
+  Star 0
+ Fork 0 wimafy/WimLive
+ Code  Issues 0  Pull requests 0  Projects 0  Wiki  Pulse  Graphs  Settings
+Tree: 9e1ebeb284 Find file Copy pathWimLive/public/js/newwim.js
+9e1ebeb  20 minutes ago
+@wimafy wimafy css
+2 contributors @wimafy @kentaito
+RawBlameHistory     
+310 lines (222 sloc)  9.09 KB
 
 function showadvancedoptions() {
     document.getElementById("fullpage3newwim").style.zIndex = "49";
@@ -81,40 +98,8 @@ function newwimbackslide(divID) {
     //document.getElementById(divID).style.left = "120vw";
 }
 
-function initAutocompleteroundonesetupmap() {
-    
-   
-}
-
-
 function initAutocomplete() {
     
-      //var ipaddressvar = geoplugin_request();
-    var latitudevar = Number(geoplugin_latitude()).toFixed(2);
-    var longitudevar = Number(geoplugin_longitude()).toFixed(2);
-    //console.log(ipaddressvar);
-    //alert((parseFloat(latitudevar)));
-    //console.log(typeof(parseFloat(longitudevar)));
-    var one = parseFloat(latitudevar);
-    var two = parseFloat(longitudevar);
-    
-    
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-          center: {lat: one, lng: two},
-          zoom: 13,
-          mapTypeId: 'roadmap'
-        });
-    
-        var home = new google.maps.Marker({
-            position:{
-                lat: one,
-                lng: two
-
-            },
-            map:map,
-            draggable:false,
-            icon: 'http://www.ppgps.info/UserManual/ppgps_position.png'
-        });
      var marker = [];
     
      // Clear out the old marker.
@@ -123,7 +108,15 @@ function initAutocomplete() {
         }
         marker = [];
     
-   
+    //var ipaddressvar = geoplugin_request();
+    var latitudevar = Number(geoplugin_latitude()).toFixed(2);
+    var longitudevar = Number(geoplugin_longitude()).toFixed(2);
+    //console.log(ipaddressvar);
+    //alert((parseFloat(latitudevar)));
+    //console.log(typeof(parseFloat(longitudevar)));
+    var one = parseFloat(latitudevar);
+    var two = parseFloat(longitudevar);
+    
     
     
     
@@ -150,34 +143,40 @@ function initAutocomplete() {
         */
     /*
         var searchBox = new google.maps.places.SearchBox(document.getElementById('mapsearch'));
-
         //place cange event on search box
         google.maps.event.addListener(searchBox, 'places_changed',function(){
-
             console.log(searchBox.getPlaces());
             var places = searchBox.getPlaces();
-
             //bound
             var bounds = new google.maps.LatLngBounds();
             var i, place;
-
             for(i=0; place=places[i];i++){
-
                 // console.log(place.geometry.location);
-
                 bounds.extend(place.geometry.location);
                 marker.setPosition(place.geometry.location);
-
             }
-
             map.fitBounds(bounds);
             map.setZoom(17);
-
         });
     */
     ////////////////////////////////////
     
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+          center: {lat: one, lng: two},
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
     
+        var home = new google.maps.Marker({
+            position:{
+                lat: one,
+                lng: two
+
+            },
+            map:map,
+            draggable:false,
+            icon: 'http://www.ppgps.info/UserManual/ppgps_position.png'
+        });
 
         // Create the search box and link it to the UI element.
         var input = document.getElementById('mapsearchbox');
@@ -317,3 +316,5 @@ function newwimdestinationpageout() {
 }
 
 //google maps search stuff
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy Security Status Help
