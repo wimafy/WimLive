@@ -83,6 +83,16 @@ function newwimbackslide(divID) {
 
 function initAutocompleteroundonesetupmap() {
     
+     //var ipaddressvar = geoplugin_request();
+    var latitudevar = Number(geoplugin_latitude()).toFixed(2);
+    var longitudevar = Number(geoplugin_longitude()).toFixed(2);
+    //console.log(ipaddressvar);
+    //alert((parseFloat(latitudevar)));
+    //console.log(typeof(parseFloat(longitudevar)));
+    var one = parseFloat(latitudevar);
+    var two = parseFloat(longitudevar);
+    
+    
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
           center: {lat: one, lng: two},
           zoom: 13,
@@ -111,18 +121,7 @@ function initAutocomplete() {
           marker[i].setMap(null);
         }
         marker = [];
-    
-    //var ipaddressvar = geoplugin_request();
-    var latitudevar = Number(geoplugin_latitude()).toFixed(2);
-    var longitudevar = Number(geoplugin_longitude()).toFixed(2);
-    //console.log(ipaddressvar);
-    //alert((parseFloat(latitudevar)));
-    //console.log(typeof(parseFloat(longitudevar)));
-    var one = parseFloat(latitudevar);
-    var two = parseFloat(longitudevar);
-    
-    
-    
+
     
     document.getElementById('newwimmapsearchdiv').style.left = "0vw";
     document.getElementById('fullpage3newwim').style.zIndex = "50";
