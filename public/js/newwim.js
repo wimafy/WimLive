@@ -86,10 +86,10 @@ function initAutocomplete() {
      var marker = [];
     
      // Clear out the old marker.
-      //    marker.forEach(function(marker) {
-        //    marker.setMap(null);
-    //      });
-      //    marker = [];
+          marker.forEach(function(marker) {
+                marker.setMap(null);
+          });
+          marker = [];
     
     //var ipaddressvar = geoplugin_request();
     var latitudevar = Number(geoplugin_latitude()).toFixed(2);
@@ -281,7 +281,7 @@ function initAutocomplete() {
             
           map.fitBounds(bounds);
             
-          alert("Location Set");
+          //alert("Location Set");
             
         });  
     
