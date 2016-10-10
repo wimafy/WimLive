@@ -327,6 +327,7 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
         
         //This is ghetto right now...Basically pulling the array of strings that represent friend ids and recreating the $scope.friends as an array of integers
 		//TODO adjust this to get the actual id once the form actually generates a friends list.
+		$scope.friends = newwiminvitedfriends;
 		if ($scope.friends.length > 1)
 			{
 				for(i = 0; i < $scope.friends.length; i++) {
