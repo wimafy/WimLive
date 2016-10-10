@@ -87,7 +87,7 @@ function initAutocomplete() {
     
      // Clear out the old marker.
          for (var i = 0; i < marker.length; i++) {
-          marker[i].setMap(map);
+          marker[i].setMap(null);
         }
         marker = [];
     
