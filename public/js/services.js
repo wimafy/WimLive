@@ -120,7 +120,7 @@ wimServices.factory('relationshipService', ['Restangular', 'userService', functi
 	function viewRequests(onSuccess, onError){
 		Restangular.all('api/relationship/viewRequests').getList().then(function(response){
 			onSuccess(response);
-		}, function(){
+		}, function(response){
 			onError(response);
 		});
 	}
