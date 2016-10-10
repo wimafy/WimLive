@@ -271,7 +271,7 @@ function initAutocomplete() {
             
           map.fitBounds(bounds);
             
-          alert("Location Set");
+          //alert("Location Set");
             
         });  
     
@@ -295,5 +295,13 @@ function newwimdestinationpageout() {
      document.getElementById('newwimmapsearchdiv').style.left = "125vw";
      document.getElementById('fullpage3newwim').style.zIndex = "100";
 }
+
+
+function newwimdestinationpageinafterinitialization() {
+     document.getElementById('newwimmapsearchdiv').style.left = "0vw";
+     document.getElementById('fullpage3newwim').style.zIndex = "50";
+}
+
+
 
 //google maps search stuff
