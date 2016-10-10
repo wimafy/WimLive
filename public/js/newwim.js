@@ -81,13 +81,26 @@ function newwimbackslide(divID) {
     //document.getElementById(divID).style.left = "120vw";
 }
 
+function initAutocompleteroundonesetupmap() {
+    
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+          center: {lat: one, lng: two},
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
+    
+        var home = new google.maps.Marker({
+            position:{
+                lat: one,
+                lng: two
 
-//sets up google map
-var map = new google.maps.Map(document.getElementById('map-canvas'), {
-      center: {lat: one, lng: two},
-      zoom: 13,
-      mapTypeId: 'roadmap'
-    });
+            },
+            map:map,
+            draggable:false,
+            icon: 'http://www.ppgps.info/UserManual/ppgps_position.png'
+        });
+}
+
 
 function initAutocomplete() {
     
@@ -161,18 +174,7 @@ function initAutocomplete() {
     */
     ////////////////////////////////////
     
-   
     
-        var home = new google.maps.Marker({
-            position:{
-                lat: one,
-                lng: two
-
-            },
-            map:map,
-            draggable:false,
-            icon: 'http://www.ppgps.info/UserManual/ppgps_position.png'
-        });
 
         // Create the search box and link it to the UI element.
         var input = document.getElementById('mapsearchbox');
