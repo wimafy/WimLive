@@ -81,6 +81,14 @@ function newwimbackslide(divID) {
     //document.getElementById(divID).style.left = "120vw";
 }
 
+
+//sets up google map
+var map = new google.maps.Map(document.getElementById('map-canvas'), {
+      center: {lat: one, lng: two},
+      zoom: 13,
+      mapTypeId: 'roadmap'
+    });
+
 function initAutocomplete() {
     
      var marker = [];
@@ -153,11 +161,7 @@ function initAutocomplete() {
     */
     ////////////////////////////////////
     
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-          center: {lat: one, lng: two},
-          zoom: 13,
-          mapTypeId: 'roadmap'
-        });
+   
     
         var home = new google.maps.Marker({
             position:{
