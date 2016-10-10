@@ -226,7 +226,7 @@ function initAutocomplete() {
               //document.getElementById("newwimdestinationbuttontext").innerHTML = place.formatted_address;
               document.getElementById("newwiminputdestinationID").innerHTML = place.name;
               document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
-              document.getElementById("newwiminputdestinationaddressIDinput").value = place.formatted_address;
+              document.getElementById("newwiminputdestinationaddressIDinput").value = "place.formatted_address";
               
               
           }  
