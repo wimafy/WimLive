@@ -83,6 +83,14 @@ function newwimbackslide(divID) {
 
 function initAutocomplete() {
     
+     var marker = [];
+    
+     // Clear out the old marker.
+      //    marker.forEach(function(marker) {
+        //    marker.setMap(null);
+    //      });
+      //    marker = [];
+    
     //var ipaddressvar = geoplugin_request();
     var latitudevar = Number(geoplugin_latitude()).toFixed(2);
     var longitudevar = Number(geoplugin_longitude()).toFixed(2);
@@ -173,7 +181,7 @@ function initAutocomplete() {
           searchBox.setBounds(map.getBounds());
         });
 
-        var marker = [];
+        marker = [];
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
         searchBox.addListener('places_changed', function() {
@@ -184,14 +192,6 @@ function initAutocomplete() {
           if (places.length == 0) {
             return;
           }
-          
-
-
-          // Clear out the old marker.
-          marker.forEach(function(marker) {
-            marker.setMap(null);
-          });
-          marker = [];
           
             
          var i = 0,
