@@ -216,7 +216,7 @@ function initAutocomplete() {
               
           if (places.length == 1) {
               var locationinput = document.getElementById('mapsearchbox').value;
-              alert("Location Set");
+              //alert("Location Set");
               //alert(locationinput);
               //alert(place.geometry.location);
               //alert(place.formatted_address);
@@ -280,6 +280,7 @@ function initAutocomplete() {
             
             
           map.fitBounds(bounds);
+            
           alert("Location Set");
             
         });  
