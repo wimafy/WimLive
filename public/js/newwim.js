@@ -109,6 +109,10 @@ function initAutocompleteroundonesetupmap() {
             draggable:false,
             icon: 'http://www.ppgps.info/UserManual/ppgps_position.png'
         });
+    
+    document.getElementById('newwimmapsearchdiv').style.left = "0vw";
+    document.getElementById('fullpage3newwim').style.zIndex = "50";
+    
 }
 
 
@@ -123,8 +127,7 @@ function initAutocomplete() {
         marker = [];
 
     
-    document.getElementById('newwimmapsearchdiv').style.left = "0vw";
-    document.getElementById('fullpage3newwim').style.zIndex = "50";
+  
     
     /*
     var map = new google.maps.Map(document.getElementById('map-canvas'),{
