@@ -57,7 +57,14 @@
             });
             
         </script>
-        
+        <script>
+            $(document).on("pagecreate","#pageone",function(){
+              $("p").on("swipeleft",function(){
+                $(this).hide();
+            alert("wee");
+              });
+            });
+        </script>
         <!-- end loading screen -->
         
         <style>
