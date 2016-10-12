@@ -11,19 +11,14 @@
 		<link href="css/wimmain.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="bower_components/chosen/chosen.css" rel="stylesheet">
-	   
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <script src= "http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-        <script src="bower_components/angular/angular.min.js"></script>
+	  
+		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
         <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
         <script src="bower_components/lodash/lodash.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
         <script src="bower_components/restangular/dist/restangular.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places&callback=initAutocomplete"
-         async defer type="text/javascript"></script>
         
         <script src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q" type="text/javascript"></script>
         <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
@@ -40,15 +35,15 @@
         <script src = "js/indexpage.js"></script>
         <script src = "js/signup.js"></script>
         <script src = "js/modal.js"></script>
-        <script src = "js/jqueryfunctions.js"></script>
         
-        
-
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places&callback=initAutocomplete"
+         async defer type="text/javascript"></script>
         
         <!--loading screen icon -->
         <!-- old jquery (it works though)
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
-        
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
         
 
         <script>
@@ -60,14 +55,7 @@
             });
             
         </script>
-        <script>
-            $(document).on("pagecreate","#pageone",function(){
-              $("p").on("swipeleft",function(){
-                $(this).hide();
-            alert("wee");
-              });
-            });
-        </script>
+        
         <!-- end loading screen -->
         
         <style>
