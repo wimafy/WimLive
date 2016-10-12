@@ -11,7 +11,8 @@
 		<link href="css/wimmain.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="bower_components/chosen/chosen.css" rel="stylesheet">
-	  
+        
+	    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
         <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
@@ -42,7 +43,7 @@
         <!--loading screen icon -->
         <!-- old jquery (it works though)
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
         
 
