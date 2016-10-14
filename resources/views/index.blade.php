@@ -11,10 +11,7 @@
 		<link href="css/wimmain.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link href="bower_components/chosen/chosen.css" rel="stylesheet">
-        
-	    <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	  
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
         <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
@@ -45,17 +42,10 @@
         <!--loading screen icon -->
         <!-- old jquery (it works though)
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
-        
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
         
-        
-        <script>
-            $(document).on("pagecreate","#pageone",function(){
-              $("p").on("swipe",function(){
-                $(this).hide();
-              });
-            });
-        </script>
+
         <script>
         //paste this code under the head tag or in a separate js file.
             // Wait for window load
@@ -111,21 +101,6 @@
                         <i id="profiletopactioncircleicon" class="material-icons dropbtn">&#xE5D4;</i>
                     </div>
                 </div>
-                <div data-role="page" id="pageone">
-                  <div data-role="header">
-                    <h1>The swipe Event</h1>
-                  </div>
-
-                  <div data-role="main" class="ui-content">
-                    <p>If you swipe me, I will disappear.</p>
-                    <p>Swipe me away!</p>
-                    <p>Swipe me too!</p>
-                  </div>
-
-                  <div data-role="footer">
-                    <h1>Footer Text</h1>
-                  </div>
-                </div>
             </div>
         </div>
 
@@ -151,7 +126,6 @@
                 </a>
                 <h1 class="headerpagetitle">Search any Users</h1>
             </div>
-            
         </div>
 
 
