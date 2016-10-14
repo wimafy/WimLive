@@ -14,7 +14,7 @@
         
 	    <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
         <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <!--<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+        
 		<script src="bower_components/angular/angular.min.js"></script>
 		<script src="bower_components/ng-file-upload-shim/ng-file-upload-shim.min.js"></script>
         <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
@@ -507,7 +507,7 @@
             
 
         </script>
-        
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     </body>
     
 </html>
