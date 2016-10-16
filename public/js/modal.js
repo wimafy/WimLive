@@ -4,6 +4,8 @@ function profilemodalcall(modalbackgroundid, modalid) {
  
     modalbackground.style.zIndex = "100";
     modal.style.zIndex = "100";
+    modalbackground.style.left = "0";
+    modal.style.left = "10";
 }
 
 function profilemodalaway(modalbackgroundid, modalid) {
@@ -12,4 +14,6 @@ function profilemodalaway(modalbackgroundid, modalid) {
     
     modalbackground.style.zIndex = "-100";
     modal.style.zIndex = "-100";
+    modalbackground.style.zIndex = "200";
+    modal.style.zIndex = "200";
 }
