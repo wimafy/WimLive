@@ -4,8 +4,8 @@ function profilemodalcall(modalbackgroundid, modalid) {
  
     modalbackground.style.zIndex = "100";
     modal.style.zIndex = "100";
-    modalbackground.style.left = "0";
-    modal.style.left = "10";
+    modalbackground.style.left = "0vw";
+    modal.style.left = "10vw";
 }
 
 function profilemodalaway(modalbackgroundid, modalid) {
