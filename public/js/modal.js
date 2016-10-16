@@ -14,6 +14,6 @@ function profilemodalaway(modalbackgroundid, modalid) {
     
     modalbackground.style.zIndex = "-100";
     modal.style.zIndex = "-100";
-    modalbackground.style.zIndex = "200";
-    modal.style.zIndex = "200";
+    modalbackground.style.left = "200vw";
+    modal.style.left = "200vw";
 }
