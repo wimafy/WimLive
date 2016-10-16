@@ -9,7 +9,7 @@ function showFriendsTab() {
     document.getElementById("interestsID").style.color = "black";
     document.getElementById("friendsID").style.color = "#2196F3";
     document.getElementById("contactinfoID").style.color = "black";
-    document.getElementById("addinterestsprofilebutton").style.visibility = "hidden";    
+    document.getElementById("addinterestsprofilebutton").style.right = "200vw";    
 }
 
 function showPastwimsTab() {
@@ -23,7 +23,7 @@ function showPastwimsTab() {
     document.getElementById("interestsID").style.color = "#2196F3";
     document.getElementById("friendsID").style.color = "black";
     document.getElementById("contactinfoID").style.color = "black";
-    document.getElementById("addinterestsprofilebutton").style.visibility = "visible";
+    document.getElementById("addinterestsprofilebutton").style.right = "10vw";
 }
 
 function showUserinfoTab() {
@@ -37,7 +37,7 @@ function showUserinfoTab() {
     document.getElementById("interestsID").style.color = "black";
     document.getElementById("friendsID").style.color = "black";
     document.getElementById("contactinfoID").style.color = "#2196F3";
-    document.getElementById("addinterestsprofilebutton").style.visibility = "hidden";
+    document.getElementById("addinterestsprofilebutton").style.right = "200vw";
 }
 
 
