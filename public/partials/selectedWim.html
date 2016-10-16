@@ -13,6 +13,14 @@
 
 </div>
 
+<div>
+    <div id="profilemodalbackground" class="profilemodaldiv" onclick="profilemodalaway('profilemodalbackground','profilemodal')"></div>
+    <div id="profilemodal" class="profilemodalwhitespace">
+        <p class="profilemodalwords">Log out?</p>
+        <div class="profilemodalyes" ng-click="logout()">Yes</div>
+        <div class="profilemodalno" onclick="profilemodalaway('profilemodalbackground','profilemodal')">Nope</div>
+    </div>
+</div>
 
 <div style="height: calc(100% - 50px); width: 100vw; top: 50px; background-color: #EEEEEE; position: absolute; overflow: hidden; overflow-y: auto; z-index: 150;">
 
@@ -40,6 +48,7 @@
     <div class="individualwiminvitedlabeldiv">
         <i class="individualwimdestinationicon material-icons" style="line-height: 40px; font-size: 20px;">&#xE7FB;</i>
         <p class="individualwiminvitedlabelwords">6 People Invited</p>
+        <a onclick="profilemodalcall('profilemodalbackground','profilemodal')">Log out</a>
     </div>
     
     <div class="individualwimattendeesdiv">
