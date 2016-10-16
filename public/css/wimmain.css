@@ -1328,15 +1328,20 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .individualwimmodalwhitespace {
-    width: 80vw;
-    height: 120px;
+    width: calc(100vw - 16px);
+    height: 70vh;
     background-color: white;
     border-radius: 4px;
     position: absolute;
-    top: calc(45vh - 60px);
-    left: 200vw;
-    overflow: hidden;
+    top: 57px;
+    left: 8px !important;
+    border: darkgray;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    background-color: white;
+    box-shadow: 0px 2px 5px 0px #BDBDBB;
 }
+
 /*profile page */
 
 .profiletopdiv {
