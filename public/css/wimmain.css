@@ -1343,6 +1343,20 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     overflow-y: auto;
 }
 
+.individualwimpeopleinvidedcircles {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 14px 5px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    line-height: 19px;
+    font-family: Roboto;
+    font-weight: bold;
+}
+
 /*profile page */
 
 .profiletopdiv {
