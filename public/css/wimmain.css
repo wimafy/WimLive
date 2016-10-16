@@ -1337,7 +1337,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     border-radius: 50%;
     position: absolute;
     right: 10vw;
-    bottom: 50vh;
+    bottom: 6vh;
     border: none;
     color: white;
     font-size: 45px;
