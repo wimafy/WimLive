@@ -1166,27 +1166,25 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .individualwimpersonsdiv {
-    width: 70px;
-    height: 101px;
-    /* float: left; */
-    /* position: relative; */
-    /* display: inline-block; */
+    width: 25%;
+    height: 100px;
     position: relative;
     display: inline-block;
-    margin: 0px -5px 2px;
+    margin: 0px 0px 2px;
+    float: left;
 }
 
 .individualwimpersonsimg {
-    width: 50px;
-    height: 50px;
-    margin: 5px 10px;
+    width: 40px;
+    height: 40px;
+    margin: 8px calc(50% - 20px);
     float: left;
     background-color: gray;
     border-radius: 50%;
 }
 
 .individualwimpersonsname {
-    width: 70px;
+    width: 100%;
     font-family: Roboto Black;
     font-size: 12px;
     text-align: center;
@@ -1201,6 +1199,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     font-size: 11px;
     font-family: Roboto;
     margin-top: -12px;
+    width: 100%;
 }
 
 
@@ -1221,7 +1220,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     border-radius: 50%;
     background-color: gray;
     color: white;
-    margin: 37px -27px;
+    margin: 37px calc(-50% + 5px);
     position: absolute;
     /* line-height: 7; */
     text-align: center;
