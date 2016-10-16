@@ -13,18 +13,18 @@
         </div>
         <div id="myDropdown" class="dropdown-content">
             <a ng-click="isClicked =!isClicked">Edit profile</a>
-            <a onclick="profilemodalcall('profilemodalbackground','profilemodal')">Log out</a>
+            <a onclick="modalcall('profilemodalbackground','profilemodal')">Log out</a>
         </div>
     </div>
         
 </div>
 
 <div>
-    <div id="profilemodalbackground" class="profilemodaldiv" onclick="profilemodalaway('profilemodalbackground','profilemodal')"></div>
+    <div id="profilemodalbackground" class="profilemodaldiv" onclick="modalaway('profilemodalbackground','profilemodal')"></div>
     <div id="profilemodal" class="profilemodalwhitespace">
         <p class="profilemodalwords">Log out?</p>
         <div class="profilemodalyes" ng-click="logout()">Yes</div>
-        <div class="profilemodalno" onclick="profilemodalaway('profilemodalbackground','profilemodal')">Nope</div>
+        <div class="profilemodalno" onclick="modalaway('profilemodalbackground','profilemodal')">Nope</div>
     </div>
 </div>
 

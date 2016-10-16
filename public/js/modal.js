@@ -1,4 +1,4 @@
-function profilemodalcall(modalbackgroundid, modalid) {
+function modalcall(modalbackgroundid, modalid) {
     var modalbackground = document.getElementById(modalbackgroundid);
     var modal = document.getElementById(modalid);
  
@@ -8,7 +8,7 @@ function profilemodalcall(modalbackgroundid, modalid) {
     modal.style.left = "10vw";
 }
 
-function profilemodalaway(modalbackgroundid, modalid) {
+function modalaway(modalbackgroundid, modalid) {
     var modalbackground = document.getElementById(modalbackgroundid);
     var modal = document.getElementById(modalid);
     

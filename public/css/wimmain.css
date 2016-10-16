@@ -1141,7 +1141,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     border: darkgray;
     float: left;
     width: calc(100vw - 14px);
-    height: 100px;
+    height: 50px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     margin-left: 7px;
