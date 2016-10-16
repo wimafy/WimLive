@@ -1,5 +1,5 @@
 (function () {
-    angular.module('app', []).directive('countdowntimer', [
+    angular.module('countdowntimerapp', []).directive('countdowntimer', [
         'Util',
         '$interval',
         function (Util, $interval) {
