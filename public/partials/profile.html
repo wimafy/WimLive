@@ -36,9 +36,11 @@
 </div>
 
 <!--This first button is a hyperlink to the Create New Wim page-->
-<button type="button" onclick="" class="currentwimaddwimbutton">
-    <i class="material-icons" style="font-size: 27px; color: white;">&#xE145;</i>
-</button>
+<div  ng-if="!isClicked">
+    <button type="button" onclick="fullpage3newwim()" class="profileplusbutton">
+        <i class="material-icons" style="font-size: 27px;">&#xE145;</i>
+    </button>
+</div>
 
 <div class="notheaderdiv" ng-repeat="p in profile">
         
@@ -72,12 +74,6 @@
 
         <div class="profilebottomdiv">
             <div id="pastwims" class="profilebottompastwimsdiv" style="z-index: 1;">
-                <div  ng-if="!isClicked">
-                    <button type="button" onclick="fullpage3newwim()" class="profileplusbutton">
-                        <i class="material-icons" style="font-size: 27px;">&#xE145;</i>
-                    </button>
-                </div>
-                
                 <div style="height: calc(100vh - 35vh - 79px); width: 100%; overflow: hidden; overflow-y: scroll; background-color: #E0E0E0;">
                     
                     <div class="profilefriendscarddiv">
