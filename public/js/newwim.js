@@ -96,6 +96,15 @@ function initAutocomplete() {
     
     document.getElementById('newwimmapsearchdiv').style.left = "0vw";
     document.getElementById('fullpage3newwim').style.zIndex = "50";
+    document.getElementById('newwiminitmapdivthatmovesaway').style.position = "absolute";
+    document.getElementById('newwiminitmapdivthatmovesaway').style.right = "200vw";
+    
+    document.getElementById('newwiminitmapdivthatmovesin').style.position = "relative";
+    document.getElementById('newwiminitmapdivthatmovesin').style.right = "0";
+    
+    
+    
+    
     
     /*
     var map = new google.maps.Map(document.getElementById('map-canvas'),{
