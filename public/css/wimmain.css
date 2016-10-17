@@ -1212,6 +1212,8 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     margin: 0;
     font-size: 14px;
     font-family: Roboto Black;
+    float: left;
+    width: 50%;
 }
 
 .individualwimpersonsresponse {
