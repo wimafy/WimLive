@@ -35,7 +35,7 @@ wimServices.factory('userService', ['$http', 'Upload', 'localStorageService', 'R
 			localStorageService.set('token', response.data.token);
 			onSuccess(response);
 		}, function(response) {
-			onError();
+			onError(response);
 		});
 	}
 
@@ -121,14 +121,14 @@ wimServices.factory('relationshipService', ['Restangular', 'userService', functi
 		Restangular.all('api/relationship/viewRequests').getList().then(function(response){
 			onSuccess(response);
 		}, function(){
-			onError();
+			onError(response);
 		});
 	}
 	
 	function acceptRequest(senderID, data, onSuccess, onError){
 		Restangular.one('api/relationship/acceptRequest').customPUT(data, senderID).then(function(response){
 			onSuccess(response);
-		}, function(){
+		}, function(response){
 			onError(response);
 		});
 	}
@@ -136,7 +136,7 @@ wimServices.factory('relationshipService', ['Restangular', 'userService', functi
 	function denyRequest(senderID, data, onSuccess, onError){
 		Restangular.one('api/relationship/denyRequest').customPUT(data, senderID).then(function(response){
 			onSuccess(response);
-		}, function(){
+		}, function(response){
 			onError(response);
 		});
 	}
