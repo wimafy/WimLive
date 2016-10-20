@@ -176,9 +176,14 @@ function initAutocomplete() {
         // Listen for the event fired when the user selects a prediction and retrieve
         // more details for that place.
         searchBox.addListener('places_changed', function() {
+            
+            
           var places = searchBox.getPlaces();
             
           document.getElementById("idforselectingtogetridofkeyboard").focus();    
+          document.getElementById("mapsearchbox").blur();
+
+
 
           if (places.length == 0) {
             return;
