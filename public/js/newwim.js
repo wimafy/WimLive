@@ -182,7 +182,7 @@ function initAutocomplete() {
             
           document.getElementById("idforselectingtogetridofkeyboard").focus();    
           document.getElementById("mapsearchbox").blur();
-          alert("wejkjl");
+          console.log("wejkjl");
 
 
 
