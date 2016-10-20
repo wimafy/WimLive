@@ -195,6 +195,8 @@ wimControllers.controller('UserListController', ['$scope', '$location', 'userSer
 			alert('A friendship status is already pending.');
 		});
 	}
+	if(!userService.checkIfLoggedIn())
+		$location.path('/login');
 	
 	$scope.refresh = function(){
 		
@@ -205,8 +207,6 @@ wimControllers.controller('UserListController', ['$scope', '$location', 'userSer
 		});
 	};
 	
-	if(!userService.checkIfLoggedIn())
-		$location.path('/login');
 	$scope.relationships = [];
 	$scope.refresh();
 }]);
@@ -237,6 +237,9 @@ wimControllers.controller('RequestController', ['$scope', '$log', '$location', '
 		});
 	};
 	
+	if(!userService.checkIfLoggedIn())
+		$location.path('/login');
+	
 	$scope.refresh = function(){
 		
 		relationshipService.viewRequests(function(response){
@@ -246,8 +249,6 @@ wimControllers.controller('RequestController', ['$scope', '$log', '$location', '
 		});
 	};
 	
-	if(!userService.checkIfLoggedIn())
-		$location.path('/login');
 	$scope.requests = [];
 	$scope.refresh();
 	
@@ -260,6 +261,9 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
 		userService.logout();
 		$location.path('/login');
 	}
+		
+	if(!userService.checkIfLoggedIn())
+		$location.path('/login');
 	
 	//view friend list
 	$scope.refresh = function(){
@@ -270,8 +274,6 @@ wimControllers.controller('FriendController', ['$scope', '$location', 'userServi
 		});
 	};
 	
-	if(!userService.checkIfLoggedIn())
-		$location.path('/login');
 	$scope.friends = [];
 	$scope.refresh();
     
@@ -360,6 +362,10 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
 
     }
 
+	//If the an unsigned in user attempts to access this page, redirect to the login page
+    if(!userService.checkIfLoggedIn())
+        $location.path('/login');
+	
     //Everytime the currentWims page is loaded, load the wims array with all the wims associated with that user
     $scope.refresh = function(){
 
@@ -378,9 +384,6 @@ wimControllers.controller('WimController', ['$scope', '$location', 'userService'
 
     };
 
-    //If the an unsigned in user attempts to access this page, redirect to the login page
-    if(!userService.checkIfLoggedIn())
-        $location.path('/login');
 
     //Create the array to be used by the refresh function every time the page loads
     $scope.wims = [];
