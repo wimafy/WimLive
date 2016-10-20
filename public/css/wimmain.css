@@ -2782,3 +2782,7 @@ button.link {
     height: calc(100vh - 50px);
     top: 50px;
 }
+
+#mapsearchbox {
+    top: 10px;
+}
