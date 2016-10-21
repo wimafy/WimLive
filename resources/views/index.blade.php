@@ -35,7 +35,8 @@
         <script src = "js/indexpage.js"></script>
         <script src = "js/signup.js"></script>
         <script src = "js/modal.js"></script>
-        <script src = "js/countdowntime.js"></script>
+        <script src = "js/countdowntime.js"></script>        
+        <script src = "js/moment.js"></script>
         
         
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places&callback=initAutocomplete"

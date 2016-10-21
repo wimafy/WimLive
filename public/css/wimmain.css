@@ -2784,5 +2784,5 @@ button.link {
 }
 
 #mapsearchbox {
-    top: 10px;
+    top: 10px !important;
 }
