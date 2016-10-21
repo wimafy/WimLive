@@ -24,6 +24,7 @@
         <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         
+        <script src = "js/moment.js"></script>
 		<script src = "js/app.js"></script>
 		<script src = "js/services.js"></script>
 		<script src = "js/controllers.js"></script>
@@ -36,7 +37,7 @@
         <script src = "js/signup.js"></script>
         <script src = "js/modal.js"></script>
         <script src = "js/countdowntime.js"></script>        
-        <script src = "js/moment.js"></script>
+        
         
         
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places&callback=initAutocomplete"
