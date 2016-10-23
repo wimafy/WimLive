@@ -37,6 +37,7 @@
         <script src = "js/signup.js"></script>
         <script src = "js/modal.js"></script>
         <script src = "js/countdowntime.js"></script>        
+        <script src = "js/countdown-clock.js"></script>        
         
         
         
