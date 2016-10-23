@@ -194,6 +194,11 @@
 		<script src="bower_components/chosen/chosen.jquery.js" type="text/javascript"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
+        <script>
+            $('#countdown-clock').countdownClock({date: '2025-07-02 08:10', id: '1'});
+            $('#countdown-clock2').countdownClock({date: '2016-10-21 089:49', id: '302'});
+            $('#countdown-clock3').countdownClock({date: '2015-07-14 08:10', id: '893484987'});
+        </script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$(".chosen-select").chosen();
