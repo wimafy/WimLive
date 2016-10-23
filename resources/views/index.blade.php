@@ -24,8 +24,7 @@
         <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         
-         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places&callback=initAutocomplete"
-         async defer type="text/javascript"></script>
+        
         
         <!--loading screen icon -->
         <!-- old jquery (it works though)
@@ -49,7 +48,8 @@
         <script src = "js/countdowntime.js"></script>  
         <script src = "js/countdown-clock.js"></script>        
         
-        
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places&callback=initAutocomplete"
+         async defer type="text/javascript"></script>
         
        
         
