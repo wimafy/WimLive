@@ -1,0 +1,22 @@
+
+.countdown-clock {
+  font-size: 22px;
+  text-align: center;
+}
+
+.countdown-clock .years,
+ .countdown-clock .months,
+ .countdown-clock .days,
+ .countdown-clock .hours,
+ .countdown-clock .minutes,
+ .countdown-clock .seconds {
+  font-size: 33px;
+  margin-left: 5px;
+  display: inline-block;
+  background-color:#F44336;
+  color:#fff;
+  border-radius:5px;
+  padding:10px;
+}
+
+.countdown-clock span:first-of-type { margin-left: 0; }

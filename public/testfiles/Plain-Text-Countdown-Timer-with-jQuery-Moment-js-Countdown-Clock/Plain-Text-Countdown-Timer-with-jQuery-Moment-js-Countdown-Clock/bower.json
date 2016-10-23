@@ -1,0 +1,20 @@
+{
+  "name": "countdown-clock-js",
+  "version": "0.0.0",
+  "authors": [
+    "Marty Eason <dev@zawntech.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "moment": "~2.10.3",
+    "bootstrap": "~3.3.4"
+  }
+}

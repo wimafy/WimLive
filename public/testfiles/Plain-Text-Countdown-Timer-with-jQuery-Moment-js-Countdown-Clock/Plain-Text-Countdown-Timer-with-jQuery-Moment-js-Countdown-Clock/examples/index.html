@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+   <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+    <script src="../build/countdown-clock.js" type="text/javascript"></script>
+</head>
+<body>
+
+        <div id="countdown-clock" class="well"></div>
+        <div id="countdown-clock2" class="well"></div>
+        <div id="countdown-clock3" class="well"></div>
+    
+
+
+    <script>
+        $('#countdown-clock').countdownClock({date: '2025-07-02 08:10', id: '1'});
+        $('#countdown-clock2').countdownClock({date: '2016-10-21 089:49', id: '302'});
+		$('#countdown-clock3').countdownClock({date: '2015-07-14 08:10', id: '893484987'});
+    </script>
+
+
+</body>
+</html>

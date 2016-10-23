@@ -1,0 +1,11 @@
+{
+    "name": "zawntech/jquery-countdown-clock",
+    "description": "A jQuery countdown clock plugin.",
+    "authors": [
+        {
+            "name": "Marty Eason",
+            "email": "dev@zawntech.com"
+        }
+    ],
+    "require": {}
+}

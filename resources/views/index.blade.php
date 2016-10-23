@@ -24,6 +24,16 @@
         <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places&callback=initAutocomplete"
+         async defer type="text/javascript"></script>
+        
+        <!--loading screen icon -->
+        <!-- old jquery (it works though)
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+        
         <script src = "js/moment.js"></script>
 		<script src = "js/app.js"></script>
 		<script src = "js/services.js"></script>
@@ -36,18 +46,12 @@
         <script src = "js/indexpage.js"></script>
         <script src = "js/signup.js"></script>
         <script src = "js/modal.js"></script>
-        <script src = "js/countdowntime.js"></script>        
+        <script src = "js/countdowntime.js"></script>  
+        <script src = "js/countdown-clock.js"></script>        
         
         
         
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q&libraries=places&callback=initAutocomplete"
-         async defer type="text/javascript"></script>
-        
-        <!--loading screen icon -->
-        <!-- old jquery (it works though)
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+       
         
 
         <script>
@@ -503,11 +507,16 @@
                   document.getElementById("loadinggiflevel3").classList.remove('killopacity');
               }, 100);
             }  
-            
-            
-            
 
         </script>
+        
+        <script>
+            $('#countdown-clock').countdownClock({date: '2025-07-02 08:10', id: '1'});
+            $('#countdown-clock2').countdownClock({date: '2016-10-21 089:49', id: '302'});
+            $('#countdown-clock3').countdownClock({date: '2015-07-14 08:10', id: '893484987'});
+        </script>
+        
+        
         
     </body>
     

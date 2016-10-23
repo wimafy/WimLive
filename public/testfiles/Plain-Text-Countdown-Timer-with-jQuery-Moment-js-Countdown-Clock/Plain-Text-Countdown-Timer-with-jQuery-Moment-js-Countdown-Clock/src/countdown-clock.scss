@@ -1,0 +1,23 @@
+$cc-font-size: 22px;
+
+.countdown-clock {
+
+  font-size: $cc-font-size;
+  text-align: center;
+
+  .years,
+  .months,
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    font-size: $cc-font-size * 1.5;
+    margin-left: 5px;
+  }
+
+  // No reason to nudge the first span...
+  span:first-of-type {
+    margin-left: 0;
+  }
+
+}
