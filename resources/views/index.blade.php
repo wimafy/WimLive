@@ -23,6 +23,9 @@
         <script src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q" type="text/javascript"></script>
         <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+        
         
         <script src = "js/moment.js"></script>
 		<script src = "js/app.js"></script>
@@ -47,7 +50,7 @@
         <!--loading screen icon -->
         <!-- old jquery (it works though)
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>-->
-        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
         
 
