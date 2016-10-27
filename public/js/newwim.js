@@ -280,11 +280,11 @@ function initAutocomplete() {
               // Only geocodes have viewport.
               bounds.union(place.geometry.viewport);
                 map.setZoom(12);
-              alert("Location Set");
+              alert("Location Set 2");
             } else {
               bounds.extend(place.geometry.location);
                 map.setZoom(12);
-              alert("Location Set");
+              alert("Location Set 3");
             }
               
               
@@ -292,6 +292,8 @@ function initAutocomplete() {
             
             
           map.fitBounds(bounds);
+          map.setZoom(12);
+          alert("Location Set 4");
             
           //alert("Location Set");
             
