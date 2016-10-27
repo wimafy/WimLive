@@ -270,7 +270,7 @@ function initAutocomplete() {
                     bounds.union(place.geometry.viewport);
                     //bounds.extend(place.geometry.location);
                     map.fitBounds(bounds);
-                    map.setZoom(18);
+                    //map.setZoom(18);
                 }
                 else{
                    
