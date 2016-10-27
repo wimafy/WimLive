@@ -267,9 +267,9 @@ function initAutocomplete() {
                     document.getElementById("newwiminputdestinationID").innerHTML = place.name;
                     document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
                     
-                    alert(place.geometry.location.lat());
-                    alert(place.geometry.location.lng());
-                    map.setCenter(place.geometry.location.lat(), place.geometry.location.lng());
+                    var templat = place.geometry.location.lat();
+                    var templng = place.geometry.location.lng();
+                    map.setCenter(templat, tempng);
                     
                     
                     if (place.geometry.viewport) {
