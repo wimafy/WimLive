@@ -146,7 +146,7 @@ function initAutocomplete() {
     
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
           center: {lat: one, lng: two},
-          //zoom: 14,
+          zoom: 14,
           mapTypeId: 'roadmap'
         });
     
