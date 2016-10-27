@@ -146,7 +146,7 @@ function initAutocomplete() {
     
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
           center: {lat: one, lng: two},
-          zoom: 13,
+          zoom: 5,
           mapTypeId: 'roadmap'
         });
     
@@ -220,7 +220,8 @@ function initAutocomplete() {
             // Create a marker for each place.
               
           if (places.length == 1) {
-              var locationinput = document.getElementById('mapsearchbox').value;
+              //var locationinput = document.getElementById('mapsearchbox').value;
+              
               map.setZoom(12);
               alert("Location Set");
               //alert(locationinput);
