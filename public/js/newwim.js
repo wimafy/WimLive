@@ -229,7 +229,7 @@ function initAutocomplete() {
               //alert(place.name);
               //alert(place.open_now);
               //document.getElementById("newwimdestinationbuttontext").innerHTML = place.formatted_address;
-              map.setZoom(1);
+              map.setZoom(30);
               document.getElementById("newwiminputdestinationID").innerHTML = place.name;
               document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
               
