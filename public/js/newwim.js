@@ -279,8 +279,12 @@ function initAutocomplete() {
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
               bounds.union(place.geometry.viewport);
+                map.setZoom(12);
+              alert("Location Set");
             } else {
               bounds.extend(place.geometry.location);
+                map.setZoom(12);
+              alert("Location Set");
             }
               
               
