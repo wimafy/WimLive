@@ -269,7 +269,7 @@ function initAutocomplete() {
                     
                     var templat = place.geometry.location.lat();
                     var templng = place.geometry.location.lng();
-                    map.setCenter(templat, tempng);
+                    map.setCenter(templat, temlng);
                     
                     
                     if (place.geometry.viewport) {
