@@ -267,6 +267,9 @@ function initAutocomplete() {
                     document.getElementById("newwiminputdestinationID").innerHTML = place.name;
                     document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
                     
+                    alert(place.geometry.location.lat());
+                    alert(place.geometry.location.lng());
+                    
                     if (place.geometry.viewport) {
                       // Only geocodes have viewport.
                       bounds.union(place.geometry.viewport);
@@ -314,6 +317,7 @@ function initAutocomplete() {
             
             
           map.fitBounds(bounds);
+            
         if (places.length == 1) {
           map.setZoom(18);
         }
