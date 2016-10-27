@@ -266,9 +266,10 @@ function initAutocomplete() {
                     //alert("Location Set");
                     document.getElementById("newwiminputdestinationID").innerHTML = place.name;
                     document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
+                    bounds.union(place.geometry.viewport);
+                    bounds.extend(place.geometry.location);
                     map.fitBounds(bounds);
                     map.setZoom(18);
-                    
                 }
                 else{
                    
@@ -291,11 +292,11 @@ function initAutocomplete() {
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
               bounds.union(place.geometry.viewport);
-                map.setZoom(12);
+                
               
             } else {
               bounds.extend(place.geometry.location);
-                map.setZoom(12);
+                
               
             }
               
