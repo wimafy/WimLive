@@ -266,8 +266,9 @@ function initAutocomplete() {
                     //alert("Location Set");
                     document.getElementById("newwiminputdestinationID").innerHTML = place.name;
                     document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
+                    
                     bounds.union(place.geometry.viewport);
-                    bounds.extend(place.geometry.location);
+                    //bounds.extend(place.geometry.location);
                     map.fitBounds(bounds);
                     map.setZoom(18);
                 }
