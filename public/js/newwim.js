@@ -221,7 +221,7 @@ function initAutocomplete() {
               
           if (places.length == 1) {
               var locationinput = document.getElementById('mapsearchbox').value;
-              map.setZoom(30);
+              map.setZoom(12);
               alert("Location Set");
               //alert(locationinput);
               //alert(place.geometry.location);
