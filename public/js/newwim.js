@@ -267,8 +267,16 @@ function initAutocomplete() {
                     document.getElementById("newwiminputdestinationID").innerHTML = place.name;
                     document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
                     
-                    bounds.union(place.geometry.viewport);
-                    //bounds.extend(place.geometry.location);
+                    if (place.geometry.viewport) {
+                      // Only geocodes have viewport.
+                      bounds.union(place.geometry.viewport);
+                    alert("union");
+
+                    } else {
+                      bounds.extend(place.geometry.location);
+                        alert("extend");
+
+                    }
                     map.fitBounds(bounds);
                     //map.setZoom(18);
                 }
@@ -289,7 +297,7 @@ function initAutocomplete() {
             
             //incramenting the variable i for each marker  
             i++;
-              alert("welk");
+              
             if (place.geometry.viewport) {
               // Only geocodes have viewport.
               bounds.union(place.geometry.viewport);
