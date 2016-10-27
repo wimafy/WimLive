@@ -270,22 +270,8 @@ function initAutocomplete() {
                     var templat = place.geometry.location.lat();
                     var templng = place.geometry.location.lng();
                     //map.setCenter(templat, templng);
-                    map.setCenter({lat: -34, lng: 151}); 
-                    
-                    
-                    if (place.geometry.viewport) {
-                      // Only geocodes have viewport.
-                      //bounds.union(place.geometry.viewport);
-                    alert("union");
-                        
-
-                    } else {
-                      //bounds.extend(place.geometry.location);
-                        alert("extend");
-
-                    }
-                    //map.fitBounds(bounds);
-                    //map.setZoom(18);
+                    map.setCenter({lat: templat, lng: templng}); 
+                    map.setZoom(18);
                 }
                 else{
                    
