@@ -292,8 +292,9 @@ function initAutocomplete() {
             
             
           map.fitBounds(bounds);
-          map.setZoom(5);
-          
+        if (places.length == 1) {
+          map.setZoom(17);
+        }
             
           //alert("Location Set");
             
