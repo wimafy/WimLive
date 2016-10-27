@@ -256,20 +256,24 @@ function initAutocomplete() {
         google.maps.event.addListener(marker, 'click', (function(marker, i) {
             return function() {
                 
-                var answer = confirm("Save data?")
+                var answer = confirm("Set location?")
                 if (answer){
-                    alert("boo");   //some code
+                    
+                    //place 
+                    //alert(place.formatted_address);
+                    infoWindow.setContent('ID: '+ place.id);
+                    //infoWindow.open(map, marker);
+                    //alert("Location Set");
+                    document.getElementById("newwiminputdestinationID").innerHTML = place.name;
+                    document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
+                    map.fitBounds(bounds);
+                    map.setZoom(18);
+                    
                 }
                 else{
-                    alert("yay");    //some code
+                   
                 }
-                //place 
-                //alert(place.formatted_address);
-                infoWindow.setContent('ID: '+ place.id);
-                //infoWindow.open(map, marker);
-                //alert("Location Set");
-                document.getElementById("newwiminputdestinationID").innerHTML = place.name;
-                document.getElementById("newwiminputdestinationaddressID").innerHTML = place.formatted_address;
+                
              
             }
         })(marker, i));
