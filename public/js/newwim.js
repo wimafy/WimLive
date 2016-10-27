@@ -275,16 +275,16 @@ function initAutocomplete() {
                     
                     if (place.geometry.viewport) {
                       // Only geocodes have viewport.
-                      bounds.union(place.geometry.viewport);
+                      //bounds.union(place.geometry.viewport);
                     alert("union");
                         
 
                     } else {
-                      bounds.extend(place.geometry.location);
+                      //bounds.extend(place.geometry.location);
                         alert("extend");
 
                     }
-                    map.fitBounds(bounds);
+                    //map.fitBounds(bounds);
                     //map.setZoom(18);
                 }
                 else{
