@@ -269,11 +269,14 @@ function initAutocomplete() {
                     
                     alert(place.geometry.location.lat());
                     alert(place.geometry.location.lng());
+                    map.setCenter(place.geometry.location.lat(), place.geometry.location.lng());
+                    
                     
                     if (place.geometry.viewport) {
                       // Only geocodes have viewport.
                       bounds.union(place.geometry.viewport);
                     alert("union");
+                        
 
                     } else {
                       bounds.extend(place.geometry.location);
