@@ -182,14 +182,14 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 
 	}
 
-	$scope.profile = [];
-	$scope.refresh();
-
   $scope.customers=  [
             { name:'John Smith', city:'Phoenix'},
             { name:'John Doe', city:'New York'},
             { name:'Jane Doe', city:'San Francisco'}
           ];
+
+	$scope.profile = [];
+	$scope.refresh();
 
 }]);
 

@@ -69,7 +69,7 @@ float: left; margin: 12px;">
                     <!--
                     <p>You currently have <b>{{ wims.length }}</b> wims on your schedule.</p>
                     -->
-                  <div data-ng-repeat="">
+                  <div>
                     <a onclick="fullpageB1selectedWim()">
                         <div class="currentwimsindividualdiv">
                             <i class="currentwimswimtypeimg material-icons" style="line-height: 50px; font-size: 30px;">&#xE7E9;</i>
@@ -137,8 +137,8 @@ float: left; margin: 12px;">
                 </a>
 
                 <ul>
-                <li data-ng-repeat="cust in customers | filter:name | orderBy:'city' ">{{ cust.name }} - {{ cust.city }}</li>
-              </ul>
+                  <li data-ng-repeat="cust in customers | filter:name | orderBy:'city' ">Whatever</li>
+                </ul>
 
 
             </div>
