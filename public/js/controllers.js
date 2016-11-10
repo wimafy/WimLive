@@ -214,7 +214,7 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 
 
     $scope.updateClock = function() {
-      var t = getTimeRemaining(endtime);
+      var t = $scope.getTimeRemaining(endtime);
 
       daysSpan.innerHTML = t.days;
       hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
