@@ -69,13 +69,16 @@ float: left; margin: 12px;">
                     <!--
                     <p>You currently have <b>{{ wims.length }}</b> wims on your schedule.</p>
                     -->
-                  <div>
+
+                  <li data-ng-repeat="cust in customers | filter:name | orderBy:'city' ">{{ cust.name }} - {{ cust.city }}</li>
+
+                  <div data-ng-repeat="cust in customers | filter:name | orderBy:'city' ">
                     <a onclick="fullpageB1selectedWim()">
                         <div class="currentwimsindividualdiv">
                             <i class="currentwimswimtypeimg material-icons" style="line-height: 50px; font-size: 30px;">&#xE7E9;</i>
                             <div style="width: 40%; float: left;">
-                                <p class="currentwimswimname">Birthday Party</p>
-                                <p class="currentwimswimdestination">Braxton's House</p>
+                                <p class="currentwimswimname">{{ cust.name }}</p>
+                                <p class="currentwimswimdestination">{{ cust.city }} - {{ cust.id }}</p>
                             </div>
                             <div class="currentwimparticipantsdiv">
                                 <img class="currentwimparticipantsimg" src="profile_pics/DrBob.png">
@@ -136,7 +139,7 @@ float: left; margin: 12px;">
                     </div>
                 </a>
 
-                <ul>
+                <ul style="float: left">
                   <li data-ng-repeat="cust in customers | filter:name | orderBy:'city' ">{{ cust.name }} - {{ cust.city }}</li>
                 </ul>
 

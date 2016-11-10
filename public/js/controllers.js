@@ -183,9 +183,9 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 	}
 
   $scope.customers=  [
-            { name:'John Smith', city:'Phoenix'},
-            { name:'John Doe', city:'New York'},
-            { name:'Jane Doe', city:'San Francisco'}
+            { name:'John Smith', city:'Phoenix', id: 12345},
+            { name:'John Doe', city:'New York', id: 67891},
+            { name:'Jane Doe', city:'San Francisco', id: 112345}
           ];
 
 	$scope.profile = [];
