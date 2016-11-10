@@ -93,7 +93,7 @@ float: left; margin: 12px;">
                         </div>
                     </a>
 
-                    <div id={{ cust.id }}s"clockdiv">
+                    <div id="{{ cust.id }}clockdiv">
                       <div>
                         <span class="days"></span>
                         <!--<div class="smalltext">Days</div>-->
@@ -114,7 +114,7 @@ float: left; margin: 12px;">
 
                     <p id="{{ cust.id }}countdownholder">clock holder</p>
 
-                    <buton ng-click="initializeClock( {{ cust.id }}'clockdiv', {{ cust.id }}'countdownholder', 'november 10 2016 17:55:59 GMT-0500')">Click me</buton>
+                    <buton ng-click="initializeClock('{{ cust.id }}clockdiv', '{{ cust.id }}countdownholder', 'november 10 2016 17:55:59 GMT-0500')">Click me</buton>
 
                   </div>
 
