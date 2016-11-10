@@ -206,12 +206,11 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 
 
  $scope.initializeClock = function(id, clockID, endtime) {
-    var clock = document.getElementById('67891clockdiv');
-    alert(id);
-    var daysSpan = clock.querySelector('.days67891clockdiv');
-    var hoursSpan = clock.querySelector('.hours67891clockdiv');
-    var minutesSpan = clock.querySelector('.minutes67891clockdiv');
-    var secondsSpan = clock.querySelector('.seconds67891clockdiv');
+    var clock = document.getElementById(id);
+    var daysSpan = clock.querySelector('.days');
+    var hoursSpan = clock.querySelector('.hours');
+    var minutesSpan = clock.querySelector('.minutes');
+    var secondsSpan = clock.querySelector('.seconds');
 
 
     $scope.updateClock = function() {
