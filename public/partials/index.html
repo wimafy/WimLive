@@ -136,6 +136,10 @@ float: left; margin: 12px;">
                     </div>
                 </a>
 
+                <ul>
+                <li data-ng-repeat="cust in customers | filter:name | orderBy:'city' ">{{ cust.name }} - {{ cust.city }}</li>
+              </ul>
+
 
             </div>
 
