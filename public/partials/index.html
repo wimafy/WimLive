@@ -8,7 +8,7 @@ float: left; margin: 12px;">
                 <img class="indexpageprofileimage" src={{p.ProfilePic}}>
                 <p class="indexpageusername"> {{p.FirstName }}</p>
             </div>
-            
+
         </div>
         <div style="height: 50px; width: 100vw; background-color: #ef5350; position: absolute; z-index: 20;"> </div>
         <div class="indexpagebottomheaderdiv">
@@ -30,11 +30,11 @@ float: left; margin: 12px;">
                 <p id="indexpagebuttonpics32" class="indexpagebottomheaderbuttontext">Search</p>
                 -->
             </div>
-            
+
             <div id="indexpagebuttonhighligher"></div>
         </div>
     </div>
-    
+
     <div id="indexpagebottomdivid" class="indexpagebottomdiv">
         <div id="indexpagebottomnotifydiv" class="indexpagebottompagesliderdiv">
             <div style="height: 100%; width: 100vw; background-color: #EEEEEE; position: absolute; z-index: 50;">
@@ -47,9 +47,9 @@ float: left; margin: 12px;">
                         -->
                             <div class="notificationdiv" ng-repeat="request in requests">
                                 <img class="notificationpicture" src={{request.ProfilePic}}>
-                                <b class="notificationname">{{ request.FirstName }} {{ request.LastName }}</b> 
+                                <b class="notificationname">{{ request.FirstName }} {{ request.LastName }}</b>
                                 <button type="button" class="btn btn-info notificationbutton" ng-click="denyRequest(request.id)" style="background-color: #e53935; border-color: #e53935;">Decline</button>
-                                <button type="button" class="btn btn-info notificationbutton" ng-click="acceptRequest(request.id)">Accept</button> 
+                                <button type="button" class="btn btn-info notificationbutton" ng-click="acceptRequest(request.id)">Accept</button>
                             </div>
 
                     </div>
@@ -69,6 +69,30 @@ float: left; margin: 12px;">
                     <!--
                     <p>You currently have <b>{{ wims.length }}</b> wims on your schedule.</p>
                     -->
+                  <div data-ng-repeat="">
+                    <a onclick="fullpageB1selectedWim()">
+                        <div class="currentwimsindividualdiv">
+                            <i class="currentwimswimtypeimg material-icons" style="line-height: 50px; font-size: 30px;">&#xE7E9;</i>
+                            <div style="width: 40%; float: left;">
+                                <p class="currentwimswimname">Birthday Party</p>
+                                <p class="currentwimswimdestination">Braxton's House</p>
+                            </div>
+                            <div class="currentwimparticipantsdiv">
+                                <img class="currentwimparticipantsimg" src="profile_pics/DrBob.png">
+                                <img class="currentwimparticipantsimg" src="profile_pics/test.png">
+                                <img class="currentwimparticipantsimg" src="profile_pics/marq.draggon.png">
+                                <div class="currentwimparticipantsimg">5</div>
+                            </div>
+                            <div style="width: calc(60% - 120px); height: 70px; float: left;">
+                                <p class="currentwimcountdowntime">20 min</p>
+                                <p class="currentwimcountdowndate">5pm Sun 24</p>
+
+                            </div>
+
+                        </div>
+                    </a>
+                  </div>
+
                 <a onclick="fullpageB1selectedWim()">
                     <div class="currentwimsindividualdiv">
                         <i class="currentwimswimtypeimg material-icons" style="line-height: 50px; font-size: 30px;">&#xE7E9;</i>
@@ -80,17 +104,17 @@ float: left; margin: 12px;">
                             <img class="currentwimparticipantsimg" src="profile_pics/DrBob.png">
                             <img class="currentwimparticipantsimg" src="profile_pics/test.png">
                             <img class="currentwimparticipantsimg" src="profile_pics/marq.draggon.png">
-                            <div class="currentwimparticipantsimg">5</div>                
+                            <div class="currentwimparticipantsimg">5</div>
                         </div>
                         <div style="width: calc(60% - 120px); height: 70px; float: left;">
                             <p class="currentwimcountdowntime">20 min</p>
                             <p class="currentwimcountdowndate">5pm Sun 24</p>
-                            
+
                         </div>
 
                     </div>
                 </a>
-                
+
                  <a onclick="fullpageB1selectedWim()">
                     <div class="currentwimsindividualdiv">
                         <i class="currentwimswimtypeimg material-icons" style="line-height: 50px; font-size: 30px;">&#xE7E9;</i>
@@ -102,7 +126,7 @@ float: left; margin: 12px;">
                             <img class="currentwimparticipantsimg" src="profile_pics/DrBob.png">
                             <img class="currentwimparticipantsimg" src="profile_pics/test.png">
                             <img class="currentwimparticipantsimg" src="profile_pics/marq.draggon.png">
-                            <div class="currentwimparticipantsimg">5</div>                
+                            <div class="currentwimparticipantsimg">5</div>
                         </div>
                         <div style="width: calc(60% - 120px); height: 70px; float: left;">
                             <p class="currentwimcountdowntime">20 min</p>
@@ -111,26 +135,20 @@ float: left; margin: 12px;">
 
                     </div>
                 </a>
-                
-                <div id="countdown-clock" class="well"></div>
-                <div id="countdown-clock2" class="well"></div>
-                <div id="countdown-clock3" class="well"></div>
-                <span ng-init="b = 2">{{ b }}</span>
-                <p></p>
 
 
             </div>
 
             </div>
-        
+
         </div>
         <div id="indexpagebottomsearchdiv" class="indexpagebottompagesliderdiv">
-            
+
             <div style="box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2); z-index: 4; position: relative; width: 100vw; height: 50px; background-color: white;">
-                <i id="searchforfriendseachinputsherlocicon" class="material-icons">&#xE8B6;</i> 
+                <i id="searchforfriendseachinputsherlocicon" class="material-icons">&#xE8B6;</i>
                 <input type="text" class="searchforfriendsinput" placeholder="Search..." ng-model="searchFor">
             </div>
-            
+
             <span ng-if="searchFor!=null && searchFor!=''">
                 <div ng-init="filter_len = (entries | filter: { country_code : countryCode }).length">
 
@@ -156,22 +174,11 @@ float: left; margin: 12px;">
                             <div style="float:left;height: 4px;width: 1;"></div>
 
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </span>
 
-    </div>
+        </div>
 
     </div>
-<!-- closes ng-view div -->    
 </div>
-<script>
-        $('#countdown-clock').countdownClock({date: '2025-07-02 08:10', id: '1'});
-        $('#countdown-clock2').countdownClock({date: '2016-10-27 23:49', id: '302'});
-		$('#countdown-clock3').countdownClock({date: '2015-07-14 08:10', id: '893484987'});
-
-</script>
-
-<div>
-    
-    
