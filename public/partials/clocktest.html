@@ -9,28 +9,30 @@
 <body>
 
     <h1>Countdown Clock</h1>
-    <div id="clockdiv">
+  <div id="clockdiv">
       <div>
         <span class="days"></span>
-        <div class="smalltext">Days</div>
+        <!--<div class="smalltext">Days</div>-->
       </div>
       <div>
         <span class="hours"></span>
-        <div class="smalltext">Hours</div>
+        <!--<div class="smalltext">Hours</div>-->
       </div>
       <div>
         <span class="minutes"></span>
-        <div class="smalltext">Minutes</div>
+        <!--<div class="smalltext">Minutes</div>-->
       </div>
       <div>
         <span class="seconds"></span>
-        <div class="smalltext">Seconds</div>
+        <!--<div class="smalltext">Seconds</div>-->
       </div>
     </div>
 
+
+
     <p id="countdownholder">clock holder</p>
 
-    <buton onclick="initializeClock('clockdiv', 'november 10 2016 16:55:59 GMT-0500')">Click me</buton>
+    <buton onclick="initializeClock('clockdiv', 'countdownholder', 'november 10 2016 17:55:59 GMT-0500')">Click me</buton>
 
 
 
@@ -54,7 +56,7 @@
     }
 
 
-    function initializeClock(id, endtime) {
+   function initializeClock(id, clockID, endtime) {
       var clock = document.getElementById(id);
       var daysSpan = clock.querySelector('.days');
       var hoursSpan = clock.querySelector('.hours');
@@ -71,24 +73,24 @@
         secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
         if (t.days > 1){
-            document.getElementById("countdownholder").innerHTML = t.days + " Days";
+            document.getElementById(clockID).innerHTML = t.days + " Days";
         }else if (t.days > 0){
-            document.getElementById("countdownholder").innerHTML = t.days + " Day";
+            document.getElementById(clockID).innerHTML = t.days + " Day";
         }else if (('0' + t.hours).slice(-2) > 1){
-             document.getElementById("countdownholder").innerHTML = ('0' + t.hours).slice(-2) + " Hours";
+             document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hours";
         }else if (('0' + t.hours).slice(-2) > 0){
-             document.getElementById("countdownholder").innerHTML = ('0' + t.hours).slice(-2) + " Hour";
+             document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hour";
         }else if (('0' + t.minutes).slice(-2) > 0){
-             document.getElementById("countdownholder").innerHTML = ('0' + t.minutes).slice(-2) + " Minutes";
+             document.getElementById(clockID).innerHTML = ('0' + t.minutes).slice(-2) + " Minutes";
         }else if (('0' + t.seconds).slice(-2) > 0){
-             document.getElementById("countdownholder").innerHTML = "1 Minute";
+             document.getElementById(clockID).innerHTML = "1 Minute";
         }
 
 
 
         if (t.total <= 0) {
           //clearInterval(timeinterval);
-          document.getElementById("countdownholder").innerHTML = "Active Now";
+          document.getElementById(clockID).innerHTML = "Active Now";
         }
           console.log("update");
 
@@ -97,7 +99,8 @@
 
 
      //var timeinterval = setInterval(updateClock(), 1);
-     setInterval( function(){updateClock()}, 3000);
+     updateClock()
+     setInterval( function(){updateClock()}, 5000);
 
 
     }
