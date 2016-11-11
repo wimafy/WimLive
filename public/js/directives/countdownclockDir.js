@@ -3,14 +3,12 @@ angular.module('wimControllers.directives.countdownClock', [])
     return {
         restrict: 'E',
         scope: {
-            data: '=',
-            id: '='
+            data: '='
         },
         replace: true,
         template: "<h1>{{data.name}}",
         controller: function($scope, $interval) {
           console.log($scope.data);
-          console.log($scope.id);
         }
     };
 });
