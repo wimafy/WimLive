@@ -6,7 +6,7 @@ angular.module('wimControllers.directives.countdownClock', [])
             data: '='
         },
         replace: true,
-        template: "<h1>{{data.name}}",
+        template: "<h1>{{data.name}}</h1>",
         link: function(scope, element, attrs) {
           //console.log(arguments)
         },
@@ -15,7 +15,8 @@ angular.module('wimControllers.directives.countdownClock', [])
           $interval(function() {
             console.log('interval');
             console.log($scope.data.id);
-          }, 1000);
+            document.getElementById($scope.data.id).innerHTML = "Paragraph changed!";
+          }, 5000);
         }
     };
 });
