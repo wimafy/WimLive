@@ -6,7 +6,12 @@ angular.module('wimControllers.directives.countdownClock', [])
             data: '='
         },
         template: "<h1>{{data.name}}",
-        controller: function($scope) {
+        link: function(scope, element, attrs) {
+          element.click(function() {
+              alert('click');
+          });
+        },
+        controller: function($scope, $interval) {
           console.log($scope.data);
         }
     };
