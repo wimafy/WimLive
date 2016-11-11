@@ -14,7 +14,7 @@ angular.module('wimControllers.directives.countdownClock', [])
           console.log($scope.data);
           $interval(function() {
             console.log('interval');
-            console.log(data.id);
+            console.log($scope.data.id);
           }, 1000);
         }
     };
