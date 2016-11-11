@@ -2,8 +2,11 @@ angular.module('wimControllers.directives.countdownClock', [])
 .directive('countdownClock', function() {
     return {
         restrict: 'E',
+        scope: {
+            data: '='
+        }
         controller: function($scope) {
-          alert('wee');
+          console.log($scope.data);
         }
 
     };

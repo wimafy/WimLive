@@ -141,7 +141,7 @@ float: left; margin: 12px;">
 
 
                 <div data-ng-repeat="cust in customers">
-                      <countdown-Clock>{{ cust.name }}</countdown-Clock>
+                      <countdown-Clock data="{{ cust.name }}">{{ cust.name }}</countdown-Clock>
                 </div>
 
 
