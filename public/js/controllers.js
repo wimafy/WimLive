@@ -209,7 +209,8 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
     console.log(id);
     console.log( clockID);
     console.log('clock' + id);
-    var clock = document.getElementById('clock' + id);
+    var clock = document.getElementById('clock0');
+    console.log(clock);
     var daysSpan = clock.querySelector('.days' + id);
     var hoursSpan = clock.querySelector('.hours' + id);
     var minutesSpan = clock.querySelector('.minutes' + id);
