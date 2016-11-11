@@ -1,4 +1,7 @@
-var wimControllers = angular.module('wimControllers', ['ngFileUpload']);
+var wimControllers = angular.module('wimControllers', [
+  'ngFileUpload',
+  'wimControllers.directives.countdownClock'
+]);
 
 var newwiminvitedfriends = [];
 var signupinterestslist = [];
