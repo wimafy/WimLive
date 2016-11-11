@@ -8,5 +8,3 @@ angular.module('wimControllers.directives.countdownClock', [])
 
     };
 });
-
-alert("got em");
