@@ -206,15 +206,12 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 
 
  $scope.initializeClock = function(id, clockID, endtime) {
-    console.log(id);
-    console.log( clockID);
-    console.log('clock' + id);
-    var clock = document.getElementById('clock0');
-    console.log(clock);
-    var daysSpan = clock.querySelector('.days' + id);
-    var hoursSpan = clock.querySelector('.hours' + id);
-    var minutesSpan = clock.querySelector('.minutes' + id);
-    var secondsSpan = clock.querySelector('.seconds' + id);
+    console.log(id)
+    var clock = document.getElementById(id);
+    var daysSpan = clock.querySelector('.days');
+    var hoursSpan = clock.querySelector('.hours');
+    var minutesSpan = clock.querySelector('.minutes');
+    var secondsSpan = clock.querySelector('.seconds');
 
 
     $scope.updateClock = function() {
@@ -226,24 +223,24 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
       secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
       if (t.days > 1){
-          document.getElementById('countdownholder' + clockID).innerHTML = t.days + " Days";
+          document.getElementById(clockID).innerHTML = t.days + " Days";
       }else if (t.days > 0){
-          document.getElementById('countdownholder' + clockID).innerHTML = t.days + " Day";
+          document.getElementById(clockID).innerHTML = t.days + " Day";
       }else if (('0' + t.hours).slice(-2) > 1){
-           document.getElementById('countdownholder' + clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hours";
+           document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hours";
       }else if (('0' + t.hours).slice(-2) > 0){
-           document.getElementById('countdownholder' + clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hour";
+           document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hour";
       }else if (('0' + t.minutes).slice(-2) > 0){
-           document.getElementById('countdownholder' + clockID).innerHTML = ('0' + t.minutes).slice(-2) + " Minutes";
+           document.getElementById(clockID).innerHTML = ('0' + t.minutes).slice(-2) + " Minutes";
       }else if (('0' + t.seconds).slice(-2) > 0){
-           document.getElementById('countdownholder' + clockID).innerHTML = "1 Minute";
+           document.getElementById(clockID).innerHTML = "1 Minute";
       }
 
 
 
       if (t.total <= 0) {
         //clearInterval(timeinterval);
-        document.getElementById('countdownholder' + clockID).innerHTML = "Active Now";
+        document.getElementById(clockID).innerHTML = "Active Now";
       }
         console.log("update");
 
