@@ -208,6 +208,7 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
  $scope.initializeClock = function(id, clockID, endtime) {
     console.log(id);
     console.log( clockID);
+    console.log('clock' + id);
     var clock = document.getElementById('clock' + id);
     var daysSpan = clock.querySelector('.days' + id);
     var hoursSpan = clock.querySelector('.hours' + id);
