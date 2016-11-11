@@ -4,10 +4,9 @@ angular.module('wimControllers.directives.countdownClock', [])
         restrict: 'E',
         scope: {
             data: '='
-        }
+        },
         controller: function($scope) {
           console.log($scope.data);
         }
-
     };
 });
