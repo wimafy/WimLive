@@ -5,7 +5,7 @@ angular.module('wimControllers.directives.countdownClock', [])
         scope: {
             data: '='
         },
-        template: "<h1>{{friend.name}}",
+        template: "<h1>{{data.name}}",
         controller: function($scope) {
           console.log($scope.data);
         }
