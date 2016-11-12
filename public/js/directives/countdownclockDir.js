@@ -3,8 +3,11 @@ angular.module('wimControllers.directives.countdownClock', [])
     return {
         restrict: 'E',
         scope: {
+            //data is found in the div called countdown-clock
+            //the syntax is awkward and i'm not sure why it is that way
             data: '='
         },
+        //not sure what replace does
         replace: true,
         template: "<h1>{{data.name}}</h1>",
         link: function(scope, element, attrs) {
@@ -12,10 +15,13 @@ angular.module('wimControllers.directives.countdownClock', [])
         },
         controller: function($scope, $interval) {
           console.log($scope.data);
+          //interval is set at the end of this function
           $interval(function() {
             console.log('interval');
             console.log($scope.data.id);
-            document.getElementById($scope.data.id).innerHTML = $scope.data.id;
+            //actually changes text to whatever variable is set
+            var myVariable = "blooba!";
+            document.getElementById($scope.data.id).innerHTML = myVariable;
           }, 5000);
         }
     };
