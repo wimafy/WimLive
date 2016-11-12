@@ -19,9 +19,18 @@ angular.module('wimControllers.directives.countdownClock', [])
           $interval(function() {
             console.log('interval');
             console.log($scope.data.id);
-            //actually changes text to whatever variable is set
+
+
+            function makething(mywords) {
+                  var endingVariable = mywords;
+            }
+
             var myVariable = "blooba!";
-            document.getElementById($scope.data.id).innerHTML = myVariable;
+
+            makething(myVariable);
+
+            //actually changes text to whatever variable is set
+            document.getElementById($scope.data.id).innerHTML = endingVariable;
           }, 5000);
         }
     };
