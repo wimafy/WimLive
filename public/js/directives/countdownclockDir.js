@@ -30,9 +30,9 @@ angular.module('wimControllers.directives.countdownClock', [])
             }
 
 
-            var myVariable = "pawowk!";
+            //var myVariable = "pawowk!";
 
-            var bimpert = makething(myVariable);
+            var bimpert = makething($scope.data.id);
 
             //actually changes text to whatever variable is set
             document.getElementById($scope.data.id).innerHTML = bimpert.variable;
