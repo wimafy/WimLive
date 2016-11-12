@@ -23,14 +23,19 @@ angular.module('wimControllers.directives.countdownClock', [])
 
             function makething(mywords) {
                   var endingVariable = mywords;
+
+                  return {
+                    'variable' = endingVariable
+                  }
             }
+
 
             var myVariable = "blooba!";
 
-            makething(myVariable);
+            var bimpert = makething(myVariable);
 
             //actually changes text to whatever variable is set
-            document.getElementById($scope.data.id).innerHTML = endingVariable;
+            document.getElementById($scope.data.id).innerHTML = bimpert.variable;
           }, 5000);
         }
     };
