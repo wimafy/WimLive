@@ -25,8 +25,8 @@ angular.module('wimControllers.directives.countdownClock', [])
                   var endingVariable = mywords;
 
                   return {
-                    'variable' = endingVariable
-                  }
+                    'variable': endingVariable
+                  };
             }
 
 
