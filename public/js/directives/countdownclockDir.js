@@ -30,7 +30,7 @@ angular.module('wimControllers.directives.countdownClock', [])
             }
 
 
-            var myVariable = "blooba!";
+            var myVariable = "pawowk!";
 
             var bimpert = makething(myVariable);
 
