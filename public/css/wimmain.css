@@ -6,7 +6,7 @@ body {
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    
+
 }
 
 a {
@@ -331,7 +331,7 @@ a {
   transition: .1s;
   opacity: 10;
   z-index: 10 !important;
-  
+
 }
 
 .ngviewtransitionout {
@@ -471,11 +471,11 @@ a {
 
 /* basic stylings ------------------------------------------ */
 body                 { background:url(http://scotch.io/wp-content/uploads/2014/07/61.jpg); }
-.container      { 
+.container      {
   font-family:'Roboto';
-  width:600px; 
-  margin:30px auto 0; 
-  display:block; 
+  width:600px;
+  margin:30px auto 0;
+  display:block;
   background:#FFF;
   padding:10px 50px 50px;
 }
@@ -485,10 +485,10 @@ h2       {
   color: white;
   font-family: Roboto;
 }
-h2 small { 
-  font-weight:normal; 
-  color:#888; 
-  display:block; 
+h2 small {
+  font-weight:normal;
+  color:#888;
+  display:block;
   color: white;
 }
 .footer     { text-align:center; }
@@ -563,20 +563,20 @@ input:focus ~ label, input:valid ~ label        {
 .bar    { position:relative; display:block; width: calc(100%);}
 .bar:before, .bar:after     {
   content:'';
-  height:2px; 
+  height:2px;
   width:0;
-  bottom:1px; 
+  bottom:1px;
   position:absolute;
-  background:#2196F3; 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
+  background:#2196F3;
+  transition:0.2s ease all;
+  -moz-transition:0.2s ease all;
   -webkit-transition:0.2s ease all;
 }
 .bar:before {
   left:50%;
 }
 .bar:after {
-  right:50%; 
+  right:50%;
 }
 
 /* active state */
@@ -587,9 +587,9 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 /* HIGHLIGHTER ================================== */
 .highlight {
   position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
+  height:60%;
+  width:100px;
+  top:25%;
   left:0;
   pointer-events:none;
   opacity:0.5;
@@ -756,7 +756,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .signupinterstsselectdivicon {
-    
+
 }
 
 .signupinterstsselectdiviconselectdiv {
@@ -795,7 +795,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     font-size: 100px;
     margin-top: 38px;
     font-family: Arial;
-    line-height: 1; 
+    line-height: 1;
     color: #3f3f3f;
     z-index: 1;
 }
@@ -895,9 +895,9 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     font-size: 100px;
     font-family: Arial Black;
     color: white;
-    
-    
-    
+
+
+
 }
 
 #tophomepageline {
@@ -977,8 +977,8 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     height: 150px;
 
     float: left;
-    
-    
+
+
 }
 
 .currentwimswimname {
@@ -1037,14 +1037,15 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     width: 260px;
     height: 150px;
     float: left;
-    
-    
+
+
 }
 
 .currentwimcountdowntime {
     line-height: 50px;
     text-align: center;
     font-family: Roboto Black;
+    font-size: 17px;
 }
 
 .currentwimcountdowndate {
@@ -1204,7 +1205,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 
 
 .individualwiminvitedlabeldiv {
-    
+
 }
 
 .individualwiminvitedlabelwords {
@@ -1414,7 +1415,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 }
 
 .profiletopprofilepictureholderdiv {
-    
+
 }
 
 .profiletopleftactioncircle {
@@ -1803,7 +1804,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
 	background-color: #ef5350;
 	border:none;
     width: 60px;
-    height: 60px;    
+    height: 60px;
 }
 
 .dropdown {
@@ -1961,7 +1962,7 @@ button.link {
 }
 
 .indexpagebottomheaderbuttonicon {
-    
+
 }
 
 .indexpagebottomheaderbuttontext {
@@ -2167,7 +2168,7 @@ button.link {
     border-radius: 2px;
     text-indent: 150px;
     margin-top: 0px;
-    
+
 }
 
 #notificationstypeimage {
@@ -2183,13 +2184,13 @@ button.link {
     margin: 15px;
     margin-right: 20px;
     float: right;
-    
+
 }
 
 .currentwimsfriendrequestresponseoption {
     width: 110px;
     float: right;
-    
+
 }
 
 #currentwimsfriendrequestresponseoptionicon {
@@ -2426,8 +2427,8 @@ button.link {
 }
 
 .newwimdiv003 {
-    float: left; 
-    border-bottom-style: solid; 
+    float: left;
+    border-bottom-style: solid;
     border-bottom-width: 1px;
     border-color: #E0E0E0;
 }
@@ -2475,8 +2476,8 @@ button.link {
 }
 
 .newwimdiv007 {
-    float: left; 
-    border-bottom-style: solid; 
+    float: left;
+    border-bottom-style: solid;
     border-bottom-width: 1px;
     border-color: #E0E0E0;
 }
@@ -2534,11 +2535,11 @@ button.link {
 }
 
 .newwimdiv012 {
-    
+
 }
 
 .newwimdiv013 {
-    
+
 }
 
 .newwimadvancedoptionscssdiv {
