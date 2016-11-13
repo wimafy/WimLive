@@ -45,8 +45,7 @@ angular.module('wimControllers.directives.countdownClock', [])
 
 
          function initializeClock(id, clockID, endtime) {
-           console.log('clockdiv'+id);
-            var clock = document.getElementById('clockdiv67891');
+            var clock = document.getElementById(id);
             var daysSpan = clock.querySelector('.days');
             var hoursSpan = clock.querySelector('.hours');
             var minutesSpan = clock.querySelector('.minutes');
@@ -62,37 +61,31 @@ angular.module('wimControllers.directives.countdownClock', [])
               secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
               if (t.days > 1){
-                console.log(t.days + " Days");
                 return {
                   'variable':  t.days + " Days"
                 };
               }else if (t.days > 0){
-                  console.log(t.days + "Day");
                   return {
                     'variable':  t.days + " Day"
                   };
               }else if (('0' + t.hours).slice(-2) > 1){
-                  console.log(('0' + t.hours).slice(-2) + " Hours");
                   return {
                     'variable':  ('0' + t.hours).slice(-2) + " Hours"
                   };
                    //document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hours";
               }else if (('0' + t.hours).slice(-2) > 0){
-                  console.log(('0' + t.hours).slice(-2) + " Hour");
                   return {
                     'variable':  ('0' + t.hours).slice(-2) + " Hour"
                   };
                    //document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hour";
               }else if (('0' + t.minutes).slice(-2) > 0){
-                  console.log(('0' + t.minutes).slice(-2) + " Miutes");
                   return {
                     'variable':  ('0' + t.minutes).slice(-2) + " Minutes"
                   };
                   // document.getElementById(clockID).innerHTML = ('0' + t.minutes).slice(-2) + " Minutes";
               }else if (('0' + t.seconds).slice(-2) > 0){
-                  console.log(('0' + t.minutes).slice(-2) + " Minute");
                   return {
-                    'variable':  ('0' + t.minutes).slice(-2) + " Minute"
+                    'variable':  ('0' + t.minutes).slice(-2) + "1 Minute"
                   };
                    //document.getElementById(clockID).innerHTML = "1 Minute";
               }
@@ -100,8 +93,7 @@ angular.module('wimControllers.directives.countdownClock', [])
 
 
               if (t.total <= 0) {
-                //clearInterval(timeinterval);""
-                console.log("active now");
+                //clearInterval(timeinterval);
                 document.getElementById(clockID).innerHTML = "Active Now";
               }
                 console.log("update");
@@ -111,11 +103,14 @@ angular.module('wimControllers.directives.countdownClock', [])
 
 
            //var timeinterval = setInterval(updateClock(), 1);
-           //updateClock()
+           updateClock()
+
+
+
 
           }
 
-         initializeClock($scope.data.id, $scope.data.id, 'november 10 2016 17:55:59 GMT-0500')
+
 
          $interval(function() {
             console.log('interval');
@@ -128,7 +123,7 @@ angular.module('wimControllers.directives.countdownClock', [])
             var updatedclock = updateClock()
 
             //actually changes text to whatever variable is set
-            document.getElementById($scope.data.id).innerHTML = updatedclock.variable;
+            document.getElementById($scope.data.id).innerHTML = bimpert.variable;
           }, 5000);
         }
     };
