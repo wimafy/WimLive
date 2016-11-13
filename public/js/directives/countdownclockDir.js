@@ -16,35 +16,19 @@ angular.module('wimControllers.directives.countdownClock', [])
         controller: function($scope, $interval) {
           console.log($scope.data);
           //interval is set at the end of this function
+
+
+          function makething(mywords) {
+                var endingVariable = mywords;
+
+                return {
+                  'variable': endingVariable
+                };
+          }
+
          $interval(function() {
             console.log('interval');
             console.log($scope.data.id);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            function makething(mywords) {
-                  var endingVariable = mywords;
-
-                  return {
-                    'variable': endingVariable
-                  };
-            }
 
 
             //var myVariable = "pawowk!";

@@ -1046,6 +1046,7 @@ label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     text-align: center;
     font-family: Roboto Black;
     font-size: 17px;
+    margin-top: 0;
 }
 
 .currentwimcountdowndate {
