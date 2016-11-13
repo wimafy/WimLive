@@ -121,7 +121,7 @@ angular.module('wimControllers.directives.countdownClock', [])
          console.log(idvar);
          console.log(clockIDvar);
 
-         var initializeclockvar = initializeClock(idvar, clockIDvar, $scope.data.date)
+         //var initializeclockvar = initializeClock(idvar, clockIDvar, $scope.data.date)
 
 
          $interval(function() {
