@@ -45,7 +45,8 @@ angular.module('wimControllers.directives.countdownClock', [])
 
 
          function initializeClock(id, clockID, endtime) {
-            var clock = document.getElementById(id);
+           console.log('clockdiv'+id);
+            var clock = document.getElementById('clockdiv'+id);
             var daysSpan = clock.querySelector('.days');
             var hoursSpan = clock.querySelector('.hours');
             var minutesSpan = clock.querySelector('.minutes');
