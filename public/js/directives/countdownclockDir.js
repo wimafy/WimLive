@@ -65,38 +65,28 @@ angular.module('wimControllers.directives.countdownClock', [])
 
               if (t.days > 1){
                 console.log(t.days + " days");
-                return {
-                  'variable':  t.days + " Days"
-                };
+                document.getElementById($scope.data.id).innerHTML = t.days + " Days";
+
               }else if (t.days > 0){
                 console.log(t.days + " day");
-                  return {
-                    'variable':  t.days + " Day"
-                  };
+                document.getElementById($scope.data.id).innerHTML = t.days + " Day";
+
               }else if (('0' + t.hours).slice(-2) > 1){
                 console.log(t.hours + " hours");
-                  return {
-                    'variable':  ('0' + t.hours).slice(-2) + " Hours"
-                  };
-                   //document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hours";
+                document.getElementById($scope.data.id).innerHTML = ('0' + t.hours).slice(-2) + " Hours";
+
               }else if (('0' + t.hours).slice(-2) > 0){
                 console.log(t.hours + " hour");
-                  return {
-                    'variable':  ('0' + t.hours).slice(-2) + " Hour"
-                  };
-                   //document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hour";
+                document.getElementById($scope.data.id).innerHTML = ('0' + t.hours).slice(-2) + " Hour";
+
               }else if (('0' + t.minutes).slice(-2) > 0){
                   console.log(t.minutes + " minutes");
-                  return {
-                    'variable':  ('0' + t.minutes).slice(-2) + " Minutes"
-                  };
-                  // document.getElementById(clockID).innerHTML = ('0' + t.minutes).slice(-2) + " Minutes";
+                  document.getElementById($scope.data.id).innerHTML = ('0' + t.minutes).slice(-2) + " Minutes";
+
               }else if (('0' + t.seconds).slice(-2) > 0){
                   console.log(t.minutes + " minute");
-                  return {
-                    'variable':  ('0' + t.minutes).slice(-2) + " Minute"
-                  };
-                   //document.getElementById(clockID).innerHTML = "1 Minute";
+                  document.getElementById($scope.data.id).innerHTML = "1 Minute";
+
               }
 
 
