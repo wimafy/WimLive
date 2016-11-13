@@ -94,7 +94,7 @@ angular.module('wimControllers.directives.countdownClock', [])
               if (t.total <= 0) {
                 console.log("Active Now");
                 //clearInterval(timeinterval);
-                document.getElementById(clockID).innerHTML = "Active Now";
+                document.getElementById($scope.data.id).innerHTML = "Active Now";
               }
                 console.log("update");
 
