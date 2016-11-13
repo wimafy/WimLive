@@ -103,7 +103,7 @@ angular.module('wimControllers.directives.countdownClock', [])
 
 
            //var timeinterval = setInterval(updateClock(), 1);
-           updateClock()
+           //updateClock()
 
 
 
