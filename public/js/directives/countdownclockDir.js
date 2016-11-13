@@ -63,29 +63,35 @@ angular.module('wimControllers.directives.countdownClock', [])
               secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
               if (t.days > 1){
+                console.log("something else1");
                 return {
                   'variable':  t.days + " Days"
                 };
               }else if (t.days > 0){
+                console.log("something else2");
                   return {
                     'variable':  t.days + " Day"
                   };
               }else if (('0' + t.hours).slice(-2) > 1){
+                console.log("something else3");
                   return {
                     'variable':  ('0' + t.hours).slice(-2) + " Hours"
                   };
                    //document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hours";
               }else if (('0' + t.hours).slice(-2) > 0){
+                console.log("something else4");
                   return {
                     'variable':  ('0' + t.hours).slice(-2) + " Hour"
                   };
                    //document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hour";
               }else if (('0' + t.minutes).slice(-2) > 0){
+                  console.log("something else5");
                   return {
                     'variable':  ('0' + t.minutes).slice(-2) + " Minutes"
                   };
                   // document.getElementById(clockID).innerHTML = ('0' + t.minutes).slice(-2) + " Minutes";
               }else if (('0' + t.seconds).slice(-2) > 0){
+                  console.log("something else6");
                   return {
                     'variable':  ('0' + t.minutes).slice(-2) + "1 Minute"
                   };
@@ -95,6 +101,7 @@ angular.module('wimControllers.directives.countdownClock', [])
 
 
               if (t.total <= 0) {
+                console.log("something else7");
                 //clearInterval(timeinterval);
                 document.getElementById(clockID).innerHTML = "Active Now";
               }
@@ -109,7 +116,10 @@ angular.module('wimControllers.directives.countdownClock', [])
 
           }
 
-         //initializeClock(id, clockID, endtime)
+         var idvar = 'clockdiv'+$scope.data.id;
+         var clockIDvar = 'clockdiv'+$scope.data.id;
+
+         var initializeclockvar = initializeClock(idvar, clockIDvar, $scope.data.date)
 
 
          $interval(function() {
