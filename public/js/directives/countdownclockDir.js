@@ -121,7 +121,7 @@ angular.module('wimControllers.directives.countdownClock', [])
          console.log(idvar);
          console.log(clockIDvar);
 
-         $setTimeout(function () {
+         $timeout(function () {
             alert('timeout');
          }, 1000);
 
