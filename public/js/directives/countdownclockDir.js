@@ -57,7 +57,7 @@ angular.module('wimControllers.directives.countdownClock', [])
 
             function updateClock() {
               var t = getTimeRemaining(endtime);
-
+              console.log(t);
               daysSpan.innerHTML = t.days;
               hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
               minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
@@ -125,7 +125,7 @@ angular.module('wimControllers.directives.countdownClock', [])
            var clockIDvar = 'clockdiv'+$scope.data.id;
            console.log(idvar);
            console.log(clockIDvar);
-           
+
            initializeClock(idvar, clockIDvar, $scope.data.date)
          }, 3000);
 
