@@ -70,7 +70,7 @@ float: left; margin: 12px;">
                     <p>You currently have <b>{{ wims.length }}</b> wims on your schedule.</p>
                     -->
 
-                  <div data-ng-repeat="cust in customers | filter:name | orderBy:'city' ">
+                  <div data-ng-repeat="cust in customers">
                     <a onclick="fullpageB1selectedWim()">
                         <div class="currentwimsindividualdiv">
                             <i class="currentwimswimtypeimg material-icons" style="line-height: 50px; font-size: 30px;">&#xE7E9;</i>
