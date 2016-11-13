@@ -130,10 +130,10 @@ angular.module('wimControllers.directives.countdownClock', [])
          }, 3000);
 
 
-
+/*
          $interval(function() {
-            console.log('interval');
-            console.log($scope.data.id);
+            //console.log('interval');
+            //console.log($scope.data.id);
 
 
             //var myVariable = "pawowk!";
@@ -143,7 +143,7 @@ angular.module('wimControllers.directives.countdownClock', [])
 
             //actually changes text to whatever variable is set
             document.getElementById($scope.data.id).innerHTML = bimpert.variable;
-          }, 5000);
+          }, 5000); */
         }
     };
 });
