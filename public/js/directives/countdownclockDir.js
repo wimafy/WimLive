@@ -5,7 +5,8 @@ angular.module('wimControllers.directives.countdownClock', [])
         scope: {
             //data is found in the div called countdown-clock
             //the syntax is awkward and i'm not sure why it is that way
-            data: '='
+            data: '=',
+            countdowndate: '='
         },
         //not sure what replace does
         replace: true,
@@ -15,6 +16,8 @@ angular.module('wimControllers.directives.countdownClock', [])
         },
         controller: function($scope, $interval) {
           console.log($scope.data);
+          console.log($scope.countdowndate);
+
           //interval is set at the end of this function
 
 
