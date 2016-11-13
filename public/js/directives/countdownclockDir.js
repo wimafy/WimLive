@@ -47,6 +47,7 @@ angular.module('wimControllers.directives.countdownClock', [])
 
 
          function initializeClock(id, clockID, endtime) {
+           console.log("start clock");
             var clock = document.getElementById(id);
             var daysSpan = clock.querySelector('.days');
             var hoursSpan = clock.querySelector('.hours');
@@ -116,12 +117,15 @@ angular.module('wimControllers.directives.countdownClock', [])
 
           }
 
-         var idvar = 'clockdiv'+$scope.data.id;
-         var clockIDvar = 'clockdiv'+$scope.data.id;
-         console.log(idvar);
-         console.log(clockIDvar);
+
 
          $timeout(function () {
+
+           var idvar = 'clockdiv'+$scope.data.id;
+           var clockIDvar = 'clockdiv'+$scope.data.id;
+           console.log(idvar);
+           console.log(clockIDvar);
+           
            initializeClock(idvar, clockIDvar, $scope.data.date)
          }, 3000);
 
