@@ -20,8 +20,8 @@ angular.module('wimControllers.directives.countdownClock', [])
           //interval is set at the end of this function
 
 
-          function makething(mywords) {
-                var endingVariable = mywords;
+          function makething() {
+                var endingVariable = $scope.data.date;
 
                 return {
                   'variable': endingVariable
@@ -121,7 +121,7 @@ angular.module('wimControllers.directives.countdownClock', [])
 
             //var myVariable = "pawowk!";
 
-            var bimpert = makething($scope.data.id);
+            var bimpert = makething();
             //var updatedclock = updateClock()
 
             //actually changes text to whatever variable is set
