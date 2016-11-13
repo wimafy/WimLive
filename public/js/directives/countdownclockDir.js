@@ -9,7 +9,7 @@ angular.module('wimControllers.directives.countdownClock', [])
         },
         //not sure what replace does
         replace: true,
-        templateUrl: "directives/dirTemplates/currentWimIDcard.html",
+        templateUrl: "dirTemplates/currentWimIDcard.html",
         link: function(scope, element, attrs) {
           //console.log(arguments)
         },
