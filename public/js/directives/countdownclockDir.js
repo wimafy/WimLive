@@ -64,37 +64,37 @@ angular.module('wimControllers.directives.countdownClock', [])
               secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 
               if (t.days > 1){
-                console.log("something else1");
+                console.log(t.days + " days");
                 return {
                   'variable':  t.days + " Days"
                 };
               }else if (t.days > 0){
-                console.log("something else2");
+                console.log(t.days + " day");
                   return {
                     'variable':  t.days + " Day"
                   };
               }else if (('0' + t.hours).slice(-2) > 1){
-                console.log("something else3");
+                console.log(t.hours + " hours");
                   return {
                     'variable':  ('0' + t.hours).slice(-2) + " Hours"
                   };
                    //document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hours";
               }else if (('0' + t.hours).slice(-2) > 0){
-                console.log("something else4");
+                console.log(t.hours + " hour");
                   return {
                     'variable':  ('0' + t.hours).slice(-2) + " Hour"
                   };
                    //document.getElementById(clockID).innerHTML = ('0' + t.hours).slice(-2) + " Hour";
               }else if (('0' + t.minutes).slice(-2) > 0){
-                  console.log("something else5");
+                  console.log(t.minutes + " minutes");
                   return {
                     'variable':  ('0' + t.minutes).slice(-2) + " Minutes"
                   };
                   // document.getElementById(clockID).innerHTML = ('0' + t.minutes).slice(-2) + " Minutes";
               }else if (('0' + t.seconds).slice(-2) > 0){
-                  console.log("something else6");
+                  console.log(t.minutes + " minute");
                   return {
-                    'variable':  ('0' + t.minutes).slice(-2) + "1 Minute"
+                    'variable':  ('0' + t.minutes).slice(-2) + " Minute"
                   };
                    //document.getElementById(clockID).innerHTML = "1 Minute";
               }
@@ -102,7 +102,7 @@ angular.module('wimControllers.directives.countdownClock', [])
 
 
               if (t.total <= 0) {
-                console.log("something else7");
+                console.log("Active Now");
                 //clearInterval(timeinterval);
                 document.getElementById(clockID).innerHTML = "Active Now";
               }
