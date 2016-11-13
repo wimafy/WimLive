@@ -139,10 +139,10 @@ angular.module('wimControllers.directives.countdownClock', [])
             //var myVariable = "pawowk!";
 
             var bimpert = makething();
-            //var updatedclock = updateClock()
+            var updatedclockvar = updateClock()
 
             //actually changes text to whatever variable is set
-            document.getElementById($scope.data.id).innerHTML = bimpert.variable;
+            document.getElementById($scope.data.id).innerHTML = updatedclockvar.variable;
           }, 5000);
         }
     };
