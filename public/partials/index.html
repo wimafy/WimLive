@@ -69,8 +69,8 @@ float: left; margin: 12px;">
                     <!--
                     <p>You currently have <b>{{ wims.length }}</b> wims on your schedule.</p>
                     -->
-              <countdown-Clock data-ng-repeat="cust in customers" id="{{cust.id}}" data="cust">
-                  <div>
+
+                  <div data-ng-repeat="cust in customers | filter:name | orderBy:'city' ">
                     <a onclick="fullpageB1selectedWim()">
                         <div class="currentwimsindividualdiv">
                             <i class="currentwimswimtypeimg material-icons" style="line-height: 50px; font-size: 30px;">&#xE7E9;</i>
@@ -85,9 +85,10 @@ float: left; margin: 12px;">
                                 <div class="currentwimparticipantsimg">5</div>
                             </div>
                             <div style="width: calc(60% - 120px); height: 70px; float: left;">
+                              <countdown-Clock id="{{cust.id}}" data="cust">
                                 <p class="currentwimcountdowntime">20 min</p>
                                 <p class="currentwimcountdowndate">5pm Sun 24</p>
-
+                              </countdown-clock>
                             </div>
 
                         </div>
@@ -116,7 +117,6 @@ float: left; margin: 12px;">
                     <buton ng-click="initializeClock('clockdiv', 'countdownholder', 'november 10 2016 17:20:59 GMT-0500')">Click me</buton>
 -->
                   </div>
-              </countdown-Clock>
 
 
                  <a onclick="fullpageB1selectedWim()">
