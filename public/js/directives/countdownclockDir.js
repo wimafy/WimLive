@@ -13,7 +13,7 @@ angular.module('wimControllers.directives.countdownClock', [])
         link: function(scope, element, attrs) {
           //console.log(arguments)
         },
-        controller: function($scope, $interval) {
+        controller: function($scope, $interval, $timeout) {
           console.log($scope.data);
           console.log('clockdiv'+$scope.data.id);
 
@@ -121,7 +121,11 @@ angular.module('wimControllers.directives.countdownClock', [])
          console.log(idvar);
          console.log(clockIDvar);
 
-         //var initializeclockvar = initializeClock(idvar, clockIDvar, $scope.data.date)
+         $setTimeout(function () {
+            alert('timeout');
+         }, 1000);
+
+         //initializeClock(idvar, clockIDvar, $scope.data.date)
 
 
          $interval(function() {
