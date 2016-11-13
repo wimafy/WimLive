@@ -15,7 +15,7 @@ angular.module('wimControllers.directives.countdownClock', [])
         },
         controller: function($scope, $interval) {
           console.log($scope.data);
-          console.log($scope.data.date);
+          console.log('clockdiv'+$scope.data.id);
 
           //interval is set at the end of this function
 
@@ -107,11 +107,9 @@ angular.module('wimControllers.directives.countdownClock', [])
            //var timeinterval = setInterval(updateClock(), 1);
            //updateClock()
 
-
-
-
           }
 
+         //initializeClock(id, clockID, endtime)
 
 
          $interval(function() {
