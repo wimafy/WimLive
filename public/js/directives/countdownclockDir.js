@@ -114,7 +114,7 @@ angular.module('wimControllers.directives.countdownClock', [])
 
            //var timeinterval = setInterval(updateClock(), 1);
            updateClock()
-           setInterval( function(){updateClock()}, 5000);
+           setInterval( function(){updateClock()}, 1000);
           }
 
 
