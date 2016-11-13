@@ -9,7 +9,7 @@ angular.module('wimControllers.directives.countdownClock', [])
         },
         //not sure what replace does
         replace: true,
-        template: "<h1>{{data.name}}</h1>",
+        template: "<p class='currentwimcountdowntime'>{{data.name}}</p><p class='currentwimcountdowndate'>{{data.name}}</p>",
         link: function(scope, element, attrs) {
           //console.log(arguments)
         },
