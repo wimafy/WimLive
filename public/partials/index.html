@@ -85,7 +85,7 @@ float: left; margin: 12px;">
                                 <div class="currentwimparticipantsimg">5</div>
                             </div>
                             <div style="width: calc(60% - 120px); height: 70px; float: left;">
-                              <countdown-Clock id="{{cust.id}}" data="cust">
+                              <countdown-Clock id="{{cust.id}}" data="cust" class="currentwimcountdowntime">
                                 <p class="currentwimcountdowntime">Error</p>
                               </countdown-clock>
                               <p class="currentwimcountdowndate">{{ cust.date | limitTo:17}}</p>
