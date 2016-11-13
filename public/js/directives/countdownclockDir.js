@@ -110,11 +110,11 @@ angular.module('wimControllers.directives.countdownClock', [])
 
 
            //var timeinterval = setInterval(updateClock(), 1);
-           updateClock()
+           //updateClock()
 
           }
 
-         initializeClock($scope.data.id, $scope.data.id, endtime)
+         initializeClock($scope.data.id, $scope.data.id, 'november 10 2016 17:55:59 GMT-0500')
 
          $interval(function() {
             console.log('interval');
