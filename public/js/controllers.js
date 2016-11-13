@@ -272,7 +272,7 @@ wimControllers.controller('ProfileController', ['$scope', '$log', '$location', '
 
   $scope.customers=  [
             { name:'John Smith', city:'Phoenix', id: 12345, date: 'Nov 10 2016 17:55:59 GMT-0500'},
-            { name:'John Doe', city:'New York', id: 67891, date: 'Nov 12 2016 22:14:59 GMT-0500'},
+            { name:'John Doe', city:'New York', id: 67891, date: 'Nov 12 2016 23:40:59 GMT-0500'},
             { name:'Jane Doe', city:'San Francisco', id: 112345, date: 'Nov 30 2016 17:55:59 GMT-0500'}
           ];
 
