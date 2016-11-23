@@ -44,7 +44,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
       document.getElementById("colordiv2").innerHTML = $scope.actualtime;
       $scope.actualtimestring = String($scope.actualtime);
       console.log($scope.actualtimestring);
-      $scope.actualtimestring = $scope.actualtimestring.substring(1, 11);
+      $scope.actualtimestring = $scope.actualtimestring.substring(1, 9);
       document.getElementById("colordiv").innerHTML = $scope.actualtimestring;
       $scope.actualtimestringnumber = Number($scope.actualtimestring);
       if($scope.actualtimestringnumber %2 == 0){
