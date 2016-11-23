@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="directoryApp">
+	<head>
+		<title>Angular JS for Everyone</title>
+		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.js"></script>
+		 <script src="lightsappcontroller.js"></script>
+
+
+	</head>
+	<body ng-controller="directoryController as dirList">
+
+		<input type="text" ng-model="search">
+    <table>
+      <tr>
+        <th>T-Plus</th>
+        <th>Color</th>
+      </tr>
+      <tr ng-repeat="item in dirList.list | filter:search" ng-include="'lightinfo.html'">
+
+      </tr>
+    </table>
+
+
+
+		<form ng-submit="dirList.addColorChange()">
+      <input id="numberinput" type="number" min={{dirList.tplus}} max="20000" value={{dirList.tplus}} ng-model="dirList.tplus"/>
+      <select value={{dirList.colorinput}} ng-model="dirList.color">
+          <option value="red" ng-disabled= {{diableRed}} >Red</option>
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+      </select>
+
+
+			<button type="submit" value="submit">Add</button>
+
+		</form>
+
+
+	</body>
+</html>
