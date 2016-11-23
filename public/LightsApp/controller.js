@@ -44,6 +44,8 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
       document.getElementById("colordiv2").innerHTML = $scope.actualtime;
       $scope.actualtimestring = String($scope.actualtime);
       console.log($scope.actualtimestring);
+      $scope.actualtimestring = $scope.actualtimestring.substring(1, 11);
+      document.getElementById("colordiv").innerHTML = $scope.actualtime;
 
 
     }
@@ -142,7 +144,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
     $scope.currentTimeHolderseconds = getcurrenttime.secondstime;
     $scope.currentTimeHoldermilliseconds = getcurrenttime.millisecondstime;
 
-
+/*
     $scope.changecolor = function() {
       alert("dsda");
       document.getElementById('colordiv').style.backgroundColor = "blue";
@@ -164,7 +166,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
       setInterval( function(){$scope.timeupdater()}, 1000);
 
     }
-
+*/
 
     //var deadline = 'August 14 2016 15:55:59 GMT-0700';
     //initializeClock('clockdiv', deadline);
