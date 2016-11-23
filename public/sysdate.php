@@ -7,7 +7,7 @@
   $milliseconds = microtime(true) * 1000;
 
 
-  echo $milliseconds;
+  return $milliseconds;
 
   
 
