@@ -38,7 +38,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
     $scope.tplus2 = 0;
 
     $scope.timeupdater2 = function() {
-      $scope.tplus2 += 100;
+      $scope.tplus2 += 100000;
       $scope.actualtime = $rootScope.currenttime2 + $scope.tplus2;
       document.getElementById("colordiv2").innerHTML = $scope.actualtime ;
 
