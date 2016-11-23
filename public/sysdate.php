@@ -8,7 +8,6 @@
 
 
   echo $milliseconds;
-  return $milliseconds;
 
   
 
