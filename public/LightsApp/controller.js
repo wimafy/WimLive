@@ -45,7 +45,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
       $scope.actualtimestring = String($scope.actualtime);
       console.log($scope.actualtimestring);
       $scope.actualtimestring = $scope.actualtimestring.substring(1, 11);
-      document.getElementById("colordiv").innerHTML = $scope.actualtime;
+      document.getElementById("colordiv").innerHTML = $scope.actualtimestring;
 
 
     }
