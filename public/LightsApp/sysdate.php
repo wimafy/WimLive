@@ -4,7 +4,7 @@
 
   //echo "yay";
 
-  $milliseconds = microtime(true) * 1000;
+  $milliseconds = round(microtime(true) * 1000);
 
 
   echo $milliseconds;
