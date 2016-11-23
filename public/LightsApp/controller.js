@@ -30,7 +30,8 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
     $http.get('http://52.41.37.153/sysdate.php')
     .success(function(response) {
       $scope.phprespone = response;
-      $rootScope.currenttime2 = response;
+
+      $rootScope.currenttime2 = Number(response);
       $scope.updatetime2;
       //alert("wee");
     });
