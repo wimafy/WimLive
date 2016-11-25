@@ -1,25 +1,6 @@
 var app = angular.module('myApp', []);
 
 
-app.service('getcurrenttime', function() {
-
-  var t = Date.parse(new Date());
-  console.log(t);
-  var milliseconds = Math.floor((t) % 60);
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 60);
-  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
-
-  this.totaltime = t;
-  this.daystime = days;
-  this.hourstime = hours;
-  this.minutestime = minutes;
-  this.secondstime = seconds;
-  this.millisecondstime = milliseconds;
-  this.currenttime = "The current time is NOW";
-
-});
 
 
 
