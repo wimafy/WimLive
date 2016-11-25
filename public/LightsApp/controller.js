@@ -34,7 +34,9 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
       $scope.phprespone = response;
 
       $rootScope.currenttime2 = Number(response);
+      $scope.currenttimeadded = $rootScope.currenttime2;
       $scope.updatetime2;
+
       $scope.currenttimeLocalinit2 = new Date();
       $scope.currenttimeLocal2 = $scope.currenttimeLocalinit2.getTime();
       $scope.timedifference = $scope.currenttimeLocal2 - $scope.currenttimeLocal;
