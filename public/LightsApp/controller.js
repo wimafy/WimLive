@@ -82,9 +82,11 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
 
     $scope.updatetime2 = function() {
       setInterval( function(){$scope.timeupdater2()}, 100);
-      setInterval( function(){$scope.timeresync()}, 500);
     }
 
+    $scope.updatetime3 = function() {
+      setInterval( function(){$scope.timeresync()}, 500);
+    }
 
     $scope.alertfunction = function() {
 
