@@ -39,7 +39,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
 
       $scope.currenttimeLocalinit2 = new Date();
       $scope.currenttimeLocal2 = $scope.currenttimeLocalinit2.getTime();
-      $scope.timedifference = $scope.currenttimeLocal2 - $scope.currenttimeLocal;
+      $scope.timedifference = ($scope.currenttimeLocal2 - $scope.currenttimeLocal)/2;
       $scope.currenttimeadded = Number($rootScope.currenttime2) + Number($scope.timedifference);
 
       //alert("wee");
