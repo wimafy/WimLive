@@ -37,7 +37,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
       //gets time from server in millsec from epoc
       $scope.phprespone = response;
       //sets variable as root so the variable can be accessed and added to
-      $rootScope.currenttime2 = Number(response);
+      $scope.servergettime = Number(response);
       //no idea lol
       $scope.updatetime2;
       //gets second time on machine
@@ -46,7 +46,8 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
       //first time on machine taken minus second time devided by 2 == one way trip
       $scope.timedifference = ($scope.currenttimeLocal2 - $scope.currenttimeLocal)/2;
       //one way trip time is added to the server returned time
-      $scope.currenttimeadded = Number($rootScope.currenttime2) + Number($scope.timedifference);
+      $scope.currenttimeadded = Number($scope.servergettime) + Number($scope.timedifference);
+      $rootScope.currenttime2 = Number($scope.servergettime) + Number($scope.timedifference);
 
       //alert("wee");
     });
