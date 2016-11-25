@@ -86,39 +86,10 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
     }
 
 
-    $scope.alertfunction = function() {
-
-          alert("theings");
-
-    }
 
 
-    $scope.showwords = function(){
 
-        document.getElementById('clicktobegin').style.zIndex = -3;
-        document.getElementById('testDiv').style.backgroundColor = "white";
-      $interval(function () {
-        document.getElementById('testDiv').style.backgroundColor = "white";
-          $timeout(function () {
-            document.getElementById('testDiv').style.backgroundColor = "black";
-
-          }, 500);
-      }, 2000);
-
-
-    };
-
-
-    $scope.testsarray = [
-      {testname: 'Test One', redirectlink: '/TestOne', completed: true},
-      {testname: 'Test Two', redirectlink: '/TestTwo', completed: true},
-      {testname: 'Test Three', redirectlink: '/TestThree', completed: true},
-      {testname: 'Test Four', redirectlink: '/TestFour', completed: true},
-      {testname: 'Test Five', redirectlink: '/TestFive', completed: true},
-      {testname: 'Test Six', redirectlink: '/TestSix', completed: true},
-
-    ];
-
+  
 
 
 
