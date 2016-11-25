@@ -93,4 +93,6 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
 
 
 
-  
+
+
+});
