@@ -24,7 +24,7 @@ app.service('getcurrenttime', function() {
 
 
 
-app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $rootScope, $http) {
+app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $scope, $http) {
 
     //$http.get('http://127.0.0.1/BraxAttack.github.io/LightsApp/sysdate.php')
     //sets date of current time on machine (next two lines)
@@ -47,16 +47,16 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
       $scope.timedifference = ($scope.currenttimeLocal2 - $scope.currenttimeLocal)/2;
       //one way trip time is added to the server returned time
       $scope.currenttimeadded = Number($scope.servergettime) + Number($scope.timedifference);
-      $rootScope.currenttime2 = Number($scope.servergettime) + Number($scope.timedifference);
+      $scope.currenttime2 = Number($scope.servergettime) + Number($scope.timedifference);
 
       //alert("wee");
     });
 
-    $rootScope.tplus2 = 0;
+    $scope.tplus2 = 0;
 
     $scope.timeupdater2 = function() {
-      $rootScope.tplus2 += 100;
-      $scope.actualtime = $rootScope.currenttime2 + $rootScope.tplus2;
+      $scope.tplus2 += 100;
+      $scope.actualtime = $scope.currenttime2 + $scope.tplus2;
       document.getElementById("colordiv2").innerHTML = $scope.actualtime;
       $scope.actualtimestring = String($scope.actualtime);
       //console.log($scope.actualtimestring);
@@ -77,7 +77,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
 
     $scope.timeresync = function() {
        //document.getElementById("colordiv2").innerHTML = "whatever";
-       $rootScope.currenttime2 = 100;
+       $scope.currenttime2 = 100;
     }
 
     $scope.updatetime2 = function() {
@@ -183,12 +183,12 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
     }
 
 
-    $rootScope.currenttime = getcurrenttime.totaltime;
+    $scope.currenttime = getcurrenttime.totaltime;
     $scope.tplus = 0;
 
     $scope.timeupdater = function() {
       $scope.tplus += 100;
-      $scope.actualtime = $rootScope.currenttime + $scope.tplus;
+      $scope.actualtime = $scope.currenttime + $scope.tplus;
       document.getElementById("colordiv").innerHTML = $scope.actualtime ;
 
 
