@@ -76,7 +76,8 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
 
 
     $scope.timeresync = function() {
-       document.getElementById("colordiv2").innerHTML = "whatever";
+       //document.getElementById("colordiv2").innerHTML = "whatever";
+       $rootScope.currenttime2 = 100;
     }
 
     $scope.updatetime2 = function() {
