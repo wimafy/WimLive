@@ -60,6 +60,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
     $scope.timeresync = function() {
        //document.getElementById("colordiv2").innerHTML = "whatever";
        //$scope.currenttime2 = 100;
+       $scope.currenttime2 = 300;
        $scope.tplus3 ++;
          document.getElementById("colordiv3").innerHTML = $scope.tplus3;
     }
