@@ -48,7 +48,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
       document.getElementById("colordiv").innerHTML = $scope.actualtimestring;
       $scope.actualtimestringnumber = Number($scope.actualtimestring);
       if($scope.actualtimestringnumber %50 == 0){
-        document.getElementById("colordiv").style.backgroundColor = "black";
+        document.getElementById("colordiv").style.backgroundColor = "red";
 
       }else {
         document.getElementById("colordiv").style.backgroundColor = "blue";
