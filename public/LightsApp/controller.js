@@ -77,7 +77,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
 
     $scope.timeresync = function() {
        //document.getElementById("colordiv2").innerHTML = "whatever";
-       $rootScope.currenttime2 = 100;
+       //$rootScope.currenttime2 = 100;
     }
 
     $scope.updatetime2 = function() {
@@ -89,90 +89,8 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
 
 
 
+
+
+
+
   
-
-
-
-    $scope.getTimeRemaining = function(endtime) {
-      var t = Date.parse(endtime) - Date.parse(new Date());
-      console.log(t);
-      var milliseconds = Math.floor((t) % 60);
-      var seconds = Math.floor((t / 1000) % 60);
-      var minutes = Math.floor((t / 1000 / 60) % 60);
-      var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-      var days = Math.floor(t / (1000 * 60 * 60 * 24));
-      return {
-        'total': t,
-        'days': days,
-        'hours': hours,
-        'minutes': minutes,
-        'seconds': seconds,
-        'milliseconds': milliseconds
-      };
-    }
-
-
-    $scope.initializeClock = function(id, clockID, endtime) {
-      var clock = document.getElementById(id);
-      var daysSpan = clock.querySelector('.days');
-      var hoursSpan = clock.querySelector('.hours');
-      var minutesSpan = clock.querySelector('.minutes');
-      var secondsSpan = clock.querySelector('.seconds');
-      var millisecondsSpan = clock.querySelector('.milliseconds');
-
-      daysSpan.innerHTML = t.days;
-      hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
-      minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
-      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-      millisecondsSpan.innerHTML = ('0' + t.milliseconds).slice(-2);
-
-    }
-
-    $scope.randomnumber = function(){
-      document.getElementById("demo").innerHTML = Math.random();
-    }
-
-    $scope.changenumber = function() {
-      setInterval( function(){$scope.randomnumber()}, 100);
-    }
-
-
-
-    $scope.currentTimeHolder = getcurrenttime.totaltime;
-    $scope.currentTimeHolderdays = getcurrenttime.daystime;
-    $scope.currentTimeHolderhours = getcurrenttime.hourstime;
-    $scope.currentTimeHolderminutes = getcurrenttime.minutestime;
-    $scope.currentTimeHolderseconds = getcurrenttime.secondstime;
-    $scope.currentTimeHoldermilliseconds = getcurrenttime.millisecondstime;
-
-/*
-    $scope.changecolor = function() {
-      alert("dsda");
-      document.getElementById('colordiv').style.backgroundColor = "blue";
-    }
-
-
-    $rootScope.currenttime = getcurrenttime.totaltime;
-    $scope.tplus = 0;
-
-    $scope.timeupdater = function() {
-      $scope.tplus += 100;
-      $scope.actualtime = $rootScope.currenttime + $scope.tplus;
-      document.getElementById("colordiv").innerHTML = $scope.actualtime ;
-
-
-    }
-
-    $scope.updatetime = function() {
-      setInterval( function(){$scope.timeupdater()}, 1000);
-
-    }
-*/
-
-    //var deadline = 'August 14 2016 15:55:59 GMT-0700';
-    //initializeClock('clockdiv', deadline);
-
-
-
-
-});
