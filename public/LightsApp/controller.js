@@ -27,7 +27,7 @@ app.service('getcurrenttime', function() {
 app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $rootScope, $http) {
 
     //$http.get('http://127.0.0.1/BraxAttack.github.io/LightsApp/sysdate.php')
-    $scope.currenttimeLocal = new Date(milliseconds);
+    $scope.currenttimeLocal = new getTime();
     $http.get('http://52.41.37.153/sysdate.php')
     .success(function(response) {
       $scope.phprespone = response;
