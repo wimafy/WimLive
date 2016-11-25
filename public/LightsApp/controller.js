@@ -52,17 +52,18 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
       //alert("wee");
     });
 
-    $scope.tplus2 = 0;
+    $rootScope.tplus2 = 0;
 
     $scope.timeupdater2 = function() {
-      $scope.tplus2 += 100;
-      $scope.actualtime = $rootScope.currenttime2 + $scope.tplus2;
+      $rootScope.tplus2 += 100;
+      $scope.actualtime = $rootScope.currenttime2 + $rootScope.tplus2;
       document.getElementById("colordiv2").innerHTML = $scope.actualtime;
       $scope.actualtimestring = String($scope.actualtime);
       //console.log($scope.actualtimestring);
       $scope.actualtimestring = $scope.actualtimestring.substring(1, 11);
       document.getElementById("colordiv").innerHTML = $scope.actualtimestring;
       $scope.actualtimestringnumber = Number($scope.actualtimestring);
+
       if($scope.actualtimestringnumber %50 == 0){
         document.getElementById("colordiv").style.backgroundColor = "black";
 
