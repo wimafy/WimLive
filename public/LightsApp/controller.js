@@ -75,12 +75,12 @@ app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $
 
 
     $scope.timeresync = function() {
-       document.getElementById("colordiv").style.backgroundColor = "yellow";
+       document.getElementById("colordiv2").innerHTML = "whatever";
     }
 
     $scope.updatetime2 = function() {
-      //setInterval( function(){$scope.timeupdater2()}, 100);
-      setInterval( function(){$scope.timeresync()}, 5000);
+      setInterval( function(){$scope.timeupdater2()}, 100);
+      setInterval( function(){$scope.timeresync()}, 500);
     }
 
 
