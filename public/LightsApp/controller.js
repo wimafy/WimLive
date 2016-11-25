@@ -5,7 +5,7 @@ var app = angular.module('myApp', []);
 
 
 
-app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $rootScope, $http) {
+app.controller('myCtrl', function($scope, $timeout, $interval, $rootScope, $http) {
 
     //$http.get('http://127.0.0.1/BraxAttack.github.io/LightsApp/sysdate.php')
     //sets date of current time on machine (next two lines)
