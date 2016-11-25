@@ -27,14 +27,17 @@ app.service('getcurrenttime', function() {
 app.controller('myCtrl', function($scope, $timeout, $interval, getcurrenttime, $rootScope, $http) {
 
     //$http.get('http://127.0.0.1/BraxAttack.github.io/LightsApp/sysdate.php')
-    $scope.currenttimeLocal1 = new Date();
-    $scope.currenttimeLocal = $scope.currenttimeLocal1.getTime();
+    $scope.currenttimeLocalinit = new Date();
+    $scope.currenttimeLocal = $scope.currenttimeLocalinit.getTime();
     $http.get('http://52.41.37.153/sysdate.php')
     .success(function(response) {
       $scope.phprespone = response;
 
       $rootScope.currenttime2 = Number(response);
+      $scope.currenttimeLocalinit2 = new Date();
+      $scope.currenttimeLocal2 = $scope.currenttimeLocalinit2.getTime();
       $scope.updatetime2;
+
       //alert("wee");
     });
 
