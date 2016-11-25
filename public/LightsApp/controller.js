@@ -76,14 +76,14 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
          $scope.currenttimeLocalinit2 = new Date();
          $scope.currenttimeLocal2 = $scope.currenttimeLocalinit2.getTime();
          //first time on machine taken minus second time devided by 2 == one way trip
-         $scope.timedifference = ($scope.currenttimeLocal2 - $scope.currenttimeLocal)/2;
+         $scope.timedifference = Math.floor(($scope.currenttimeLocal2 - $scope.currenttimeLocal)/2);
          //one way trip time is added to the server returned time
          $scope.currenttimeadded = Number($scope.servergettime) + Number($scope.timedifference);
          $scope.currenttime2 = Number($scope.servergettime) + Number($scope.timedifference);
           $scope.tplus2= 0;
          //alert("wee");
        });
-       
+
        //$scope.currenttime2 = 0;
        console.log($scope.tplus2);
        console.log($scope.actualtimestring);
