@@ -62,7 +62,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
        //$scope.currenttime2 = 100;
        $scope.currenttime2 = 300;
        console.log($scope.tplus2);
-       console.log($$scope.actualtimestring);
+       console.log($scope.actualtimestring);
        $scope.tplus3 ++;
          document.getElementById("colordiv3").innerHTML = $scope.tplus3;
     }
