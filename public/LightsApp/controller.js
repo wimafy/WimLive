@@ -97,7 +97,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
     }
 
 
-    $scope.booliean = true;
+    $scope.booliean = false;
 
     $scope.iffunction = function() {
       alert("this is true");
