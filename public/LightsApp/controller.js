@@ -47,7 +47,10 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
       $scope.currenttime2 = Number($scope.servergettime) + Number($scope.timedifference);
 
       //alert("wee");
+
+/*xampp
     });
+*/
 
     $scope.tplus2 = 0;
     $scope.tplus3 = 0;
