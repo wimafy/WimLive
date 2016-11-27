@@ -162,7 +162,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
       {color: '#1B5E20', timeMS: 85000}
     ]
 
-    $scope.lightsChangeArrayInitTime =   1480215580319     ;
+    $scope.lightsChangeArrayInitTime =   1480216544901      ;
 
     //only fires if booliean is true
     $scope.booliean = true;
