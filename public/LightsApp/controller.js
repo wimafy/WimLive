@@ -177,14 +177,15 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
           //console.log($scope.actualtime);
           //console.log(this.timeMSforeach);
           console.log(this.timeMSforeachSubtract);
-
-          $timeout(function () {
-            //alert("Test complete");
-            //console.log( lightsChangeArray.color );
-            //console.log($scope.actualtime);
-            //console.log(this.timeMSforeach);
-            document.getElementById("LightsAppColorDiv").style.backgroundColor = lightsChangeArray.color;
-          }, this.timeMSforeachSubtract );
+          if(this.timeMSforeachSubtract >= 0) {
+              $timeout(function () {
+                //alert("Test complete");
+                //console.log( lightsChangeArray.color );
+                //console.log($scope.actualtime);
+                //console.log(this.timeMSforeach);
+                document.getElementById("LightsAppColorDiv").style.backgroundColor = lightsChangeArray.color;
+              }, this.timeMSforeachSubtract );
+          }
 
         }, 2000 );
 
