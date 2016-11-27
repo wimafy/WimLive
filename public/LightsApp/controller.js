@@ -7,6 +7,10 @@ var app = angular.module('myApp', []);
 
 app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 
+
+
+    //all of this mess is time syncing
+
     //$http.get('http://127.0.0.1/BraxAttack.github.io/LightsApp/sysdate.php')
     //sets date of current time on machine (next two lines)
     $scope.currenttimeLocalinit = new Date();
@@ -123,8 +127,8 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 
 
        //$scope.currenttime2 = 0;
-       console.log($scope.tplus2);
-       console.log($scope.actualtimestring);
+       //console.log($scope.tplus2);
+       //console.log($scope.actualtimestring);
        $scope.tplus3 ++;
          document.getElementById("colordiv3").innerHTML = $scope.tplus3;
     }
@@ -134,6 +138,10 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
       setInterval( function(){$scope.timeresync()}, 15000);
     }
 
+//end of time syncing
+
+
+//begin color changing
 
 
     //changing colors and stuff
@@ -161,7 +169,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
       {color: '#C2185B', timeMS: 160000}
     ]
 
-    $scope.lightsChangeArrayInitTime =   1480217436708   ;
+    $scope.lightsChangeArrayInitTime =   1480217733023    ;
 
     //only fires if booliean is true
     $scope.booliean = true;
@@ -176,9 +184,9 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
           //console.log( lightsChangeArray.color );
           //console.log($scope.actualtime);
           //console.log(this.timeMSforeach);
-          console.log(this.timeMSforeachSubtract);
+          //console.log(this.timeMSforeachSubtract);
           if(this.timeMSforeachSubtract > 0) {
-              console.log("things");
+              //console.log("things");
               $timeout(function () {
                 //alert("Test complete");
                 //console.log( lightsChangeArray.color );
@@ -207,7 +215,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 
 
 
-
+//end color changing
 
 
 });
