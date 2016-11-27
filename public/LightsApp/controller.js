@@ -161,7 +161,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
       {color: '#C2185B', timeMS: 160000}
     ]
 
-    $scope.lightsChangeArrayInitTime =   1480217064163 ;
+    $scope.lightsChangeArrayInitTime =   1480217436708   ;
 
     //only fires if booliean is true
     $scope.booliean = true;
@@ -177,7 +177,8 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
           //console.log($scope.actualtime);
           //console.log(this.timeMSforeach);
           console.log(this.timeMSforeachSubtract);
-          if(this.timeMSforeachSubtract >= 0) {
+          if(this.timeMSforeachSubtract > 0) {
+              console.log("things");
               $timeout(function () {
                 //alert("Test complete");
                 //console.log( lightsChangeArray.color );
