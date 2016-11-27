@@ -138,30 +138,30 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 
     //changing colors and stuff
     var lightsChangeArray = [
-      {color: '#D81B60', timeMS: 62000},
-      {color: '#D81B60', timeMS: 63000},
-      {color: '#D81B60', timeMS: 64000},
-      {color: '#D81B60', timeMS: 65000},
-      {color: '#D81B60', timeMS: 66000},
-      {color: '#D81B60', timeMS: 67000},
-      {color: '#D81B60', timeMS: 68000},
-      {color: '#D81B60', timeMS: 69000},
-      {color: '#D81B60', timeMS: 70000},
-      {color: '#D81B60', timeMS: 71000},
-      {color: '#D81B60', timeMS: 72000},
-      {color: '#D81B60', timeMS: 73000},
-      {color: '#D81B60', timeMS: 74000},
-      {color: '#D81B60', timeMS: 75000},
-      {color: '#D81B60', timeMS: 76000},
-      {color: '#D81B60', timeMS: 77000},
-      {color: '#D81B60', timeMS: 78000},
-      {color: '#D81B60', timeMS: 79000},
-      {color: '#D81B60', timeMS: 80000},
-      {color: '#D81B60', timeMS: 81000},
-      {color: '#D81B60', timeMS: 85000}
+      {color: '#f44336', timeMS: 60000},
+      {color: '#E91E63', timeMS: 65000},
+      {color: '#9C27B0', timeMS: 70000},
+      {color: '#673AB7', timeMS: 75000},
+      {color: '#3F51B5', timeMS: 80000},
+      {color: '#2196F3', timeMS: 85000},
+      {color: '#03A9F4', timeMS: 90000},
+      {color: '#00BCD4', timeMS: 95000},
+      {color: '#009688', timeMS: 100000},
+      {color: '#4CAF50', timeMS: 105000},
+      {color: '#8BC34A', timeMS: 110000},
+      {color: '#CDDC39', timeMS: 115000},
+      {color: '#FFEB3B', timeMS: 120000},
+      {color: '#FFC107', timeMS: 125000},
+      {color: '#FF9800', timeMS: 130000},
+      {color: '#FF5722', timeMS: 135000},
+      {color: '#795548', timeMS: 140000},
+      {color: '#9E9E9E', timeMS: 145000},
+      {color: '#607D8B', timeMS: 1500000},
+      {color: '#d32f2f', timeMS: 155000},
+      {color: '#C2185B', timeMS: 160000}
     ]
 
-    $scope.lightsChangeArrayInitTime =   1480216824237;
+    $scope.lightsChangeArrayInitTime =   1480217064163 ;
 
     //only fires if booliean is true
     $scope.booliean = true;
