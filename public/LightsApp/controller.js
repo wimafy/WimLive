@@ -139,30 +139,30 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 
     //changing colors and stuff
     var lightsChangeArray = [
-      {color: '#e53935', timeMS: 62000},
+      {color: '#D81B60', timeMS: 62000},
       {color: '#D81B60', timeMS: 63000},
-      {color: '#8E24AA', timeMS: 64000},
-      {color: '#5E35B1', timeMS: 65000},
-      {color: '#3949AB', timeMS: 66000},
-      {color: '#1E88E5', timeMS: 67000},
-      {color: '#039BE5', timeMS: 68000},
-      {color: '#00ACC1', timeMS: 69000},
-      {color: '#00897B', timeMS: 70000},
-      {color: '#43A047', timeMS: 71000},
-      {color: '#7CB342', timeMS: 72000},
-      {color: '#C0CA33', timeMS: 73000},
-      {color: '#FDD835', timeMS: 74000},
-      {color: '#FFB300', timeMS: 75000},
-      {color: '#FB8C00', timeMS: 76000},
-      {color: '#F4511E', timeMS: 77000},
-      {color: '#6D4C41', timeMS: 78000},
-      {color: '#757575', timeMS: 79000},
-      {color: '#546E7A', timeMS: 80000},
-      {color: '#311B92', timeMS: 81000},
-      {color: '#1B5E20', timeMS: 85000}
+      {color: '#D81B60', timeMS: 64000},
+      {color: '#D81B60', timeMS: 65000},
+      {color: '#D81B60', timeMS: 66000},
+      {color: '#D81B60', timeMS: 67000},
+      {color: '#D81B60', timeMS: 68000},
+      {color: '#D81B60', timeMS: 69000},
+      {color: '#D81B60', timeMS: 70000},
+      {color: '#D81B60', timeMS: 71000},
+      {color: '#D81B60', timeMS: 72000},
+      {color: '#D81B60', timeMS: 73000},
+      {color: '#D81B60', timeMS: 74000},
+      {color: '#D81B60', timeMS: 75000},
+      {color: '#D81B60', timeMS: 76000},
+      {color: '#D81B60', timeMS: 77000},
+      {color: '#D81B60', timeMS: 78000},
+      {color: '#D81B60', timeMS: 79000},
+      {color: '#D81B60', timeMS: 80000},
+      {color: '#D81B60', timeMS: 81000},
+      {color: '#D81B60', timeMS: 85000}
     ]
 
-    $scope.lightsChangeArrayInitTime =   1480216544901      ;
+    $scope.lightsChangeArrayInitTime =   1480216670405       ;
 
     //only fires if booliean is true
     $scope.booliean = true;
