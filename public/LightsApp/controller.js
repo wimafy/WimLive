@@ -14,7 +14,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
     //pulls data from server
 
 
-/*xampp
+
        $http.get('http://52.41.37.153/sysdate.php')
        .success(function(response) {
 
@@ -22,14 +22,14 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
          $scope.phprespone = response;
          //sets variable as root so the variable can be accessed and added to
          $scope.servergettime = Number(response);
-*/
+
 
          //xamarin for offline work
 
          //gets time from server in millsec from epoc
-         $scope.phprespone =  $scope.currenttimeLocal;
+         //$scope.phprespone =  $scope.currenttimeLocal;
          //sets variable as root so the variable can be accessed and added to
-         $scope.servergettime = Number( $scope.currenttimeLocal);
+         //$scope.servergettime = Number( $scope.currenttimeLocal);
 
          //end offline work
 
@@ -48,9 +48,9 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 
       //alert("wee");
 
-/*xampp
+
     });
-*/
+
 
     $scope.tplus2 = 0;
     $scope.tplus3 = 0;
@@ -81,7 +81,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
        //$scope.currenttime2 = 100;
        $scope.currenttimeLocalinit = new Date();
        $scope.currenttimeLocal = $scope.currenttimeLocalinit.getTime();
-/*xampp
+
        $http.get('http://52.41.37.153/sysdate.php')
        .success(function(response) {
 
@@ -89,14 +89,14 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
          $scope.phprespone = response;
          //sets variable as root so the variable can be accessed and added to
          $scope.servergettime = Number(response);
-*/
+
 
          //xamarin for offline work
 
          //gets time from server in millsec from epoc
-         $scope.phprespone =  $scope.currenttimeLocal;
+         //$scope.phprespone =  $scope.currenttimeLocal;
          //sets variable as root so the variable can be accessed and added to
-         $scope.servergettime = Number( $scope.currenttimeLocal);
+         //$scope.servergettime = Number( $scope.currenttimeLocal);
 
          //end offline work
 
@@ -115,10 +115,9 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
          //alert("wee");
 
 
-    /*xampp
+
        });
 
-*/
 
 
 
@@ -162,7 +161,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
       {color: '#D81B60', timeMS: 85000}
     ]
 
-    $scope.lightsChangeArrayInitTime =   1480216670405       ;
+    $scope.lightsChangeArrayInitTime =   1480216824237;
 
     //only fires if booliean is true
     $scope.booliean = true;
