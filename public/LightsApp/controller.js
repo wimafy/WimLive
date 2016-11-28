@@ -267,7 +267,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
             }
           }
 
-          if(this.timeMSforeachSubtract > 0) {
+
               //console.log("things");
               $timeout(function () {
                 //alert("Test complete");
@@ -277,7 +277,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
                 document.getElementById("LightsAppColorDiv").style.backgroundColor = lightsChangeArray.color;
                 document.getElementById("LightsAppColorDiv").innerHTML = "";
               }, this.timeMSforeachSubtract );
-          }
+          
 
         }, 2000 );
 
