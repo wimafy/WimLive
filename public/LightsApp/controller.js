@@ -144,9 +144,82 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 //begin color changing
 
 
+    //time countdown function
+    $scope.timecountdownfunction = function(inittime) {
+      if((inittime - $scope.actualtime) > 0){
+        document.getElementById("LightsAppColorDiv").innerHTML = (inittime - $scope.actualtime).toString().slice(0,-3);
+      }
+      $timeout(function () {
+        if((inittime - $scope.actualtime) > 0){
+          document.getElementById("LightsAppColorDiv").innerHTML = (inittime - $scope.actualtime).toString().slice(0,-3);
+        }
+      }, 1000);
+      $timeout(function () {
+        if((inittime - $scope.actualtime) > 0){
+          document.getElementById("LightsAppColorDiv").innerHTML = (inittime - $scope.actualtime).toString().slice(0,-3);
+        }
+      }, 2000);
+      $timeout(function () {
+        if((inittime - $scope.actualtime) > 0){
+          document.getElementById("LightsAppColorDiv").innerHTML = (inittime - $scope.actualtime).toString().slice(0,-3);
+        }
+      }, 3000);
+      $timeout(function () {
+        if((inittime - $scope.actualtime) > 0){
+          document.getElementById("LightsAppColorDiv").innerHTML = (inittime - $scope.actualtime).toString().slice(0,-3);
+        }
+      }, 4000);
+      $timeout(function () {
+        if((inittime - $scope.actualtime) > 0){
+          document.getElementById("LightsAppColorDiv").innerHTML = (inittime - $scope.actualtime).toString().slice(0,-3);
+        }
+      }, 5000);
+      $timeout(function () {
+        if((inittime - $scope.actualtime) > 0){
+          document.getElementById("LightsAppColorDiv").innerHTML = (inittime - $scope.actualtime).toString().slice(0,-3);
+        }
+      }, 6000);
+      $timeout(function () {
+        if((inittime - $scope.actualtime) > 0){
+          document.getElementById("LightsAppColorDiv").innerHTML = (inittime - $scope.actualtime).toString().slice(0,-3);
+        }
+      }, 7000);
+      $timeout(function () {
+        if((inittime - $scope.actualtime) > 0){
+          document.getElementById("LightsAppColorDiv").innerHTML = (inittime - $scope.actualtime).toString().slice(0,-3);
+        }
+      }, 8000);
+      $timeout(function () {
+        if((inittime - $scope.actualtime) > 0){
+          document.getElementById("LightsAppColorDiv").innerHTML = (inittime - $scope.actualtime).toString().slice(0,-3);
+        }
+      }, 9000);
+
+    }
+
+
     //changing colors and stuff
     var lightsChangeArray = [
-      {color: '#f44336', timeMS: 60000},
+      {color: '#f44336', timeMS: 0000},
+      {color: '#E91E63', timeMS: 4000},
+      {color: '#9C27B0', timeMS: 7000},
+      {color: '#673AB7', timeMS: 10000},
+      {color: '#3F51B5', timeMS: 16000},
+      {color: '#2196F3', timeMS: 18000},
+      {color: '#03A9F4', timeMS: 21000},
+      {color: '#00BCD4', timeMS: 25000},
+      {color: '#009688', timeMS: 32000},
+      {color: '#4CAF50', timeMS: 38000},
+      {color: '#8BC34A', timeMS: 39000},
+      {color: '#CDDC39', timeMS: 40000},
+      {color: '#FFEB3B', timeMS: 42000},
+      {color: '#FFC107', timeMS: 45000},
+      {color: '#FF9800', timeMS: 50000},
+      {color: '#FF5722', timeMS: 52000},
+      {color: '#795548', timeMS: 54000},
+      {color: '#9E9E9E', timeMS: 60000},
+      {color: '#607D8B', timeMS: 62000},
+      {color: '#d32f2f', timeMS: 64000},
       {color: '#E91E63', timeMS: 65000},
       {color: '#9C27B0', timeMS: 70000},
       {color: '#673AB7', timeMS: 75000},
@@ -169,12 +242,11 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
       {color: '#C2185B', timeMS: 160000}
     ]
 
-    $scope.lightsChangeArrayInitTime =   1480222177231     ;
+    //millisecond that show will start
+    $scope.lightsChangeArrayInitTime =   1480312726484    ;
 
     //only fires if booliean is true
     $scope.booliean = true;
-
-
 
     $scope.iffunction = function() {
       angular.forEach(lightsChangeArray, function (lightsChangeArray, key, data) {
@@ -184,7 +256,17 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
           //console.log( lightsChangeArray.color );
           //console.log($scope.actualtime);
           //console.log(this.timeMSforeach);
-          //console.log(this.timeMSforeachSubtract);
+
+          //console.log(key);
+          if(key == 0){
+            console.log(this.timeMSforeachSubtract);
+            if(this.timeMSforeachSubtract > 0) {
+              $scope.timecountdownfunction($scope.lightsChangeArrayInitTime);
+            }else{
+              document.getElementById("LightsAppColorDiv").innerHTML = "";
+            }
+          }
+
           if(this.timeMSforeachSubtract > 0) {
               //console.log("things");
               $timeout(function () {
@@ -193,23 +275,21 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
                 //console.log($scope.actualtime);
                 //console.log(this.timeMSforeach);
                 document.getElementById("LightsAppColorDiv").style.backgroundColor = lightsChangeArray.color;
+                document.getElementById("LightsAppColorDiv").innerHTML = "";
               }, this.timeMSforeachSubtract );
           }
 
         }, 2000 );
 
-
-
-
-
-        });
-        $timeout(function () {
-        console.log("endofall");
-      }, 3000);
+      });
+      //  $timeout(function () {
+      //    console.log("endofall");
+      //  }, 3000);
       }
 
     if($scope.booliean == true){
       $scope.iffunction();
+      //runs funciton every 10 seconds to ensure syncing is up to date
       setInterval( function(){$scope.iffunction()}, 10000);
     }
 
