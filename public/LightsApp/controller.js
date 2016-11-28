@@ -243,7 +243,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
     ]
 
     //millisecond that show will start
-    $scope.lightsChangeArrayInitTime =   1480345436607       ;
+    $scope.lightsChangeArrayInitTime =   1480347296273        ;
 
     //only fires if booliean is true
     $scope.booliean = true;
@@ -277,7 +277,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
                 document.getElementById("LightsAppColorDiv").style.backgroundColor = lightsChangeArray.color;
                 document.getElementById("LightsAppColorDiv").innerHTML = "";
               }, this.timeMSforeachSubtract );
-          
+
 
         }, 2000 );
 
