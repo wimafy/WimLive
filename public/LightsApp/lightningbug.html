@@ -10,14 +10,38 @@
 </head>
 <body ng-controller="myCtrl">
 
+    <h1>Countdown Clock</h1>
+
+  </br>
+    Server: {{ servergettime }}
+  </br>
+    Server: {{ currenttimeadded }} : current time added
+  </br>
+    Local 1: {{ currenttimeLocal }}
+  </br>
+    Local 2: {{ currenttimeLocal2 }}
+  </br>
+    Time difference: {{ timedifference }}
+  </br>
+  </br>
+  </br>
 
 
 
-    <div id="colordiv" style="height: 100vh; width: 100vw; background-color: red; float: right; color: white; line-height: 200px; text-align: center;">
+    <div id="colordiv" style="height: 100vh; width: 100vw; position: absolute; background-color: lightgray; color: white; line-height: 200px; text-align: center;">
 
     </div>
 
+    <div id="colordiv2" style="height: 200px; width: 200px; background-color: blue; float: right; color: white; line-height: 200px; text-align: center;">
 
+    </div>
+
+    <div id="colordiv3" style="height: 200px; width: 200px; background-color: gray; float: right; color: white; line-height: 200px; text-align: center;">
+
+    </div>
+    <div id="LightsAppColorDiv" style="height: 200px; width: 200px; background-color: gray; float: right; color: white; line-height: 200px; text-align: center;">
+
+    </div>
     <div ng-init="updatetime(); updatetime2(); updatetime3()"></div>
 
 
