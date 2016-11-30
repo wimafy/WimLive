@@ -316,7 +316,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
     ]
 
     //millisecond that show will start
-    $scope.lightsChangeArrayInitTime =   1480521761724   ;
+    $scope.lightsChangeArrayInitTime =   1480521861724   ;
 
     //only fires if booliean is true
     $scope.booliean = true;
