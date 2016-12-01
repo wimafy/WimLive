@@ -1,0 +1,56 @@
+<html lang="en" ng-app="myApp">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="controller.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="lightsappStyle.css">
+
+
+</head>
+<body ng-controller="SettupController" ng-init="initfunction()">
+
+    <h1>Setup</h1>
+
+    <h2 style="text-align:center;"> Current Slide {{ lastbigdaddy }}</h2>
+    <div class="colorpickerdiv">
+      <h2 class="colorpickerheader">Color Picker</h2>
+      <div id="colorpickercurrentcolorID" class="colorpickercurrentcolor">
+        #FAFAFA
+      </div>
+
+      <div class="colorpickerscrolldiv">
+        <div class="colorpickerindividualdiv" style="background-color: {{ color }}" ng-repeat="color in colors" ng-click="setColor(color)">
+
+        </div>
+      </div>
+
+    </div>
+
+    <div style="width: 500px; height: 500px; left: calc(50vw - 250px); top: calc(50vh - 250px); position: absolute; background-color: gray;">
+      <div id="bigdaddy{{ $index }}" class="bigdaddy" ng-repeat="squares in bigsquares">
+        <div id="{{ $parent.$index }}{{ square.i }}" ng-repeat="square in squares" class="littlesquares" ng-click="setSquare($parent.$index, square.i)">
+            {{ square.i }}
+        </div>
+      </div>
+    </div>
+
+    <div class="timeLineDiv">
+      <h2 class="colorpickerheader">Time-Line (millisec)</h2>
+
+      <div class="timelinescrolldiv">
+        <div class="timelineeachsec" ng-repeat="timelineunit in timelinemilliseconds" ng-click="gotoTime(timelineunit.bigi)" id="timelinemillsec{{ timelineunit.bigi }}">
+          <p style="line-height: 25px; margin: 0; left: 5%; background-color: gray; width: 20px;"> {{ timelineunit.bigi }}</p>
+          {{ timelineunit.t }}
+        </div>
+      </div>
+
+      <input type="number" step="100" min="100" value=100 ng-model="newMillisecond" style="width: 90%; margin: 5px 5%; text-align: center;"/>
+      <button type="button" class="btn btn-success" style="width: 90%; margin-left: 5%;" ng-click="addTimeMillsec()">Add</button>
+    </div>
+
+    <button type="button" class="btn btn-success" ng-click="runtest()" style="position: absolute; width: 40vw; height: 50px; margin-left: 30vw; top: calc(85vh - 25px);">Run test</button>
+
+</body>
+</html>

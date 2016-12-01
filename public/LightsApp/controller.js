@@ -1,13 +1,7 @@
 var app = angular.module('myApp', []);
 
 
-
-
-
-
 app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
-
-
 
     //all of this mess is time syncing
 
@@ -16,7 +10,6 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
     $scope.currenttimeLocalinit = new Date();
     $scope.currenttimeLocal = $scope.currenttimeLocalinit.getTime();
     //pulls data from server
-
 
 
        $http.get('http://52.41.37.153/sysdate.php')
@@ -370,5 +363,298 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 
 //end color changing
 
+
+});
+
+app.controller('SettupController', function($scope, $timeout, $interval, $scope, $http) {
+
+  // i == index / c == color hex
+  $scope.bigsquares = [
+    [
+      { "i":0, "c": ""},
+      { "i":1, "c": ""},
+      { "i":2, "c": ""},
+      { "i":3, "c": ""},
+      { "i":4, "c": ""},
+      { "i":5, "c": ""},
+      { "i":6, "c": ""},
+      { "i":7, "c": ""},
+      { "i":8, "c": ""},
+      { "i":9, "c": ""},
+      { "i":10, "c": ""},
+      { "i":11, "c": ""},
+      { "i":12, "c": ""},
+      { "i":13, "c": ""},
+      { "i":14, "c": ""},
+      { "i":15, "c": ""},
+      { "i":16, "c": ""},
+      { "i":17, "c": ""},
+      { "i":18, "c": ""},
+      { "i":19, "c": ""},
+      { "i":20, "c": ""},
+      { "i":21, "c": ""},
+      { "i":22, "c": ""},
+      { "i":23, "c": ""},
+      { "i":24, "c": ""},
+      { "i":25, "c": ""},
+      { "i":26, "c": ""},
+      { "i":27, "c": ""},
+      { "i":28, "c": ""},
+      { "i":29, "c": ""},
+      { "i":30, "c": ""},
+      { "i":31, "c": ""},
+      { "i":32, "c": ""},
+      { "i":33, "c": ""},
+      { "i":34, "c": ""},
+      { "i":35, "c": ""},
+      { "i":36, "c": ""},
+      { "i":37, "c": ""},
+      { "i":38, "c": ""},
+      { "i":39, "c": ""},
+      { "i":40, "c": ""},
+      { "i":41, "c": ""},
+      { "i":42, "c": ""},
+      { "i":43, "c": ""},
+      { "i":44, "c": ""},
+      { "i":45, "c": ""},
+      { "i":46, "c": ""},
+      { "i":47, "c": ""},
+      { "i":48, "c": ""},
+      { "i":49, "c": ""},
+      { "i":50, "c": ""},
+      { "i":51, "c": ""},
+      { "i":52, "c": ""},
+      { "i":53, "c": ""},
+      { "i":54, "c": ""},
+      { "i":55, "c": ""},
+      { "i":56, "c": ""},
+      { "i":57, "c": ""},
+      { "i":58, "c": ""},
+      { "i":59, "c": ""},
+      { "i":60, "c": ""},
+      { "i":61, "c": ""},
+      { "i":62, "c": ""},
+      { "i":63, "c": ""},
+      { "i":64, "c": ""},
+      { "i":65, "c": ""},
+      { "i":66, "c": ""},
+      { "i":67, "c": ""},
+      { "i":68, "c": ""},
+      { "i":69, "c": ""},
+      { "i":70, "c": ""},
+      { "i":71, "c": ""},
+      { "i":72, "c": ""},
+      { "i":73, "c": ""},
+      { "i":74, "c": ""},
+      { "i":75, "c": ""},
+      { "i":76, "c": ""},
+      { "i":77, "c": ""},
+      { "i":78, "c": ""},
+      { "i":79, "c": ""},
+      { "i":80, "c": ""},
+      { "i":81, "c": ""},
+      { "i":82, "c": ""},
+      { "i":83, "c": ""},
+      { "i":84, "c": ""},
+      { "i":85, "c": ""},
+      { "i":86, "c": ""},
+      { "i":87, "c": ""},
+      { "i":88, "c": ""},
+      { "i":89, "c": ""},
+      { "i":90, "c": ""},
+      { "i":91, "c": ""},
+      { "i":92, "c": ""},
+      { "i":93, "c": ""},
+      { "i":94, "c": ""},
+      { "i":95, "c": ""},
+      { "i":96, "c": ""},
+      { "i":97, "c": ""},
+      { "i":98, "c": ""},
+      { "i":99, "c": ""}
+    ]
+
+  ];
+
+  //bigi == big-index / t == time
+  $scope.timelinemilliseconds = [
+    {"bigi": 0, "t": 0}
+  ];
+
+  $scope.colors = ["#111111", "#FAFAFA","#d32f2f", "#C2185B", "#7B1FA2", "#512DA8", "#303F9F", "#1976D2", "#0288D1", "#0097A7", "#00796B", "#388E3C", "#689F38", "#AFB42B", "#FBC02D", "#FFA000", "#F57C00", "#E64A19", "#5D4037", "#616161", "#455A64"]
+
+  $scope.selectedColorvar = "#FAFAFA";
+
+
+  $scope.setSquare = function(parentindex, idNumber) {
+    //alert(String(parentindex)+String(idNumber));
+    document.getElementById(String(parentindex)+String(idNumber)).style.backgroundColor = $scope.selectedColorvar;
+  }
+
+  $scope.setColor = function(color) {
+    //alert(color);
+    document.getElementById("colorpickercurrentcolorID").style.backgroundColor = color;
+    document.getElementById("colorpickercurrentcolorID").innerHTML = color;
+    $scope.selectedColorvar = color;
+
+  }
+
+  $scope.lastbigdaddy = "0";
+
+  $scope.initfunction = function() {
+    //initally sets current slide 0 to green when page loads
+    $timeout(function () {
+      document.getElementById("timelinemillsec0").style.backgroundColor = "#66BB6A";
+    }, 1000);
+
+  }
+
+
+  $scope.gotoTime = function(bigi) {
+    //alert("bigdaddy"+bigi);
+    document.getElementById("bigdaddy"+$scope.lastbigdaddy).style.zIndex = "0";
+    document.getElementById("bigdaddy"+bigi).style.zIndex = "10";
+    document.getElementById("timelinemillsec"+$scope.lastbigdaddy).style.backgroundColor = "#BDBDBD";
+    document.getElementById("timelinemillsec"+bigi).style.backgroundColor = "#66BB6A";
+
+    $scope.lastbigdaddy = bigi;
+  }
+
+
+  //code for running Test display
+  $scope.runtest = function() {
+    
+    angular.forEach($scope.timelinemilliseconds, function (value, key) {
+            alert(value.bigi);
+        });
+    //$timeout(function () {
+
+    //}, this.timeMSforeachSubtract );
+  }
+
+
+  $scope.newMillisecond = 100;
+
+  $scope.addTimeMillsec = function() {
+
+    if($scope.newMillisecond == undefined){
+      alert("No Time input");
+    }else{
+      var arraylength = $scope.timelinemilliseconds.length;
+      //alert(arraylength);
+      if(arraylength != 0){
+        var nextarrayvar =  1 + $scope.timelinemilliseconds[arraylength - 1]["bigi"];
+      }else{
+        var nextarrayvar = 0;
+      }
+      //alert(nextarrayvar);
+      $scope.timelinemilliseconds.push({"bigi": nextarrayvar, "t": $scope.newMillisecond});
+      $scope.bigsquares.push(
+        [
+          { "i":0, "c": ""},
+          { "i":1, "c": ""},
+          { "i":2, "c": ""},
+          { "i":3, "c": ""},
+          { "i":4, "c": ""},
+          { "i":5, "c": ""},
+          { "i":6, "c": ""},
+          { "i":7, "c": ""},
+          { "i":8, "c": ""},
+          { "i":9, "c": ""},
+          { "i":10, "c": ""},
+          { "i":11, "c": ""},
+          { "i":12, "c": ""},
+          { "i":13, "c": ""},
+          { "i":14, "c": ""},
+          { "i":15, "c": ""},
+          { "i":16, "c": ""},
+          { "i":17, "c": ""},
+          { "i":18, "c": ""},
+          { "i":19, "c": ""},
+          { "i":20, "c": ""},
+          { "i":21, "c": ""},
+          { "i":22, "c": ""},
+          { "i":23, "c": ""},
+          { "i":24, "c": ""},
+          { "i":25, "c": ""},
+          { "i":26, "c": ""},
+          { "i":27, "c": ""},
+          { "i":28, "c": ""},
+          { "i":29, "c": ""},
+          { "i":30, "c": ""},
+          { "i":31, "c": ""},
+          { "i":32, "c": ""},
+          { "i":33, "c": ""},
+          { "i":34, "c": ""},
+          { "i":35, "c": ""},
+          { "i":36, "c": ""},
+          { "i":37, "c": ""},
+          { "i":38, "c": ""},
+          { "i":39, "c": ""},
+          { "i":40, "c": ""},
+          { "i":41, "c": ""},
+          { "i":42, "c": ""},
+          { "i":43, "c": ""},
+          { "i":44, "c": ""},
+          { "i":45, "c": ""},
+          { "i":46, "c": ""},
+          { "i":47, "c": ""},
+          { "i":48, "c": ""},
+          { "i":49, "c": ""},
+          { "i":50, "c": ""},
+          { "i":51, "c": ""},
+          { "i":52, "c": ""},
+          { "i":53, "c": ""},
+          { "i":54, "c": ""},
+          { "i":55, "c": ""},
+          { "i":56, "c": ""},
+          { "i":57, "c": ""},
+          { "i":58, "c": ""},
+          { "i":59, "c": ""},
+          { "i":60, "c": ""},
+          { "i":61, "c": ""},
+          { "i":62, "c": ""},
+          { "i":63, "c": ""},
+          { "i":64, "c": ""},
+          { "i":65, "c": ""},
+          { "i":66, "c": ""},
+          { "i":67, "c": ""},
+          { "i":68, "c": ""},
+          { "i":69, "c": ""},
+          { "i":70, "c": ""},
+          { "i":71, "c": ""},
+          { "i":72, "c": ""},
+          { "i":73, "c": ""},
+          { "i":74, "c": ""},
+          { "i":75, "c": ""},
+          { "i":76, "c": ""},
+          { "i":77, "c": ""},
+          { "i":78, "c": ""},
+          { "i":79, "c": ""},
+          { "i":80, "c": ""},
+          { "i":81, "c": ""},
+          { "i":82, "c": ""},
+          { "i":83, "c": ""},
+          { "i":84, "c": ""},
+          { "i":85, "c": ""},
+          { "i":86, "c": ""},
+          { "i":87, "c": ""},
+          { "i":88, "c": ""},
+          { "i":89, "c": ""},
+          { "i":90, "c": ""},
+          { "i":91, "c": ""},
+          { "i":92, "c": ""},
+          { "i":93, "c": ""},
+          { "i":94, "c": ""},
+          { "i":95, "c": ""},
+          { "i":96, "c": ""},
+          { "i":97, "c": ""},
+          { "i":98, "c": ""},
+          { "i":99, "c": ""}
+        ]
+      )
+    }
+
+
+  }
 
 });
