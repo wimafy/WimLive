@@ -28,12 +28,18 @@
 
     </div>
 
-    <div style="width: 500px; height: 500px; left: calc(50vw - 250px); top: calc(50vh - 250px); position: absolute; background-color: gray;">
-      <div id="bigdaddy{{ $index }}" class="bigdaddy" ng-repeat="squares in bigsquares">
-        <div id="{{ $parent.$index }}{{ square.i }}" ng-repeat="square in squares" class="littlesquares" ng-click="setSquare($parent.$index, square.i)">
-            {{ square.i }}
-        </div>
+    <div id="bigdaddy{{ $index }}" class="bigdaddy" ng-repeat="squares in bigsquares">
+      <div id="{{ $parent.$index }}{{ square.i }}" ng-repeat="square in squares" class="littlesquares" ng-click="setSquare($parent.$index, square.i)">
+          {{ square.i }}
       </div>
+    </div>
+
+    <!-- background color div -->
+    <div style="width: 500px;height: 500px;left: calc(50vw - 250px);top: calc(50vh - 250px);position: absolute;background-color: gray;z-index: 3;">
+    </div>
+
+    <!-- transparent div -->
+    <div style="width: 500px;height: 500px;left: calc(50vw - 250px);top: calc(50vh - 250px);position: absolute; background-color: gray; z-index: 5; opacity: .5">
     </div>
 
     <div class="timeLineDiv">
