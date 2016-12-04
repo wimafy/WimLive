@@ -368,9 +368,42 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 
 app.controller('SettupController', function($scope, $timeout, $interval, $scope, $http) {
 
+  // Event handlers
+  //keyboard commands
+  $scope.onKeyDownResult = "";
+  $scope.onKeyUpResult = "";
+  var getKeyboardEventResult = function (keyEvent, keyEventDesc)
+   {
+     return (window.event ? keyEvent.keyCode : keyEvent.which);
+   };
+
+  $scope.onKeyDown = function ($event) {
+
+    $scope.onKeyDownResult = getKeyboardEventResult($event, "Key down");
+    if($scope.onKeyDownResult == "38") {
+      //alert("up");
+      $scope.gotoTime($scope.lastbigdaddy - 1);
+    }
+    if($scope.onKeyDownResult == "40") {
+      //alert("down");
+      $scope.gotoTime($scope.lastbigdaddy + 1);
+    }
+    if($scope.onKeyDownResult == "13") {
+      //alert("add");
+      $scope.addTimeMillsec();
+    }
+    if($scope.onKeyDownResult == "32") {
+      //alert("play");
+      $scope.runtest();
+    }
+  };
+
+
+  //end keyboard commands
+
+
   // i == index / c == color hex
   $scope.bigsquares = [
-
 
   ];
 
@@ -385,12 +418,82 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
 
   $scope.inselectrange = "stuff";
   $scope.outselectrange = "things";
+  $scope.selectrangeYarray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+  $scope.selectrangeXarray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+
   $scope.inselectrangeFunction = function(parentindex, squarei){
-    console.log(parentindex + " " + squarei);
+    //console.log(parentindex + " " + squarei);
+    $scope.inselectrange = parentindex+squarei;
+    $scope.inselectrange2 = parentindex + squarei;
+    $scope.inselectrangeX = $scope.inselectrange.slice(2,3);
+    $scope.inselectrangeY = $scope.inselectrange2.slice(1,2);
+    $scope.inselectrangebigi = parentindex;
+    $scope.inselectrangeXindex = $scope.selectrangeXarray.indexOf(Number($scope.inselectrangeX));
+    //console.log($scope.inselectrangeXindex);
+    $scope.inselectrangeYindex = $scope.selectrangeYarray.indexOf($scope.inselectrangeY);
+    //console.log($scope.inselectrangeYindex);
+    //console.log("--------------");
   }
 
   $scope.OUTselectrangeFunction = function(parentindex, squarei){
-    console.log("outselect" + parentindex + " " + squarei);
+    //console.log("outselect" + parentindex + " " + squarei);
+    $scope.outselectrange = parentindex + squarei;
+    $scope.outselectrange2 = parentindex + squarei;
+    $scope.outselectrangeX = $scope.outselectrange.slice(2,3);
+    $scope.outselectrangeY = $scope.outselectrange2.slice(1,2);
+    $scope.outselectrangebigi = parentindex;
+    $scope.outselectrangeXindex = $scope.selectrangeXarray.indexOf(Number($scope.outselectrangeX)) + 1;
+    //console.log($scope.outselectrangeXindex);
+    $scope.outselectrangeYindex = $scope.selectrangeYarray.indexOf($scope.outselectrangeY) + 1;
+    //console.log($scope.outselectrangeYindex);
+    //console.log("--------end--------")
+
+    if($scope.outselectrangeXindex < $scope.inselectrangeXindex) {
+      $scope.xadjuster = $scope.outselectrangeXindex;
+      $scope.outselectrangeXindex = $scope.inselectrangeXindex;
+      $scope.inselectrangeXindex = $scope.xadjuster;
+    }
+
+    if($scope.outselectrangeYindex < $scope.inselectrangeYindex) {
+      $scope.Yadjuster = $scope.outselectrangeYindex;
+      $scope.outselectrangeYindex = $scope.inselectrangeYindex;
+      $scope.inselectrangeYindex = $scope.Yadjuster;
+    }
+
+
+
+
+    $scope.actualXrange = $scope.selectrangeXarray.slice($scope.inselectrangeXindex, $scope.outselectrangeXindex);
+    $scope.actualYrange = $scope.selectrangeYarray.slice($scope.inselectrangeYindex, $scope.outselectrangeYindex);
+
+    //alert($scope.actualXrange);
+    //alert($scope.actualYrange);
+
+
+
+    if($scope.outselectrangebigi == $scope.inselectrangebigi){
+      //xrange
+      for (i = 0; i < $scope.actualXrange.length; i++) {
+          //console.log( $scope.actualXrange[i]);
+          this.xvalue = $scope.actualXrange[i];
+          //console.log(this.xvalue);
+          //y range
+          for (y = 0; y < $scope.actualYrange.length; y++) {
+              //console.log( $scope.actualXrange[i]);
+
+              console.log($scope.outselectrangebigi + $scope.actualYrange[y] + this.xvalue);
+              $scope.setSquare($scope.outselectrangebigi, $scope.actualYrange[y] + this.xvalue);
+          }
+
+      }
+    }else{
+      alert("inbred");
+    }
+
+
+
   }
 
   $scope.setSquare = function(parentindex, idNumber) {
@@ -463,6 +566,8 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
 
   //code for running Test display
   $scope.runtest = function() {
+
+    document.getElementById("bigdaddy"+$scope.oldhazy).style.zIndex = "0";
     $scope.runTestTimevar = 0;
     document.getElementById("bigdaddy"+$scope.lastbigdaddy).style.zIndex = "0";
     angular.forEach($scope.timelinemilliseconds, function (value, key) {
@@ -487,51 +592,47 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
 
   $scope.addTimeMillsec = function() {
 
+    document.getElementById("addmilsecbutton").disabled = true;
+    $timeout(function () {
+      document.getElementById("addmilsecbutton").disabled = false;
+    }, 200);
+
+
     if($scope.newMillisecond == undefined){
       alert("No Time input");
     }else{
       var arraylength = $scope.timelinemilliseconds.length;
       //alert(arraylength);
       if(arraylength != 0){
-        var nextarrayvar =  1 + $scope.timelinemilliseconds[arraylength - 1]["bigi"];
+        var nextarrayvar =  1 + Number($scope.timelinemilliseconds[arraylength - 1]["bigi"]);
+        if(nextarrayvar < 10){
+          nextarrayvar = "000" + nextarrayvar;
+        }else if(nextarrayvar > 9 & nextarrayvar < 100){
+          nextarrayvar = "00" + nextarrayvar;
+        }else if(nextarrayvar > 99 & nextarrayvar < 1000){
+          nextarrayvar = "0" + nextarrayvar;
+        }
+
+
         $timeout(function () {
           document.getElementById("timelinemillsec"+$scope.lastbigdaddy).style.backgroundColor = "#BDBDBD";
           document.getElementById("timelinemillsec"+nextarrayvar).style.backgroundColor = "#66BB6A";
           document.getElementById("bigdaddy"+$scope.lastbigdaddy).style.zIndex = "0";
           document.getElementById("bigdaddy"+nextarrayvar).style.zIndex = "10";
 
-
-
-
-
-
-
           $scope.newhazy = Number(nextarrayvar) - 1;
-
-
           if($scope.oldhazy != nextarrayvar){
             document.getElementById("bigdaddy"+$scope.oldhazy).style.zIndex = "0";
           }
           document.getElementById("bigdaddy"+$scope.newhazy).style.zIndex = "5";
-
-
-
-
           $scope.oldhazy = $scope.newhazy;
-
-
-
-
-
-
-
-
 
           $scope.lastbigdaddy = nextarrayvar;
         }, 50);
 
       }else{
-        var nextarrayvar = 0;
+        var nextarrayvar = "0000";
+
       }
       //alert(nextarrayvar);
       $scope.timelinemilliseconds.push({"bigi": nextarrayvar, "t": $scope.newMillisecond});

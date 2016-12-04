@@ -9,12 +9,11 @@
 
 
 </head>
-<body ng-controller="SettupController" ng-init="initfunction()">
-
-    <h1>Setup</h1>
+<body ng-controller="SettupController" ng-init="initfunction()" ng-keydown="onKeyDown($event)" ng-keyup="onKeyUp($event)" ng-keypress="onKeyPress($event)">
 
     <h2 style="text-align:center;"> Current Slide {{ lastbigdaddy }}</h2>
     <h3 style="text-align:center;">Big daddy minus one {{ oldhazy }}</h3>
+    <h3 style="text-align:center;">inselect: {{ inselectrange }} outselect: {{ outselectrange}} </h3>
     <div class="colorpickerdiv">
       <h2 class="colorpickerheader">Color Picker</h2>
       <div id="colorpickercurrentcolorID" class="colorpickercurrentcolor">
@@ -56,10 +55,14 @@
       </div>
 
       <input type="number" step="100" min="100" value=100 ng-model="newMillisecond" style="width: 90%; margin: 5px 5%; text-align: center;"/>
-      <button type="button" class="btn btn-success" style="width: 90%; margin-left: 5%;" ng-click="addTimeMillsec()">Add</button>
+      <button type="button" id="addmilsecbutton" class="btn btn-success" style="width: 90%; margin-left: 5%;" ng-click="addTimeMillsec()" >Add</button>
     </div>
 
     <button type="button" class="btn btn-success" ng-click="runtest()" style="position: absolute; width: 40vw; height: 50px; margin-left: 30vw; top: calc(85vh - 25px);">Run test</button>
+
+    <!--
+      <strong>KEY DOWN RESULT:</strong> {{onKeyDownResult}}<br />
+    -->
 
 </body>
 </html>
