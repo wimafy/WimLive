@@ -325,7 +325,7 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 
           //console.log(key);
           if(key == 0){
-            console.log(this.timeMSforeachSubtract);
+            //console.log(this.timeMSforeachSubtract);
             if(this.timeMSforeachSubtract > 0) {
               $scope.timecountdownfunction($scope.lightsChangeArrayInitTime);
             }else{
@@ -396,6 +396,38 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
       //alert("play");
       $scope.runtest();
     }
+    if($scope.onKeyDownResult == "49") {
+      $scope.setColor("");
+    }
+    if($scope.onKeyDownResult == "50") {
+      $scope.setColor("#FAFAFA");
+    }
+    if($scope.onKeyDownResult == "51") {
+      $scope.setColor("#d32f2f");
+    }
+    if($scope.onKeyDownResult == "52") {
+      $scope.setColor("#C2185B");
+    }
+    if($scope.onKeyDownResult == "53") {
+      $scope.setColor("#7B1FA2");
+    }
+    if($scope.onKeyDownResult == "54") {
+      $scope.setColor("#512DA8");
+    }
+    if($scope.onKeyDownResult == "55") {
+      $scope.setColor("#303F9F");
+    }
+    if($scope.onKeyDownResult == "56") {
+      $scope.setColor("#1976D2");
+    }
+    if($scope.onKeyDownResult == "57") {
+      $scope.setColor("#0288D1");
+    }
+    if($scope.onKeyDownResult == "58") {
+      $scope.setColor("#0097A7");
+    }
+
+
   };
 
 
@@ -412,23 +444,63 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
 
   ];
 
-  $scope.colors = ["#111111", "#FAFAFA","#d32f2f", "#C2185B", "#7B1FA2", "#512DA8", "#303F9F", "#1976D2", "#0288D1", "#0097A7", "#00796B", "#388E3C", "#689F38", "#AFB42B", "#FBC02D", "#FFA000", "#F57C00", "#E64A19", "#5D4037", "#616161", "#455A64"]
+  $scope.colors = [
+    {"c": "", "hk": "1"},
+    {"c": "#FAFAFA", "hk": "2"},
+    {"c": "#d32f2f", "hk": "3"},
+    {"c": "#C2185B", "hk": "4"},
+    {"c": "#7B1FA2", "hk": "5"},
+    {"c": "#512DA8", "hk": "6"},
+    {"c": "#303F9F", "hk": "7"},
+    {"c": "#1976D2", "hk": "8"},
+    {"c": "#0288D1", "hk": "9"},
+    {"c": "#0097A7", "hk": "0"},
+    {"c": "#00796B", "hk": ""},
+    {"c": "#388E3C", "hk": ""},
+    {"c": "#689F38", "hk": ""},
+    {"c": "#AFB42B", "hk": ""},
+    {"c": "#FBC02D", "hk": ""},
+    {"c": "#FFA000", "hk": ""},
+    {"c": "#F57C00", "hk": ""},
+    {"c": "#E64A19", "hk": ""},
+    {"c": "#5D4037", "hk": ""},
+    {"c": "#616161", "hk": ""},
+    {"c": "#455A64", "hk": ""}
+  ]
 
   $scope.selectedColorvar = "#FAFAFA";
 
   $scope.inselectrange = "stuff";
   $scope.outselectrange = "things";
+  $scope.inHighlightrange = "highlight stuff";
+  $scope.outHighlightrange = "highlight things";
   $scope.selectrangeYarray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
   $scope.selectrangeXarray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
+  $scope.pressEntervar = "press ENTER to add your first frame..."
 
 
   $scope.inselectrangeFunction = function(parentindex, squarei){
     //console.log(parentindex + " " + squarei);
     $scope.inselectrange = parentindex+squarei;
     $scope.inselectrange2 = parentindex + squarei;
-    $scope.inselectrangeX = $scope.inselectrange.slice(2,3);
-    $scope.inselectrangeY = $scope.inselectrange2.slice(1,2);
+    //$scope.inselectrangeX = $scope.inselectrange.slice(2,3);
+    //$scope.inselectrangeY = $scope.inselectrange2.slice(1,2);
+    if($scope.inselectrange.length == 3){
+      $scope.inselectrangeX = $scope.inselectrange.slice(2,3);
+      $scope.inselectrangeY = $scope.inselectrange2.slice(1,2);
+    }else if($scope.inselectrange.length == 4){
+      //alert($scope.inselectrange.slice(3,4));
+      //alert($scope.inselectrange.slice(2,3));
+      $scope.inselectrangeX = $scope.inselectrange.slice(3,4);
+      $scope.inselectrangeY = $scope.inselectrange2.slice(2,3);
+    }else if($scope.inselectrange.length == 5){
+      $scope.inselectrangeX = $scope.inselectrange.slice(4,5);
+      $scope.inselectrangeY = $scope.inselectrange2.slice(3,4);
+    }else{
+      alert("your range is too big");
+    }
+
+
     $scope.inselectrangebigi = parentindex;
     $scope.inselectrangeXindex = $scope.selectrangeXarray.indexOf(Number($scope.inselectrangeX));
     //console.log($scope.inselectrangeXindex);
@@ -441,8 +513,24 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
     //console.log("outselect" + parentindex + " " + squarei);
     $scope.outselectrange = parentindex + squarei;
     $scope.outselectrange2 = parentindex + squarei;
-    $scope.outselectrangeX = $scope.outselectrange.slice(2,3);
-    $scope.outselectrangeY = $scope.outselectrange2.slice(1,2);
+    //alert($scope.outselectrange);
+    //alert($scope.outselectrange.length);
+
+    if($scope.outselectrange.length == 3){
+      $scope.outselectrangeX = $scope.outselectrange.slice(2,3);
+      $scope.outselectrangeY = $scope.outselectrange2.slice(1,2);
+    }else if($scope.outselectrange.length == 4){
+      //alert($scope.outselectrange.slice(3,4));
+      //alert($scope.outselectrange.slice(2,3));
+      $scope.outselectrangeX = $scope.outselectrange.slice(3,4);
+      $scope.outselectrangeY = $scope.outselectrange2.slice(2,3);
+    }else if($scope.outselectrange.length == 5){
+      $scope.outselectrangeX = $scope.outselectrange.slice(4,5);
+      $scope.outselectrangeY = $scope.outselectrange2.slice(3,4);
+    }else{
+      alert("your range is too big");
+    }
+
     $scope.outselectrangebigi = parentindex;
     $scope.outselectrangeXindex = $scope.selectrangeXarray.indexOf(Number($scope.outselectrangeX)) + 1;
     //console.log($scope.outselectrangeXindex);
@@ -451,27 +539,23 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
     //console.log("--------end--------")
 
     if($scope.outselectrangeXindex < $scope.inselectrangeXindex) {
+      //alert("x");
       $scope.xadjuster = $scope.outselectrangeXindex;
-      $scope.outselectrangeXindex = $scope.inselectrangeXindex;
-      $scope.inselectrangeXindex = $scope.xadjuster;
+      $scope.outselectrangeXindex = $scope.inselectrangeXindex + 1;
+      $scope.inselectrangeXindex = $scope.xadjuster - 1;
     }
 
     if($scope.outselectrangeYindex < $scope.inselectrangeYindex) {
+      //alert("y");
       $scope.Yadjuster = $scope.outselectrangeYindex;
-      $scope.outselectrangeYindex = $scope.inselectrangeYindex;
-      $scope.inselectrangeYindex = $scope.Yadjuster;
+      $scope.outselectrangeYindex = $scope.inselectrangeYindex + 1;
+      $scope.inselectrangeYindex = $scope.Yadjuster - 1;
     }
-
-
-
 
     $scope.actualXrange = $scope.selectrangeXarray.slice($scope.inselectrangeXindex, $scope.outselectrangeXindex);
     $scope.actualYrange = $scope.selectrangeYarray.slice($scope.inselectrangeYindex, $scope.outselectrangeYindex);
-
     //alert($scope.actualXrange);
     //alert($scope.actualYrange);
-
-
 
     if($scope.outselectrangebigi == $scope.inselectrangebigi){
       //xrange
@@ -482,19 +566,29 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
           //y range
           for (y = 0; y < $scope.actualYrange.length; y++) {
               //console.log( $scope.actualXrange[i]);
-
-              console.log($scope.outselectrangebigi + $scope.actualYrange[y] + this.xvalue);
+              //console.log($scope.outselectrangebigi + $scope.actualYrange[y] + this.xvalue);
               $scope.setSquare($scope.outselectrangebigi, $scope.actualYrange[y] + this.xvalue);
           }
-
       }
     }else{
       alert("inbred");
     }
-
-
-
   }
+
+
+
+$scope.highlightSelector = function(squarei) {
+  $scope.highlightSelectorvar = "highlightdivlilsquare" + squarei;
+  document.getElementById($scope.highlightSelectorvar).style.opacity = 1;
+}
+
+$scope.highlightDeSelector = function(squarei) {
+  $scope.highlightSelectorvar = "highlightdivlilsquare" + squarei;
+  document.getElementById($scope.highlightSelectorvar).style.opacity = 0;
+}
+
+
+
 
   $scope.setSquare = function(parentindex, idNumber) {
     //alert(String(parentindex)+String(idNumber));
@@ -592,11 +686,12 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
 
   $scope.addTimeMillsec = function() {
 
+    $scope.pressEntervar = "";
+
     document.getElementById("addmilsecbutton").disabled = true;
     $timeout(function () {
       document.getElementById("addmilsecbutton").disabled = false;
     }, 200);
-
 
     if($scope.newMillisecond == undefined){
       alert("No Time input");
@@ -604,15 +699,7 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
       var arraylength = $scope.timelinemilliseconds.length;
       //alert(arraylength);
       if(arraylength != 0){
-        var nextarrayvar =  1 + Number($scope.timelinemilliseconds[arraylength - 1]["bigi"]);
-        if(nextarrayvar < 10){
-          nextarrayvar = "000" + nextarrayvar;
-        }else if(nextarrayvar > 9 & nextarrayvar < 100){
-          nextarrayvar = "00" + nextarrayvar;
-        }else if(nextarrayvar > 99 & nextarrayvar < 1000){
-          nextarrayvar = "0" + nextarrayvar;
-        }
-
+        var nextarrayvar =  1 + $scope.timelinemilliseconds[arraylength - 1]["bigi"];
 
         $timeout(function () {
           document.getElementById("timelinemillsec"+$scope.lastbigdaddy).style.backgroundColor = "#BDBDBD";
@@ -631,8 +718,7 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
         }, 50);
 
       }else{
-        var nextarrayvar = "0000";
-
+        var nextarrayvar = 0;
       }
       //alert(nextarrayvar);
       $scope.timelinemilliseconds.push({"bigi": nextarrayvar, "t": $scope.newMillisecond});

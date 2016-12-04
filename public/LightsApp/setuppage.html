@@ -11,18 +11,21 @@
 </head>
 <body ng-controller="SettupController" ng-init="initfunction()" ng-keydown="onKeyDown($event)" ng-keyup="onKeyUp($event)" ng-keypress="onKeyPress($event)">
 
+    <h2 style="text-align:center;"> Color Picker</h2>
+<!--
     <h2 style="text-align:center;"> Current Slide {{ lastbigdaddy }}</h2>
     <h3 style="text-align:center;">Big daddy minus one {{ oldhazy }}</h3>
-    <h3 style="text-align:center;">inselect: {{ inselectrange }} outselect: {{ outselectrange}} </h3>
+    <h3 style="text-align:center;">inselect: {{ highlightSelectorvar }}  </h3>
+    <h3 style="text-align:center;">all blank squares will be black</h3>
+-->
     <div class="colorpickerdiv">
       <h2 class="colorpickerheader">Color Picker</h2>
       <div id="colorpickercurrentcolorID" class="colorpickercurrentcolor">
-        #FAFAFA
       </div>
 
       <div class="colorpickerscrolldiv">
-        <div class="colorpickerindividualdiv" style="background-color: {{ color }}" ng-repeat="color in colors" ng-click="setColor(color)">
-
+        <div class="colorpickerindividualdiv" style="background-color: {{ color.c }}" ng-repeat="color in colors" ng-click="setColor(color.c)">
+          {{ color.hk }}
         </div>
       </div>
 
@@ -31,17 +34,31 @@
     <!-- to satisfy issue with bigi at index 0 -->
     <div id="bigdaddy-1"></div>
     <div id="bigdaddy{{ $index }}" class="bigdaddy" ng-repeat="squares in bigsquares">
-      <div id="{{ $parent.$index }}{{ square.i }}" ng-repeat="square in squares" class="littlesquares" ng-click="setSquare($parent.$index, square.i)" ng-mousedown="inselectrangeFunction($parent.$index , square.i)" ng-mouseup="OUTselectrangeFunction($parent.$index , square.i)">
+      <div id="{{ $parent.$index }}{{ square.i }}" ng-repeat="square in squares" class="littlesquares" ng-click="setSquare($parent.$index, square.i)" ng-mousedown="inselectrangeFunction($parent.$index , square.i)" ng-mouseup="OUTselectrangeFunction($parent.$index , square.i)"
+      ng-mouseover="highlightSelector(square.i)"
+      ng-mouseleave="highlightDeSelector(square.i)">
           {{ square.i }}
       </div>
     </div>
 
     <!-- background color div -->
     <div style="width: 500px;height: 500px;left: calc(50vw - 250px);top: calc(50vh - 250px);position: absolute;background-color: gray;z-index: 3;">
+
     </div>
 
     <!-- transparent div -->
-    <div style="width: 500px;height: 500px;left: calc(50vw - 250px);top: calc(50vh - 250px);position: absolute; background-color: gray; z-index: 5; opacity: .5">
+    <div style="width: 500px;height: 500px;left: calc(50vw - 250px);top: calc(50vh - 250px);position: absolute; background-color: gray; z-index: 7; opacity: .5">
+
+    </div>
+    <!-- highlight div -->
+    <div style="width: 500px;height: 500px;left: calc(50vw - 250px);top: calc(50vh - 250px);position: absolute; z-index: 7; text-align: center; line-height: 500px; font-family: Roboto Black;
+    color: #424242;">
+      {{ pressEntervar }}
+      <div id="highlightdiv" class="bigdaddy" ng-repeat="squares in bigsquares | limitTo: 1" style="left: 0px; top: 0px;">
+        <div id="highlightdivlilsquare{{ square.i }}" ng-repeat="square in squares" class="littlesquares" style="background-color: {{ selectedColorvar }}; opacity: 0; margin: 0px; width: 50px; height: 50px;">
+
+        </div>
+      </div>
     </div>
 
     <div class="timeLineDiv">
