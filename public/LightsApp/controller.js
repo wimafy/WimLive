@@ -383,6 +383,15 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
 
   $scope.selectedColorvar = "#FAFAFA";
 
+  $scope.inselectrange = "stuff";
+  $scope.outselectrange = "things";
+  $scope.inselectrangeFunction = function(parentindex, squarei){
+    console.log(parentindex + " " + squarei);
+  }
+
+  $scope.OUTselectrangeFunction = function(parentindex, squarei){
+    console.log("outselect" + parentindex + " " + squarei);
+  }
 
   $scope.setSquare = function(parentindex, idNumber) {
     //alert(String(parentindex)+String(idNumber));
@@ -398,7 +407,7 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
   }
 
   $scope.lastbigdaddy = "0";
-
+  $scope.oldhazy = -1;
   $scope.initfunction = function() {
     //initally sets current slide 0 to green when page loads
     $timeout(function () {
@@ -408,14 +417,39 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
   }
 
 
+
   $scope.gotoTime = function(bigi) {
     //alert("bigdaddy"+bigi);
+    //console.log("bigi " + bigi);
+
+    $scope.newhazy = Number(bigi) - 1;
+    //alert($scope.oldhazy);
+    //alert($scope.newhazy);
+
+
+
+
+  //  alert($scope.lastbigdaddyminusone);
+  //  alert(Number(bigi - 1));
+
+
     document.getElementById("bigdaddy"+$scope.lastbigdaddy).style.zIndex = "0";
     document.getElementById("bigdaddy"+bigi).style.zIndex = "10";
+
+    if($scope.oldhazy != bigi){
+      document.getElementById("bigdaddy"+$scope.oldhazy).style.zIndex = "0";
+    }
+    document.getElementById("bigdaddy"+$scope.newhazy).style.zIndex = "5";
+
     document.getElementById("timelinemillsec"+$scope.lastbigdaddy).style.backgroundColor = "#BDBDBD";
     document.getElementById("timelinemillsec"+bigi).style.backgroundColor = "#66BB6A";
 
+
     $scope.lastbigdaddy = bigi;
+    $scope.oldhazy = $scope.newhazy;
+    //alert($scope.oldhazy);
+
+    //alert($scope.lastbigdaddy + ", " + $scope.lastbigdaddyminusone);
   }
 
   $scope.runtestZindexfunction = function(bigi, durration) {
@@ -465,6 +499,34 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
           document.getElementById("timelinemillsec"+nextarrayvar).style.backgroundColor = "#66BB6A";
           document.getElementById("bigdaddy"+$scope.lastbigdaddy).style.zIndex = "0";
           document.getElementById("bigdaddy"+nextarrayvar).style.zIndex = "10";
+
+
+
+
+
+
+
+          $scope.newhazy = Number(nextarrayvar) - 1;
+
+
+          if($scope.oldhazy != nextarrayvar){
+            document.getElementById("bigdaddy"+$scope.oldhazy).style.zIndex = "0";
+          }
+          document.getElementById("bigdaddy"+$scope.newhazy).style.zIndex = "5";
+
+
+
+
+          $scope.oldhazy = $scope.newhazy;
+
+
+
+
+
+
+
+
+
           $scope.lastbigdaddy = nextarrayvar;
         }, 50);
 
@@ -473,108 +535,109 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
       }
       //alert(nextarrayvar);
       $scope.timelinemilliseconds.push({"bigi": nextarrayvar, "t": $scope.newMillisecond});
+
       $scope.bigsquares.push(
         [
-          { "i":0, "c": ""},
-          { "i":1, "c": ""},
-          { "i":2, "c": ""},
-          { "i":3, "c": ""},
-          { "i":4, "c": ""},
-          { "i":5, "c": ""},
-          { "i":6, "c": ""},
-          { "i":7, "c": ""},
-          { "i":8, "c": ""},
-          { "i":9, "c": ""},
-          { "i":10, "c": ""},
-          { "i":11, "c": ""},
-          { "i":12, "c": ""},
-          { "i":13, "c": ""},
-          { "i":14, "c": ""},
-          { "i":15, "c": ""},
-          { "i":16, "c": ""},
-          { "i":17, "c": ""},
-          { "i":18, "c": ""},
-          { "i":19, "c": ""},
-          { "i":20, "c": ""},
-          { "i":21, "c": ""},
-          { "i":22, "c": ""},
-          { "i":23, "c": ""},
-          { "i":24, "c": ""},
-          { "i":25, "c": ""},
-          { "i":26, "c": ""},
-          { "i":27, "c": ""},
-          { "i":28, "c": ""},
-          { "i":29, "c": ""},
-          { "i":30, "c": ""},
-          { "i":31, "c": ""},
-          { "i":32, "c": ""},
-          { "i":33, "c": ""},
-          { "i":34, "c": ""},
-          { "i":35, "c": ""},
-          { "i":36, "c": ""},
-          { "i":37, "c": ""},
-          { "i":38, "c": ""},
-          { "i":39, "c": ""},
-          { "i":40, "c": ""},
-          { "i":41, "c": ""},
-          { "i":42, "c": ""},
-          { "i":43, "c": ""},
-          { "i":44, "c": ""},
-          { "i":45, "c": ""},
-          { "i":46, "c": ""},
-          { "i":47, "c": ""},
-          { "i":48, "c": ""},
-          { "i":49, "c": ""},
-          { "i":50, "c": ""},
-          { "i":51, "c": ""},
-          { "i":52, "c": ""},
-          { "i":53, "c": ""},
-          { "i":54, "c": ""},
-          { "i":55, "c": ""},
-          { "i":56, "c": ""},
-          { "i":57, "c": ""},
-          { "i":58, "c": ""},
-          { "i":59, "c": ""},
-          { "i":60, "c": ""},
-          { "i":61, "c": ""},
-          { "i":62, "c": ""},
-          { "i":63, "c": ""},
-          { "i":64, "c": ""},
-          { "i":65, "c": ""},
-          { "i":66, "c": ""},
-          { "i":67, "c": ""},
-          { "i":68, "c": ""},
-          { "i":69, "c": ""},
-          { "i":70, "c": ""},
-          { "i":71, "c": ""},
-          { "i":72, "c": ""},
-          { "i":73, "c": ""},
-          { "i":74, "c": ""},
-          { "i":75, "c": ""},
-          { "i":76, "c": ""},
-          { "i":77, "c": ""},
-          { "i":78, "c": ""},
-          { "i":79, "c": ""},
-          { "i":80, "c": ""},
-          { "i":81, "c": ""},
-          { "i":82, "c": ""},
-          { "i":83, "c": ""},
-          { "i":84, "c": ""},
-          { "i":85, "c": ""},
-          { "i":86, "c": ""},
-          { "i":87, "c": ""},
-          { "i":88, "c": ""},
-          { "i":89, "c": ""},
-          { "i":90, "c": ""},
-          { "i":91, "c": ""},
-          { "i":92, "c": ""},
-          { "i":93, "c": ""},
-          { "i":94, "c": ""},
-          { "i":95, "c": ""},
-          { "i":96, "c": ""},
-          { "i":97, "c": ""},
-          { "i":98, "c": ""},
-          { "i":99, "c": ""}
+          { "i":"A0", "c": ""},
+          { "i":"A1", "c": ""},
+          { "i":"A2", "c": ""},
+          { "i":"A3", "c": ""},
+          { "i":"A4", "c": ""},
+          { "i":"A5", "c": ""},
+          { "i":"A6", "c": ""},
+          { "i":"A7", "c": ""},
+          { "i":"A8", "c": ""},
+          { "i":"A9", "c": ""},
+          { "i":"B0", "c": ""},
+          { "i":"B1", "c": ""},
+          { "i":"B2", "c": ""},
+          { "i":"B3", "c": ""},
+          { "i":"B4", "c": ""},
+          { "i":"B5", "c": ""},
+          { "i":"B6", "c": ""},
+          { "i":"B7", "c": ""},
+          { "i":"B8", "c": ""},
+          { "i":"B9", "c": ""},
+          { "i":"C0", "c": ""},
+          { "i":"C1", "c": ""},
+          { "i":"C2", "c": ""},
+          { "i":"C3", "c": ""},
+          { "i":"C4", "c": ""},
+          { "i":"C5", "c": ""},
+          { "i":"C6", "c": ""},
+          { "i":"C7", "c": ""},
+          { "i":"C8", "c": ""},
+          { "i":"C9", "c": ""},
+          { "i":"D0", "c": ""},
+          { "i":"D1", "c": ""},
+          { "i":"D2", "c": ""},
+          { "i":"D3", "c": ""},
+          { "i":"D4", "c": ""},
+          { "i":"D5", "c": ""},
+          { "i":"D6", "c": ""},
+          { "i":"D7", "c": ""},
+          { "i":"D8", "c": ""},
+          { "i":"D9", "c": ""},
+          { "i":"E0", "c": ""},
+          { "i":"E1", "c": ""},
+          { "i":"E2", "c": ""},
+          { "i":"E3", "c": ""},
+          { "i":"E4", "c": ""},
+          { "i":"E5", "c": ""},
+          { "i":"E6", "c": ""},
+          { "i":"E7", "c": ""},
+          { "i":"E8", "c": ""},
+          { "i":"E9", "c": ""},
+          { "i":"F0", "c": ""},
+          { "i":"F1", "c": ""},
+          { "i":"F2", "c": ""},
+          { "i":"F3", "c": ""},
+          { "i":"F4", "c": ""},
+          { "i":"F5", "c": ""},
+          { "i":"F6", "c": ""},
+          { "i":"F7", "c": ""},
+          { "i":"F8", "c": ""},
+          { "i":"F9", "c": ""},
+          { "i":"G0", "c": ""},
+          { "i":"G1", "c": ""},
+          { "i":"G2", "c": ""},
+          { "i":"G3", "c": ""},
+          { "i":"G4", "c": ""},
+          { "i":"G5", "c": ""},
+          { "i":"G6", "c": ""},
+          { "i":"G7", "c": ""},
+          { "i":"G8", "c": ""},
+          { "i":"G9", "c": ""},
+          { "i":"H0", "c": ""},
+          { "i":"H1", "c": ""},
+          { "i":"H2", "c": ""},
+          { "i":"H3", "c": ""},
+          { "i":"H4", "c": ""},
+          { "i":"H5", "c": ""},
+          { "i":"H6", "c": ""},
+          { "i":"H7", "c": ""},
+          { "i":"H8", "c": ""},
+          { "i":"H9", "c": ""},
+          { "i":"I0", "c": ""},
+          { "i":"I1", "c": ""},
+          { "i":"I2", "c": ""},
+          { "i":"I3", "c": ""},
+          { "i":"I4", "c": ""},
+          { "i":"I5", "c": ""},
+          { "i":"I6", "c": ""},
+          { "i":"I7", "c": ""},
+          { "i":"I8", "c": ""},
+          { "i":"I9", "c": ""},
+          { "i":"J0", "c": ""},
+          { "i":"J1", "c": ""},
+          { "i":"J2", "c": ""},
+          { "i":"J3", "c": ""},
+          { "i":"J4", "c": ""},
+          { "i":"J5", "c": ""},
+          { "i":"J6", "c": ""},
+          { "i":"J7", "c": ""},
+          { "i":"J8", "c": ""},
+          { "i":"J9", "c": ""},
         ]
       )
     }

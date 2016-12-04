@@ -14,6 +14,7 @@
     <h1>Setup</h1>
 
     <h2 style="text-align:center;"> Current Slide {{ lastbigdaddy }}</h2>
+    <h3 style="text-align:center;">Big daddy minus one {{ oldhazy }}</h3>
     <div class="colorpickerdiv">
       <h2 class="colorpickerheader">Color Picker</h2>
       <div id="colorpickercurrentcolorID" class="colorpickercurrentcolor">
@@ -28,8 +29,10 @@
 
     </div>
 
+    <!-- to satisfy issue with bigi at index 0 -->
+    <div id="bigdaddy-1"></div>
     <div id="bigdaddy{{ $index }}" class="bigdaddy" ng-repeat="squares in bigsquares">
-      <div id="{{ $parent.$index }}{{ square.i }}" ng-repeat="square in squares" class="littlesquares" ng-click="setSquare($parent.$index, square.i)">
+      <div id="{{ $parent.$index }}{{ square.i }}" ng-repeat="square in squares" class="littlesquares" ng-click="setSquare($parent.$index, square.i)" ng-mousedown="inselectrangeFunction($parent.$index , square.i)" ng-mouseup="OUTselectrangeFunction($parent.$index , square.i)">
           {{ square.i }}
       </div>
     </div>
