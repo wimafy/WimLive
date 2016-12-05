@@ -18,6 +18,46 @@
     <h3 style="text-align:center;">inselect: {{ highlightSelectorvar }}  </h3>
     <h3 style="text-align:center;">all blank squares will be black</h3>
 -->
+    <!-- preset selector -->
+    <div class="presetSelectorDiv" class="btn-group" data-toggle="buttons">
+      <div class="presetIndividuals" style="width: 35%; height: 95px; background-color: gray; margin: 5px;">
+        {{ selectedPreset }}</br>
+        <img class="presetGifimg" src="pics/{{ selectedPresetPic }}" />
+
+      </div>
+
+      <label class="btn btn-primary" style="width: calc(50% - 15px); margin: 5px; height: 50px; line-height: 30px;">
+        <input type="checkbox" ng-model="showPresets" autocomplete="off">Presets
+      </label>
+      <label class="btn btn-primary" style="width: calc(50% - 70px); margin: 0px 5px; height: 40px; line-height: 25px; background-color: #4CAF50; border-color: #388E3C; float: left;">
+        <div ng-click="addPreset()">Add preset</div>
+      </label>
+      <div ng-if="livepreset" style="position: absolute; left: calc(35% + 15px);; width: calc(50% - 68px); height: 40px; background-color: orange; float: left; border-radius: 3px; text-align: center; line-height: 40px; font-family: Roboto Black; color: white;">
+        live
+      </div>
+      <label class="btn btn-danger" style="width: 50px; margin: 0px; height: 40px; line-height: 25px; float:left;">
+        <div ng-click="cancelPreset()"><span class="glyphicon glyphicon-remove" style="font-size: 14px;float: right;text-align: center;width: 100%;line-height: 25px;"></span></div>
+      </label>
+      <p style="width: 10%; margin: -22px 2.5%; height: 18px; float: left; font-family: Roboto Black;">
+        frames
+      </p>
+      <input type="number" min="1" ng-model="presetFrameCount" style="width: 50px; height: 40px; float: left; margin: 0px 1.5%; text-align: center;">
+    </div>
+
+    <div ng-if="showPresets">
+      <div class="presetSelectorchooserDiv">
+
+            <div type="button" ng-click="closePresetselectordiv()" autocomplete="off"><span class="glyphicon glyphicon-remove" style="font-size: 30px; margin: 10px; float: right; color: #212121;"></span></div>
+            <h2 style="float: right; width: calc(100% - 90px); text-align: center;">Presets</h2>
+
+            <div class="presetIndividuals" ng-repeat="preset in presets" ng-click="selectPresetFunc(preset.n, preset.funcN, preset.gifpic)">
+                <h3 class="presetname">{{ preset.n }}</h3>
+                <img class="presetGifimg" src="pics/{{ preset.gifpic }}" />
+            </div>
+
+      </div>
+    </div>
+
     <div class="colorpickerdiv">
       <h2 class="colorpickerheader">Color Picker</h2>
       <div id="colorpickercurrentcolorID" class="colorpickercurrentcolor">
@@ -34,9 +74,9 @@
     <!-- to satisfy issue with bigi at index 0 -->
     <div id="bigdaddy-1"></div>
     <div id="bigdaddy{{ $index }}" class="bigdaddy" ng-repeat="squares in bigsquares">
-      <div id="{{ $parent.$index }}{{ square.i }}" ng-repeat="square in squares" class="littlesquares" ng-click="setSquare($parent.$index, square.i)" ng-mousedown="inselectrangeFunction($parent.$index , square.i)" ng-mouseup="OUTselectrangeFunction($parent.$index , square.i)"
-      ng-mouseover="highlightSelector(square.i)"
-      ng-mouseleave="highlightDeSelector(square.i)">
+      <div id="{{ $parent.$index }}{{ square.i }}" ng-repeat="square in squares" class="littlesquares" ng-click="setSquare($parent.$index, square.i); applyPreset($parent.$index, square.i)" ng-mousedown="inselectrangeFunction($parent.$index , square.i)" ng-mouseup="OUTselectrangeFunction($parent.$index , square.i)"
+      ng-mouseover="highlightSelector($parent.$index, square.i)"
+      ng-mouseleave="highlightDeSelector($parent.$index, square.i)">
           {{ square.i }}
       </div>
     </div>
@@ -61,6 +101,13 @@
       </div>
     </div>
 
+    <!-- stadium pic div -->
+    <div ng-if="stadiumPic">
+      <div style="width: 500px;height: 500px;left: calc(50vw - 250px);top: calc(50vh - 250px);position: absolute; background-color: gray; z-index: 4; opacity: .9">
+        <img src="pics/001stadium.png" style="width: 100%; margin-top: 55px;"/>
+      </div>
+    </div>
+
     <div class="timeLineDiv">
       <h2 class="colorpickerheader">Time-Line (millisec)</h2>
 
@@ -75,7 +122,16 @@
       <button type="button" id="addmilsecbutton" class="btn btn-success" style="width: 90%; margin-left: 5%;" ng-click="addTimeMillsec()" >Add</button>
     </div>
 
-    <button type="button" class="btn btn-success" ng-click="runtest()" style="position: absolute; width: 40vw; height: 50px; margin-left: 30vw; top: calc(85vh - 25px);">Run test</button>
+    <button type="button" class="btn btn-success" id="runtestbutton" ng-click="runtest()" style="position: absolute; width: 40vw; height: 50px; margin-left: 30vw; top: calc(85vh - 25px);">Run test</button>
+
+    <!--options div-->
+    <div class="optionsdiv" class="btn-group" data-toggle="buttons" >
+      <h3 style="width: 100%; margin-top: 5px;">Options...</h3>
+      <label class="btn btn-primary">
+        <input type="checkbox" ng-model="stadiumPic" ng-init="stadiumPic = true" autocomplete="off">Stadium Pic
+      </label>
+
+    </div>
 
     <!--
       <strong>KEY DOWN RESULT:</strong> {{onKeyDownResult}}<br />

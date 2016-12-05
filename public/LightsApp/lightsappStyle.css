@@ -29,9 +29,10 @@ body {
   width: 50px;
   border-style: solid;
   border-width: 1px;
-  border-color: lightgray;
+  border-color: black;
   text-align: center;
   line-height: 50px;
+  border-radius: 2px;
 }
 
 .colorpickerdiv {
@@ -115,4 +116,62 @@ body {
   line-height: 0px;
   font-family: Roboto Black;
   color: #424242;
+}
+
+.optionsdiv {
+  width: calc(50vw - 300px);
+  height: 100px;
+  background-color: #E0E0E0;
+  top: calc(50vh + 280px);
+  position: absolute;
+  right: 25px;
+  border-radius: 3px;
+  padding-left: 15px;
+}
+
+.presetSelectorDiv {
+  height: 105px;
+  width: calc(50vw - 50px);
+  background-color: lightgray;
+  position: absolute;
+  top: 60px;
+  left: 25px;
+}
+
+.presetIndividuals {
+  float: left;
+  height: 125px;
+  width: 23%;
+  background-color: lightgray;
+  margin: 15px 0px 0% 1.5%;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 30px;
+  font-family: Roboto Black;
+  color: #424242;
+}
+
+.presetSelectorchooserDiv {
+  height: 90vh;
+  width: 96vw;
+  left: 2vw;
+  top: 2vh;
+  background-color: gray;
+  z-index: 20;
+  position: absolute;
+  border-radius: 4px;
+}
+
+.presetname {
+  float: left;
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  margin: 0;
+  line-height: 50px;
+}
+
+.presetGifimg {
+  height: 70px;
+  margin-top: -5px;
 }

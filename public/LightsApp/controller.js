@@ -380,15 +380,19 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
   $scope.onKeyDown = function ($event) {
 
     $scope.onKeyDownResult = getKeyboardEventResult($event, "Key down");
-    if($scope.onKeyDownResult == "38") {
+    if($scope.onKeyDownResult == "87") {
       //alert("up");
       $scope.gotoTime($scope.lastbigdaddy - 1);
     }
-    if($scope.onKeyDownResult == "40") {
+    if($scope.onKeyDownResult == "83") {
       //alert("down");
       $scope.gotoTime($scope.lastbigdaddy + 1);
     }
     if($scope.onKeyDownResult == "13") {
+      //alert("add");
+      $scope.addTimeMillsec();
+    }
+    if($scope.onKeyDownResult == "16") {
       //alert("add");
       $scope.addTimeMillsec();
     }
@@ -426,6 +430,18 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
     if($scope.onKeyDownResult == "58") {
       $scope.setColor("#0097A7");
     }
+    if($scope.onKeyDownResult == "65") {
+      $scope.addPreset();
+    }
+    if($scope.onKeyDownResult == "68") {
+      $scope.cancelPreset();
+    }
+    if($scope.onKeyDownResult == "79") {
+      $scope.stadiumPic = false;
+    }
+    if($scope.onKeyDownResult == "80") {
+      $scope.stadiumPic = true;
+    }
 
 
   };
@@ -446,7 +462,7 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
 
   $scope.colors = [
     {"c": "", "hk": "1"},
-    {"c": "#FAFAFA", "hk": "2"},
+    {"c": "#EEEEEE", "hk": "2"},
     {"c": "#d32f2f", "hk": "3"},
     {"c": "#C2185B", "hk": "4"},
     {"c": "#7B1FA2", "hk": "5"},
@@ -573,18 +589,24 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
     }else{
       alert("inbred");
     }
+
+
+
   }
 
 
 
-$scope.highlightSelector = function(squarei) {
+$scope.highlightSelector = function(parent, squarei) {
   $scope.highlightSelectorvar = "highlightdivlilsquare" + squarei;
+  $scope.presetSelectorSquare = parent + squarei;
   document.getElementById($scope.highlightSelectorvar).style.opacity = 1;
+
 }
 
-$scope.highlightDeSelector = function(squarei) {
+$scope.highlightDeSelector = function(parent, squarei) {
   $scope.highlightSelectorvar = "highlightdivlilsquare" + squarei;
   document.getElementById($scope.highlightSelectorvar).style.opacity = 0;
+
 }
 
 
@@ -660,6 +682,11 @@ $scope.highlightDeSelector = function(squarei) {
 
   //code for running Test display
   $scope.runtest = function() {
+
+    document.getElementById("runtestbutton").disabled = true;
+    $timeout(function () {
+      document.getElementById("runtestbutton").disabled = false;
+    }, 200);
 
     document.getElementById("bigdaddy"+$scope.oldhazy).style.zIndex = "0";
     $scope.runTestTimevar = 0;
@@ -828,8 +855,156 @@ $scope.highlightDeSelector = function(squarei) {
         ]
       )
     }
+  }
+
+  $scope.livepreset = false;
+  $scope.showPresets = false;
+  $scope.presetFrameCount = 1;
+
+  $scope.closePresetselectordiv = function() {
+      $scope.showPresets = false;
+  }
+  $scope.presets = [
+    {"n": "checkard", "funcN": "checkardFunction", "gifpic": "nothing.png"},
+    {"n": "blink", "funcN": "blinkFunction", "gifpic": "black.jpg"},
+    {"n": "circle out", "funcN": "", "gifpic": "nothing.png"},
+    {"n": "solid", "funcN": "allonecolorFunction", "gifpic": "white.png"},
+    {"n": "circle odsafdst", "funcN": "", "gifpic": "nothing.png"},
+    {"n": "circle oudsafadst", "funcN": "", "gifpic": "nothing.png"},
+    {"n": "circledsafsad out", "funcN": "", "gifpic": "nothing.png"},
+    {"n": "cadsfircle out", "funcN": "", "gifpic": "nothing.png"}
+  ]
 
 
+
+  $scope.selectPresetFunc = function(name, funcName, pic) {
+      $scope.selectedPreset = name;
+      $scope.selectedPresetFuncName = funcName;
+      $scope.selectedPresetPic = pic;
+      $scope.livepreset = true;
+      $scope.showPresets = false;
+
+  }
+
+  $scope.addPreset = function() {
+    $scope.livepreset = true;
+  }
+
+  $scope.cancelPreset = function() {
+      $scope.livepreset = false;
+  }
+
+  $scope.applyPreset = function(parentindex, squarei) {
+
+  if($scope.livepreset == true){
+
+    if($scope.selectedPresetFuncName == "allonecolorFunction"){
+      $scope.allonecolorFunction();
+    }else if($scope.selectedPresetFuncName == "blinkFunction"){
+      $scope.blinkFunction();
+    }else if($scope.selectedPresetFuncName == "checkardFunction"){
+      $scope.checkardFunction();
+    }
+
+
+    }
+    $scope.livepreset = false;
+  }
+
+
+
+  //preset functions
+  $scope.allonecolorFunction = function() {
+    for (i = 0; i < $scope.selectrangeXarray.length; i++) {
+        //console.log( $scope.actualXrange[i]);
+        this.xvalue = $scope.selectrangeXarray[i];
+        //console.log(this.xvalue);
+        //y range
+        for (y = 0; y < $scope.selectrangeYarray.length; y++) {
+            //console.log( $scope.actualXrange[i]);
+            //console.log($scope.outselectrangebigi + $scope.actualYrange[y] + this.xvalue);
+            $scope.setSquare($scope.outselectrangebigi, $scope.selectrangeYarray[y] + this.xvalue);
+        }
+    }
+  }
+
+  $scope.blinkFunction = function() {
+    //alert($scope.presetFrameCount);
+    //alert($scope.outselectrangebigi);
+
+    for (i = 0; i < $scope.presetFrameCount; i++) {
+      if(i % 2 == 0){
+        //alert(i + $scope.outselectrangebigi);
+        for (q = 0; q < $scope.selectrangeXarray.length; q++) {
+            //console.log( $scope.actualXrange[i]);
+            this.xvalue = $scope.selectrangeXarray[q];
+            for (y = 0; y < $scope.selectrangeYarray.length; y++) {
+                $scope.setSquare($scope.outselectrangebigi + i, $scope.selectrangeYarray[y] + this.xvalue);
+            }
+        }
+      }
+    }
+  }
+
+  $scope.checkardFunction = function() {
+    //alert($scope.presetFrameCount);
+    //alert($scope.outselectrangebigi);
+
+    for (i = 0; i < $scope.presetFrameCount; i++) {
+      if(i % 2 == 0){
+        //alert(i + $scope.outselectrangebigi);
+        for (q = 0; q < $scope.selectrangeXarray.length; q++) {
+            //console.log( $scope.actualXrange[i]);
+            //alert(q);
+            if(q % 2 == 1){
+              //alert(q);
+              this.xoscilatevar = 1;
+            }else{
+              this.xoscilatevar = 0;
+            }
+            this.xvalue = $scope.selectrangeXarray[q];
+            for (y = 0; y < $scope.selectrangeYarray.length; y++) {
+              if(this.xoscilatevar == 1){
+                if(y % 2 == 0){
+                $scope.setSquare($scope.outselectrangebigi + i, $scope.selectrangeYarray[y] + this.xvalue);
+                }
+              }else{
+                if(y % 2 == 1){
+                $scope.setSquare($scope.outselectrangebigi + i, $scope.selectrangeYarray[y] + this.xvalue);
+                }
+              }
+
+            }
+        }
+      }else {
+        for (q = 0; q < $scope.selectrangeXarray.length; q++) {
+            //console.log( $scope.actualXrange[i]);
+            //alert(q);
+            if(q % 2 == 1){
+              //alert(q);
+              this.xoscilatevar = 1;
+            }else{
+              this.xoscilatevar = 0;
+            }
+            this.xvalue = $scope.selectrangeXarray[q];
+            for (y = 0; y < $scope.selectrangeYarray.length; y++) {
+              if(this.xoscilatevar == 1){
+                if(y % 2 == 1){
+                $scope.setSquare($scope.outselectrangebigi + i, $scope.selectrangeYarray[y] + this.xvalue);
+                }
+              }else{
+                if(y % 2 == 0){
+                $scope.setSquare($scope.outselectrangebigi + i, $scope.selectrangeYarray[y] + this.xvalue);
+                }
+              }
+
+            }
+        }
+      }
+
+
+
+    }
   }
 
 });
