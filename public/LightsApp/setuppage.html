@@ -73,7 +73,7 @@
 
     <!-- to satisfy issue with bigi at index 0 -->
     <div id="bigdaddy-1"></div>
-    <div id="bigdaddy{{ $index }}" class="bigdaddy" ng-repeat="squares in bigsquares">
+    <div id="bigdaddy{{ $index }}" class="bigdaddy" nmerg-repeat="squares in bigsquares">
       <div id="{{ $parent.$index }}{{ square.i }}" ng-repeat="square in squares" class="littlesquares" ng-click="setSquare($parent.$index, square.i); applyPreset($parent.$index, square.i)" ng-mousedown="inselectrangeFunction($parent.$index , square.i)" ng-mouseup="OUTselectrangeFunction($parent.$index , square.i)"
       ng-mouseover="highlightSelector($parent.$index, square.i)"
       ng-mouseleave="highlightDeSelector($parent.$index, square.i)">
