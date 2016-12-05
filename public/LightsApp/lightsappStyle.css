@@ -25,8 +25,8 @@ body {
 
 .littlesquares {
   float: left;
-  height: 50px;
-  width: 50px;
+  height: 12.5px;
+  width: 12.5px;
   border-style: solid;
   border-width: 1px;
   border-color: black;
