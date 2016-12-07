@@ -10,15 +10,49 @@
 
 </head>
 <body ng-controller="SettupController">
-
-  {{ columns }}
-  <div ng-repeat="frame in bigarray">
-      <div ng-repeat="row in frame">
-        <div ng-repeat="cell in row">
-            {{ cell }}
-        </div>
+<!-- Frame divs will be ordered in their respective z-index order from highest to lowest-->
+<!-- this will be the highest div and provide the interface which is actually clikced-->
+<div class="frame" style="z-index: 20;">
+  <div ng-repeat="frame in frames | limitTo:1">
+    <div ng-repeat="row in frame| limitTo:38">
+      <div id="click{{ $parent.$index }}{{ $index }}" class="clickindividualseat" ng-repeat="seat in row track by $index" ng-click="changeSquareColor($parent.$index, $index)">
       </div>
+    </div>
   </div>
+</div>
+
+
+<!-- this frame is for actuall displaying the colors of the current frame-->
+<div class="frame">
+  <div ng-repeat="frame in frames | limitTo:1">
+    <div ng-repeat="row in frame| limitTo:38">
+      <div id="display{{ $parent.$index }}.{{ $index }}" class="individualseat" ng-repeat="seat in row track by $index">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- background frame (this is gray to give the illusion of color but the divs are actually clear) -->
+<div class="backgroundFrame">
+
+</div>
+
+
+<div class="timelineDiv">
+
+  <div class="timelineScrollDiv">
+    <div class="timelineScrollClickDiv" ng-repeat="frame in frames" ng-click="setCurrentFrame( $index)">
+      {{ $index }}
+    </div>
+  </div>
+
+  <button type="button" id="addmilsecbutton" class="btn btn-success" style="width: 90%; margin-left: 5%; height: 60px; font-size: 30px;" ng-click="addTimeMillsec()">Add</button>
+
+</div>
+
+{{ currentFrame }}
+<!--{{ frames }}-->
+
 
 </body>
 </html>

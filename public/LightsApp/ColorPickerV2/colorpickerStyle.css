@@ -1,0 +1,69 @@
+.frame {
+    width: 76vh;
+    height: 76vh;
+    margin: 12vh calc(50vw - 38vh);
+    position: absolute;
+    z-index: 1;
+}
+
+.individualseat {
+  height: 2vh;
+  width: 2vh;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  line-height: 12.5px;
+}
+
+.clickindividualseat {
+  height: 2vh;
+  width: 2vh;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  line-height: 12.5px;
+}
+
+.clickindividualseat:hover {
+  background-color: white;
+}
+
+.backgroundFrame {
+  width: 76vh;
+  height: 76vh;
+  margin: 12vh calc(50vw - 38vh);
+  background-color: gray;
+  position: absolute;
+  z-index: 0;
+}
+
+.timelineDiv {
+  position: absolute;
+  width: calc(50vw - 38vh);
+  height: 76vh;
+  right: 0;
+  top: 12vh;
+  background-color: #E0E0E0;
+  border-radius: 3px;
+}
+
+.timelineScrollDiv {
+  width: 90%;
+  height: calc(100% - 160px);
+  overflow-y: auto;
+  margin: 60px 5% 15px;
+}
+
+.timelineScrollClickDiv {
+  width: 100%;
+  height: 100px;
+  background-color: #4CAF50;
+  float: left;
+  border-radius: 3px;
+  margin: 2px 0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #388E3C;
+}
