@@ -8,8 +8,10 @@
   <link rel="stylesheet" type="text/css" href="colorpickerStyle.css">
 
 
+
+
 </head>
-<body ng-controller="SettupController">
+<body ng-controller="SettupController" ng-keydown="onKeyDown($event)" ng-init="uponInit()">
 <!-- Frame divs will be ordered in their respective z-index order from highest to lowest-->
 <!-- this will be the highest div and provide the interface which is actually clikced-->
 <div class="frame" style="z-index: 20;">
@@ -23,10 +25,25 @@
 
 
 <!-- this frame is for actuall displaying the colors of the current frame-->
-<div class="frame">
+<div class="frame" style="z-index: 10;">
   <div ng-repeat="frame in frames | limitTo:1">
     <div ng-repeat="row in frame| limitTo:38">
       <div id="display{{ $parent.$index }}.{{ $index }}" class="individualseat" ng-repeat="seat in row track by $index">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- this frame creates the opaque view-->
+<div class="frame" style="z-index: 7; background-color: gray; opacity: .5;">
+
+</div>
+
+<!-- This frame displays the frame previous to the live one-->
+<div class="frame" style="z-index: 5;">
+  <div ng-repeat="frame in frames | limitTo:1">
+    <div ng-repeat="row in frame| limitTo:38">
+      <div id="displayminusone{{ $parent.$index }}.{{ $index }}" class="individualseat" ng-repeat="seat in row track by $index">
       </div>
     </div>
   </div>
@@ -37,11 +54,11 @@
 
 </div>
 
-
+<!-- timeline div -->
 <div class="timelineDiv">
-
+  {{ currentFrame }}
   <div class="timelineScrollDiv">
-    <div class="timelineScrollClickDiv" ng-repeat="frame in frames" ng-click="setCurrentFrame( $index)">
+    <div id="timeline{{ $index }}" class="timelineScrollClickDiv" ng-repeat="frame in frames" ng-click="setCurrentFrame( $index)">
       {{ $index }}
     </div>
   </div>
@@ -50,8 +67,27 @@
 
 </div>
 
-{{ currentFrame }}
-<!--{{ frames }}-->
+<!-- color picker div -->
+<div class="colorpickerDiv">
+  <div class="selectedColor" id="selectedColorDiv" style="background-color: #f44336;">
+    #f44336
+  </div>
+  <div class="colorpickerColorPad">
+    <div class="colorpickerColorIndividual" ng-repeat="color in colorListArray" style="background-color: {{ color }}" ng-click="setColor(color, $index)">
+
+    </div>
+  </div>
+
+</div>
+
+<button type="button" class="btn btn-success" id="runtestbutton" ng-click="runtest()">Start test</button>
+<button type="button" class="btn btn-success" id="stoptestbutton" ng-click="stoptest()">Stop test</button>
+<button type="button" class="btn btn-success" id="continuetestbutton" ng-click="continuetest()">Continue test</button>
+
+
+<!--{{ frames }}
+{{ runTestTimevar }}
+{{ columns }}-->
 
 
 </body>

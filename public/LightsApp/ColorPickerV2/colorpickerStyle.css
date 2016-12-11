@@ -59,11 +59,79 @@
 .timelineScrollClickDiv {
   width: 100%;
   height: 100px;
-  background-color: #4CAF50;
+  background-color: #9E9E9E;
   float: left;
   border-radius: 3px;
   margin: 2px 0;
   border-style: solid;
   border-width: 1px;
-  border-color: #388E3C;
+  border-color: darkgray;
+}
+
+.colorpickerDiv{
+  position: absolute;
+  width: calc(50vw - 38vh);
+  height: 76vh;
+  left: 0;
+  top: 12vh;
+  background-color: #E0E0E0;
+  border-radius: 3px;
+
+}
+
+.colorpickerColorPad {
+  width: 90%;
+  height: 63.5vh;
+  margin: 1vh 5%;
+  overflow-y: auto;
+  background-color: gray;
+  border-radius: 3px;
+  overflow-x: hidden;
+  float: left;
+}
+
+.colorpickerColorIndividual {
+  width: calc((50vw - 38vh)*.18);
+  height: calc((50vw - 38vh)*.18);
+  float: left;
+}
+
+.selectedColor {
+  width: 90%;
+  height: 10vh;
+  background-color: gray;
+  margin: 1vh 5% -.5vh;
+  float: left;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 10vh;
+  font-family: Roboto Black;
+}
+
+#runtestbutton {
+  position: absolute;
+  height: 6vh;
+  bottom: 5vh;
+  width: 38vh;
+  left: calc(50vw - 38vh);
+}
+
+#stoptestbutton {
+  position: absolute;
+  height: 6vh;
+  bottom: 5vh;
+  width: 18vh;
+  left: calc(51vw);
+  background-color: #d32f2f;
+  border-color: #b71c1c;
+}
+
+#continuetestbutton {
+  position: absolute;
+  height: 6vh;
+  bottom: 5vh;
+  width: 18vh;
+  left: calc(69.5vw);
+  background-color: #FFA000;
+  border-color: #FF6F00;
 }
