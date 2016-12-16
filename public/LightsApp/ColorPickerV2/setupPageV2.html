@@ -17,7 +17,7 @@
 <div class="frame" style="z-index: 20;">
   <div ng-repeat="frame in frames | limitTo:1">
     <div ng-repeat="row in frame| limitTo:38">
-      <div id="click{{ $parent.$index }}{{ $index }}" class="clickindividualseat" ng-repeat="seat in row track by $index" ng-click="changeSquareColor($parent.$index, $index)">
+      <div id="click{{ $parent.$index }}{{ $index }}" class="clickindividualseat" ng-repeat="seat in row track by $index" ng-click="changeSquareColor($parent.$index, $index)" ng-mousedown="spreadSelectIN($parent.$index, $index)" ng-mouseup="spreadSelectOut($parent.$index, $index)">
       </div>
     </div>
   </div>
@@ -54,16 +54,33 @@
 
 </div>
 
+<div class="selectpresetBar">
+  <div class="individualpreset" id="preset{{ $index }}" ng-repeat="preset in presetdivs" ng-click="setPreset($index)">
+    <p class="individualpresettitle">{{ preset.name }}</p>
+    <div class="individualpresetviewer">
+
+    </div>
+  </div>
+</div>
+<button type="button" class="btn btn-success" id="createpresetbutton" ng-click="createpreset()">Save Preset</button>
+
+
+
 <!-- timeline div -->
 <div class="timelineDiv">
-  {{ currentFrame }}
+  <div class="timelinecurrentdiv">
+    <!-- this makes it user friendly for not computer people-->
+    {{ currentFrame + 1 }}/{{ numberofFrames }}
+  </div>
   <div class="timelineScrollDiv">
     <div id="timeline{{ $index }}" class="timelineScrollClickDiv" ng-repeat="frame in frames" ng-click="setCurrentFrame( $index)">
-      {{ $index }}
+      {{ $index + 1}}
     </div>
   </div>
 
-  <button type="button" id="addmilsecbutton" class="btn btn-success" style="width: 90%; margin-left: 5%; height: 60px; font-size: 30px;" ng-click="addTimeMillsec()">Add</button>
+  <button type="button" class="btn btn-success" id="runtestbutton" ng-click="runtest()">Start test</button>
+  <button type="button" class="btn btn-success" id="stoptestbutton" ng-click="stoptest()">Stop test</button>
+  <button type="button" class="btn btn-success" id="continuetestbutton" ng-click="continuetest()">Continue test</button>
 
 </div>
 
@@ -73,21 +90,20 @@
     #f44336
   </div>
   <div class="colorpickerColorPad">
-    <div class="colorpickerColorIndividual" ng-repeat="color in colorListArray" style="background-color: {{ color }}" ng-click="setColor(color, $index)">
+    <div class="colorpickerColorIndividual" ng-repeat="color in colorListArray" style="background-color: {{ color }}" ng-mousedown="setColor(color, $index)">
 
     </div>
   </div>
 
 </div>
 
-<button type="button" class="btn btn-success" id="runtestbutton" ng-click="runtest()">Start test</button>
-<button type="button" class="btn btn-success" id="stoptestbutton" ng-click="stoptest()">Stop test</button>
-<button type="button" class="btn btn-success" id="continuetestbutton" ng-click="continuetest()">Continue test</button>
 
+<!--
+<p style="position: absolute; background-color:black; color:white">
+  {{ presetarray }}
 
-<!--{{ frames }}
-{{ runTestTimevar }}
-{{ columns }}-->
+</p>
+-->
 
 
 </body>
