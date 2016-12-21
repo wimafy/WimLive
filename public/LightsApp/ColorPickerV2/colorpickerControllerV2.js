@@ -1,6 +1,6 @@
 var app = angular.module('myApp', []);
 
-app.controller('SettupController', function($scope, $timeout, $interval, $scope, $http) {
+app.controller('SettupController', function($scope, $timeout, $interval, $scope, $http, $parse ) {
 
   // Event handlers
   //keyboard commands
@@ -30,7 +30,7 @@ app.controller('SettupController', function($scope, $timeout, $interval, $scope,
 //end keyboard commands
 
 // sets number of frames
-$scope.numberofFrames = 500;
+$scope.numberofFrames = 50;
 
 $scope.frames = [
 
@@ -52,8 +52,8 @@ $scope.row = [
 $scope.uponInit = function() {
   $timeout(function () {
       document.getElementById('timeline0').style.backgroundColor = "#66BB6A";
-      document.getElementById('preset0').style.backgroundColor = "#66BB6A";
-      document.getElementById('preset0').style.color = "white";
+      document.getElementById('preseteditbutton').style.backgroundColor = "#66BB6A";
+      document.getElementById('preseteditbutton').style.color = "white";
 
   }, 10);
 }
@@ -114,9 +114,28 @@ $scope.colorListArray = [
   "#FF9800", "#FF5722", "#795548",
   "#9E9E9E", "#607D8B"];
 
+$scope.clearFrame = function() {
+  for (row=0; row<38; row++) {
+    for (seat=0; seat< 38; seat++) {
+        $scope.frames[$scope.currentFrame][row][seat] = 0;
+    }
+  }
+  $scope.setCurrentFrame($scope.currentFrame);
+}
+
+$scope.duplicateFrame = function() {
+  //duplicates frame to next frame
+  for (row=0; row<38; row++) {
+    for (seat=0; seat< 38; seat++) {
+        $scope.frames[$scope.currentFrame+1][row][seat] = $scope.frames[$scope.currentFrame][row][seat];
+    }
+  }
+  $scope.setCurrentFrame($scope.currentFrame);
+  $scope.downThroughFrames();
+
+}
 
 //create temp div and do the lookup in there
-
 $scope.currentFrame = 0;
 $scope.lastCurrentFrame = 0;
 
@@ -155,7 +174,8 @@ $scope.totalFrames = $scope.frames.length - 1;
 
 
 
-
+//undo stuff
+$scope.undoarray = []
 
 
 $scope.changeSquareColor = function(row, seat) {
@@ -163,12 +183,29 @@ $scope.changeSquareColor = function(row, seat) {
   //this is for determining which preset to use
   //currently only for single frame presets
   //if statement determines if the preset is set to a specific position or any position
+
   if($scope.presetdivs[$scope.selectedpreset]["setxy"] == "no"){
+
+    var the_string = 'life.meaning';
+    // Get the model
+    var model = $parse(the_string);
+    // Assigns a value to it
+    model.assign($scope, 42);
+
+    console.log($scope.life.meaning);  // logs 42
+
+
+      var undoholdervar = $scope.frames[$scope.currentFrame];
+      $scope.undoarray.push([undoholdervar]);
+
+
       for(frame=0; frame<$scope.presetdivs[$scope.selectedpreset]["xy"].length; frame++){
         //alert($scope.presetdivs[$scope.selectedpreset]["xy"][frame][0]);
         for(coordinate=0; coordinate<$scope.presetdivs[$scope.selectedpreset]["xy"][frame].length; coordinate++){
+          if(row-$scope.presetdivs[$scope.selectedpreset]["xy"][frame][coordinate][1] > -1){
 
-          $scope.frames[$scope.currentFrame+frame][row-$scope.presetdivs[$scope.selectedpreset]["xy"][frame][coordinate][1]][seat+$scope.presetdivs[$scope.selectedpreset]["xy"][frame][coordinate][0]] = $scope.currentColorI;
+            $scope.frames[$scope.currentFrame+frame][row-$scope.presetdivs[$scope.selectedpreset]["xy"][frame][coordinate][1]][seat+$scope.presetdivs[$scope.selectedpreset]["xy"][frame][coordinate][0]] = $scope.currentColorI;
+          }
         }
       }
   }else{
@@ -179,6 +216,137 @@ $scope.changeSquareColor = function(row, seat) {
         $scope.frames[$scope.currentFrame+frame][$scope.presetdivs[$scope.selectedpreset]["setxycoords"][1]-$scope.presetdivs[$scope.selectedpreset]["xy"][frame][coordinate][1]][$scope.presetdivs[$scope.selectedpreset]["setxycoords"][0]+$scope.presetdivs[$scope.selectedpreset]["xy"][frame][coordinate][0]] = $scope.currentColorI;
       }
     }
+  }
+
+
+  //this is used to refresh the frame to update the changes of any given click
+  $scope.setCurrentFrame($scope.currentFrame);
+
+}
+
+
+$scope.changeSquareColorOUT = function(row, seat) {
+  //alert($scope.presetdivs[$scope.selectedpreset]["xy"][1][1][1]);
+  //this is for determining which preset to use
+  //currently only for single frame presets
+  //if statement determines if the preset is set to a specific position or any position
+  if($scope.manyselectIN != $scope.manyselectOUT){
+
+    if($scope.manyselectINrow - $scope.manyselectOUTrow + 1 > 0 & $scope.manyselectOUTcolumn - $scope.manyselectINcolumn + 1 > 0){
+      $scope.rowdifference = $scope.manyselectINrow - $scope.manyselectOUTrow + 1;
+      $scope.columndifference = $scope.manyselectOUTcolumn - $scope.manyselectINcolumn + 1;
+      for(row=0; row<$scope.rowdifference; row++){
+        //alert($scope.presetdivs[$scope.selectedpreset]["xy"][row][0]);
+        for(seat=0; seat<$scope.columndifference; seat++){
+
+          $scope.frames[$scope.currentFrame][$scope.manyselectINrow - row][$scope.manyselectINcolumn + seat] = $scope.currentColorI;
+        }
+      }
+
+    }else if($scope.manyselectINrow - $scope.manyselectOUTrow + 1 > 0 & $scope.manyselectINcolumn - $scope.manyselectOUTcolumn + 1 > 0){
+      $scope.rowdifference = $scope.manyselectINrow - $scope.manyselectOUTrow + 1;
+      $scope.columndifference = $scope.manyselectINcolumn - $scope.manyselectOUTcolumn + 1;
+      for(row=0; row<$scope.rowdifference; row++){
+        //alert($scope.presetdivs[$scope.selectedpreset]["xy"][row][0]);
+        for(seat=0; seat<$scope.columndifference; seat++){
+
+          $scope.frames[$scope.currentFrame][$scope.manyselectINrow - row][$scope.manyselectINcolumn - seat] = $scope.currentColorI;
+        }
+      }
+    }else if($scope.manyselectOUTrow - $scope.manyselectINrow + 1 > 0 & $scope.manyselectINcolumn - $scope.manyselectOUTcolumn + 1 > 0){
+      $scope.rowdifference = $scope.manyselectOUTrow - $scope.manyselectINrow + 1;
+      $scope.columndifference = $scope.manyselectINcolumn - $scope.manyselectOUTcolumn + 1;
+      for(row=0; row<$scope.rowdifference; row++){
+        //alert($scope.presetdivs[$scope.selectedpreset]["xy"][row][0]);
+        for(seat=0; seat<$scope.columndifference; seat++){
+
+          $scope.frames[$scope.currentFrame][$scope.manyselectINrow + row][$scope.manyselectINcolumn - seat] = $scope.currentColorI;
+        }
+      }
+    }else{
+      $scope.rowdifference = $scope.manyselectOUTrow - $scope.manyselectINrow + 1;
+      $scope.columndifference = $scope.manyselectOUTcolumn - $scope.manyselectINcolumn + 1;
+      for(row=0; row<$scope.rowdifference; row++){
+        //alert($scope.presetdivs[$scope.selectedpreset]["xy"][row][0]);
+        for(seat=0; seat<$scope.columndifference; seat++){
+
+          $scope.frames[$scope.currentFrame][$scope.manyselectINrow + row][$scope.manyselectINcolumn + seat] = $scope.currentColorI;
+        }
+      }
+
+    }
+
+
+  }
+
+  //this is used to refresh the frame to update the changes of any given click
+  $scope.setCurrentFrame($scope.currentFrame);
+
+}
+
+
+$scope.changeSquareColorOUThighlight = function(row, seat) {
+  //alert($scope.presetdivs[$scope.selectedpreset]["xy"][1][1][1]);
+  //this is for determining which preset to use
+  //currently only for single frame presets
+  //if statement determines if the preset is set to a specific position or any position
+
+
+
+
+  if($scope.manyselectIN != $scope.manyselectOUT){
+
+    for (row=0; row<38; row++) {
+      for (seat=0; seat< 38; seat++) {
+        document.getElementById("preset"+row+"."+seat).style.backgroundColor = "";
+        //$scope.frames[$scope.currentFrame][$scope.manyselectINrow - row][$scope.manyselectINcolumn - seat] = $scope.currentColorI;
+      }
+    }
+    if($scope.manyselectINrow - $scope.manyselectOUTrow + 1 > 0 & $scope.manyselectOUTcolumn - $scope.manyselectINcolumn + 1 > 0){
+      $scope.rowdifference = $scope.manyselectINrow - $scope.manyselectOUTrow + 1;
+      $scope.columndifference = $scope.manyselectOUTcolumn - $scope.manyselectINcolumn + 1;
+      for(row=0; row<$scope.rowdifference; row++){
+        //alert($scope.presetdivs[$scope.selectedpreset]["xy"][row][0]);
+        for(seat=0; seat<$scope.columndifference; seat++){
+          document.getElementById("preset"+($scope.manyselectINrow - row)+"."+($scope.manyselectINcolumn + seat)).style.backgroundColor = "white";
+          //$scope.frames[$scope.currentFrame][$scope.manyselectINrow - row][$scope.manyselectINcolumn + seat] = $scope.currentColorI;
+        }
+      }
+
+    }else if($scope.manyselectINrow - $scope.manyselectOUTrow + 1 > 0 & $scope.manyselectINcolumn - $scope.manyselectOUTcolumn + 1 > 0){
+      $scope.rowdifference = $scope.manyselectINrow - $scope.manyselectOUTrow + 1;
+      $scope.columndifference = $scope.manyselectINcolumn - $scope.manyselectOUTcolumn + 1;
+      for(row=0; row<$scope.rowdifference; row++){
+        //alert($scope.presetdivs[$scope.selectedpreset]["xy"][row][0]);
+        for(seat=0; seat<$scope.columndifference; seat++){
+          document.getElementById("preset"+($scope.manyselectINrow - row)+"."+($scope.manyselectINcolumn - seat)).style.backgroundColor = "white";
+          //$scope.frames[$scope.currentFrame][$scope.manyselectINrow - row][$scope.manyselectINcolumn - seat] = $scope.currentColorI;
+        }
+      }
+    }else if($scope.manyselectOUTrow - $scope.manyselectINrow + 1 > 0 & $scope.manyselectINcolumn - $scope.manyselectOUTcolumn + 1 > 0){
+      $scope.rowdifference = $scope.manyselectOUTrow - $scope.manyselectINrow + 1;
+      $scope.columndifference = $scope.manyselectINcolumn - $scope.manyselectOUTcolumn + 1;
+      for(row=0; row<$scope.rowdifference; row++){
+        //alert($scope.presetdivs[$scope.selectedpreset]["xy"][row][0]);
+        for(seat=0; seat<$scope.columndifference; seat++){
+
+          //$scope.frames[$scope.currentFrame][$scope.manyselectINrow + row][$scope.manyselectINcolumn - seat] = $scope.currentColorI;
+          document.getElementById("preset"+($scope.manyselectINrow + row)+"."+($scope.manyselectINcolumn - seat)).style.backgroundColor = "white";
+        }
+      }
+    }else{
+      $scope.rowdifference = $scope.manyselectOUTrow - $scope.manyselectINrow + 1;
+      $scope.columndifference = $scope.manyselectOUTcolumn - $scope.manyselectINcolumn + 1;
+      for(row=0; row<$scope.rowdifference; row++){
+        //alert($scope.presetdivs[$scope.selectedpreset]["xy"][row][0]);
+        for(seat=0; seat<$scope.columndifference; seat++){
+           document.getElementById("preset"+($scope.manyselectINrow + row)+"."+($scope.manyselectINcolumn + seat)).style.backgroundColor = "white";
+        }
+      }
+
+    }
+
+
   }
 
   //this is used to refresh the frame to update the changes of any given click
@@ -195,10 +363,53 @@ $scope.manyselectIN = 0;
 
 $scope.spreadSelectIN = function(row, column) {
   //alert(row+column);
-  $scope.manyselectIN = String(row)+String(column);
+  $scope.manyselectINrow = row;
+  $scope.manyselectINcolumn = column;
+  $scope.changeSquareColor(row, column)
+  $scope.ishighlighting = true;
 }
 
 
+$scope.spreadSelectOut = function(row, column) {
+  //alert(row+column);
+  //only does the spread select if the edit button is selected
+  if($scope.selectedpreset == 0){
+    $scope.manyselectOUTrow = row;
+    $scope.manyselectOUTcolumn = column;
+    $scope.changeSquareColorOUT(row, column)
+
+
+  }
+  //decolors all highlighted squares
+  for (row=0; row<38; row++) {
+    for (seat=0; seat< 38; seat++) {
+      document.getElementById("preset"+row+"."+seat).style.backgroundColor = "";
+      //$scope.frames[$scope.currentFrame][$scope.manyselectINrow - row][$scope.manyselectINcolumn - seat] = $scope.currentColorI;
+    }
+  }
+  $scope.ishighlighting = false;
+  $scope.setCurrentFrame($scope.currentFrame);
+}
+
+$scope.speadSelectOUThighlightupdate = function(row, column) {
+  $scope.manyselectOUTrow = row;
+  $scope.manyselectOUTcolumn = column;
+  if($scope.ishighlighting == true){
+    if($scope.selectedpreset == 0){
+      $scope.changeSquareColorOUThighlight(row, column);
+    }else if($scope.selectedpreset == 1){
+      //only works for paint tool
+      $scope.painthighlighttool(row, column);
+
+    }
+  }
+
+}
+
+$scope.painthighlighttool = function(row, column){
+  document.getElementById("preset"+row+"."+column).style.backgroundColor = "white";
+  $scope.frames[$scope.currentFrame][row][column] = $scope.currentColorI;
+}
 
 $scope.settimelineScrollClickDiv = function() {
   document.getElementById('timeline'+$scope.lastCurrentFrame).style.backgroundColor = "#9E9E9E";
@@ -281,12 +492,13 @@ $scope.continuetest = function() {
 
 //this section is for all things revolving around presets
 //default preset is the normal one
-$scope.laspreset = 0;
+$scope.laspreset = "editbutton";
 $scope.selectedpreset = 0;
 
 //the arrays will first be nested in by frames then by x,y coordinates in relation to the clicked square
 $scope.presetdivs = [
-  {name: "single", setxy: "no", setxycoords: [], xy: [[[0,0]]] },
+  {name: "edit", setxy: "no", setxycoords: [], xy: [[[0,0]]] },
+  {name: "paint", setxy: "no", setxycoords: [], xy: [[[0,0]]] },
   {name: "checkard", setxy: "yes", setxycoords: [19,19], xy: [[[-18,19],[-16,19],[-14,19],[-12,19],[-10,19],[-8,19],[-6,19],[-4,19],[-2,19],[0,19],[2,19],[4,19],[6,19],[8,19],[10,19],[12,19],[14,19],[16,19],[18,19],[-19,18],[-17,18],[-15,18],[-13,18],[-11,18],[-9,18],[-7,18],[-5,18],[-3,18],[-1,18],[1,18],[3,18],[5,18],[7,18],[9,18],[11,18],[13,18],[15,18],[17,18],[-18,17],[-16,17],[-14,17],[-12,17],[-10,17],[-8,17],[-6,17],[-4,17],[-2,17],[0,17],[2,17],[4,17],[6,17],[8,17],[10,17],[12,17],[14,17],[16,17],[18,17],[-19,16],[-17,16],[-15,16],[-13,16],[-11,16],[-9,16],[-7,16],[-5,16],[-3,16],[-1,16],[1,16],[3,16],[5,16],[7,16],[9,16],[11,16],[13,16],[15,16],[17,16],[-18,15],[-16,15],[-14,15],[-12,15],[-10,15],[-8,15],[-6,15],[-4,15],[-2,15],[0,15],[2,15],[4,15],[6,15],[8,15],[10,15],[12,15],[14,15],[16,15],[18,15],[-19,14],[-17,14],[-15,14],[-13,14],[-11,14],[-9,14],[-7,14],[-5,14],[-3,14],[-1,14],[1,14],[3,14],[5,14],[7,14],[9,14],[11,14],[13,14],[15,14],[17,14],[-18,13],[-16,13],[-14,13],[-12,13],[-10,13],[-8,13],[-6,13],[-4,13],[-2,13],[0,13],[2,13],[4,13],[6,13],[8,13],[10,13],[12,13],[14,13],[16,13],[18,13],[-19,12],[-17,12],[-15,12],[-13,12],[-11,12],[-9,12],[-7,12],[-5,12],[-3,12],[-1,12],[1,12],[3,12],[5,12],[7,12],[9,12],[11,12],[13,12],[15,12],[17,12],[-18,11],[-16,11],[-14,11],[-12,11],[-10,11],[-8,11],[-6,11],[-4,11],[-2,11],[0,11],[2,11],[4,11],[6,11],[8,11],[10,11],[12,11],[14,11],[16,11],[18,11],[-19,10],[-17,10],[-15,10],[-13,10],[-11,10],[-9,10],[-7,10],[-5,10],[-3,10],[-1,10],[1,10],[3,10],[5,10],[7,10],[9,10],[11,10],[13,10],[15,10],[17,10],[-18,9],[-16,9],[-14,9],[-12,9],[-10,9],[-8,9],[-6,9],[-4,9],[-2,9],[0,9],[2,9],[4,9],[6,9],[8,9],[10,9],[12,9],[14,9],[16,9],[18,9],[-19,8],[-17,8],[-15,8],[-13,8],[-11,8],[-9,8],[-7,8],[-5,8],[-3,8],[-1,8],[1,8],[3,8],[5,8],[7,8],[9,8],[11,8],[13,8],[15,8],[17,8],[-18,7],[-16,7],[-14,7],[-12,7],[-10,7],[-8,7],[-6,7],[-4,7],[-2,7],[0,7],[2,7],[4,7],[6,7],[8,7],[10,7],[12,7],[14,7],[16,7],[18,7],[-19,6],[-17,6],[-15,6],[-13,6],[-11,6],[-9,6],[-7,6],[-5,6],[-3,6],[-1,6],[1,6],[3,6],[5,6],[7,6],[9,6],[11,6],[13,6],[15,6],[17,6],[-18,5],[-16,5],[-14,5],[-12,5],[-10,5],[-8,5],[-6,5],[-4,5],[-2,5],[0,5],[2,5],[4,5],[6,5],[8,5],[10,5],[12,5],[14,5],[16,5],[18,5],[-19,4],[-17,4],[-15,4],[-13,4],[-11,4],[-9,4],[-7,4],[-5,4],[-3,4],[-1,4],[1,4],[3,4],[5,4],[7,4],[9,4],[11,4],[13,4],[15,4],[17,4],[-18,3],[-16,3],[-14,3],[-12,3],[-10,3],[-8,3],[-6,3],[-4,3],[-2,3],[0,3],[2,3],[4,3],[6,3],[8,3],[10,3],[12,3],[14,3],[16,3],[18,3],[-19,2],[-17,2],[-15,2],[-13,2],[-11,2],[-9,2],[-7,2],[-5,2],[-3,2],[-1,2],[1,2],[3,2],[5,2],[7,2],[9,2],[11,2],[13,2],[15,2],[17,2],[-18,1],[-16,1],[-14,1],[-12,1],[-10,1],[-8,1],[-6,1],[-4,1],[-2,1],[0,1],[2,1],[4,1],[6,1],[8,1],[10,1],[12,1],[14,1],[16,1],[18,1],[-19,0],[-17,0],[-15,0],[-13,0],[-11,0],[-9,0],[-7,0],[-5,0],[-3,0],[-1,0],[1,0],[3,0],[5,0],[7,0],[9,0],[11,0],[13,0],[15,0],[17,0],[-18,-1],[-16,-1],[-14,-1],[-12,-1],[-10,-1],[-8,-1],[-6,-1],[-4,-1],[-2,-1],[0,-1],[2,-1],[4,-1],[6,-1],[8,-1],[10,-1],[12,-1],[14,-1],[16,-1],[18,-1],[-19,-2],[-17,-2],[-15,-2],[-13,-2],[-11,-2],[-9,-2],[-7,-2],[-5,-2],[-3,-2],[-1,-2],[1,-2],[3,-2],[5,-2],[7,-2],[9,-2],[11,-2],[13,-2],[15,-2],[17,-2],[-18,-3],[-16,-3],[-14,-3],[-12,-3],[-10,-3],[-8,-3],[-6,-3],[-4,-3],[-2,-3],[0,-3],[2,-3],[4,-3],[6,-3],[8,-3],[10,-3],[12,-3],[14,-3],[16,-3],[18,-3],[-19,-4],[-17,-4],[-15,-4],[-13,-4],[-11,-4],[-9,-4],[-7,-4],[-5,-4],[-3,-4],[-1,-4],[1,-4],[3,-4],[5,-4],[7,-4],[9,-4],[11,-4],[13,-4],[15,-4],[17,-4],[-18,-5],[-16,-5],[-14,-5],[-12,-5],[-10,-5],[-8,-5],[-6,-5],[-4,-5],[-2,-5],[0,-5],[2,-5],[4,-5],[6,-5],[8,-5],[10,-5],[12,-5],[14,-5],[16,-5],[18,-5],[-19,-6],[-17,-6],[-15,-6],[-13,-6],[-11,-6],[-9,-6],[-7,-6],[-5,-6],[-3,-6],[-1,-6],[1,-6],[3,-6],[5,-6],[7,-6],[9,-6],[11,-6],[13,-6],[15,-6],[17,-6],[-18,-7],[-16,-7],[-14,-7],[-12,-7],[-10,-7],[-8,-7],[-6,-7],[-4,-7],[-2,-7],[0,-7],[2,-7],[4,-7],[6,-7],[8,-7],[10,-7],[12,-7],[14,-7],[16,-7],[18,-7],[-19,-8],[-17,-8],[-15,-8],[-13,-8],[-11,-8],[-9,-8],[-7,-8],[-5,-8],[-3,-8],[-1,-8],[1,-8],[3,-8],[5,-8],[7,-8],[9,-8],[11,-8],[13,-8],[15,-8],[17,-8],[-18,-9],[-16,-9],[-14,-9],[-12,-9],[-10,-9],[-8,-9],[-6,-9],[-4,-9],[-2,-9],[0,-9],[2,-9],[4,-9],[6,-9],[8,-9],[10,-9],[12,-9],[14,-9],[16,-9],[18,-9],[-19,-10],[-17,-10],[-15,-10],[-13,-10],[-11,-10],[-9,-10],[-7,-10],[-5,-10],[-3,-10],[-1,-10],[1,-10],[3,-10],[5,-10],[7,-10],[9,-10],[11,-10],[13,-10],[15,-10],[17,-10],[-18,-11],[-16,-11],[-14,-11],[-12,-11],[-10,-11],[-8,-11],[-6,-11],[-4,-11],[-2,-11],[0,-11],[2,-11],[4,-11],[6,-11],[8,-11],[10,-11],[12,-11],[14,-11],[16,-11],[18,-11],[-19,-12],[-17,-12],[-15,-12],[-13,-12],[-11,-12],[-9,-12],[-7,-12],[-5,-12],[-3,-12],[-1,-12],[1,-12],[3,-12],[5,-12],[7,-12],[9,-12],[11,-12],[13,-12],[15,-12],[17,-12],[-18,-13],[-16,-13],[-14,-13],[-12,-13],[-10,-13],[-8,-13],[-6,-13],[-4,-13],[-2,-13],[0,-13],[2,-13],[4,-13],[6,-13],[8,-13],[10,-13],[12,-13],[14,-13],[16,-13],[18,-13],[-19,-14],[-17,-14],[-15,-14],[-13,-14],[-11,-14],[-9,-14],[-7,-14],[-5,-14],[-3,-14],[-1,-14],[1,-14],[3,-14],[5,-14],[7,-14],[9,-14],[11,-14],[13,-14],[15,-14],[17,-14],[-18,-15],[-16,-15],[-14,-15],[-12,-15],[-10,-15],[-8,-15],[-6,-15],[-4,-15],[-2,-15],[0,-15],[2,-15],[4,-15],[6,-15],[8,-15],[10,-15],[12,-15],[14,-15],[16,-15],[18,-15],[-19,-16],[-17,-16],[-15,-16],[-13,-16],[-11,-16],[-9,-16],[-7,-16],[-5,-16],[-3,-16],[-1,-16],[1,-16],[3,-16],[5,-16],[7,-16],[9,-16],[11,-16],[13,-16],[15,-16],[17,-16],[-18,-17],[-16,-17],[-14,-17],[-12,-17],[-10,-17],[-8,-17],[-6,-17],[-4,-17],[-2,-17],[0,-17],[2,-17],[4,-17],[6,-17],[8,-17],[10,-17],[12,-17],[14,-17],[16,-17],[18,-17],[-19,-18],[-17,-18],[-15,-18],[-13,-18],[-11,-18],[-9,-18],[-7,-18],[-5,-18],[-3,-18],[-1,-18],[1,-18],[3,-18],[5,-18],[7,-18],[9,-18],[11,-18],[13,-18],[15,-18],[17,-18]],
 [[-19,19],[-17,19],[-15,19],[-13,19],[-11,19],[-9,19],[-7,19],[-5,19],[-3,19],[-1,19],[1,19],[3,19],[5,19],[7,19],[9,19],[11,19],[13,19],[15,19],[17,19],[-18,18],[-16,18],[-14,18],[-12,18],[-10,18],[-8,18],[-6,18],[-4,18],[-2,18],[0,18],[2,18],[4,18],[6,18],[8,18],[10,18],[12,18],[14,18],[16,18],[18,18],[-19,17],[-17,17],[-15,17],[-13,17],[-11,17],[-9,17],[-7,17],[-5,17],[-3,17],[-1,17],[1,17],[3,17],[5,17],[7,17],[9,17],[11,17],[13,17],[15,17],[17,17],[-18,16],[-16,16],[-14,16],[-12,16],[-10,16],[-8,16],[-6,16],[-4,16],[-2,16],[0,16],[2,16],[4,16],[6,16],[8,16],[10,16],[12,16],[14,16],[16,16],[18,16],[-19,15],[-17,15],[-15,15],[-13,15],[-11,15],[-9,15],[-7,15],[-5,15],[-3,15],[-1,15],[1,15],[3,15],[5,15],[7,15],[9,15],[11,15],[13,15],[15,15],[17,15],[-18,14],[-16,14],[-14,14],[-12,14],[-10,14],[-8,14],[-6,14],[-4,14],[-2,14],[0,14],[2,14],[4,14],[6,14],[8,14],[10,14],[12,14],[14,14],[16,14],[18,14],[-19,13],[-17,13],[-15,13],[-13,13],[-11,13],[-9,13],[-7,13],[-5,13],[-3,13],[-1,13],[1,13],[3,13],[5,13],[7,13],[9,13],[11,13],[13,13],[15,13],[17,13],[-18,12],[-16,12],[-14,12],[-12,12],[-10,12],[-8,12],[-6,12],[-4,12],[-2,12],[0,12],[2,12],[4,12],[6,12],[8,12],[10,12],[12,12],[14,12],[16,12],[18,12],[-19,11],[-17,11],[-15,11],[-13,11],[-11,11],[-9,11],[-7,11],[-5,11],[-3,11],[-1,11],[1,11],[3,11],[5,11],[7,11],[9,11],[11,11],[13,11],[15,11],[17,11],[-18,10],[-16,10],[-14,10],[-12,10],[-10,10],[-8,10],[-6,10],[-4,10],[-2,10],[0,10],[2,10],[4,10],[6,10],[8,10],[10,10],[12,10],[14,10],[16,10],[18,10],[-19,9],[-17,9],[-15,9],[-13,9],[-11,9],[-9,9],[-7,9],[-5,9],[-3,9],[-1,9],[1,9],[3,9],[5,9],[7,9],[9,9],[11,9],[13,9],[15,9],[17,9],[-18,8],[-16,8],[-14,8],[-12,8],[-10,8],[-8,8],[-6,8],[-4,8],[-2,8],[0,8],[2,8],[4,8],[6,8],[8,8],[10,8],[12,8],[14,8],[16,8],[18,8],[-19,7],[-17,7],[-15,7],[-13,7],[-11,7],[-9,7],[-7,7],[-5,7],[-3,7],[-1,7],[1,7],[3,7],[5,7],[7,7],[9,7],[11,7],[13,7],[15,7],[17,7],[-18,6],[-16,6],[-14,6],[-12,6],[-10,6],[-8,6],[-6,6],[-4,6],[-2,6],[0,6],[2,6],[4,6],[6,6],[8,6],[10,6],[12,6],[14,6],[16,6],[18,6],[-19,5],[-17,5],[-15,5],[-13,5],[-11,5],[-9,5],[-7,5],[-5,5],[-3,5],[-1,5],[1,5],[3,5],[5,5],[7,5],[9,5],[11,5],[13,5],[15,5],[17,5],[-18,4],[-16,4],[-14,4],[-12,4],[-10,4],[-8,4],[-6,4],[-4,4],[-2,4],[0,4],[2,4],[4,4],[6,4],[8,4],[10,4],[12,4],[14,4],[16,4],[18,4],[-19,3],[-17,3],[-15,3],[-13,3],[-11,3],[-9,3],[-7,3],[-5,3],[-3,3],[-1,3],[1,3],[3,3],[5,3],[7,3],[9,3],[11,3],[13,3],[15,3],[17,3],[-18,2],[-16,2],[-14,2],[-12,2],[-10,2],[-8,2],[-6,2],[-4,2],[-2,2],[0,2],[2,2],[4,2],[6,2],[8,2],[10,2],[12,2],[14,2],[16,2],[18,2],[-19,1],[-17,1],[-15,1],[-13,1],[-11,1],[-9,1],[-7,1],[-5,1],[-3,1],[-1,1],[1,1],[3,1],[5,1],[7,1],[9,1],[11,1],[13,1],[15,1],[17,1],[-18,0],[-16,0],[-14,0],[-12,0],[-10,0],[-8,0],[-6,0],[-4,0],[-2,0],[0,0],[2,0],[4,0],[6,0],[8,0],[10,0],[12,0],[14,0],[16,0],[18,0],[-19,-1],[-17,-1],[-15,-1],[-13,-1],[-11,-1],[-9,-1],[-7,-1],[-5,-1],[-3,-1],[-1,-1],[1,-1],[3,-1],[5,-1],[7,-1],[9,-1],[11,-1],[13,-1],[15,-1],[17,-1],[-18,-2],[-16,-2],[-14,-2],[-12,-2],[-10,-2],[-8,-2],[-6,-2],[-4,-2],[-2,-2],[0,-2],[2,-2],[4,-2],[6,-2],[8,-2],[10,-2],[12,-2],[14,-2],[16,-2],[18,-2],[-19,-3],[-17,-3],[-15,-3],[-13,-3],[-11,-3],[-9,-3],[-7,-3],[-5,-3],[-3,-3],[-1,-3],[1,-3],[3,-3],[5,-3],[7,-3],[9,-3],[11,-3],[13,-3],[15,-3],[17,-3],[-18,-4],[-16,-4],[-14,-4],[-12,-4],[-10,-4],[-8,-4],[-6,-4],[-4,-4],[-2,-4],[0,-4],[2,-4],[4,-4],[6,-4],[8,-4],[10,-4],[12,-4],[14,-4],[16,-4],[18,-4],[-19,-5],[-17,-5],[-15,-5],[-13,-5],[-11,-5],[-9,-5],[-7,-5],[-5,-5],[-3,-5],[-1,-5],[1,-5],[3,-5],[5,-5],[7,-5],[9,-5],[11,-5],[13,-5],[15,-5],[17,-5],[-18,-6],[-16,-6],[-14,-6],[-12,-6],[-10,-6],[-8,-6],[-6,-6],[-4,-6],[-2,-6],[0,-6],[2,-6],[4,-6],[6,-6],[8,-6],[10,-6],[12,-6],[14,-6],[16,-6],[18,-6],[-19,-7],[-17,-7],[-15,-7],[-13,-7],[-11,-7],[-9,-7],[-7,-7],[-5,-7],[-3,-7],[-1,-7],[1,-7],[3,-7],[5,-7],[7,-7],[9,-7],[11,-7],[13,-7],[15,-7],[17,-7],[-18,-8],[-16,-8],[-14,-8],[-12,-8],[-10,-8],[-8,-8],[-6,-8],[-4,-8],[-2,-8],[0,-8],[2,-8],[4,-8],[6,-8],[8,-8],[10,-8],[12,-8],[14,-8],[16,-8],[18,-8],[-19,-9],[-17,-9],[-15,-9],[-13,-9],[-11,-9],[-9,-9],[-7,-9],[-5,-9],[-3,-9],[-1,-9],[1,-9],[3,-9],[5,-9],[7,-9],[9,-9],[11,-9],[13,-9],[15,-9],[17,-9],[-18,-10],[-16,-10],[-14,-10],[-12,-10],[-10,-10],[-8,-10],[-6,-10],[-4,-10],[-2,-10],[0,-10],[2,-10],[4,-10],[6,-10],[8,-10],[10,-10],[12,-10],[14,-10],[16,-10],[18,-10],[-19,-11],[-17,-11],[-15,-11],[-13,-11],[-11,-11],[-9,-11],[-7,-11],[-5,-11],[-3,-11],[-1,-11],[1,-11],[3,-11],[5,-11],[7,-11],[9,-11],[11,-11],[13,-11],[15,-11],[17,-11],[-18,-12],[-16,-12],[-14,-12],[-12,-12],[-10,-12],[-8,-12],[-6,-12],[-4,-12],[-2,-12],[0,-12],[2,-12],[4,-12],[6,-12],[8,-12],[10,-12],[12,-12],[14,-12],[16,-12],[18,-12],[-19,-13],[-17,-13],[-15,-13],[-13,-13],[-11,-13],[-9,-13],[-7,-13],[-5,-13],[-3,-13],[-1,-13],[1,-13],[3,-13],[5,-13],[7,-13],[9,-13],[11,-13],[13,-13],[15,-13],[17,-13],[-18,-14],[-16,-14],[-14,-14],[-12,-14],[-10,-14],[-8,-14],[-6,-14],[-4,-14],[-2,-14],[0,-14],[2,-14],[4,-14],[6,-14],[8,-14],[10,-14],[12,-14],[14,-14],[16,-14],[18,-14],[-19,-15],[-17,-15],[-15,-15],[-13,-15],[-11,-15],[-9,-15],[-7,-15],[-5,-15],[-3,-15],[-1,-15],[1,-15],[3,-15],[5,-15],[7,-15],[9,-15],[11,-15],[13,-15],[15,-15],[17,-15],[-18,-16],[-16,-16],[-14,-16],[-12,-16],[-10,-16],[-8,-16],[-6,-16],[-4,-16],[-2,-16],[0,-16],[2,-16],[4,-16],[6,-16],[8,-16],[10,-16],[12,-16],[14,-16],[16,-16],[18,-16],[-19,-17],[-17,-17],[-15,-17],[-13,-17],[-11,-17],[-9,-17],[-7,-17],[-5,-17],[-3,-17],[-1,-17],[1,-17],[3,-17],[5,-17],[7,-17],[9,-17],[11,-17],[13,-17],[15,-17],[17,-17],[-18,-18],[-16,-18],[-14,-18],[-12,-18],[-10,-18],[-8,-18],[-6,-18],[-4,-18],[-2,-18],[0,-18],[2,-18],[4,-18],[6,-18],[8,-18],[10,-18],[12,-18],[14,-18],[16,-18],[18,-18]]]},
   {name: "square", setxy: "no", setxycoords: [], xy: [[[0,0],[1,1],[1,0],[0,1]]] },
@@ -295,16 +507,29 @@ $scope.presetdivs = [
 
 ]
 
-$scope.setPreset = function(index) {
+$scope.setPreset = function(index, xvar) {
   //alert(index);
   $scope.selectedpreset = index;
-  document.getElementById('preset'+$scope.laspreset).style.backgroundColor = "lightgray";
+
+  //sets preset to edit
+  if(xvar == "edit"){
+    $scope.selectedpreset = 0;
+  }
+  // sets preset to paint...
+  if(xvar == "paint"){
+    $scope.selectedpreset = 1;
+  }
+
+
+  document.getElementById('preset'+$scope.laspreset).style.backgroundColor = "#BDBDBD";
   document.getElementById('preset'+$scope.laspreset).style.color = "black";
   $scope.laspreset = index;
   document.getElementById('preset'+index).style.backgroundColor = "#66BB6A";
   document.getElementById('preset'+index).style.color = "white";
 
 }
+
+
 
 $scope.presetarray = [];
 
@@ -326,7 +551,8 @@ $scope.presetdivs.push({name: "wee", setxy:"no", setxycoords: [], xy: $scope.pre
 
 }
 
-
+//determines if the preset center div is shown
+$scope.presetcentertoggleTF = true;
 
 
 

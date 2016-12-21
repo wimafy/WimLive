@@ -17,7 +17,7 @@
 <div class="frame" style="z-index: 20;">
   <div ng-repeat="frame in frames | limitTo:1">
     <div ng-repeat="row in frame| limitTo:38">
-      <div id="click{{ $parent.$index }}{{ $index }}" class="clickindividualseat" ng-repeat="seat in row track by $index" ng-click="changeSquareColor($parent.$index, $index)" ng-mousedown="spreadSelectIN($parent.$index, $index)" ng-mouseup="spreadSelectOut($parent.$index, $index)">
+      <div id="click{{ $parent.$index }}{{ $index }}" class="clickindividualseat" ng-repeat="seat in row track by $index" ng-mousedown="spreadSelectIN($parent.$index, $index)" ng-mouseup="spreadSelectOut($parent.$index, $index)" ng-mouseover="speadSelectOUThighlightupdate($parent.$index, $index)">
       </div>
     </div>
   </div>
@@ -39,6 +39,22 @@
 
 </div>
 
+<!-- displays upon conditional statement, the preset center frame-->
+<div class="presetcentermaerk" ng-if="presetcentertoggleTF">
+
+</div>
+
+
+<!-- This frame displays the highlight of a preset-->
+<div class="frame" style="z-index: 6;">
+  <div ng-repeat="frame in frames | limitTo:1">
+    <div ng-repeat="row in frame| limitTo:38">
+      <div id="preset{{ $parent.$index }}.{{ $index }}" class="individualseat" ng-repeat="seat in row track by $index">
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- This frame displays the frame previous to the live one-->
 <div class="frame" style="z-index: 5;">
   <div ng-repeat="frame in frames | limitTo:1">
@@ -55,7 +71,7 @@
 </div>
 
 <div class="selectpresetBar">
-  <div class="individualpreset" id="preset{{ $index }}" ng-repeat="preset in presetdivs" ng-click="setPreset($index)">
+  <div class="individualpreset" id="preset{{ $index }}" ng-repeat="preset in presetdivs" ng-click="setPreset($index)" ng-if="$index > 1">
     <p class="individualpresettitle">{{ preset.name }}</p>
     <div class="individualpresetviewer">
 
@@ -82,6 +98,14 @@
   <button type="button" class="btn btn-success" id="stoptestbutton" ng-click="stoptest()">Stop test</button>
   <button type="button" class="btn btn-success" id="continuetestbutton" ng-click="continuetest()">Continue test</button>
 
+
+  <div class="material-switch" id="togglepresetcenter">
+      Center mark (for presets)
+      <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox" ng-model="presetcentertoggleTF"/>
+      <label for="someSwitchOptionSuccess" class="label-success"></label>
+  </div>
+
+
 </div>
 
 <!-- color picker div -->
@@ -95,15 +119,22 @@
     </div>
   </div>
 
+  <button type="button" class="btn btn-success" id="preseteditbutton" ng-click="setPreset('editbutton', 'edit')">Edit</button>
+  <button type="button" class="btn btn-success" id="presetpaintbutton" ng-click="setPreset('paintbutton', 'paint')">Paint</button>
+  <button type="button" class="btn btn-success" id="clearframebutton" ng-click="clearFrame()">Clear frame</button>
+  <button type="button" class="btn btn-success" id="duplicateframebutton" ng-click="duplicateFrame()">duplicate frame</button>
+  <button type="button" class="btn btn-success" id="undobutton" ng-click="undo()">Undo</button>
+  <button type="button" class="btn btn-success" id="redobutton" ng-click="redo()">Redo</button>
+
 </div>
 
 
-<!--
+
+
+
 <p style="position: absolute; background-color:black; color:white">
-  {{ presetarray }}
 
 </p>
--->
 
 
 </body>
