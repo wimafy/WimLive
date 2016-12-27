@@ -1,8 +1,15 @@
 <html lang="en" ng-app="myApp">
 <head>
+  <!-- for offline work -->
+  <script src="offline/angularVdunno.js"></script>
+  <script src="offline/angular-RouteVdunno.js"></script>
+  <link href="offline/bootstrap.min.css" rel="stylesheet">
+
+<!--
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+-->
   <script src="colorpickerControllerV2.js"></script>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="colorpickerStyle.css">
@@ -86,11 +93,16 @@
 <div class="timelineDiv">
   <div class="timelinecurrentdiv">
     <!-- this makes it user friendly for not computer people-->
-    {{ currentFrame + 1 }}/{{ numberofFrames }}
+    <div ng-if="showSeconds" ng-click="showSecondsfunc()">
+      Sec: {{ currentFrame * .1 | number: 1}}/{{ numberofFrames * .1 }}
+    </div>
+    <div ng-if="!showSeconds" ng-click="hideSecondsfunc()">
+      Frame: {{ currentFrame }}/{{ numberofFrames }}
+    </div>
   </div>
   <div class="timelineScrollDiv">
     <div id="timeline{{ $index }}" class="timelineScrollClickDiv" ng-repeat="frame in frames" ng-click="setCurrentFrame( $index)">
-      {{ $index + 1}}
+      {{ $index }}
     </div>
   </div>
 
@@ -124,17 +136,29 @@
   <button type="button" class="btn btn-success" id="clearframebutton" ng-click="clearFrame()">Clear frame</button>
   <button type="button" class="btn btn-success" id="duplicateframebutton" ng-click="duplicateFrame()">duplicate frame</button>
   <button type="button" class="btn btn-success" id="undobutton" ng-click="undo()">Undo</button>
-  <button type="button" class="btn btn-success" id="redobutton" ng-click="redo()">Redo</button>
+  <button type="button" class="btn btn-success" id="undobutton" ng-click="pushtoSeats()">push</button>
+  <div class="translateframeDiv">
+    <button type="button" class="btn btn-success" id="translatebuttonup" ng-click="translateFrame('up')">Up</button>
+    <button type="button" class="btn btn-success" id="translatebuttonleft" ng-click="translateFrame('left')">Left</button>
+    <button type="button" class="btn btn-success" id="translatebuttonright" ng-click="translateFrame('right')">Right</button>
+    <button type="button" class="btn btn-success" id="translatebuttondown" ng-click="translateFrame('down')">Down</button>
+
+
+
+
+  </div>
+
 
 </div>
 
 
 
 
-
+<!-- black and white table for debgging-->
 <p style="position: absolute; background-color:black; color:white">
 
 </p>
+  <!--{{ stadiumSeatSquareArray }}-->
 
 
 </body>
