@@ -1,22 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="myApp">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Big Nerd Ranch D3 Blog Post</title>
-    <link rel="stylesheet" href="application.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Angular Material requires Angular.js Libraries -->
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+     <!-- Angular Material Library -->
+     <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+     <script src="app.js"></script>
+
   </head>
 
-  <body>
+  <body ng-controller="SettupController">
     <audio id="audioElement" src="./audio/Odesza - Above The Middle.mp3"></audio>
     <div>
-      <button onclick="document.getElementById('audioElement').play()">Play the Audio</button>
-      <button onclick="document.getElementById('audioElement').pause()">Pause the Audio</button>
-      <button onclick="document.getElementById('audioElement').volume+=0.1">Increase Volume</button>
-      <button onclick="document.getElementById('audioElement').volume-=0.1">Decrease Volume</button>
+      <button ng-click="musicfunction('play')">Play the Audio</button>
+      <button ng-click="musicfunction('pause')">Pause the Audio</button>
+      <button ng-click="musicfunction('volup')">Increase Volume</button>
+      <button ng-click="musicfunction('voldown')">Decrease Volume</button>
+      <button ng-click="musicfunction('setTime')">Set Time</button>
     </div>
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-    <script src="app.js"></script>
+
+    {{ timevar }}
+
+    <div ng-cloak>
+      <md-content>
+
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <md-button>{{title1}}</md-button>
+          <md-button md-no-ink class="md-primary">Primary (md-noink)</md-button>
+          <md-button ng-disabled="true" class="md-primary">Disabled</md-button>
+          <md-button class="md-warn">{{title4}}</md-button>
+          <div class="label">Flat</div>
+        </section>
+
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+          <md-button class="md-raised">Button</md-button>
+          <md-button class="md-raised md-primary">Primary</md-button>
+          <md-button ng-disabled="true" class="md-raised md-primary">Disabled</md-button>
+          <md-button class="md-raised md-warn">Warn</md-button>
+          <div class="label">Raised</div>
+        </section>
+
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap>
+            <md-button class="md-fab" aria-label="Eat cake">
+                <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-fab md-primary" aria-label="Use Android">
+              <md-icon md-svg-src="img/icons/android.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-fab" ng-disabled="true" aria-label="Comment">
+                <md-icon md-svg-src="img/icons/ic_comment_24px.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-fab md-primary md-hue-2" aria-label="Profile">
+                <md-icon md-svg-src="img/icons/ic_people_24px.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-fab md-mini" aria-label="Eat cake">
+                <md-icon md-svg-src="img/icons/cake.svg"></md-icon>
+            </md-button>
+
+            <md-button class="md-fab md-mini md-primary" aria-label="Use Android">
+              <md-icon md-svg-src="img/icons/android.svg" style="color: greenyellow;"></md-icon>
+            </md-button>
+          <div class="label">FAB</div>
+        </section>
+
+
+      </md-content>
+    </div>
+
+
+
   </body>
 </html>
