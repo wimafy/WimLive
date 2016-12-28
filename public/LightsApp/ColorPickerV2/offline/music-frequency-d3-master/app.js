@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngMaterial']);
+var app = angular.module('myApp', []);
 
 app.controller('SettupController', function($scope, $timeout, $interval, $scope, $http) {
 
@@ -19,6 +19,10 @@ $scope.audioElementVar = document.getElementById('audioElement');
     }else if(argument == "setTime"){
       $scope.audioElementVar.currentTime=$scope.timevar;
       $scope.audioElementVar.play();
+    }else if(argument == "startBeginning"){
+      $scope.audioElementVar.currentTime=0;
+      $scope.audioElementVar.play();
+
     }
 
 
