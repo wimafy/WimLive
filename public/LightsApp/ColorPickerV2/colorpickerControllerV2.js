@@ -41,7 +41,7 @@ $scope.hideSecondsfunc = function(){
 }
 
 // sets number of frames
-$scope.numberofFrames = 50;
+$scope.numberofFrames = 3500;
 
 $scope.frames = [
 ];
@@ -60,56 +60,69 @@ $scope.row = [
 
 $scope.uponInit = function() {
   $timeout(function () {
+      $scope.initializeFramesFunc();
+
       document.getElementById('timeline0').style.backgroundColor = "#66BB6A";
       document.getElementById('preseteditbutton').style.backgroundColor = "#66BB6A";
       document.getElementById('preseteditbutton').style.color = "white";
 
 
-  }, 10);
+  }, 1000);
 }
 
-$scope.addTimeMillsec = function() {
-  //alert("things");
-  $scope.frames.push([$scope.columns])
+$scope.initializeFramesFunc = function(){
+  $scope.musicfunction('songdurration');
+  for(frame=0; frame<$scope.numberofFrames; frame++){
+    $scope.frames.push([])
+     for (row=0; row<38; row++) {
+       //console.log(row);
+       //$scope.frames[this.frame].push(row);
+       $scope.frames[frame].push([]);
+       for (seat=0; seat< 38; seat++) {
+         //printvar("" + row + "_" + seat + "");
+         $scope.frames[frame][row].push([]);
+         $scope.frames[frame][row][seat] = 0;
+       }
+     }
+
+     //holder for time
+     //$scope.frames[frame].push([]);
+     $scope.frames[frame][38] = "100";
+   }
+
+  //creates preset frame arrays
+  for(frame=0; frame<$scope.numberofpresetframes; frame++){
+    $scope.presetFrames.push([])
+     for (row=0; row<38; row++) {
+       //console.log(row);
+       //$scope.frames[this.frame].push(row);
+       $scope.presetFrames[frame].push([]);
+       for (seat=0; seat< 38; seat++) {
+         //printvar("" + row + "_" + seat + "");
+         $scope.presetFrames[frame][row].push([]);
+         $scope.presetFrames[frame][row][seat] = 0;
+       }
+     }
+
+     //holder for time
+     //$scope.frames[frame].push([]);
+
+   }
 }
 
-for(frame=0; frame<$scope.numberofFrames; frame++){
-  $scope.frames.push([])
-   for (row=0; row<38; row++) {
-     //console.log(row);
-     //$scope.frames[this.frame].push(row);
-     $scope.frames[frame].push([]);
-     for (seat=0; seat< 38; seat++) {
-       //printvar("" + row + "_" + seat + "");
-       $scope.frames[frame][row].push([]);
-       $scope.frames[frame][row][seat] = 0;
-     }
+
+/*
+ for (row=0; row<38; row++) {
+   //console.log(row);
+   //$scope.frames[this.frame].push(row);
+   $scope.frames[frame].push([]);
+   for (seat=0; seat< 38; seat++) {
+     //printvar("" + row + "_" + seat + "");
+     $scope.frames[frame][row].push([]);
+     $scope.frames[frame][row][seat] = 0;
    }
-
-   //holder for time
-   //$scope.frames[frame].push([]);
-   $scope.frames[frame][38] = "100";
  }
-
-//creates preset frame arrays
-for(frame=0; frame<$scope.numberofpresetframes; frame++){
-  $scope.presetFrames.push([])
-   for (row=0; row<38; row++) {
-     //console.log(row);
-     //$scope.frames[this.frame].push(row);
-     $scope.presetFrames[frame].push([]);
-     for (seat=0; seat< 38; seat++) {
-       //printvar("" + row + "_" + seat + "");
-       $scope.presetFrames[frame][row].push([]);
-       $scope.presetFrames[frame][row][seat] = 0;
-     }
-   }
-
-   //holder for time
-   //$scope.frames[frame].push([]);
-   $scope.presetFrames[frame][38] = "100";
- }
-
+*/
 
 
 //sets current color as red to start
@@ -193,16 +206,7 @@ $scope.translateFrame = function(direction) {
 }
 
 
-for (row=0; row<38; row++) {
-  //console.log(row);
-  //$scope.frames[this.frame].push(row);
-  $scope.frames[frame].push([]);
-  for (seat=0; seat< 38; seat++) {
-    //printvar("" + row + "_" + seat + "");
-    $scope.frames[frame][row].push([]);
-    $scope.frames[frame][row][seat] = 0;
-  }
-}
+
 
 //create temp div and do the lookup in there
 $scope.currentFrame = 0;
@@ -211,6 +215,9 @@ $scope.lastCurrentFrame = 0;
 $scope.setCurrentFrame = function(indexvar) {
 
   $scope.currentFrame = indexvar;
+
+
+
   $scope.settimelineScrollClickDiv();
   //itterates through squares in frame
   for (row=0; row<38; row++) {
@@ -237,6 +244,14 @@ if($scope.testIsRunning == false){
 
 
 }
+
+$scope.updateplayingsong = function(){
+  //for updating frame if music is going
+  if($scope.testIsRunning == true){
+    $scope.musicfunction('setTime', $scope.currentFrame/10);
+  }
+}
+
 
 $scope.totalFrames = $scope.frames.length - 1;
 
@@ -567,6 +582,12 @@ $scope.incrimentFrame = function() {
     $scope.testIsRunning = false;
   } else {
     $scope.setCurrentFrame($scope.runTestTimevar);
+    //resyncs music every minute to ensure slides are on time with music
+    if($scope.runTestTimevar % 600 == 0){
+      console.log($scope.audioElementVar.currentTime);
+      $scope.musicfunction('setTime', $scope.runTestTimevar/10);
+    }
+    $scope.$apply();
     $scope.runTestTimevar++;
     //console.log($scope.runTestTimevar);
   }
@@ -574,14 +595,17 @@ $scope.incrimentFrame = function() {
 
 $scope.runtest = function() {
 
+  //keeps users from double clicking by disabling button for .2 secs
   document.getElementById("runtestbutton").disabled = true;
   $timeout(function () {
     document.getElementById("runtestbutton").disabled = false;
   }, 200);
+
   $scope.runTestTimevar = 0;
   $scope.testIsRunning = false;
   $scope.testIsRunning = true;
   clearInterval($scope.intervalId);
+  $scope.musicfunction('setTime', 0);
   //this number is added onto to set a starting point for each next frame
   $scope.intervalId = setInterval($scope.incrimentFrame, 100);
 
@@ -592,6 +616,7 @@ $scope.stoptest = function() {
   //this number is added onto to set a starting point for each next frame
   $scope.testIsRunning = true;
   $scope.testIsRunning = false;
+  $scope.musicfunction('pause');
   clearInterval($scope.intervalId);
 }
 
@@ -600,6 +625,7 @@ $scope.continuetest = function() {
   clearInterval($scope.intervalId);
   $scope.testIsRunning = false;
   $scope.testIsRunning = true;
+  $scope.musicfunction('setTime', $scope.runTestTimevar/10);
   $scope.intervalId = setInterval($scope.incrimentFrame, 100);
 
 }
@@ -695,6 +721,33 @@ $scope.pushtoSeats = function() {
      }
 };
 
+$scope.audioElementVar = document.getElementById('audioElement');
+
+$scope.musicfunction = function(argument, time) {
+
+  if(argument == "play"){
+    $scope.audioElementVar.play();
+  }else if(argument == "pause"){
+    $scope.audioElementVar.pause();
+  }else if(argument == "volup"){
+    $scope.audioElementVar.volume+=0.1;
+  }else if(argument == "voldown"){
+    $scope.audioElementVar.volume-=0.1;
+  }else if(argument == "mute"){
+    $scope.audioElementVar.volume=0;
+  }else if(argument == "setTime"){
+    $scope.audioElementVar.currentTime = time;
+    $scope.audioElementVar.play();
+  }else if(argument == "startBeginning"){
+    $scope.audioElementVar.currentTime=0;
+    $scope.audioElementVar.play();
+  }else if(argument == "songdurration"){
+    //multiply times 10 because the song is set in terms of seconds
+    $scope.numberofFrames = ($scope.audioElementVar.duration * 10) + 50;
+
+  }
+
+}
 
 
 });

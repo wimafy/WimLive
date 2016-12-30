@@ -22,9 +22,7 @@ $scope.audioElementVar = document.getElementById('audioElement');
     }else if(argument == "startBeginning"){
       $scope.audioElementVar.currentTime=0;
       $scope.audioElementVar.play();
-
     }
-
 
   }
 

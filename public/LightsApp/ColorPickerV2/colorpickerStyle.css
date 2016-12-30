@@ -162,6 +162,9 @@ body {
   background-color: #E0E0E0;
   padding: 10px;
   border-radius: 3px;
+  border-color: #BDBDBD;
+  border-width: 1px;
+  border-style: solid;
 }
 
 #clearframebutton {
@@ -439,4 +442,37 @@ body {
   float: left;
   color: black;
   font-family: Roboto;
+}
+
+#volDown {
+  margin: 10px 10px 10px 0px;
+  width: 50px;
+  float: left;
+  border-radius: 50%;
+  height: 50px;
+  background-color: #E0E0E0;
+  border-color: #BDBDBD;
+  color: #757575;
+}
+
+#volup {
+  margin: 10px 10px 10px 0px;
+  width: 50px;
+  float: left;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #E0E0E0;
+  border-color: #BDBDBD;
+  color: #757575;
+}
+
+#ToggleVol {
+  margin: 10px 0px;
+  width: 50px;
+  float: left;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #E0E0E0;
+  border-color: #BDBDBD;
+  color: #757575;
 }

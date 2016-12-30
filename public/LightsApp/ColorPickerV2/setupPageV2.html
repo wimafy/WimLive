@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en" ng-app="myApp">
 <head>
   <!-- for offline work -->
@@ -94,14 +95,14 @@
   <div class="timelinecurrentdiv">
     <!-- this makes it user friendly for not computer people-->
     <div ng-if="showSeconds" ng-click="showSecondsfunc()">
-      Sec: {{ currentFrame * .1 | number: 1}}/{{ numberofFrames * .1 }}
+      Sec: {{ currentFrame * .1 | number: 1}}/{{ numberofFrames * .1 | number: 0}}
     </div>
     <div ng-if="!showSeconds" ng-click="hideSecondsfunc()">
-      Frame: {{ currentFrame }}/{{ numberofFrames }}
+      Frame: {{ currentFrame | number: 0}}/{{ numberofFrames | number: 0}}
     </div>
   </div>
   <div class="timelineScrollDiv">
-    <div id="timeline{{ $index }}" class="timelineScrollClickDiv" ng-repeat="frame in frames" ng-click="setCurrentFrame( $index)">
+    <div id="timeline{{ $index }}" class="timelineScrollClickDiv" ng-repeat="frame in frames" ng-click="setCurrentFrame( $index); updateplayingsong()">
       {{ $index }}
     </div>
   </div>
@@ -117,6 +118,12 @@
       <label for="someSwitchOptionSuccess" class="label-success"></label>
   </div>
 
+  <!--audio element to play music-->
+  <audio id="audioElement" src="audio/WildestDreams.mp3"></audio>
+
+  <button type="button" class="btn btn-success" id="volDown" ng-click="musicfunction('voldown')"><i class="material-icons">volume_down</i></button>
+  <button type="button" class="btn btn-success" id="volup" ng-click="musicfunction('volup')"><i class="material-icons">volume_up</i></button>
+  <button type="button" class="btn btn-success" id="ToggleVol" ng-click="musicfunction('mute')"><i class="material-icons">volume_off</i></button>
 
 </div>
 
