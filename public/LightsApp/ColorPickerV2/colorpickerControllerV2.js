@@ -1,7 +1,7 @@
 var app = angular.module('myApp', ['ngMaterial', 'ngMdIcons']);
 
 
-app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',  function($scope, $mdBottomSheet, $mdSidenav, $mdDialog, $http){
+app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog', '$http',  function($scope, $mdBottomSheet, $mdSidenav, $mdDialog, $http){
   $scope.toggleSidenav = function(menuId) {
     $mdSidenav(menuId).toggle();
   };
@@ -36,17 +36,40 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
   ];
 
 
+$scope.homepageisloading = true;
 
 //imports user's songs and presets
+$scope.pullsongs = function() {
+  $http.post('http://localhost/WimLive/public/LightsApp/ColorPickerV2/php/setuphomepage.php', {'userID': 32})
+  .success(function(response) {
+      //songs are sent first
+      $scope.songs = response[0];
+      //presets are sent second
+      $scope.presets = response[1];
+      $scope.homepageisloading = false;
+  })
+};
 
-$http.get('http://localhost/WimLive/public/LightsApp/ColorPickerV2/databaseinterface.php')
-.success(function(response) {
-  
-})
+$scope.pullsongs();
+
+$scope.addSong = function() {
+  $scope.homepageisloading = true;
+  $http.post('http://localhost/WimLive/public/LightsApp/ColorPickerV2/php/newSong.php', {'userID': 32})
+  .success(function(response) {
+      //rechecks database for songs if one was added
+      $scope.pullsongs();
+      $scope.homepageisloading = false;
+  })
+  .error(function(err) {
+    alert("There was an error on our end (oops)");
+    $scope.homepageisloading = false;
+  });
+
+};
 
 
 
-
+/*
   $scope.songs = [
     {'date': '1/15/17', 'title': 'Shake it off', 'durration': '3:55', 'songID': 32},
     {'date': '1/15/17', 'title': 'Shake it off', 'durration': '3:55', 'songID': 32},
@@ -56,16 +79,14 @@ $http.get('http://localhost/WimLive/public/LightsApp/ColorPickerV2/databaseinter
     {'date': '1/15/17', 'title': 'Shake it off', 'durration': '3:55', 'songID': 32}
 
   ];
-
   $scope.presets = [
     {'date': '1/15/17', 'title': 'Shake it off', 'durration': '3:55', 'presetID': 32, 'creatorID': 03},
 
 
   ];
+  */
 
-  $scope.alert = '';
-  $scope.showListBottomSheet = function($event) {
-    $scope.alert = '';
+    $scope.showListBottomSheet = function($event) {
     $mdBottomSheet.show({
       template: '<md-bottom-sheet class="md-list md-has-header"> <md-subheader>Settings</md-subheader> <md-list> <md-item ng-repeat="item in items"><md-item-content md-ink-ripple flex class="inset"> <a flex aria-label="{{item.name}}" ng-click="listItemClick($index)"> <span class="md-inline-list-icon-label">{{ item.name }}</span> </a></md-item-content> </md-item> </md-list></md-bottom-sheet>',
       controller: 'ListBottomSheetCtrl',
@@ -75,10 +96,11 @@ $http.get('http://localhost/WimLive/public/LightsApp/ColorPickerV2/databaseinter
     });
   };
 
+  $scope.songName = "words for song";
   $scope.showAdd = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      template: '<md-dialog aria-label="Mango (Fruit)"> <md-content class="md-padding"> <form name="userForm"> <div layout layout-sm="column"> <md-input-container flex> <label>First Name</label> <input ng-model="user.firstName" placeholder="Placeholder text"> </md-input-container> <md-input-container flex> <label>Last Name</label> <input ng-model="theMax"> </md-input-container> </div> <md-input-container flex> <label>Address</label> <input ng-model="user.address"> </md-input-container> <div layout layout-sm="column"> <md-input-container flex> <label>City</label> <input ng-model="user.city"> </md-input-container> <md-input-container flex> <label>State</label> <input ng-model="user.state"> </md-input-container> <md-input-container flex> <label>Postal Code</label> <input ng-model="user.postalCode"> </md-input-container> </div> <md-input-container flex> <label>Biography</label> <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea> </md-input-container> </form> </md-content> <div class="md-actions" layout="row"> <span flex></span> <md-button ng-click="answer(\'not useful\')"> Cancel </md-button> <md-button ng-click="answer(\'useful\')" class="md-primary"> Save </md-button> </div></md-dialog>',
+      template: '<md-dialog style="width: 70vw;"> <md-content class="md-padding"><h1 style="margin-bottom: 5px;">New project...</h1> <div layout layout-sm="column" style="flex-direction: column; height: 103px;"> <md-input-container flex> <label class="md-title">Song name</label> <input ng-model="songName" placeholder="Song name"> </md-input-container> <input type="file" id="myFile" multiple size="50" onchange="myFunction()"> </div></md-content><div class="md-actions" layout="row"> <span flex></span> <md-button ng-click="answer(\'not useful\')"> Cancel </md-button> <md-button ng-click="answer(\'useful\')" class="md-primary"> Save </md-button> </div></md-dialog>',
       targetEvent: ev,
     })
     .then(function(answer) {
@@ -210,7 +232,7 @@ $scope.uponInit = function() {
 
       document.getElementById('timeline0').style.backgroundColor = "#66BB6A";
       document.getElementById('preseteditbutton').style.backgroundColor = "#66BB6A";
-      document.getElementById('preseteditbutton').style.color = "white";
+
 
 
   }, 1000);

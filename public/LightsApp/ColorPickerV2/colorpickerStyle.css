@@ -80,6 +80,16 @@ md-sidenav {
   float: left;
   background-color: #81C784;
   color: #212121;
+  max-height: 86px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.indexpagesonginfotitle:hover{
+    white-space: normal;
+    max-height: none;
+    z-index: 20
 }
 
 .indexpagepresetdiv {
@@ -120,6 +130,16 @@ md-sidenav {
   float: left;
   background-color: #FF8A65;
   color: #212121;
+  max-height: 86px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.indexpagepresettitle:hover{
+  white-space: normal;
+  max-height: none;
+  z-index: 20
 }
 
 .indexpagepresetSongTitle {
