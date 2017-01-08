@@ -38,6 +38,90 @@ md-sidenav {
   border-radius: 99%;
 }
 
-.songCard {
+.indexpagesonginfodiv {
+  width: 300px;
+  height: 200px;
+  background-color: lightgray;
+}
+
+.inexpagesonginfobutton {
+  width: 100%;
+}
+
+.indexpagesonginfolastedit {
+  margin: 5px 170px 5px 0px;
+  background-color: white;
+  width: 130px;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
   float: left;
+}
+
+.indexpagesonginfoSongTitle {
+  margin: 6px 0;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  padding-right: 10px;
+}
+
+.indexpagesonginfotitle {
+  margin: 6px 0;
+  width: 250px;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  background-color: #81C784;
+  color: #212121;
+}
+
+.indexpagepresetdiv {
+  width: 300px;
+  height: 200px;
+  background-color: lightgray;
+}
+
+
+.inexpagepresetbutton {
+  width: 100%;
+}
+
+.indexpagepresetSongTitle {
+  margin: 6px 0;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  padding-right: 10px;
+}
+
+.indexpagepresetlastedit {
+  margin: 5px 170px 5px 0px;
+  background-color: white;
+  width: 130px;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+}
+
+.indexpagepresettitle {
+  margin: 6px 0;
+  width: 250px;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  background-color: #FF8A65;
+  color: #212121;
+}
+
+.indexpagepresetSongTitle {
+  margin: 6px 0;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  padding-right: 10px;
 }

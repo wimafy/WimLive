@@ -2,6 +2,144 @@ body {
   background-color: #F5F5F5;
 }
 
+/*homepage css*/
+$gray: #eee;
+
+md-content.md-default-theme {
+  background-color: $gray;
+}
+md-card {
+  background-color: #fff;
+  h2:first-of-type {
+    margin-top: 0;
+  }
+}
+md-toolbar {
+  .md-button.md-default-theme {
+    border-radius: 99%; // round toolbar buttons
+  }
+}
+h2 {
+  font-weight: 400;
+}
+.md-toolbar-tools-bottom {
+  font-size: small;
+  & :last-child {
+    opacity: 0.8;
+  }
+}
+md-toolbar:not(.md-hue-1),
+.md-fab {
+  fill: #fff;
+}
+md-sidenav {
+  fill: #737373;
+  ng-md-icon {
+    position: relative;
+    top: 5px; // adjust for svg viewbox
+  }
+}
+.user-avatar {
+  border-radius: 99%;
+}
+
+.indexpagesonginfodiv {
+  width: 300px;
+  height: 200px;
+  background-color: lightgray;
+}
+
+.inexpagesonginfobutton {
+  width: 100%;
+}
+
+.indexpagesonginfolastedit {
+  margin: 5px 170px 5px 0px;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  width: 175px;
+}
+
+.indexpagesonginfoSongTitle {
+  margin: 6px 0;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  padding-right: 10px;
+}
+
+.indexpagesonginfotitle {
+  margin: 6px 0;
+  width: 250px;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  background-color: #81C784;
+  color: #212121;
+}
+
+.indexpagepresetdiv {
+  width: 300px;
+  height: 200px;
+  background-color: lightgray;
+}
+
+
+.inexpagepresetbutton {
+  width: 100%;
+}
+
+.indexpagepresetSongTitle {
+  margin: 6px 0;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  padding-right: 10px;
+}
+
+.indexpagepresetlastedit {
+  margin: 5px 170px 5px 0px;
+  background-color: white;
+  width: 175px;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+}
+
+.indexpagepresettitle {
+  margin: 6px 0;
+  width: 250px;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  background-color: #FF8A65;
+  color: #212121;
+}
+
+.indexpagepresetSongTitle {
+  margin: 6px 0;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  padding-right: 10px;
+}
+
+/*end home page */
+
+
+
+
+
+
+
+
 .frame {
     width: 76vh;
     height: 76vh;
@@ -25,7 +163,7 @@ body {
   width: 2vh;
   float: left;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
   text-align: center;
   line-height: 12.5px;
 }
@@ -58,6 +196,7 @@ body {
   height: 50vh;
   overflow-y: auto;
   margin: 10px;
+  float: left;
 }
 
 .timelineScrollClickDiv {
@@ -130,7 +269,9 @@ body {
   bottom: 5vh;
   width: calc(50% - 30px);
   margin: 0 4px 0 10px;
+  background-color: #4CAF50;
   float: left;
+  top: 0px;
 }
 
 #stoptestbutton {
@@ -149,6 +290,7 @@ body {
   background-color: #FFA000;
   border-color: #FF6F00;
   float: left;
+  top: 0px;
 }
 
 #togglepresetcenter {
@@ -401,44 +543,44 @@ body {
 }
 
 #translatebuttonup {
-  height: 30px;
-  width: 33.3%;
+  height: 35px;
+  width: 35px;
   background-color: #BDBDBD;
   border-color: #BDBDBD;
-  margin: 10px 33.33% 3px;
+  margin: 10px calc(50% - 17px) 3px;
   float: left;
   color: black;
   font-family: Roboto;
 }
 
 #translatebuttonleft {
-  height: 30px;
-  width: 33.3%;
+  height: 35px;
+  width: 35px;
   background-color: #BDBDBD;
   border-color: #BDBDBD;
-  margin: 3px 8.33%;
+  margin: 0px calc(25% - 17px) 0px;
   float: left;
   color: black;
   font-family: Roboto;
 }
 
 #translatebuttonright {
-  height: 30px;
-  width: 33.3%;
+  height: 35px;
+  width: 35px;
   background-color: #BDBDBD;
   border-color: #BDBDBD;
-  margin: 3px 8.33%;
+  margin: 0px calc(25% - 18px) 0px;
   float: left;
   color: black;
   font-family: Roboto;
 }
 
 #translatebuttondown {
-  height: 30px;
-  width: 33.3%;
+  height: 35px;
+  width: 35px;
   background-color: #BDBDBD;
   border-color: #BDBDBD;
-  margin: 3px 33.33%;
+  margin: -5px calc(50% - 17px) 0px;
   float: left;
   color: black;
   font-family: Roboto;

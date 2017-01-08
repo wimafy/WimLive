@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <!-- for offline work -->
+<!--
+  <script src="offline/angularVdunno.js"></script>
+  <script src="offline/angular-RouteVdunno.js"></script>
+  <link href="offline/bootstrap.min.css" rel="stylesheet">
+-->
+<!--
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src="colorpickerControllerV2.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="colorpickerStyle.css">
+-->
+
+<!--
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+<link rel="stylesheet" href="colorpickerStyle.css">
+-->
+<!-- Angular Material Dependencies -->
+<!--
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
+<script src="http://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<script src="colorpickerControllerV2.js"></script>
+-->
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+<link rel="stylesheet" href="colorpickerStyle.css">
+
+<!-- Angular Material Dependencies -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.js"></script>
+<script src="http://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="colorpickerControllerV2.js"></script>
+
+
+</head>
+<body ng-controller="SettupController" ng-keydown="onKeyDown($event)" ng-init="uponInit()">
+<!-- Frame divs will be ordered in their respective z-index order from highest to lowest-->
+<!-- this will be the highest div and provide the interface which is actually clikced-->
+
+
+<div class="frame" style="z-index: 20;" ng-mousedown="spreadSelectIN(currentrow, currentcolumn)" ng-mouseup="spreadSelectOut(currentrow, currentcolumn)">
+  <div ng-repeat="frame in frames | limitTo:1">
+    <div ng-repeat="row in frame| limitTo:38">
+      <div id="click{{ $parent.$index }}{{ $index }}" class="clickindividualseat" ng-repeat="seat in row track by $index" ng-mouseover="speadSelectOUThighlightupdate($parent.$index, $index)">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- This frame displays the highlight of a preset-->
+<div class="frame" style="z-index: 15;">
+  <div ng-repeat="frame in frames | limitTo:1">
+    <div ng-repeat="row in frame| limitTo:38">
+      <div id="preset{{ $parent.$index }}.{{ $index }}" class="individualseat" ng-repeat="seat in row track by $index">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- this frame is for actuall displaying the colors of the current frame-->
+<div class="frame" style="z-index: 10;">
+  <div ng-repeat="frame in frames | limitTo:1">
+    <div ng-repeat="row in frame| limitTo:38">
+      <div id="display{{ $parent.$index }}.{{ $index }}" class="individualseat" ng-repeat="seat in row track by $index">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- this frame creates the opaque view-->
+<div class="frame" style="z-index: 7; background-color: gray; opacity: .5;">
+
+</div>
+
+<!-- displays upon conditional statement, the preset center frame-->
+<div class="presetcentermaerk" ng-if="presetcentertoggleTF">
+
+</div>
+
+
+
+<!-- This frame displays the frame previous to the live one-->
+<div class="frame" style="z-index: 5;">
+  <div ng-repeat="frame in frames | limitTo:1">
+    <div ng-repeat="row in frame| limitTo:38">
+      <div id="displayminusone{{ $parent.$index }}.{{ $index }}" class="individualseat" ng-repeat="seat in row track by $index">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- background frame (this is gray to give the illusion of color but the divs are actually clear) -->
+<div class="backgroundFrame">
+
+</div>
+
+
+<div class="selectpresetBar">
+  <md-button class="md-raised individualpreset" style="background-color: rgb(189, 189, 189)" id="preset{{ $index }}" ng-repeat="preset in presetdivs" ng-click="setPreset($index)" ng-if="$index > 1">
+    <p class="individualpresettitle">{{ preset.name }}</p>
+    <div class="individualpresetviewer">
+    </div>
+  </md-button>
+</div>
+<!--
+<button type="button" class="btn btn-success" id="createpresetbutton" ng-click="createpreset()">Save Preset</button>
+-->
+<md-button style="background-color: #03A9F4;" class="md-raised" id="createpresetbutton" ng-click="createpreset()">
+  Save Preset
+</md-button>
+
+
+
+<!-- timeline div -->
+<div class="timelineDiv">
+  <div class="timelinecurrentdiv">
+    <!-- this makes it user friendly for not computer people-->
+    <div ng-if="showSeconds" ng-click="showSecondsfunc()">
+      Sec: {{ currentFrame * .1 | number: 1}}/{{ numberofFrames * .1 | number: 0}}
+    </div>
+    <div ng-if="!showSeconds" ng-click="hideSecondsfunc()">
+      Frame: {{ currentFrame | number: 0}}/{{ numberofFrames | number: 0}}
+    </div>
+  </div>
+  <div class="timelineScrollDiv">
+    <div id="timeline{{ $index }}" class="timelineScrollClickDiv" ng-repeat="frame in frames" ng-click="setCurrentFrame( $index); updateplayingsong()">
+      {{ $index }}
+    </div>
+  </div>
+
+  <md-button type="button" class="btn md-raised btn-success" id="runtestbutton" ng-click="runtest()">Start test</md-button>
+  <md-button type="button" class="btn md-raised btn-success" id="stoptestbutton" ng-click="stoptest()">Stop test</md-button>
+  <md-button type="button" class="btn md-raised btn-success" id="continuetestbutton" ng-click="continuetest()">Continue test</md-button>
+
+
+  <div class="material-switch" id="togglepresetcenter">
+      Center mark (for presets)
+      <input id="someSwitchOptionSuccess" name="someSwitchOption001" type="checkbox" ng-model="presetcentertoggleTF"/>
+      <label for="someSwitchOptionSuccess" class="label-success"></label>
+  </div>
+
+  <!--audio element to play music-->
+  <audio id="audioElement" src="audio/WildestDreams.mp3"></audio>
+
+  <md-button type="button" class="md-fab md-primary md-hue-2"  id="volDown" ng-click="musicfunction('voldown')"><i class="material-icons">volume_down</i></md-button>
+  <md-button type="button" class="md-fab md-primary md-hue-2"  id="volup" ng-click="musicfunction('volup')"><i class="material-icons">volume_up</i></md-button>
+  <md-button type="button" class="md-fab md-primary md-hue-2"  id="ToggleVol" ng-click="musicfunction('mute')"><i class="material-icons">volume_off</i></md-button>
+
+</div>
+
+<!-- color picker div -->
+<div class="colorpickerDiv">
+  <div class="selectedColor" id="selectedColorDiv" style="background-color: #f44336;">
+    #f44336
+  </div>
+  <div class="colorpickerColorPad">
+    <div class="colorpickerColorIndividual" ng-repeat="color in colorListArray" style="background-color: {{ color }}" ng-mousedown="setColor(color, $index)">
+
+    </div>
+  </div>
+
+  <md-button type="button" class="md-raised" id="preseteditbutton" ng-click="setPreset('editbutton', 'edit')">Edit</md-button>
+  <md-button type="button" class="md-raised" id="presetpaintbutton" ng-click="setPreset('paintbutton', 'paint')">Paint</md-button>
+  <md-button type="button" class="md-raised" id="clearframebutton" ng-click="clearFrame()">Clear frame</md-button>
+  <md-button type="button" class="md-raised" id="duplicateframebutton" ng-click="duplicateFrame()">duplicate frame</md-button>
+  <md-button type="button" class="md-raised" id="undobutton" ng-click="undo()">Undo</md-button>
+  <md-button type="button" class="md-raised" id="undobutton" ng-click="pushtoSeats()">push</md-button>
+  <div class="translateframeDiv">
+    <md-button type="button" class="md-fab md-primary md-hue-2" id="translatebuttonup" ng-click="translateFrame('up')"><i class="material-icons">&#xE316;</i></md-button>
+    <md-button type="button" class="md-fab md-primary md-hue-2" id="translatebuttonleft" ng-click="translateFrame('left')"><i class="material-icons">&#xE314;</i></md-button>
+    <md-button type="button" class="md-fab md-primary md-hue-2" id="translatebuttonright" ng-click="translateFrame('right')"><i class="material-icons">&#xE315;</i></md-button>
+    <md-button type="button" class="md-fab md-primary md-hue-2" id="translatebuttondown" ng-click="translateFrame('down')"><i class="material-icons">&#xE313;</i></md-button>
+
+
+
+
+  </div>
+
+
+</div>
+
+
+
+
+<!-- black and white table for debgging-->
+<p style="position: absolute; background-color:black; color:white">
+{{ currentColorI }}
+</p>
+
+  <!--{{ stadiumSeatSquareArray }}-->
+
+
+</body>
+</html>
