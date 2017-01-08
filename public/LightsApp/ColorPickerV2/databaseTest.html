@@ -73,97 +73,18 @@
         -->
 
         </div>
-        <md-tabs md-stretch-tabs class="md-primary" md-selected="data.selectedIndex">
-          <md-tab id="tab1" aria-controls="tab1-content">
-            Songs
-          </md-tab>
-          <md-tab id="tab2" aria-controls="tab2-content">
-            Presets
-          </md-tab>
-        </md-tabs>
+
       </md-toolbar>
 
       <md-content flex md-scroll-y>
         <md-button class="md-fab md-fab-bottom-right md-hue-3" aria-label="Add" ng-click="showAdd($event)">
           <ng-md-icon icon="add"></ng-md-icon>
         </md-button>
-        <ui-view layout="column" layout-fill layout-padding>
-          <div class="inset" hide-sm></div>
-            <ng-switch on="data.selectedIndex" class="tabpanel-container">
-              <div role="tabpanel"
-                   id="tab1-content"
-                   aria-labelledby="tab1"
-                   ng-switch-when="0"
-                   md-swipe-left="next()"
-                   md-swipe-right="previous()"
-                   layout="row" layout-align="left " layout-wrap>
+
+        {{ songs }}
+        whatevder
 
 
-                   <div class='md-padding' layout="row" layout-wrap>
-                      <md-card style="width: 300px;" ng-repeat="song in songs">
-                        <div class="indexpagesonginfodiv">
-                          <h3 class="indexpagesonginfolastedit">
-                            Last Edit {{ song.date }}
-                          </h3>
-                          <h1 class="indexpagesonginfotitle">
-                            {{ song.title }}
-                          </h1>
-                          <h2 class="indexpagesonginfoSongTitle">
-                            Durration- {{ song.durration }}
-                          </h2>
-                        </div>
-
-                        <div class="md-actions" layout="row" layout-align="end center">
-                          <md-button class="inexpagesonginfobutton" style="background-color: #03A9F4;">
-                            <i class="material-icons">&#xE037;</i>
-                          </md-button>
-                        </div>
-                        <div class="md-actions" layout="row" layout-align="end center">
-                          <md-button class="inexpagesonginfobutton">Edit</md-button>
-                        </div>
-                      </md-card>
-
-                    </div>
-
-
-
-              </div>
-              <div role="tabpanel"
-                   id="tab2-content"
-                   aria-labelledby="tab2"
-                   ng-switch-when="1"
-                   md-swipe-left="next()"
-                   md-swipe-right="previous()"
-                   layout="column" layout-align="center center">
-
-
-                   <div class='md-padding' layout="row" layout-wrap>
-                      <md-card style="width: 300px;" ng-repeat="preset in presets">
-                        <div class="indexpagepresetdiv">
-                          <h3 class="indexpagepresetlastedit">
-                            Last Edit {{ preset.date }}
-                          </h3>
-                          <h1 class="indexpagepresettitle">
-                            {{ preset.title }}
-                          </h1>
-                          <h2 class="indexpagepresetSongTitle">
-                            Durration- {{ preset.durration }}
-                          </h2>
-                        </div>
-
-                        <div class="md-actions" layout="row" layout-align="end center">
-                          <md-button class="inexpagepresetbutton">Edit</md-button>
-                        </div>
-                      </md-card>
-                    </div>
-
-
-
-              </div>
-
-          </ng-switch>
-
-        </ui-view>
       </md-content>
     </div>
 
