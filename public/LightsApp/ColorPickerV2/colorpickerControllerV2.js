@@ -1,7 +1,7 @@
 var app = angular.module('myApp', ['ngMaterial', 'ngMdIcons']);
 
 
-app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog', function($scope, $mdBottomSheet, $mdSidenav, $mdDialog, $http){
+app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',  function($scope, $mdBottomSheet, $mdSidenav, $mdDialog, $http){
   $scope.toggleSidenav = function(menuId) {
     $mdSidenav(menuId).toggle();
   };
@@ -39,12 +39,10 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
 
 //imports user's songs and presets
 
-$http.get('http://52.41.37.153/LightsApp/ColorPickerV2/databaseinterface.php')
-  .success(function(response) {
-    alert(response);
-  })
-
-
+$http.get('http://localhost/WimLive/public/LightsApp/ColorPickerV2/databaseinterface.php')
+.success(function(response) {
+  
+})
 
 
 

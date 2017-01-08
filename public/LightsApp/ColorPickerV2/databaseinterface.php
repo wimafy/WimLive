@@ -15,12 +15,12 @@ $sql = "SELECT * FROM `songs`";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo "[";
+    //echo "[";
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "{'songID': '". $row["songID"] . "', 'UserOwnerID': '" . $row["UserOwnerID"] . "', 'lastEditDate': '" . $row["lastEditDate"] . "', 'songTitle': '" . $row["songTitle"] . "', 'durration': '" .$row["durration"] ."'},";
+        //echo "{'songID': '". $row["songID"] . "', 'UserOwnerID': '" . $row["UserOwnerID"] . "', 'lastEditDate': '" . $row["lastEditDate"] . "', 'songTitle': '" . $row["songTitle"] . "', 'durration': '" .$row["durration"] ."'},";
     }
-    echo "]";
+    //echo "]";
 } else {
     echo "0 results";
 }
