@@ -39,7 +39,7 @@ app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog',
 
 //imports user's songs and presets
 
-$http.get('http://localhost/WimLive/public/LightsApp/ColorPickerV2/databaseinterface.php')
+$http.get('http://52.41.37.153/LightsApp/ColorPickerV2/databaseinterface.php')
   .success(function(response) {
     alert(response);
   })
