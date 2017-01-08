@@ -1,7 +1,7 @@
 var app = angular.module('myApp', ['ngMaterial', 'ngMdIcons']);
 
 
-app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog', $http,  function($scope, $mdBottomSheet, $mdSidenav, $mdDialog){
+app.controller('AppCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog', function($scope, $mdBottomSheet, $mdSidenav, $mdDialog, $http){
   $scope.toggleSidenav = function(menuId) {
     $mdSidenav(menuId).toggle();
   };
