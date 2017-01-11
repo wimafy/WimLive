@@ -1,0 +1,640 @@
+body {
+  background-color: #F5F5F5;
+}
+
+/*homepage css*/
+$gray: #eee;
+
+md-content.md-default-theme {
+  background-color: $gray;
+}
+md-card {
+  background-color: #fff;
+  h2:first-of-type {
+    margin-top: 0;
+  }
+}
+md-toolbar {
+  .md-button.md-default-theme {
+    border-radius: 99%; // round toolbar buttons
+  }
+}
+h2 {
+  font-weight: 400;
+}
+.md-toolbar-tools-bottom {
+  font-size: small;
+  & :last-child {
+    opacity: 0.8;
+  }
+}
+md-toolbar:not(.md-hue-1),
+.md-fab {
+  fill: #fff;
+}
+md-sidenav {
+  fill: #737373;
+  ng-md-icon {
+    position: relative;
+    top: 5px; // adjust for svg viewbox
+  }
+}
+.user-avatar {
+  border-radius: 99%;
+}
+
+.indexpagesonginfodiv {
+  width: 300px;
+  height: 200px;
+  background-color: lightgray;
+}
+
+.inexpagesonginfobutton {
+  width: 100%;
+}
+
+.indexpagesonginfolastedit {
+  margin: 5px 170px 5px 0px;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  width: 175px;
+}
+
+.indexpagesonginfoSongTitle {
+  margin: 6px 0;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  padding-right: 10px;
+}
+
+.indexpagesonginfotitle {
+  margin: 6px 0;
+  width: 250px;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  background-color: #81C784;
+  color: #212121;
+  max-height: 86px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.indexpagesonginfotitle:hover{
+    white-space: normal;
+    max-height: none;
+    z-index: 20
+}
+
+.indexpagepresetdiv {
+  width: 300px;
+  height: 200px;
+  background-color: lightgray;
+}
+
+
+.inexpagepresetbutton {
+  width: 100%;
+}
+
+.indexpagepresetSongTitle {
+  margin: 6px 0;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  padding-right: 10px;
+}
+
+.indexpagepresetlastedit {
+  margin: 5px 170px 5px 0px;
+  background-color: white;
+  width: 175px;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+}
+
+.indexpagepresettitle {
+  margin: 6px 0;
+  width: 250px;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  background-color: #FF8A65;
+  color: #212121;
+  max-height: 86px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.indexpagepresettitle:hover{
+  white-space: normal;
+  max-height: none;
+  z-index: 20
+}
+
+.indexpagepresetSongTitle {
+  margin: 6px 0;
+  background-color: white;
+  border-radius: 0 2px 2px 0;
+  text-indent: 3px;
+  float: left;
+  padding-right: 10px;
+}
+
+/*end home page */
+
+
+
+
+
+
+
+
+.frame {
+    width: 76vh;
+    height: 76vh;
+    margin: 12vh calc(50vw - 38vh);
+    position: absolute;
+    z-index: 1;
+}
+
+.individualseat {
+  height: 2vh;
+  width: 2vh;
+  float: left;
+  border-style: solid;
+  border-width: 1px;
+  text-align: center;
+  line-height: 12.5px;
+}
+
+.clickindividualseat {
+  height: 2vh;
+  width: 2vh;
+  float: left;
+  border-style: solid;
+  border-width: 0px;
+  text-align: center;
+  line-height: 12.5px;
+}
+
+.clickindividualseat:hover {
+  background-color: white;
+}
+
+.backgroundFrame {
+  width: 76vh;
+  height: 76vh;
+  margin: 12vh calc(50vw - 38vh);
+  background-color: gray;
+  position: absolute;
+  z-index: 0;
+}
+
+.timelineDiv {
+  position: absolute;
+  width: calc(50vw - 38vh);
+  height: 76vh;
+  right: 0;
+  top: 12vh;
+  background-color: #F5F5F5;
+  border-radius: 3px;
+}
+
+.timelineScrollDiv {
+  width: calc(((100vw - 76vh)/2) - 20px);
+  height: 50vh;
+  overflow-y: auto;
+  margin: 10px;
+  float: left;
+}
+
+.timelineScrollClickDiv {
+  width: calc(20% - 4px);
+  height: 100px;
+  background-color: #9E9E9E;
+  float: left;
+  border-radius: 3px;
+  margin: 2px 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: darkgray;
+}
+
+.timelinecurrentdiv {
+  height: 60px;
+  background-color: #66BB6A;
+  width: calc(((100vw - 76vh)/2) - 20px);
+  margin: 0px 10px;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 60px;
+  font-family: Roboto;
+  color: white;
+  font-size: 20px;
+}
+
+.colorpickerDiv{
+  position: absolute;
+  width: calc(50vw - 38vh);
+  height: 76vh;
+  left: 0;
+  top: 12vh;
+  background-color: #F5F5F5;
+  border-radius: 3px;
+
+}
+
+.colorpickerColorPad {
+  width: calc(((100vw - 76vh)/2) - 20px);
+  height: calc(40vh - 10px);
+  overflow-y: auto;
+  background-color: gray;
+  border-radius: 3px;
+  overflow-x: hidden;
+  float: left;
+  margin: 10px;
+}
+
+.colorpickerColorIndividual {
+  width: 12.5%;
+  height: 50px;
+  float: left;
+}
+
+.selectedColor {
+  width: calc(((100vw - 76vh)/2) - 20px);
+  height: 10vh;
+  background-color: gray;
+  margin: 0px 10px;
+  float: left;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 10vh;
+  font-family: Roboto Black;
+}
+
+#runtestbutton {
+  height: 6vh;
+  bottom: 5vh;
+  width: calc(50% - 30px);
+  margin: 0 4px 0 10px;
+  background-color: #4CAF50;
+  float: left;
+  top: 0px;
+}
+
+#stoptestbutton {
+  height: 6vh;
+  width: 25%;
+  background-color: #d32f2f;
+  border-color: #b71c1c;
+  margin: 0 5px 0 0;
+  float: left;
+}
+
+#continuetestbutton {
+  height: 6vh;
+  bottom: 5vh;
+  width: 25%;
+  background-color: #FFA000;
+  border-color: #FF6F00;
+  float: left;
+  top: 0px;
+}
+
+#togglepresetcenter {
+  float: left;
+  height: 50px;
+  margin: 10px;
+  width: 50%;
+  line-height: 30px;
+  font-size: 16px;
+  font-family: Roboto;
+  background-color: #E0E0E0;
+  padding: 10px;
+  border-radius: 3px;
+  border-color: #BDBDBD;
+  border-width: 1px;
+  border-style: solid;
+}
+
+#clearframebutton {
+  height: 6vh;
+  width: calc(33.3% - 30px);
+  background-color: #d32f2f;
+  border-color: #b71c1c;
+  float: left;
+  min-width: 0;
+}
+
+#duplicateframebutton {
+  height: 6vh;
+  width: 33.3%;
+  background-color: #03A9F4;
+  border-color: #0288D1;
+  margin: 5px 5px 0px 10px;
+  float: left;color: white;
+  font-family: Roboto;
+}
+
+#presetpaintbutton {
+  height: 6vh;
+  width: 33.3%;
+  background-color: #BDBDBD;
+  border-color: #BDBDBD;
+  margin: 0 5px 0 0;
+  float: left;
+  color: black;
+  font-family: Roboto;
+}
+
+#preseteditbutton {
+  height: 6vh;
+  width: 33.3%;
+  background-color: #BDBDBD;
+  border-color: #BDBDBD;
+  margin: 0px 5px 0px 10px;
+  float: left;
+  color: black;
+  font-family: Roboto;
+}
+
+#undobutton {
+  height: 6vh;
+  width: 33.3%;
+  background-color: #BDBDBD;
+  border-color: #BDBDBD;
+  margin: 5px 5px 0 0;
+  float: left;
+  color: black;
+  font-family: Roboto;
+}
+
+#redobutton {
+  height: 6vh;
+  width: calc(33.3% - 30px);
+  background-color: #d32f2f;
+  border-color: #b71c1c;
+  float: left;
+  min-width: 0;
+  margin-top: 5px;
+}
+
+.selectpresetBar {
+  position: absolute;
+  width: calc(90vw - 30px);
+  height: 10vh;
+  background-color: gray;
+  left: 10px;
+  top: 1vh;
+  border-radius: 3px;
+  padding-left: 4px;
+  overflow-y: auto;
+  padding-top: 4px;
+}
+
+.individualpreset {
+  width: 12vh;
+  height: calc(10vh - 8px);
+  background-color: #BDBDBD;
+  margin: 0px 4px 4px 0px;
+  float: left;
+  border-radius: 3px;
+}
+
+.individualpreset:hover {
+  background-color: #66BB6A;
+  color: white;
+}
+
+.individualpresettitle {
+  width: 100%;
+  text-align: center;
+  line-height: 2vh;
+  margin: 0;
+  font-family: Roboto;
+  font-size: 13px;
+  height: 2vh;
+  float: left;
+}
+
+.individualpresetviewer {
+  width: 10vh;
+  height: 7vh;
+  background-color: #EEEEEE;
+  float: left;
+  margin-left: 1vh;
+  border-radius: 3px;
+}
+
+#createpresetbutton {
+  position: absolute;
+  height: 10vh;
+  top: 1vh;
+  width: 10vw;
+  left: calc(90vw - 10px);
+  background-color: #2196F3;
+  border-color: #1976D2;
+}
+
+#closecreatepresetdivicon {
+  float: right;
+  margin: 10px;
+  font-size: 25px;
+  color: #424242;
+}
+
+.createpresetdiv {
+  width: 98vw;
+  height: 98vh;
+  top: 1vh;
+  left: 1vw;
+  position: absolute;
+  background-color: #9E9E9E;
+  border-radius: 3px;
+  z-index: 25;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #757575;
+}
+
+.createpresetredsquare {
+  height: 2vh;
+  width: 2vh;
+  border-style: solid;
+  border-width: 1px;
+  position: absolute;
+  background-color: red;
+  z-index: 26;
+  left: calc(50vw + 0px);
+  top: calc(50vh + 0px);
+}
+
+/*material design switch */
+.material-switch > input[type="checkbox"] {
+    display: none;
+}
+
+.material-switch > label {
+    cursor: pointer;
+    height: 0px;
+    position: relative;
+    width: 40px;
+    float: right;
+    margin-top: 15px;
+}
+
+.material-switch > label::before {
+    background: rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    content: '';
+    height: 16px;
+    margin-top: -8px;
+    position:absolute;
+    opacity: 0.3;
+    transition: all 0.4s ease-in-out;
+    width: 40px;
+}
+.material-switch > label::after {
+    background: rgb(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    content: '';
+    height: 24px;
+    left: -4px;
+    margin-top: -8px;
+    position: absolute;
+    top: -4px;
+    transition: all 0.3s ease-in-out;
+    width: 24px;
+}
+.material-switch > input[type="checkbox"]:checked + label::before {
+    background: inherit;
+    opacity: 0.5;
+}
+.material-switch > input[type="checkbox"]:checked + label::after {
+    background: inherit;
+    left: 20px;
+}
+/*end this*/
+
+
+.presetcentermaerk {
+  width: 2vh;
+  height: 2vh;
+  background-color: #5cb85c;
+  position: absolute;
+  z-index: 7;
+  left: calc(50vw - 0vh);
+  top: 50vh;
+  opacity: .7;
+}
+
+.translateframeDiv {
+  background-color: gray;
+  height: 124px;
+  width: 33.33%;
+  float: left;
+  margin: 5px 10px;
+  border-radius: 3px;
+}
+
+#translatebuttonup {
+  height: 30px;
+  width: 33.3%;
+  background-color: #BDBDBD;
+  border-color: #BDBDBD;
+  margin: 3px 33.33%;
+  float: left;
+  color: black;
+  font-family: Roboto;
+}
+
+#translatebuttonup {
+  height: 35px;
+  width: 35px;
+  background-color: #BDBDBD;
+  border-color: #BDBDBD;
+  margin: 10px calc(50% - 17px) 3px;
+  float: left;
+  color: black;
+  font-family: Roboto;
+}
+
+#translatebuttonleft {
+  height: 35px;
+  width: 35px;
+  background-color: #BDBDBD;
+  border-color: #BDBDBD;
+  margin: 0px calc(25% - 17px) 0px;
+  float: left;
+  color: black;
+  font-family: Roboto;
+}
+
+#translatebuttonright {
+  height: 35px;
+  width: 35px;
+  background-color: #BDBDBD;
+  border-color: #BDBDBD;
+  margin: 0px calc(25% - 18px) 0px;
+  float: left;
+  color: black;
+  font-family: Roboto;
+}
+
+#translatebuttondown {
+  height: 35px;
+  width: 35px;
+  background-color: #BDBDBD;
+  border-color: #BDBDBD;
+  margin: -5px calc(50% - 17px) 0px;
+  float: left;
+  color: black;
+  font-family: Roboto;
+}
+
+#volDown {
+  margin: 10px 10px 10px 0px;
+  width: 50px;
+  float: left;
+  border-radius: 50%;
+  height: 50px;
+  background-color: #E0E0E0;
+  border-color: #BDBDBD;
+  color: #757575;
+}
+
+#volup {
+  margin: 10px 10px 10px 0px;
+  width: 50px;
+  float: left;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #E0E0E0;
+  border-color: #BDBDBD;
+  color: #757575;
+}
+
+#ToggleVol {
+  margin: 10px 0px;
+  width: 50px;
+  float: left;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #E0E0E0;
+  border-color: #BDBDBD;
+  color: #757575;
+}

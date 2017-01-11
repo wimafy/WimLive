@@ -128,7 +128,9 @@ app.controller('myCtrl', function($scope, $timeout, $interval, $scope, $http) {
 
     $scope.updatetime2 = function() {
       setInterval( function(){$scope.timeupdater2()}, 100);
-      setInterval( function(){$scope.timeresync()}, 10000);
+
+      //sets the interval of the time to re-sync
+      setInterval( function(){$scope.timeresync()}, 5000);
     }
 
 //end of time syncing
