@@ -103,7 +103,7 @@ $scope.addSong = function() {
   $http.post('http://localhost/WimLive/public/LightsAppReal/php/newSong.php', {
     'userID': $scope.HomePageServicedVariable.newSongUserID,
     'songName': $scope.HomePageServicedVariable.newSongName,
-    'songFile': 'file and stuff'
+    'songFile': 'file '
   })
   .success(function(response) {
     //alert(response);
