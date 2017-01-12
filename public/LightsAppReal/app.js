@@ -25,10 +25,15 @@ lightsAppMod.config(function($stateProvider, $urlRouterProvider) {
 });
 
 
-lightsAppMod.service("currentsong", function CurrentSong() {
-          var currentsong = this;
+lightsAppMod.service("servicedVars", function servicedVars() {
+          var servicedVars = this;
 
-          currentsong.song = "you dont own me";
+          servicedVars.selectedSongIndex = "";
+
+
+          servicedVars.newSongName = "";
+          servicedVars.newSongUserID = "32";
+
 
       })
 
@@ -36,9 +41,9 @@ lightsAppMod.service("currentsong", function CurrentSong() {
 
 //dont go down there it's scary :o
 
-lightsAppMod.controller('HomePageCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog', '$http', 'currentsong',  function($scope, $mdBottomSheet, $mdSidenav, $mdDialog, $http, currentsong){
+lightsAppMod.controller('HomePageCtrl', ['$scope', '$mdBottomSheet','$mdSidenav', '$mdDialog', '$http', 'servicedVars',  function($scope, $mdBottomSheet, $mdSidenav, $mdDialog, $http, servicedVars){
 
-  $scope.homepageCurrentSong = currentsong;
+  $scope.HomePageServicedVariable = servicedVars;
 
 
   $scope.toggleSidenav = function(menuId) {
@@ -79,7 +84,9 @@ $scope.homepageisloading = true;
 
 //imports user's songs and presets
 $scope.pullsongs = function() {
-  $http.post('http://localhost/WimLive/public/LightsApp/ColorPickerV2/php/setuphomepage.php', {'userID': 32})
+  $http.post('http://localhost/WimLive/public/LightsAppReal/php/setuphomepage.php', {
+    'userID': 32
+  })
   .success(function(response) {
       //songs are sent first
       $scope.songs = response[0];
@@ -93,8 +100,13 @@ $scope.pullsongs();
 
 $scope.addSong = function() {
   $scope.homepageisloading = true;
-  $http.post('http://localhost/WimLive/public/LightsApp/ColorPickerV2/php/newSong.php', {'userID': 32})
+  $http.post('http://localhost/WimLive/public/LightsAppReal/php/newSong.php', {
+    'userID': $scope.HomePageServicedVariable.newSongUserID,
+    'songName': $scope.HomePageServicedVariable.newSongName,
+    'songFile': 'file and stuff'
+  })
   .success(function(response) {
+    //alert(response);
       //rechecks database for songs if one was added
       $scope.pullsongs();
       $scope.homepageisloading = false;
@@ -135,15 +147,19 @@ $scope.addSong = function() {
     });
   };
 
-  $scope.songName = "words for song";
+
   $scope.showAdd = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      template: '<md-dialog style="width: 70vw;"> <md-content class="md-padding"><h1 style="margin-bottom: 5px;">New project...</h1> <div layout layout-sm="column" style="flex-direction: column; height: 103px;"> <md-input-container flex> <label class="md-title">Song name</label> <input ng-model="songName" placeholder="Song name"> </md-input-container> <input type="file" id="myFile" multiple size="50" onchange="myFunction()"> </div></md-content><div class="md-actions" layout="row"> <span flex></span> <md-button ng-click="answer(\'not useful\')"> Cancel </md-button> <md-button ng-click="answer(\'useful\')" class="md-primary"> Save </md-button> </div></md-dialog>',
+      template: '<md-dialog style="width: 70vw;"> <md-content class="md-padding"><h1 style="margin-bottom: 5px;">New project...</h1> <div layout layout-sm="column" style="flex-direction: column; height: 103px;"> <md-input-container flex> <label class="md-title">Song name</label> <input ng-model="scopedNewSongInfo.newSongName" placeholder="Song name"> </md-input-container> <input type="file" id="uploadASong" multiple size="50" onchange="myFunction()"> </div></md-content><div class="md-actions" layout="row"> <span flex></span> <md-button ng-click="answer(\'not useful\')"> Cancel </md-button> <md-button ng-click="answer(\'useful\')" class="md-primary"> Save </md-button> </div></md-dialog>',
       targetEvent: ev,
     })
     .then(function(answer) {
       $scope.alert = 'You said the information was "' + answer + '".';
+      if(answer== "useful"){
+        $scope.addSong();
+
+      }
     }, function() {
       $scope.alert = 'You cancelled the dialog.';
     });
@@ -164,7 +180,11 @@ lightsAppMod.controller('ListBottomSheetCtrl', function($scope, $mdBottomSheet) 
   };
 });
 
-function DialogController($scope, $mdDialog) {
+function DialogController($scope, $mdDialog, servicedVars) {
+
+  $scope.scopedNewSongInfo = servicedVars;
+
+
   $scope.hide = function() {
     $mdDialog.hide();
   };
@@ -222,10 +242,10 @@ lightsAppMod.config(function($mdThemingProvider) {
 
 
 //for the editor
-lightsAppMod.controller('SettupController', function($scope, $timeout, $interval, $scope, $http, currentsong) {
+lightsAppMod.controller('SettupController', function($scope, $timeout, $interval, $scope, $http, servicedVars) {
 
 
-  $scope.SetupPageCurrentSong = currentsong;
+  $scope.SetupPageServicedVariable = servicedVars;
 
 
   // Event handlers

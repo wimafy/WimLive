@@ -11,6 +11,8 @@ $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
 
 $userIDnumber = $request->userID;
+$newSongName = 'something';
+
 //$userIDnumber = 32;
 
 
@@ -23,7 +25,7 @@ if ($conn->connect_error) {
 
 
 //for loading songs
-$sql = "INSERT INTO `songs` (`songID`, `UserOwnerID`, `lastEditDate`, `songTitle`, `durration`, `filepath`) VALUES (NULL, $userIDnumber, '3722', 'things that i do at night', '3:47', 'yepp.mp3');";
+$sql = "INSERT INTO `songs` (`songID`, `UserOwnerID`, `lastEditDate`, `songTitle`, `durration`, `filepath`) VALUES (NULL, $userIDnumber, '3722', $newSongName, '3:47', 'yepp.mp3');";
 $result = $conn->query($sql);
 
 
